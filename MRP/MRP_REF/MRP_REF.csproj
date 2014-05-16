@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C7D6EEF-6AA9-416C-BC40-50DB5C30ECBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRP_REF</RootNamespace>
+    <AssemblyName>MRP_REF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs" />
+    <Compile Include="ActivityInstruction.cs" />
+    <Compile Include="ActivityMachine.cs" />
+    <Compile Include="ActivityMachineUsage.cs" />
+    <Compile Include="ApproveLimits.cs" />
+    <Compile Include="BasicProduct.cs" />
+    <Compile Include="Batch.cs" />
+    <Compile Include="BatchActivity.cs" />
+    <Compile Include="BatchActivityInstructions.cs" />
+    <Compile Include="BatchFormualFinishProducts.cs" />
+    <Compile Include="BatchFormulaBasicProducts.cs" />
+    <Compile Include="BatchFormulaMaterial.cs" />
+    <Compile Include="BatchMR.cs" />
+    <Compile Include="BatchPackingMR.cs" />
+    <Compile Include="BatchProduction.cs" />
+    <Compile Include="BatchLabourDetails.cs" />
+    <Compile Include="CAP.cs" />
+    <Compile Include="CAPProduct.cs" />
+    <Compile Include="CompanyOverHeadRate.cs" />
+    <Compile Include="BatchMachineDetails.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerTerritoryList.cs" />
+    <Compile Include="PlanMaterials.cs" />
+    <Compile Include="DeliverNote.cs" />
+    <Compile Include="DeliverNoteMaterials.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DepartmentalPlanningMaterials.cs" />
+    <Compile Include="DepartmentalPlanningWeeks.cs" />
+    <Compile Include="DepartmentEmployees.cs" />
+    <Compile Include="DepartmentPlans.cs" />
+    <Compile Include="DispatchNote.cs" />
+    <Compile Include="DispatchNoteList.cs" />
+    <Compile Include="Distributor.cs" />
+    <Compile Include="DivisionManage.cs" />
+    <Compile Include="Divisions.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeExecutive.cs" />
+    <Compile Include="EmployeeRole.cs" />
+    <Compile Include="EmployeeSupervisor.cs" />
+    <Compile Include="ExtractionDetails.cs" />
+    <Compile Include="ExtractionDetailsLabour.cs" />
+    <Compile Include="FinishProduct.cs" />
+    <Compile Include="Form.cs" />
+    <Compile Include="Formula.cs" />
+    <Compile Include="FormulaBasicProduct.cs" />
+    <Compile Include="FormulaFinishProduct.cs" />
+    <Compile Include="FormulaMaterial.cs" />
+    <Compile Include="GenActivityMachineUsage.cs" />
+    <Compile Include="GenActivitySuperviser.cs" />
+    <Compile Include="GenActivityWork.cs" />
+    <Compile Include="GeneralActivity.cs" />
+    <Compile Include="GRN.cs" />
+    <Compile Include="GRNBasicProducts.cs" />
+    <Compile Include="GRNFinishProducts.cs" />
+    <Compile Include="GRNMaterials.cs" />
+    <Compile Include="GRN_Payment.cs" />
+    <Compile Include="InstructedMachines.cs" />
+    <Compile Include="InstructedSubActivity.cs" />
+    <Compile Include="InvoiceMaterials.cs" />
+    <Compile Include="Machine.cs" />
+    <Compile Include="MachineActivity.cs" />
+    <Compile Include="MachineTransfer.cs" />
+    <Compile Include="MachineType.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="MaterialCategory.cs" />
+    <Compile Include="MaterialRework.cs" />
+    <Compile Include="MaterialReworkBasicProductUsage.cs" />
+    <Compile Include="MaterialReworkBatch.cs" />
+    <Compile Include="MaterialReworkMaterialUsage.cs" />
+    <Compile Include="MaterialSupply.cs" />
+    <Compile Include="MaterialType.cs" />
+    <Compile Include="MR.cs" />
+    <Compile Include="MRBasicProduct.cs" />
+    <Compile Include="MRFinishProduct.cs" />
+    <Compile Include="MRIssueList.cs" />
+    <Compile Include="MRMaterial.cs" />
+    <Compile Include="MTN.cs" />
+    <Compile Include="MTNBasicProduct.cs" />
+    <Compile Include="MTNFinishProduct.cs" />
+    <Compile Include="MTNMaterial.cs" />
+    <Compile Include="MTNTransferList.cs" />
+    <Compile Include="OverheadRates.cs" />
+    <Compile Include="PackingBatch.cs" />
+    <Compile Include="PackingBatchActivity.cs" />
+    <Compile Include="PackingBatchActWork.cs" />
+    <Compile Include="PackingBatchMachineWork.cs" />
+    <Compile Include="PackingBatchMaterial.cs" />
+    <Compile Include="PackingType.cs" />
+    <Compile Include="PlanBatch.cs" />
+    <Compile Include="PlanWeeks.cs" />
+    <Compile Include="PO.cs" />
+    <Compile Include="PODelivery.cs" />
+    <Compile Include="PODeliveryShedule.cs" />
+    <Compile Include="POMaterials.cs" />
+    <Compile Include="PR.cs" />
+    <Compile Include="PRMaterial.cs" />
+    <Compile Include="ProductCategory.cs" />
+    <Compile Include="ProductSubCategory.cs" />
+    <Compile Include="ProjectMaterials.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PRPDActivityDetailsLabour.cs" />
+    <Compile Include="PRPDActivityDetailsMachine.cs" />
+    <Compile Include="PRPDBatch.cs" />
+    <Compile Include="PRPDBatchActivity.cs" />
+    <Compile Include="PRPDBatchActivityInstructions.cs" />
+    <Compile Include="PRPDBatchQTR.cs" />
+    <Compile Include="PRPDCAP.cs" />
+    <Compile Include="QCReport.cs" />
+    <Compile Include="QCReportDetails.cs" />
+    <Compile Include="RepackBatch.cs" />
+    <Compile Include="RepackBatchBasicProductUsage.cs" />
+    <Compile Include="RepackBatchMaterialUsage.cs" />
+    <Compile Include="RepackBatchProductList.cs" />
+    <Compile Include="Rework.cs" />
+    <Compile Include="ReworkBatch.cs" />
+    <Compile Include="ReworkBatchBasicProductUsage.cs" />
+    <Compile Include="ReworkBatchCAP.cs" />
+    <Compile Include="ReworkBatchMaterialUsage.cs" />
+    <Compile Include="ReworkBatchProductList.cs" />
+    <Compile Include="RPDActivityDetailsLabour.cs" />
+    <Compile Include="RPDActivityDetailsMachine.cs" />
+    <Compile Include="RPDActivityMachine.cs" />
+    <Compile Include="RPDBatch.cs" />
+    <Compile Include="RPDBatchActivity.cs" />
+    <Compile Include="RPDBatchActivityInstructions.cs" />
+    <Compile Include="RPDBatchActivityProduction.cs" />
+    <Compile Include="RPDBatchActPackingDetails.cs" />
+    <Compile Include="RPDBatchActualProduction.cs" />
+    <Compile Include="RPDBatchPackingMaterialUsage.cs" />
+    <Compile Include="RPDBatchProduction.cs" />
+    <Compile Include="SalesForecast.cs" />
+    <Compile Include="SalesForecastBatches.cs" />
+    <Compile Include="SalesForecastContent.cs" />
+    <Compile Include="SalesForecastDetails.cs" />
+    <Compile Include="SalesRef.cs" />
+    <Compile Include="SalesReturn.cs" />
+    <Compile Include="Sections.cs" />
+    <Compile Include="SKU.cs" />
+    <Compile Include="STDBatch.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="StockGRN.cs" />
+    <Compile Include="StockHoldingRate.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="SubActivity.cs" />
+    <Compile Include="SubContractor.cs" />
+    <Compile Include="SubStock.cs" />
+    <Compile Include="SubStockIssueBasicProduct.cs" />
+    <Compile Include="SubStockIssueFinishProduct.cs" />
+    <Compile Include="SubStockIssueMaterial.cs" />
+    <Compile Include="SubStockRecBasicProduct.cs" />
+    <Compile Include="SubStockRecFinishProduct.cs" />
+    <Compile Include="SubStockRecMaterial.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SystemFunction.cs" />
+    <Compile Include="TempPOMaterials.cs" />
+    <Compile Include="TestParameter.cs" />
+    <Compile Include="TGRN.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserAccesRoles.cs" />
+    <Compile Include="UserAccessRights.cs" />
+    <Compile Include="UserRole.cs" />
+    <Compile Include="UserRoleFunction.cs" />
+    <Compile Include="Weighing.cs" />
+    <Compile Include="WorkShift.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

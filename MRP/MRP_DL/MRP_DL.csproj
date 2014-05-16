@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1C82C46-577C-45AC-9080-5BA324340421}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRP_DL</RootNamespace>
+    <AssemblyName>MRP_DL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityMachine_DL.cs" />
+    <Compile Include="Activity_DL.cs" />
+    <Compile Include="BasicProduct_DL.cs" />
+    <Compile Include="BatchActivity_DL.cs" />
+    <Compile Include="BatchFormualFinishProducts_DL.cs" />
+    <Compile Include="BatchFormulaBasicProducts_DL.cs" />
+    <Compile Include="BatchFormulaMaterial_DL.cs" />
+    <Compile Include="BatchLabourDetails_DL.cs" />
+    <Compile Include="Batch_DL.cs" />
+    <Compile Include="CompanyOverHeadRate_DL.cs" />
+    <Compile Include="ConnectionStringClass.cs" />
+    <Compile Include="BatchMachineDetails_DL.cs" />
+    <Compile Include="BatchPackingMR_DL.cs" />
+    <Compile Include="CustomerTerritoryList_DL.cs" />
+    <Compile Include="Customer_DL.cs" />
+    <Compile Include="PlanBatch_DL.cs" />
+    <Compile Include="PlanWeek_DL.cs" />
+    <Compile Include="PlanMaterials_DL.cs" />
+    <Compile Include="PODeliveryShedules_DL.cs" />
+    <Compile Include="POMaterials_DL.cs" />
+    <Compile Include="PO_DL.cs" />
+    <Compile Include="Distributor_DL.cs" />
+    <Compile Include="OptionalFormula_DL.cs" />
+    <Compile Include="ProjectMaterials_DL.cs" />
+    <Compile Include="Projects_DL.cs" />
+    <Compile Include="PRPDActivityDetailsLabour_DL.cs" />
+    <Compile Include="PRPDActivityDetailsMachine_DL.cs" />
+    <Compile Include="PRPDBatchActivityInstructions_DL.cs" />
+    <Compile Include="PRPDBatchActivity_DL.cs" />
+    <Compile Include="PRPDBatchQTR_DL.cs" />
+    <Compile Include="PRPDBatch_DL.cs" />
+    <Compile Include="PRPDCAP_DL.cs" />
+    <Compile Include="QCReportDetails_DL.cs" />
+    <Compile Include="QCReport_DL.cs" />
+    <Compile Include="RPDActivityDetailsLabour_DL.cs" />
+    <Compile Include="RPDActivityDetailsMachine_DL.cs" />
+    <Compile Include="RPDActivityMachine_DL.cs" />
+    <Compile Include="RPDBatchActivityInstructions_DL.cs" />
+    <Compile Include="RPDBatchActivityProduction_DL.cs" />
+    <Compile Include="RPDBatchActivity_DL.cs" />
+    <Compile Include="RPDBatchActPackingDetails_DL.cs" />
+    <Compile Include="RPDBatchActualProduction_DL.cs" />
+    <Compile Include="RPDBatchPackingMaterialUsage_DL.cs" />
+    <Compile Include="RPDBatchProduction_DL.cs" />
+    <Compile Include="RPDBatch_DL.cs" />
+    <Compile Include="SalesForecastContent_DL.cs" />
+    <Compile Include="SalesForecastDetails_DL.cs" />
+    <Compile Include="SalesForeCast_DL.cs" />
+    <Compile Include="SalesMethod_DL.cs" />
+    <Compile Include="Supplier_DL.cs" />
+    <Compile Include="DeliverNoteMaterials_DL.cs" />
+    <Compile Include="DeliverNote_DL.cs" />
+    <Compile Include="STDBatch_DL.cs" />
+    <Compile Include="TGRN_DL.cs" />
+    <Compile Include="UserDepartments_DL.cs" />
+    <Compile Include="Department_DL.cs" />
+    <Compile Include="DispatchNoteList_DL.cs" />
+    <Compile Include="DispatchNote_DL.cs" />
+    <Compile Include="DivisionManage_DL.cs" />
+    <Compile Include="Division_DL.cs" />
+    <Compile Include="EmployeeRole_DL.cs" />
+    <Compile Include="Employee_DL.cs" />
+    <Compile Include="Execute.cs" />
+    <Compile Include="FinishProduct_DL.cs" />
+    <Compile Include="FormulaBasicProduct_DL.cs" />
+    <Compile Include="FormulaFinishProduct_DL.cs" />
+    <Compile Include="FormulaMaterial_DL.cs" />
+    <Compile Include="Formula_DL.cs" />
+    <Compile Include="Form_DL.cs" />
+    <Compile Include="GRNBasicProducts_DL.cs" />
+    <Compile Include="GRNFinishProducts_DL.cs" />
+    <Compile Include="GRNMaterials_DL.cs" />
+    <Compile Include="GRN_DL.cs" />
+    <Compile Include="GRN_Payment_DL.cs" />
+    <Compile Include="MachineActivity_DL.cs" />
+    <Compile Include="MachineType_DL.cs" />
+    <Compile Include="Machine_DL.cs" />
+    <Compile Include="MainActivity_DL.cs" />
+    <Compile Include="MaterialCategory_DL.cs" />
+    <Compile Include="MaterialType_DL.cs" />
+    <Compile Include="Material_DL.cs" />
+    <Compile Include="MRBasicProduct_DL.cs" />
+    <Compile Include="MRFinishProduct_DL.cs" />
+    <Compile Include="MRIssueList_DL.cs" />
+    <Compile Include="MRMaterial_DL.cs" />
+    <Compile Include="MR_DL.cs" />
+    <Compile Include="MTNBasicProduct_DL.cs" />
+    <Compile Include="MTNFinishProduct_DL.cs" />
+    <Compile Include="MTNMaterial_DL.cs" />
+    <Compile Include="MTNTransferList_DL.cs" />
+    <Compile Include="MTN_DL.cs" />
+    <Compile Include="OverheadRates_DL.cs" />
+    <Compile Include="PackingType_DL.cs" />
+    <Compile Include="ProductCategory_DL.cs" />
+    <Compile Include="ProductSubCategory_DL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Section_DL.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SKU_DL.cs" />
+    <Compile Include="StockGRN_DL.cs" />
+    <Compile Include="StockHoldingRate_DL.cs" />
+    <Compile Include="Stock_DL.cs" />
+    <Compile Include="Store_DL.cs" />
+    <Compile Include="SubContractor_DL.cs" />
+    <Compile Include="SystemFunction_DL.cs" />
+    <Compile Include="TestParameter_DL.cs" />
+    <Compile Include="Unit_DL.cs" />
+    <Compile Include="UserAccesRoles_DL.cs" />
+    <Compile Include="UserAccessRights_DL.cs" />
+    <Compile Include="UserRoleFunction_DL.cs" />
+    <Compile Include="UserRole_DL.cs" />
+    <Compile Include="User_DL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MRP_REF\MRP_REF.csproj">
+      <Project>{4C7D6EEF-6AA9-416C-BC40-50DB5C30ECBC}</Project>
+      <Name>MRP_REF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
