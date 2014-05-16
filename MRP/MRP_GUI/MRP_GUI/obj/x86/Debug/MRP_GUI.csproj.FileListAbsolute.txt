@@ -1904,3 +1904,6 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\Rd
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.TrustInfo.xml
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe.manifest
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
+C:\Users\CHAMILA\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.config
+C:\Users\CHAMILA\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
+C:\Users\CHAMILA\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
