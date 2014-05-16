@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="MRPConnectionString" connectionString="Data Source=IT-LAP-CHAMILA;Initial Catalog=MRP_Dev;User ID=sa;Password=password321"
+            providerName="System.Data.SqlClient" />
+    
+    </connectionStrings>
+</configuration>

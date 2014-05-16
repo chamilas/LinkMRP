@@ -1,0 +1,2059 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B9E9483-0F7D-4D11-AC1D-A51E26BCC23B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRP_GUI</RootNamespace>
+    <AssemblyName>MRP_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\pub\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <MinimumRequiredVersion>1.1.0.6</MinimumRequiredVersion>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>C:\Program Files %28x86%29\Microsoft Visual Studio 11.0\ReportViewer</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9B262CA619B7DAF75D15EA76F35D97D840EB780A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MRP_GUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MRP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MRP_GUI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculate.cs" />
+    <Compile Include="Components\EmployeeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\EmployeeSelect.Designer.cs">
+      <DependentUpon>EmployeeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\frmEmpList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\frmEmpList.Designer.cs">
+      <DependentUpon>frmEmpList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\frmMaterialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\frmMaterialList.designer.cs">
+      <DependentUpon>frmMaterialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\MaterialSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\MaterialSelect.designer.cs">
+      <DependentUpon>MaterialSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucMaterialCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucMaterialCategory.designer.cs">
+      <DependentUpon>ucMaterialCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucMaterials.designer.cs">
+      <DependentUpon>ucMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucProcessedMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucProcessedMaterial.designer.cs">
+      <DependentUpon>ucProcessedMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\usProductInsert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\usProductInsert.designer.cs">
+      <DependentUpon>usProductInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmTGRN_Import.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmTGRN_Import.Designer.cs">
+      <DependentUpon>frmTGRN_Import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmPOMaterialSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmPOMaterialSelection.Designer.cs">
+      <DependentUpon>frmPOMaterialSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_FG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_FG.designer.cs">
+      <DependentUpon>frmMRT_Batch_FG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchCreate.designer.cs">
+      <DependentUpon>frmBatchCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmPackingMaterialsForecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmPackingMaterialsForecast.designer.cs">
+      <DependentUpon>frmPackingMaterialsForecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmPlanMaterials_Full.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmPlanMaterials_Full.designer.cs">
+      <DependentUpon>frmPlanMaterials_Full.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmBatchPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmBatchPlan.designer.cs">
+      <DependentUpon>frmBatchPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmDepartmentPlanningWeeks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmDepartmentPlanningWeeks.designer.cs">
+      <DependentUpon>frmDepartmentPlanningWeeks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmPackType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmPackType.designer.cs">
+      <DependentUpon>frmPackType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmWIP_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmWIP_Packing.Designer.cs">
+      <DependentUpon>frmWIP_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procurement\frmPOFinalize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procurement\frmPOFinalize.designer.cs">
+      <DependentUpon>frmPOFinalize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procurement\frmPOList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procurement\frmPOList.Designer.cs">
+      <DependentUpon>frmPOList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procurement\frmPODeliveryShedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procurement\frmPODeliveryShedule.designer.cs">
+      <DependentUpon>frmPODeliveryShedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procurement\frmPOSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procurement\frmPOSelection.Designer.cs">
+      <DependentUpon>frmPOSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmBinCards_BP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmBinCards_BP.Designer.cs">
+      <DependentUpon>frmBinCards_BP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Direct_Semi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Direct_Semi.designer.cs">
+      <DependentUpon>frmGRN_Direct_Semi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toStore_Semi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toStore_Semi.designer.cs">
+      <DependentUpon>frmMRT_toStore_Semi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toSection.designer.cs">
+      <DependentUpon>frmMRReceive_toSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toSec_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toSec_Packing.designer.cs">
+      <DependentUpon>frmMRT_toSec_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_RPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_RPD.designer.cs">
+      <DependentUpon>frmMRT_Batch_RPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_AnySemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_AnySemi.designer.cs">
+      <DependentUpon>frmMRT_Batch_AnySemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_AnyMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_AnyMaterial.designer.cs">
+      <DependentUpon>frmMRT_Batch_AnyMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRManagePOPUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRManagePOPUP.Designer.cs">
+      <DependentUpon>frmMRManagePOPUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Basic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Basic.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_Basic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_RM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_RM.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_RM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive_RM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive_RM.designer.cs">
+      <DependentUpon>frmMTNReceive_RM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Herbal_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Herbal_Rework.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_Herbal_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Ayurveda_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Ayurveda_Rework.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_Ayurveda_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNManagement.Designer.cs">
+      <DependentUpon>frmMTNManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Secondary_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Secondary_Edit.Designer.cs">
+      <DependentUpon>frmBatchPacking_Secondary_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Primary_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Primary_Edit.Designer.cs">
+      <DependentUpon>frmBatchPacking_Primary_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Rework.Designer.cs">
+      <DependentUpon>frmBatchList_Transfer_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchSendQC_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchSendQC_Rework.Designer.cs">
+      <DependentUpon>frmBatchSendQC_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Rework.Designer.cs">
+      <DependentUpon>frmBatchPacking_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchSendQC_Packing_Secondary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchSendQC_Packing_Secondary.Designer.cs">
+      <DependentUpon>frmBatchSendQC_Packing_Secondary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmIssueFinishedGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmIssueFinishedGoods.designer.cs">
+      <DependentUpon>frmIssueFinishedGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procurement\frmPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procurement\frmPO.designer.cs">
+      <DependentUpon>frmPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmPlanMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmPlanMaterials.designer.cs">
+      <DependentUpon>frmPlanMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmProjectMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmProjectMaterials.designer.cs">
+      <DependentUpon>frmProjectMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlan\frmRegisterProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmRegisterProject.designer.cs">
+      <DependentUpon>frmRegisterProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmWIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmWIP.Designer.cs">
+      <DependentUpon>frmWIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchCost.designer.cs">
+      <DependentUpon>frmBatchCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchRegister_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchRegister_Rework.Designer.cs">
+      <DependentUpon>frmBatchRegister_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchList_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchList_Edit.Designer.cs">
+      <DependentUpon>frmBatchList_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatch_Rework_Approve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatch_Rework_Approve.designer.cs">
+      <DependentUpon>frmBatch_Rework_Approve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchQCFail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchQCFail.designer.cs">
+      <DependentUpon>frmBatchQCFail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchPlanExclusive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchPlanExclusive.designer.cs">
+      <DependentUpon>frmBatchPlanExclusive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchFinish_Approve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchFinish_Approve.Designer.cs">
+      <DependentUpon>frmBatchFinish_Approve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchActivity_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchActivity_View.Designer.cs">
+      <DependentUpon>frmPRPDBatchActivity_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\Create\frmPRPDBatchCreatePreperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\Create\frmPRPDBatchCreatePreperation.designer.cs">
+      <DependentUpon>frmPRPDBatchCreatePreperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmInstructedPRPDBatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmInstructedPRPDBatches.Designer.cs">
+      <DependentUpon>frmInstructedPRPDBatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmMultipleLabour_PRPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmMultipleLabour_PRPD.Designer.cs">
+      <DependentUpon>frmMultipleLabour_PRPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchFile.designer.cs">
+      <DependentUpon>frmPRPDBatchFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchList.Designer.cs">
+      <DependentUpon>frmPRPDBatchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDCostingApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDCostingApprove.Designer.cs">
+      <DependentUpon>frmPRPDCostingApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDQCReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDQCReport.Designer.cs">
+      <DependentUpon>frmPRPDQCReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmPRPDBatchActivity.Designer.cs">
+      <DependentUpon>frmPRPDBatchActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\frmViewPRPDBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmViewPRPDBatch.Designer.cs">
+      <DependentUpon>frmViewPRPDBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\Manage\frmPRPDBatchManagement-Preperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\Manage\frmPRPDBatchManagement-Preperation.designer.cs">
+      <DependentUpon>frmPRPDBatchManagement-Preperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\PRPDBatchActivityForms\frmAddPRPDActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\PRPDBatchActivityForms\frmAddPRPDActivity.Designer.cs">
+      <DependentUpon>frmAddPRPDActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRPD\Transfer\frmPRPDBatchTransfer-Preperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\Transfer\frmPRPDBatchTransfer-Preperation.Designer.cs">
+      <DependentUpon>frmPRPDBatchTransfer-Preperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmStandardBatchManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmStandardBatchManage.designer.cs">
+      <DependentUpon>frmStandardBatchManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmBasicProductRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmBasicProductRegistration.designer.cs">
+      <DependentUpon>frmBasicProductRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQC.designer.cs">
+      <DependentUpon>frmQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCDetailView.designer.cs">
+      <DependentUpon>frmQCDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_RPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_RPD.Designer.cs">
+      <DependentUpon>frmQCReport_RPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_Rework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_Rework.Designer.cs">
+      <DependentUpon>frmQCReport_Rework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCView.designer.cs">
+      <DependentUpon>frmQCView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmEmployeeRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmEmployeeRegistration.designer.cs">
+      <DependentUpon>frmEmployeeRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainScreen.designer.cs">
+      <DependentUpon>frmMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmTGRNEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmTGRNEdit.Designer.cs">
+      <DependentUpon>frmTGRNEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Rejects_Approval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Rejects_Approval.designer.cs">
+      <DependentUpon>frmGRN_Rejects_Approval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Rejects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Rejects.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_Rejects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive_Rejects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive_Rejects.designer.cs">
+      <DependentUpon>frmMTNReceive_Rejects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive_Semi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive_Semi.designer.cs">
+      <DependentUpon>frmMTNReceive_Semi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Packing.designer.cs">
+      <DependentUpon>frmMRT_Batch_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRApproval_Batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRApproval_Batch.designer.cs">
+      <DependentUpon>frmMRApproval_Batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmCostingResults_BasicProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmCostingResults_BasicProduct.Designer.cs">
+      <DependentUpon>frmCostingResults_BasicProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Ayurveda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Ayurveda.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_Ayurveda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Optional_Semi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Optional_Semi.designer.cs">
+      <DependentUpon>frmMRT_Batch_Optional_Semi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Optional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Optional.designer.cs">
+      <DependentUpon>frmMRT_Batch_Optional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRNApproval_FG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRNApproval_FG.designer.cs">
+      <DependentUpon>frmGRNApproval_FG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmCostingResults_FinishedProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmCostingResults_FinishedProduct.Designer.cs">
+      <DependentUpon>frmCostingResults_FinishedProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNCosting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNCosting.designer.cs">
+      <DependentUpon>frmMTNCosting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toDep.designer.cs">
+      <DependentUpon>frmMRReceive_toDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toDep_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toDep_Packing.designer.cs">
+      <DependentUpon>frmMRT_toDep_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN.designer.cs">
+      <DependentUpon>frmGRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRAResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRAResults.Designer.cs">
+      <DependentUpon>frmMRAResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmTGRNSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmTGRNSelection.Designer.cs">
+      <DependentUpon>frmTGRNSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmSupplierSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmSupplierSelection.Designer.cs">
+      <DependentUpon>frmSupplierSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmTGRNList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmTGRNList.Designer.cs">
+      <DependentUpon>frmTGRNList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRNApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRNApproval.designer.cs">
+      <DependentUpon>frmGRNApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Direct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Direct.designer.cs">
+      <DependentUpon>frmGRN_Direct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmBinCards_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmBinCards_Packing.Designer.cs">
+      <DependentUpon>frmBinCards_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toBatch.designer.cs">
+      <DependentUpon>frmMRReceive_toBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Partial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch_Partial.designer.cs">
+      <DependentUpon>frmMRT_Batch_Partial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmBinCards_Raw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmBinCards_Raw.Designer.cs">
+      <DependentUpon>frmBinCards_Raw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRReceive_toStore.designer.cs">
+      <DependentUpon>frmMRReceive_toStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Batch.designer.cs">
+      <DependentUpon>frmMRT_Batch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Section.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_Section.designer.cs">
+      <DependentUpon>frmMRT_Section.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmAddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmAddStock.designer.cs">
+      <DependentUpon>frmAddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRNManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRNManagement.designer.cs">
+      <DependentUpon>frmGRNManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRApproval.designer.cs">
+      <DependentUpon>frmMRApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRIssue.designer.cs">
+      <DependentUpon>frmMRIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRManagement.designer.cs">
+      <DependentUpon>frmMRManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MR\frmMRT_toStore.designer.cs">
+      <DependentUpon>frmMRT_toStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTN.designer.cs">
+      <DependentUpon>frmMTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNApproval.designer.cs">
+      <DependentUpon>frmMTNApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNote.designer.cs">
+      <DependentUpon>frmMTNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceive.designer.cs">
+      <DependentUpon>frmMTNReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Herbal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MTN\frmMTNReceiveGRN_Herbal.designer.cs">
+      <DependentUpon>frmMTNReceiveGRN_Herbal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmRemoveStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmRemoveStock.designer.cs">
+      <DependentUpon>frmRemoveStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmTGRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmTGRN.Designer.cs">
+      <DependentUpon>frmTGRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\frmMaterialSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmMaterialSelection.Designer.cs">
+      <DependentUpon>frmMaterialSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmSystemMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmSystemMgt.designer.cs">
+      <DependentUpon>frmSystemMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MRP_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRP_Main.designer.cs">
+      <DependentUpon>MRP_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Primary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Primary.Designer.cs">
+      <DependentUpon>frmBatchList_Transfer_Primary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Basic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Basic.Designer.cs">
+      <DependentUpon>frmBatchList_Transfer_Basic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Secondary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer_Secondary.Designer.cs">
+      <DependentUpon>frmBatchList_Transfer_Secondary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPackingMR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPackingMR.Designer.cs">
+      <DependentUpon>frmBatchPackingMR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Secondary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Secondary.Designer.cs">
+      <DependentUpon>frmBatchPacking_Secondary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchActivity_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchActivity_Packing.Designer.cs">
+      <DependentUpon>frmBatchActivity_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchList_Transfer.Designer.cs">
+      <DependentUpon>frmBatchList_Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Primary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Primary.Designer.cs">
+      <DependentUpon>frmBatchPacking_Primary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Secondary_Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_Secondary_Instructions.Designer.cs">
+      <DependentUpon>frmBatchPacking_Secondary_Instructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packing\frmBatchSendQC_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchSendQC_Packing.Designer.cs">
+      <DependentUpon>frmBatchSendQC_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchRegistry_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchRegistry_view.Designer.cs">
+      <DependentUpon>frmBatchRegistry_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchRegister.Designer.cs">
+      <DependentUpon>frmBatchRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchRegistry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchRegistry.Designer.cs">
+      <DependentUpon>frmBatchRegistry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchInitiate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchInitiate.designer.cs">
+      <DependentUpon>frmBatchInitiate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchMaterial.Designer.cs">
+      <DependentUpon>frmBatchMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchSendQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchSendQC.Designer.cs">
+      <DependentUpon>frmBatchSendQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchFinish.Designer.cs">
+      <DependentUpon>frmBatchFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmFinishActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmFinishActivity.Designer.cs">
+      <DependentUpon>frmFinishActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmFormulaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmFormulaEdit.Designer.cs">
+      <DependentUpon>frmFormulaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmMultipleLabour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmMultipleLabour.Designer.cs">
+      <DependentUpon>frmMultipleLabour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmWeighingChecking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmWeighingChecking.designer.cs">
+      <DependentUpon>frmWeighingChecking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchApproving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchApproving.designer.cs">
+      <DependentUpon>frmBatchApproving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchList.Designer.cs">
+      <DependentUpon>frmBatchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchActivity.Designer.cs">
+      <DependentUpon>frmBatchActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmWeighing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmWeighing.designer.cs">
+      <DependentUpon>frmWeighing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MasterData\frmActivityManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmActivityManagement.designer.cs">
+      <DependentUpon>frmActivityManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_Packing_Secondary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_Packing_Secondary.Designer.cs">
+      <DependentUpon>frmQCReport_Packing_Secondary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_Packing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport_Packing.Designer.cs">
+      <DependentUpon>frmQCReport_Packing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReport.Designer.cs">
+      <DependentUpon>frmQCReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmFormula.designer.cs">
+      <DependentUpon>frmFormula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmMachineRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmMachineRegistration.designer.cs">
+      <DependentUpon>frmMachineRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmMaterialRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmMaterialRegistration.designer.cs">
+      <DependentUpon>frmMaterialRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmFinishedProductRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmFinishedProductRegistration.designer.cs">
+      <DependentUpon>frmFinishedProductRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmStandardBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmStandardBatch.designer.cs">
+      <DependentUpon>frmStandardBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmStockManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmStockManagment.designer.cs">
+      <DependentUpon>frmStockManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmSubContractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmSubContractor.designer.cs">
+      <DependentUpon>frmSubContractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmCatTypeUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmCatTypeUnit.designer.cs">
+      <DependentUpon>frmCatTypeUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmCosting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmCosting.designer.cs">
+      <DependentUpon>frmCosting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\frmUserRoleAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\frmUserRoleAssign.designer.cs">
+      <DependentUpon>frmUserRoleAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucDivision.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucDivision.designer.cs">
+      <DependentUpon>ucDivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucEmployee.designer.cs">
+      <DependentUpon>ucEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucEmployeeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucEmployeeSelect.designer.cs">
+      <DependentUpon>ucEmployeeSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucMachine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucMachine.designer.cs">
+      <DependentUpon>ucMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucSection.designer.cs">
+      <DependentUpon>ucSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucSectionFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucSectionFilter.designer.cs">
+      <DependentUpon>ucSectionFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsReports.cs">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dsReports.designer.cs">
+      <DependentUpon>dsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmBatchPackingMRBulk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmBatchPackingMRBulk.designer.cs">
+      <DependentUpon>frmBatchPackingMRBulk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGRNBulkPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGRNBulkPrint.Designer.cs">
+      <DependentUpon>frmGRNBulkPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmGRNPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmGRNPrint.Designer.cs">
+      <DependentUpon>frmGRNPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmMRPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmMRPrint.Designer.cs">
+      <DependentUpon>frmMRPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmMRBulkPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmMRBulkPrint.Designer.cs">
+      <DependentUpon>frmMRBulkPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmRptManufactPackCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptManufactPackCost.designer.cs">
+      <DependentUpon>frmRptManufactPackCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmRptProductionCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptProductionCost.designer.cs">
+      <DependentUpon>frmRptProductionCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmRptPRPDBatchCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptPRPDBatchCost.designer.cs">
+      <DependentUpon>frmRptPRPDBatchCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmRptRPDBatchCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptRPDBatchCost.designer.cs">
+      <DependentUpon>frmRptRPDBatchCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmWIP_manufacturingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmWIP_manufacturingReport.designer.cs">
+      <DependentUpon>frmWIP_manufacturingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmWIP_Packing_MaterialTablePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmWIP_Packing_MaterialTablePrint.designer.cs">
+      <DependentUpon>frmWIP_Packing_MaterialTablePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmBatchPackingMR_RPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmBatchPackingMR_RPD.Designer.cs">
+      <DependentUpon>frmBatchPackingMR_RPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchActivity_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchActivity_View.Designer.cs">
+      <DependentUpon>frmRPDBatchActivity_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchEditMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchEditMode.designer.cs">
+      <DependentUpon>frmRPDBatchEditMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmAddActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmAddActivity.designer.cs">
+      <DependentUpon>frmAddActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmMultipleLabour_RPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmMultipleLabour_RPD.Designer.cs">
+      <DependentUpon>frmMultipleLabour_RPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchActivity.Designer.cs">
+      <DependentUpon>frmRPDBatchActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchFileView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchFileView.designer.cs">
+      <DependentUpon>frmRPDBatchFileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchInitialize.designer.cs">
+      <DependentUpon>frmRPDBatchInitialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchList.Designer.cs">
+      <DependentUpon>frmRPDBatchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDBatchManage.designer.cs">
+      <DependentUpon>frmRPDBatchManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDCostApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDCostApprove.Designer.cs">
+      <DependentUpon>frmRPDCostApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPD\frmRPDProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmRPDProduction.Designer.cs">
+      <DependentUpon>frmRPDProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataValidation.cs" />
+    <Compile Include="Sales\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmApproveSalesForeCast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmApproveSalesForeCast.designer.cs">
+      <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmCustomerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmCustomerRegistration.designer.cs">
+      <DependentUpon>frmCustomerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmDailySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmDailySales.designer.cs">
+      <DependentUpon>frmDailySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmPlanPackingMaterial_Full.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmPlanPackingMaterial_Full.Designer.cs">
+      <DependentUpon>frmPlanPackingMaterial_Full.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSalesForeCast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSalesForeCast.designer.cs">
+      <DependentUpon>frmSalesForeCast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\frmMaterialList.resx">
+      <DependentUpon>frmMaterialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\MaterialSelect.resx">
+      <DependentUpon>MaterialSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucMaterialCategory.resx">
+      <DependentUpon>ucMaterialCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucMaterials.resx">
+      <DependentUpon>ucMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucProcessedMaterial.resx">
+      <DependentUpon>ucProcessedMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\usProductInsert.resx">
+      <DependentUpon>usProductInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmTGRN_Import.resx">
+      <DependentUpon>frmTGRN_Import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmPOMaterialSelection.resx">
+      <DependentUpon>frmPOMaterialSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_FG.resx">
+      <DependentUpon>frmMRT_Batch_FG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmPackingMaterialsForecast.resx">
+      <DependentUpon>frmPackingMaterialsForecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmPlanMaterials_Full.resx">
+      <DependentUpon>frmPlanMaterials_Full.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmBatchPlan.resx">
+      <DependentUpon>frmBatchPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmDepartmentPlanningWeeks.resx">
+      <DependentUpon>frmDepartmentPlanningWeeks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmPackType.resx">
+      <DependentUpon>frmPackType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmWIP_Packing.resx">
+      <DependentUpon>frmWIP_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procurement\frmPOFinalize.resx">
+      <DependentUpon>frmPOFinalize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procurement\frmPOList.resx">
+      <DependentUpon>frmPOList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procurement\frmPODeliveryShedule.resx">
+      <DependentUpon>frmPODeliveryShedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procurement\frmPOSelection.resx">
+      <DependentUpon>frmPOSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmBinCards_BP.resx">
+      <DependentUpon>frmBinCards_BP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRN_Direct_Semi.resx">
+      <DependentUpon>frmGRN_Direct_Semi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_toStore_Semi.resx">
+      <DependentUpon>frmMRT_toStore_Semi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRReceive_toSection.resx">
+      <DependentUpon>frmMRReceive_toSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_toSec_Packing.resx">
+      <DependentUpon>frmMRT_toSec_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_RPD.resx">
+      <DependentUpon>frmMRT_Batch_RPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_AnySemi.resx">
+      <DependentUpon>frmMRT_Batch_AnySemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_AnyMaterial.resx">
+      <DependentUpon>frmMRT_Batch_AnyMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRManagePOPUP.resx">
+      <DependentUpon>frmMRManagePOPUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_Basic.resx">
+      <DependentUpon>frmMTNReceiveGRN_Basic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_RM.resx">
+      <DependentUpon>frmMTNReceiveGRN_RM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceive_RM.resx">
+      <DependentUpon>frmMTNReceive_RM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_Herbal_Rework.resx">
+      <DependentUpon>frmMTNReceiveGRN_Herbal_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_Ayurveda_Rework.resx">
+      <DependentUpon>frmMTNReceiveGRN_Ayurveda_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNManagement.resx">
+      <DependentUpon>frmMTNManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_Secondary_Edit.resx">
+      <DependentUpon>frmBatchPacking_Secondary_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_Primary_Edit.resx">
+      <DependentUpon>frmBatchPacking_Primary_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchList_Transfer_Rework.resx">
+      <DependentUpon>frmBatchList_Transfer_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchSendQC_Rework.resx">
+      <DependentUpon>frmBatchSendQC_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_Rework.resx">
+      <DependentUpon>frmBatchPacking_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchSendQC_Packing_Secondary.resx">
+      <DependentUpon>frmBatchSendQC_Packing_Secondary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmIssueFinishedGoods.resx">
+      <DependentUpon>frmIssueFinishedGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procurement\frmPO.resx">
+      <DependentUpon>frmPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmPlanMaterials.resx">
+      <DependentUpon>frmPlanMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmProjectMaterials.resx">
+      <DependentUpon>frmProjectMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmRegisterProject.resx">
+      <DependentUpon>frmRegisterProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmWIP.resx">
+      <DependentUpon>frmWIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchCost.resx">
+      <DependentUpon>frmBatchCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchRegister_Rework.resx">
+      <DependentUpon>frmBatchRegister_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchList_Edit.resx">
+      <DependentUpon>frmBatchList_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatch_Rework_Approve.resx">
+      <DependentUpon>frmBatch_Rework_Approve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchQCFail.resx">
+      <DependentUpon>frmBatchQCFail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchPlanExclusive.resx">
+      <DependentUpon>frmBatchPlanExclusive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchFinish_Approve.resx">
+      <DependentUpon>frmBatchFinish_Approve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmPRPDBatchActivity_View.resx">
+      <DependentUpon>frmPRPDBatchActivity_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\Create\frmPRPDBatchCreatePreperation.resx">
+      <DependentUpon>frmPRPDBatchCreatePreperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmMultipleLabour_PRPD.resx">
+      <DependentUpon>frmMultipleLabour_PRPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmPRPDBatchFile.resx">
+      <DependentUpon>frmPRPDBatchFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmPRPDBatchActivity.resx">
+      <DependentUpon>frmPRPDBatchActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmPRPDBatchList.resx">
+      <DependentUpon>frmPRPDBatchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmPRPDCostingApprove.resx">
+      <DependentUpon>frmPRPDCostingApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmViewPRPDBatch.resx">
+      <DependentUpon>frmViewPRPDBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\Manage\frmPRPDBatchManagement-Preperation.resx">
+      <DependentUpon>frmPRPDBatchManagement-Preperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\PRPDBatchActivityForms\frmAddPRPDActivity.resx">
+      <DependentUpon>frmAddPRPDActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\Transfer\frmPRPDBatchTransfer-Preperation.resx">
+      <DependentUpon>frmPRPDBatchTransfer-Preperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmStandardBatchManage.resx">
+      <DependentUpon>frmStandardBatchManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmBasicProductRegistration.resx">
+      <DependentUpon>frmBasicProductRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQC.resx">
+      <DependentUpon>frmQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCDetailView.resx">
+      <DependentUpon>frmQCDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCReport_RPD.resx">
+      <DependentUpon>frmQCReport_RPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCReport_Rework.resx">
+      <DependentUpon>frmQCReport_Rework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCView.resx">
+      <DependentUpon>frmQCView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmEmployeeRegistration.resx">
+      <DependentUpon>frmEmployeeRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainScreen.resx">
+      <DependentUpon>frmMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmTGRNEdit.resx">
+      <DependentUpon>frmTGRNEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRN_Rejects_Approval.resx">
+      <DependentUpon>frmGRN_Rejects_Approval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_Rejects.resx">
+      <DependentUpon>frmMTNReceiveGRN_Rejects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceive_Rejects.resx">
+      <DependentUpon>frmMTNReceive_Rejects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceive_Semi.resx">
+      <DependentUpon>frmMTNReceive_Semi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_Packing.resx">
+      <DependentUpon>frmMRT_Batch_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRApproval_Batch.resx">
+      <DependentUpon>frmMRApproval_Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmCostingResults_BasicProduct.resx">
+      <DependentUpon>frmCostingResults_BasicProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_Ayurveda.resx">
+      <DependentUpon>frmMTNReceiveGRN_Ayurveda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_Optional_Semi.resx">
+      <DependentUpon>frmMRT_Batch_Optional_Semi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_Optional.resx">
+      <DependentUpon>frmMRT_Batch_Optional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRNApproval_FG.resx">
+      <DependentUpon>frmGRNApproval_FG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmCostingResults_FinishedProduct.resx">
+      <DependentUpon>frmCostingResults_FinishedProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNCosting.resx">
+      <DependentUpon>frmMTNCosting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRReceive_toDep.resx">
+      <DependentUpon>frmMRReceive_toDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_toDep_Packing.resx">
+      <DependentUpon>frmMRT_toDep_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRN.resx">
+      <DependentUpon>frmGRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRAResults.resx">
+      <DependentUpon>frmMRAResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmTGRNSelection.resx">
+      <DependentUpon>frmTGRNSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmSupplierSelection.resx">
+      <DependentUpon>frmSupplierSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmTGRNList.resx">
+      <DependentUpon>frmTGRNList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRNApproval.resx">
+      <DependentUpon>frmGRNApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRN_Direct.resx">
+      <DependentUpon>frmGRN_Direct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmBinCards_Packing.resx">
+      <DependentUpon>frmBinCards_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRReceive_toBatch.resx">
+      <DependentUpon>frmMRReceive_toBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_Partial.resx">
+      <DependentUpon>frmMRT_Batch_Partial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmBinCards_Raw.resx">
+      <DependentUpon>frmBinCards_Raw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRReceive_toStore.resx">
+      <DependentUpon>frmMRReceive_toStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Batch.resx">
+      <DependentUpon>frmMRT_Batch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_Section.resx">
+      <DependentUpon>frmMRT_Section.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmAddStock.resx">
+      <DependentUpon>frmAddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRNManagement.resx">
+      <DependentUpon>frmGRNManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRApproval.resx">
+      <DependentUpon>frmMRApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRIssue.resx">
+      <DependentUpon>frmMRIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRManagement.resx">
+      <DependentUpon>frmMRManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MR\frmMRT_toStore.resx">
+      <DependentUpon>frmMRT_toStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTN.resx">
+      <DependentUpon>frmMTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNApproval.resx">
+      <DependentUpon>frmMTNApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNote.resx">
+      <DependentUpon>frmMTNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceive.resx">
+      <DependentUpon>frmMTNReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MTN\frmMTNReceiveGRN_Herbal.resx">
+      <DependentUpon>frmMTNReceiveGRN_Herbal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmRemoveStock.resx">
+      <DependentUpon>frmRemoveStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmTGRN.resx">
+      <DependentUpon>frmTGRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmMaterialSelection.resx">
+      <DependentUpon>frmMaterialSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmSystemMgt.resx">
+      <DependentUpon>frmSystemMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRP_Main.resx">
+      <DependentUpon>MRP_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchList_Transfer_Primary.resx">
+      <DependentUpon>frmBatchList_Transfer_Primary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchList_Transfer_Basic.resx">
+      <DependentUpon>frmBatchList_Transfer_Basic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchList_Transfer_Secondary.resx">
+      <DependentUpon>frmBatchList_Transfer_Secondary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPackingMR.resx">
+      <DependentUpon>frmBatchPackingMR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_Secondary.resx">
+      <DependentUpon>frmBatchPacking_Secondary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchActivity_Packing.resx">
+      <DependentUpon>frmBatchActivity_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchList_Transfer.resx">
+      <DependentUpon>frmBatchList_Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_Primary.resx">
+      <DependentUpon>frmBatchPacking_Primary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_Secondary_Instructions.resx">
+      <DependentUpon>frmBatchPacking_Secondary_Instructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchSendQC_Packing.resx">
+      <DependentUpon>frmBatchSendQC_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchRegistry_view.resx">
+      <DependentUpon>frmBatchRegistry_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchRegister.resx">
+      <DependentUpon>frmBatchRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchRegistry.resx">
+      <DependentUpon>frmBatchRegistry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchInitiate.resx">
+      <DependentUpon>frmBatchInitiate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchMaterial.resx">
+      <DependentUpon>frmBatchMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchSendQC.resx">
+      <DependentUpon>frmBatchSendQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchFinish.resx">
+      <DependentUpon>frmBatchFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmFormulaEdit.resx">
+      <DependentUpon>frmFormulaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmMultipleLabour.resx">
+      <DependentUpon>frmMultipleLabour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmWeighingChecking.resx">
+      <DependentUpon>frmWeighingChecking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchApproving.resx">
+      <DependentUpon>frmBatchApproving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchList.resx">
+      <DependentUpon>frmBatchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchActivity.resx">
+      <DependentUpon>frmBatchActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmWeighing.resx">
+      <DependentUpon>frmWeighing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MasterData\frmActivityManagement.resx">
+      <DependentUpon>frmActivityManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCReport_Packing_Secondary.resx">
+      <DependentUpon>frmQCReport_Packing_Secondary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCReport_Packing.resx">
+      <DependentUpon>frmQCReport_Packing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCReport.resx">
+      <DependentUpon>frmQCReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmFormula.resx">
+      <DependentUpon>frmFormula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmMachineRegistration.resx">
+      <DependentUpon>frmMachineRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmMaterialRegistration.resx">
+      <DependentUpon>frmMaterialRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmFinishedProductRegistration.resx">
+      <DependentUpon>frmFinishedProductRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmStandardBatch.resx">
+      <DependentUpon>frmStandardBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmStockManagment.resx">
+      <DependentUpon>frmStockManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmSubContractor.resx">
+      <DependentUpon>frmSubContractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmCatTypeUnit.resx">
+      <DependentUpon>frmCatTypeUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmCosting.resx">
+      <DependentUpon>frmCosting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\frmUserRoleAssign.resx">
+      <DependentUpon>frmUserRoleAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucDivision.resx">
+      <DependentUpon>ucDivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucEmployee.resx">
+      <DependentUpon>ucEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucEmployeeSelect.resx">
+      <DependentUpon>ucEmployeeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucMachine.resx">
+      <DependentUpon>ucMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucSection.resx">
+      <DependentUpon>ucSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucSectionFilter.resx">
+      <DependentUpon>ucSectionFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmBatchPackingMRBulk.resx">
+      <DependentUpon>frmBatchPackingMRBulk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmGRNBulkPrint.resx">
+      <DependentUpon>frmGRNBulkPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmGRNPrint.resx">
+      <DependentUpon>frmGRNPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmMRPrint.resx">
+      <DependentUpon>frmMRPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmMRBulkPrint.resx">
+      <DependentUpon>frmMRBulkPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptManufactPackCost.resx">
+      <DependentUpon>frmRptManufactPackCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptProductionCost.resx">
+      <DependentUpon>frmRptProductionCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptPRPDBatchCost.resx">
+      <DependentUpon>frmRptPRPDBatchCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptRPDBatchCost.resx">
+      <DependentUpon>frmRptRPDBatchCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmWIP_manufacturingReport.resx">
+      <DependentUpon>frmWIP_manufacturingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmWIP_Packing_MaterialTablePrint.resx">
+      <DependentUpon>frmWIP_Packing_MaterialTablePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptBatchPackingMRBulk.rdlc" />
+    <EmbeddedResource Include="Report\rptGRNBulkPrint.rdlc" />
+    <EmbeddedResource Include="Report\rptGRNPrint.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RptManufactPackCost.rdlc" />
+    <EmbeddedResource Include="Report\rptMRBulkPrint.rdlc" />
+    <EmbeddedResource Include="Report\rptMRPrint.rdlc" />
+    <EmbeddedResource Include="Report\RptProductionCost.rdlc" />
+    <EmbeddedResource Include="Report\rptPRPDBatchCost.rdlc" />
+    <EmbeddedResource Include="Report\rptRPDBatchCost.rdlc" />
+    <EmbeddedResource Include="Report\rptWIP_manufacturingReport.rdlc" />
+    <EmbeddedResource Include="Report\rptWIP_Packing_MaterialTablePrint.rdlc" />
+    <EmbeddedResource Include="RPD\frmBatchPackingMR_RPD.resx">
+      <DependentUpon>frmBatchPackingMR_RPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchActivity_View.resx">
+      <DependentUpon>frmRPDBatchActivity_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchEditMode.resx">
+      <DependentUpon>frmRPDBatchEditMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmAddActivity.resx">
+      <DependentUpon>frmAddActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmMultipleLabour_RPD.resx">
+      <DependentUpon>frmMultipleLabour_RPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchActivity.resx">
+      <DependentUpon>frmRPDBatchActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchFileView.resx">
+      <DependentUpon>frmRPDBatchFileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchInitialize.resx">
+      <DependentUpon>frmRPDBatchInitialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchList.resx">
+      <DependentUpon>frmRPDBatchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDBatchManage.resx">
+      <DependentUpon>frmRPDBatchManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDCostApprove.resx">
+      <DependentUpon>frmRPDCostApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmRPDProduction.resx">
+      <DependentUpon>frmRPDProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmApproveSalesForeCast.resx">
+      <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmCustomerRegistration.resx">
+      <DependentUpon>frmCustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmDailySales.resx">
+      <DependentUpon>frmDailySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmPlanPackingMaterial_Full.resx">
+      <DependentUpon>frmPlanPackingMaterial_Full.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSalesForeCast.resx">
+      <DependentUpon>frmSalesForeCast.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MRP_GUI_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Report\dsReports.xsc">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsReports.xsd" />
+    <None Include="Report\dsReports.xss">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MRP_BL\MRP_BL.csproj">
+      <Project>{F09D7332-6E98-4CC4-B3C6-CC3447F7ACF3}</Project>
+      <Name>MRP_BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MRP_DL\MRP_DL.csproj">
+      <Project>{A1C82C46-577C-45AC-9080-5BA324340421}</Project>
+      <Name>MRP_DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MRP_REF\MRP_REF.csproj">
+      <Project>{4C7D6EEF-6AA9-416C-BC40-50DB5C30ECBC}</Project>
+      <Name>MRP_REF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.11.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2012 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MRP.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
