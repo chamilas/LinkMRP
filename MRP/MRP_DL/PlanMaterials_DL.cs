@@ -206,5 +206,50 @@ namespace DL
             }
         }
 
+        public DataTable GetPackingMaterialsForecastFull(int Year1, string Month1, int Year2, string Month2, int Year3, string Month3)
+        {
+            try
+            {
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                new SqlParameter("@prmYear1",Year1),
+                new SqlParameter("@prmMonth1",Month1),
+                new SqlParameter("@prmYear2",Year2),
+                new SqlParameter("@prmMonth2",Month2),
+                new SqlParameter("@prmYear3",Year3),
+                new SqlParameter("@prmMonth3",Month3)
+                };
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_PackingMaterialsForecast_FULL", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+        public DataTable CkeckPackingMaterialsForecast(int Year, string Month, int Week)
+        {
+            try
+            {
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                new SqlParameter("@prmYear",Year),
+                new SqlParameter("@prmMonth",Month),
+                new SqlParameter("@prmWeek",Week)
+                };
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_PackingMaterialsForecastCheck", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
     }
 }

@@ -3035,6 +3035,12 @@ namespace MRP_GUI
             ShowForm(frm);
         }
 
+        private void frmPlanPackingMaterialFullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPlanPackingMaterial_Full frm = new frmPlanPackingMaterial_Full();
+            ShowForm(frm);
+        }
+
 
 
 

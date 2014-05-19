@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtMonth3 = new System.Windows.Forms.TextBox();
             this.txtYear3 = new System.Windows.Forms.TextBox();
             this.txtMonth2 = new System.Windows.Forms.TextBox();
@@ -41,9 +51,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnff = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvTotal = new System.Windows.Forms.DataGridView();
+            this.bsTable = new System.Windows.Forms.BindingSource(this.components);
+            this.RMCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RMName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week1_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week2_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week3_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Week4_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month1_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month2_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month3_Minus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMonth3
@@ -195,14 +225,6 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Year1";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1028, 300);
-            this.dataGridView1.TabIndex = 40;
-            // 
             // btnff
             // 
             this.btnff.Location = new System.Drawing.Point(960, 12);
@@ -213,13 +235,211 @@
             this.btnff.UseVisualStyleBackColor = true;
             this.btnff.Click += new System.EventHandler(this.btnff_Click);
             // 
+            // dgvTotal
+            // 
+            this.dgvTotal.AllowUserToAddRows = false;
+            this.dgvTotal.AllowUserToDeleteRows = false;
+            this.dgvTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RMCode,
+            this.RMName,
+            this.Stock,
+            this.Week1,
+            this.Week1_Minus,
+            this.Week2,
+            this.Week2_Minus,
+            this.Week3,
+            this.Week3_Minus,
+            this.Week4,
+            this.Week4_Minus,
+            this.Month1,
+            this.Month1_Minus,
+            this.Month2,
+            this.Month2_Minus,
+            this.Month3,
+            this.Month3_Minus,
+            this.Total});
+            this.dgvTotal.Location = new System.Drawing.Point(9, 42);
+            this.dgvTotal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvTotal.Name = "dgvTotal";
+            this.dgvTotal.ReadOnly = true;
+            this.dgvTotal.Size = new System.Drawing.Size(1028, 300);
+            this.dgvTotal.TabIndex = 42;
+            // 
+            // RMCode
+            // 
+            this.RMCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RMCode.DataPropertyName = "MaterialCode";
+            this.RMCode.FillWeight = 150F;
+            this.RMCode.HeaderText = "RM Code";
+            this.RMCode.Name = "RMCode";
+            this.RMCode.ReadOnly = true;
+            // 
+            // RMName
+            // 
+            this.RMName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RMName.DataPropertyName = "Material";
+            this.RMName.FillWeight = 300F;
+            this.RMName.HeaderText = "Material";
+            this.RMName.Name = "RMName";
+            this.RMName.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            this.Stock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Stock.DataPropertyName = "Stock";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Stock.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            // 
+            // Week1
+            // 
+            this.Week1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week1.DataPropertyName = "Week1";
+            this.Week1.HeaderText = "W1";
+            this.Week1.Name = "Week1";
+            this.Week1.ReadOnly = true;
+            // 
+            // Week1_Minus
+            // 
+            this.Week1_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week1_Minus.DataPropertyName = "Week1_Minus";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Week1_Minus.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Week1_Minus.HeaderText = "W1_Minus";
+            this.Week1_Minus.Name = "Week1_Minus";
+            this.Week1_Minus.ReadOnly = true;
+            // 
+            // Week2
+            // 
+            this.Week2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week2.DataPropertyName = "Week2";
+            this.Week2.HeaderText = "W2";
+            this.Week2.Name = "Week2";
+            this.Week2.ReadOnly = true;
+            // 
+            // Week2_Minus
+            // 
+            this.Week2_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week2_Minus.DataPropertyName = "Week2_Minus";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Week2_Minus.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Week2_Minus.HeaderText = "W2_Minus";
+            this.Week2_Minus.Name = "Week2_Minus";
+            this.Week2_Minus.ReadOnly = true;
+            // 
+            // Week3
+            // 
+            this.Week3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week3.DataPropertyName = "Week3";
+            this.Week3.HeaderText = "W3";
+            this.Week3.Name = "Week3";
+            this.Week3.ReadOnly = true;
+            // 
+            // Week3_Minus
+            // 
+            this.Week3_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week3_Minus.DataPropertyName = "Week3_Minus";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Week3_Minus.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Week3_Minus.HeaderText = "W3_Minus";
+            this.Week3_Minus.Name = "Week3_Minus";
+            this.Week3_Minus.ReadOnly = true;
+            // 
+            // Week4
+            // 
+            this.Week4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week4.DataPropertyName = "Week4";
+            this.Week4.HeaderText = "W4";
+            this.Week4.Name = "Week4";
+            this.Week4.ReadOnly = true;
+            // 
+            // Week4_Minus
+            // 
+            this.Week4_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Week4_Minus.DataPropertyName = "Week4_Minus";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Week4_Minus.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Week4_Minus.HeaderText = "W4_Minus";
+            this.Week4_Minus.Name = "Week4_Minus";
+            this.Week4_Minus.ReadOnly = true;
+            // 
+            // Month1
+            // 
+            this.Month1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Month1.DataPropertyName = "Month1";
+            this.Month1.HeaderText = "M1";
+            this.Month1.Name = "Month1";
+            this.Month1.ReadOnly = true;
+            // 
+            // Month1_Minus
+            // 
+            this.Month1_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Month1_Minus.DataPropertyName = "Month1_Minus";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Month1_Minus.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Month1_Minus.HeaderText = "M1_Minus";
+            this.Month1_Minus.Name = "Month1_Minus";
+            this.Month1_Minus.ReadOnly = true;
+            // 
+            // Month2
+            // 
+            this.Month2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Month2.DataPropertyName = "Month2";
+            this.Month2.HeaderText = "M2";
+            this.Month2.Name = "Month2";
+            this.Month2.ReadOnly = true;
+            // 
+            // Month2_Minus
+            // 
+            this.Month2_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Month2_Minus.DataPropertyName = "Month2_Minus";
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Month2_Minus.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Month2_Minus.HeaderText = "M2_Minus";
+            this.Month2_Minus.Name = "Month2_Minus";
+            this.Month2_Minus.ReadOnly = true;
+            // 
+            // Month3
+            // 
+            this.Month3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Month3.DataPropertyName = "Month3";
+            this.Month3.HeaderText = "M3";
+            this.Month3.Name = "Month3";
+            this.Month3.ReadOnly = true;
+            // 
+            // Month3_Minus
+            // 
+            this.Month3_Minus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Month3_Minus.DataPropertyName = "Month3_Minus";
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Month3_Minus.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Month3_Minus.HeaderText = "M3_Minus";
+            this.Month3_Minus.Name = "Month3_Minus";
+            this.Month3_Minus.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.DataPropertyName = "Total";
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Total.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
             // frmPlanPackingMaterial_Full
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 354);
+            this.Controls.Add(this.dgvTotal);
             this.Controls.Add(this.btnff);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtMonth3);
             this.Controls.Add(this.txtYear3);
             this.Controls.Add(this.txtMonth2);
@@ -236,7 +456,8 @@
             this.Name = "frmPlanPackingMaterial_Full";
             this.Text = "frmPlanPackingMaterial_Full";
             this.Load += new System.EventHandler(this.frmPlanPackingMaterial_Full_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +478,26 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnff;
+        private System.Windows.Forms.DataGridView dgvTotal;
+        private System.Windows.Forms.BindingSource bsTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RMCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RMName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week1_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week2_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week3_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week4_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month1_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month2_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month3_Minus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

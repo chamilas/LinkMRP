@@ -23,7 +23,7 @@ namespace MRP_GUI.Sales
 
         private Customer objCustomer = new Customer();
         private Customer_DL objCustomer_DL = new Customer_DL(ConnectionStringClass.GetConnection());
-
+        
         private DispatchNote objDispatchNote = new DispatchNote();
         private DispatchNote_DL objDispatchNote_DL = new DispatchNote_DL(ConnectionStringClass.GetConnection());
 
@@ -274,6 +274,7 @@ namespace MRP_GUI.Sales
             dgvProduct.Rows.Clear();
             dgvProduct.Refresh();
         }
+
 
     }
 }

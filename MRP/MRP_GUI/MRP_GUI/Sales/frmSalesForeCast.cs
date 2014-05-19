@@ -14,6 +14,7 @@ namespace MRP_GUI.Sales
 {
     public partial class frmSalesForeCast : System.Windows.Forms.Form
     {
+        DataTable dtCheck = new DataTable();
         private User _objCurrentUser;
 
         public User CurrentUser
@@ -24,7 +25,7 @@ namespace MRP_GUI.Sales
 
         private Customer_DL objCustomer_DL = new Customer_DL(ConnectionStringClass.GetConnection());
         private Distributor_DL objDistributor_DL = new Distributor_DL(ConnectionStringClass.GetConnection());
-        
+        private PlanMaterials_DL objPlanMaterials_DL = new PlanMaterials_DL(ConnectionStringClass.GetConnection());
         private SalesForeCast_DL objSalesForeCast_DL = new SalesForeCast_DL(ConnectionStringClass.GetConnection());
         private SalesForecast objSalesForeCast = new SalesForecast();
 
@@ -44,7 +45,10 @@ namespace MRP_GUI.Sales
 
         private void frmSalesForeCast_Load(object sender, EventArgs e)
         {
-
+            cmbYear.Text = DateTime.Today.Year.ToString();
+            cmbMonth.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Today.Month);
+            cmbForcastedIn.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Today.Month);
+            cmbWeekNo.Text = "1";
         }
 
         private void LoadFinishProductList()
@@ -175,6 +179,27 @@ namespace MRP_GUI.Sales
             dgvProduct.Rows.Clear();
             dgvProduct.Refresh();
             txtQty.Text = "";
+        }
+
+        private void CheckPackingPaterial(int Year, string Month, int Week)
+        {
+            dtCheck = objPlanMaterials_DL.CkeckPackingMaterialsForecast(Year, Month, Week);
+            if (dtCheck.Rows.Count > 0)
+            {
+                
+                //txtRevID.Text = "Hello";
+                //txtEnteredDate.Text = "ccc";
+            }
+            else 
+            {
+                //txtRevID.Text = "ZZZZZ";
+                //txtEnteredDate.Text = "ZZZZ";
+            }
+        }
+
+        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckPackingPaterial(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, Convert.ToInt32(cmbWeekNo.Text));
         }
     }
 }

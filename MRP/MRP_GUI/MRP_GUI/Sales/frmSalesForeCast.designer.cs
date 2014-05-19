@@ -48,12 +48,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbCurraentMonth = new System.Windows.Forms.ComboBox();
+            this.cmbForcastedIn = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtRevID = new System.Windows.Forms.Label();
+            this.txtEnteredDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFinishProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDistributorsList)).BeginInit();
@@ -225,7 +227,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.cmbCurraentMonth);
+            this.groupBox3.Controls.Add(this.cmbForcastedIn);
             this.groupBox3.Location = new System.Drawing.Point(6, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(255, 49);
@@ -235,17 +237,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 18);
+            this.label2.Location = new System.Drawing.Point(6, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Forecasted In :";
             // 
-            // cmbCurraentMonth
+            // cmbForcastedIn
             // 
-            this.cmbCurraentMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCurraentMonth.FormattingEnabled = true;
-            this.cmbCurraentMonth.Items.AddRange(new object[] {
+            this.cmbForcastedIn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbForcastedIn.FormattingEnabled = true;
+            this.cmbForcastedIn.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -257,12 +259,13 @@
             "September",
             "October",
             "November",
-            "December"});
-            this.cmbCurraentMonth.Location = new System.Drawing.Point(90, 15);
-            this.cmbCurraentMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbCurraentMonth.Name = "cmbCurraentMonth";
-            this.cmbCurraentMonth.Size = new System.Drawing.Size(153, 21);
-            this.cmbCurraentMonth.TabIndex = 23;
+            "December",
+            "FullYear"});
+            this.cmbForcastedIn.Location = new System.Drawing.Point(90, 20);
+            this.cmbForcastedIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbForcastedIn.Name = "cmbForcastedIn";
+            this.cmbForcastedIn.Size = new System.Drawing.Size(153, 21);
+            this.cmbForcastedIn.TabIndex = 23;
             // 
             // label14
             // 
@@ -334,11 +337,14 @@
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(114, 21);
             this.cmbYear.TabIndex = 19;
+            this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.txtRevID);
+            this.groupBox2.Controls.Add(this.txtEnteredDate);
             this.groupBox2.Controls.Add(this.cmbProductList);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnDelete);
@@ -351,6 +357,28 @@
             this.groupBox2.Size = new System.Drawing.Size(980, 446);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
+            // 
+            // txtRevID
+            // 
+            this.txtRevID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRevID.AutoSize = true;
+            this.txtRevID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRevID.Location = new System.Drawing.Point(739, 27);
+            this.txtRevID.Name = "txtRevID";
+            this.txtRevID.Size = new System.Drawing.Size(93, 16);
+            this.txtRevID.TabIndex = 23;
+            this.txtRevID.Text = "Revition ID -";
+            // 
+            // txtEnteredDate
+            // 
+            this.txtEnteredDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEnteredDate.AutoSize = true;
+            this.txtEnteredDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnteredDate.Location = new System.Drawing.Point(724, 56);
+            this.txtEnteredDate.Name = "txtEnteredDate";
+            this.txtEnteredDate.Size = new System.Drawing.Size(108, 16);
+            this.txtEnteredDate.TabIndex = 24;
+            this.txtEnteredDate.Text = "Entered Date -";
             // 
             // frmSalesForeCast
             // 
@@ -402,7 +430,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbCurraentMonth;
+        private System.Windows.Forms.ComboBox cmbForcastedIn;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label txtRevID;
+        private System.Windows.Forms.Label txtEnteredDate;
     }
 }
