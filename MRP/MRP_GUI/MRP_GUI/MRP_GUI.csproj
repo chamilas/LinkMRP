@@ -1320,9 +1320,11 @@
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\frmMaterialList.resx">
       <DependentUpon>frmMaterialList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\MaterialSelect.resx">
       <DependentUpon>MaterialSelect.cs</DependentUpon>
