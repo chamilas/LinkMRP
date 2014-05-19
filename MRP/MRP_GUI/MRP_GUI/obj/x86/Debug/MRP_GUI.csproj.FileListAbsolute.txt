@@ -1686,10 +1686,8 @@ D:\Work Space\MRP4\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPlanPackingMat
 D:\Work Space\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.config
 D:\Work Space\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
 D:\Work Space\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
-C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.config
-C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
-C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\Report\rptGRNPrint.rdlc
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.config
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.manifest
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.application
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe
@@ -1700,7 +1698,6 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_RE
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_BL.pdb
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_DL.pdb
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_REF.pdb
-C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.csprojResolveAssemblyReference.cache
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.About.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.MaterialSelection.frmMaterialList.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.MaterialSelection.MaterialSelect.resources
@@ -1904,3 +1901,6 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\Rd
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.TrustInfo.xml
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe.manifest
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.csprojResolveAssemblyReference.cache

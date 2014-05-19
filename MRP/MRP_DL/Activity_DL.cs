@@ -23,7 +23,6 @@ namespace DL
         {
             try
             {
-
                 SqlParameter[] paramList = new SqlParameter[] {
                 
                 new SqlParameter("@ActMainActID", obj.ActMainActivity.MainActID),
@@ -55,10 +54,11 @@ namespace DL
 
                 SqlParameter[] paramList = new SqlParameter[] {
                 
-                new SqlParameter("@ActID", obj.ActivityID)    
+                new SqlParameter("@ActivityID", obj.ActivityID),
+                new SqlParameter("@outParam",SqlDbType.Int,120){Direction=ParameterDirection.Output} 
         };
 
-                return Execute.RunSP_Output(Connection, "SPDELETE_Activity", paramList);
+                return Execute.RunSP_Output(Connection, "SPDELETE_ActivityDetails", paramList);
 
             }
             catch (Exception ex)

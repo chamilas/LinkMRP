@@ -18,17 +18,20 @@ namespace DL
             Connection = Conn;
         }
 
-        public long Add(SalesForecastDetails obj)
+        public long Add(SalesForecast obj1, SalesForecastDetails obj2)
         {
             try
             {
 
                 SqlParameter[] paramList = new SqlParameter[] {
                 
-                new SqlParameter("@SalesForecastID", obj.SalesForecastID),
-                new SqlParameter("@RevisionID", obj.RevisionID),
-                new SqlParameter("@ProductCode", obj.ProductCode),
-                new SqlParameter("@Qty", obj.Qty),
+
+                new SqlParameter("@prmYear", obj1.Year),
+                new SqlParameter("@prmMonth", obj1.Month),
+                new SqlParameter("@prmWeekID", obj1.WeekID),
+                new SqlParameter("@SalesForecastID", obj2.SalesForecastID),
+                new SqlParameter("@ProductCode", obj2.ProductCode),
+                new SqlParameter("@Qty", obj2.Qty),
                 new SqlParameter("@outParam",SqlDbType.Int,120){Direction=ParameterDirection.Output}
         };
 

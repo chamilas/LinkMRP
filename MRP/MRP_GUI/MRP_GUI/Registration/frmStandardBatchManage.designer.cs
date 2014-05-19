@@ -61,6 +61,10 @@ namespace MRP_GUI
             this.button3 = new System.Windows.Forms.Button();
             this.gpMain = new System.Windows.Forms.GroupBox();
             this.dgvBatchList = new System.Windows.Forms.DataGridView();
+            this.STDBatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STDBatchDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlQualityInspection = new System.Windows.Forms.Panel();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.pnlWeightControl = new System.Windows.Forms.Panel();
@@ -74,12 +78,9 @@ namespace MRP_GUI
             this.objSourceProducts = new System.Windows.Forms.BindingSource(this.components);
             this.objSourceMainActivityList = new System.Windows.Forms.BindingSource(this.components);
             this.bindBatchList = new System.Windows.Forms.BindingSource(this.components);
-            this.STDBatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STDBatchDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindActivity = new System.Windows.Forms.BindingSource(this.components);
             this.Sequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -172,6 +173,7 @@ namespace MRP_GUI
             this.gvActivityList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvActivityList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sequence,
+            this.ActivityID,
             this.Column17,
             this.Column19,
             this.Column20});
@@ -354,7 +356,7 @@ namespace MRP_GUI
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Location = new System.Drawing.Point(913, 254);
+            this.btnDelete.Location = new System.Drawing.Point(913, 248);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 26);
             this.btnDelete.TabIndex = 115;
@@ -365,7 +367,7 @@ namespace MRP_GUI
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(797, 257);
+            this.btnAdd.Location = new System.Drawing.Point(797, 248);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 26);
             this.btnAdd.TabIndex = 115;
@@ -422,9 +424,41 @@ namespace MRP_GUI
             this.dgvBatchList.Location = new System.Drawing.Point(16, 22);
             this.dgvBatchList.Name = "dgvBatchList";
             this.dgvBatchList.ReadOnly = true;
-            this.dgvBatchList.Size = new System.Drawing.Size(519, 195);
+            this.dgvBatchList.Size = new System.Drawing.Size(525, 195);
             this.dgvBatchList.TabIndex = 30;
             this.dgvBatchList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBatchList_CellClick);
+            // 
+            // STDBatchID
+            // 
+            this.STDBatchID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.STDBatchID.DataPropertyName = "STDBatchID";
+            this.STDBatchID.HeaderText = "STDBatchID";
+            this.STDBatchID.Name = "STDBatchID";
+            this.STDBatchID.ReadOnly = true;
+            // 
+            // BatchSize
+            // 
+            this.BatchSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BatchSize.DataPropertyName = "STDBatchSize";
+            this.BatchSize.HeaderText = "BatchSize";
+            this.BatchSize.Name = "BatchSize";
+            this.BatchSize.ReadOnly = true;
+            // 
+            // STDBatchDescription
+            // 
+            this.STDBatchDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.STDBatchDescription.DataPropertyName = "STDBatchDescription";
+            this.STDBatchDescription.HeaderText = "STDBatchDescription";
+            this.STDBatchDescription.Name = "STDBatchDescription";
+            this.STDBatchDescription.ReadOnly = true;
+            // 
+            // TimeDuration
+            // 
+            this.TimeDuration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TimeDuration.DataPropertyName = "STDDuration";
+            this.TimeDuration.HeaderText = "TimeDuration";
+            this.TimeDuration.Name = "TimeDuration";
+            this.TimeDuration.ReadOnly = true;
             // 
             // pnlQualityInspection
             // 
@@ -517,38 +551,6 @@ namespace MRP_GUI
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 150;
             // 
-            // STDBatchID
-            // 
-            this.STDBatchID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.STDBatchID.DataPropertyName = "STDBatchID";
-            this.STDBatchID.HeaderText = "STDBatchID";
-            this.STDBatchID.Name = "STDBatchID";
-            this.STDBatchID.ReadOnly = true;
-            // 
-            // BatchSize
-            // 
-            this.BatchSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BatchSize.DataPropertyName = "STDBatchSize";
-            this.BatchSize.HeaderText = "BatchSize";
-            this.BatchSize.Name = "BatchSize";
-            this.BatchSize.ReadOnly = true;
-            // 
-            // STDBatchDescription
-            // 
-            this.STDBatchDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.STDBatchDescription.DataPropertyName = "STDBatchDescription";
-            this.STDBatchDescription.HeaderText = "STDBatchDescription";
-            this.STDBatchDescription.Name = "STDBatchDescription";
-            this.STDBatchDescription.ReadOnly = true;
-            // 
-            // TimeDuration
-            // 
-            this.TimeDuration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TimeDuration.DataPropertyName = "STDDuration";
-            this.TimeDuration.HeaderText = "TimeDuration";
-            this.TimeDuration.Name = "TimeDuration";
-            this.TimeDuration.ReadOnly = true;
-            // 
             // Sequence
             // 
             this.Sequence.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -557,6 +559,13 @@ namespace MRP_GUI
             this.Sequence.HeaderText = "Sequence";
             this.Sequence.Name = "Sequence";
             this.Sequence.ReadOnly = true;
+            // 
+            // ActivityID
+            // 
+            this.ActivityID.DataPropertyName = "ActivityID";
+            this.ActivityID.HeaderText = "ActivityID";
+            this.ActivityID.Name = "ActivityID";
+            this.ActivityID.ReadOnly = true;
             // 
             // Column17
             // 
@@ -664,6 +673,7 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeDuration;
         private System.Windows.Forms.BindingSource bindActivity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sequence;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivityID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;

@@ -79,6 +79,17 @@
             this.objSourceSections = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtMachineStop = new System.Windows.Forms.MaskedTextBox();
+            this.txtMachineStart = new System.Windows.Forms.MaskedTextBox();
+            this.cmbMachine = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvMachineDetails = new System.Windows.Forms.DataGridView();
+            this.MachineRecID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MachineCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.From_Machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.To_Machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchLabourDetails)).BeginInit();
@@ -91,12 +102,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSecondaryProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSecondaryActivityList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSections)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMachineDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // txtOT
             // 
             this.txtOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOT.Location = new System.Drawing.Point(875, 290);
+            this.txtOT.Location = new System.Drawing.Point(977, 259);
             this.txtOT.Name = "txtOT";
             this.txtOT.Size = new System.Drawing.Size(41, 21);
             this.txtOT.TabIndex = 2;
@@ -106,7 +118,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(830, 260);
+            this.label1.Location = new System.Drawing.Point(747, 262);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 3;
@@ -116,7 +128,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(924, 262);
+            this.label2.Location = new System.Drawing.Point(837, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 15);
             this.label2.TabIndex = 3;
@@ -126,7 +138,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(803, 293);
+            this.label3.Location = new System.Drawing.Point(912, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 15);
             this.label3.TabIndex = 3;
@@ -135,9 +147,8 @@
             // dgvBatchLabourDetails
             // 
             this.dgvBatchLabourDetails.AllowUserToAddRows = false;
-            this.dgvBatchLabourDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvBatchLabourDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvBatchLabourDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBatchLabourDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.LabourRecID,
@@ -146,10 +157,10 @@
             this.From_emp,
             this.To_emp,
             this.OT});
-            this.dgvBatchLabourDetails.Location = new System.Drawing.Point(12, 325);
+            this.dgvBatchLabourDetails.Location = new System.Drawing.Point(15, 288);
             this.dgvBatchLabourDetails.Name = "dgvBatchLabourDetails";
             this.dgvBatchLabourDetails.ReadOnly = true;
-            this.dgvBatchLabourDetails.Size = new System.Drawing.Size(990, 275);
+            this.dgvBatchLabourDetails.Size = new System.Drawing.Size(691, 312);
             this.dgvBatchLabourDetails.TabIndex = 4;
             this.dgvBatchLabourDetails.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvBatchLabourDetails_KeyDown);
             // 
@@ -227,7 +238,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(751, 260);
+            this.label6.Location = new System.Drawing.Point(667, 262);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 15);
             this.label6.TabIndex = 3;
@@ -236,7 +247,7 @@
             // txtNos
             // 
             this.txtNos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNos.Location = new System.Drawing.Point(787, 254);
+            this.txtNos.Location = new System.Drawing.Point(702, 258);
             this.txtNos.Name = "txtNos";
             this.txtNos.Size = new System.Drawing.Size(39, 21);
             this.txtNos.TabIndex = 2;
@@ -245,7 +256,7 @@
             // rdbOutsource
             // 
             this.rdbOutsource.AutoSize = true;
-            this.rdbOutsource.Location = new System.Drawing.Point(434, 261);
+            this.rdbOutsource.Location = new System.Drawing.Point(404, 260);
             this.rdbOutsource.Name = "rdbOutsource";
             this.rdbOutsource.Size = new System.Drawing.Size(81, 19);
             this.rdbOutsource.TabIndex = 181;
@@ -257,7 +268,7 @@
             // rdbPermanentSection
             // 
             this.rdbPermanentSection.AutoSize = true;
-            this.rdbPermanentSection.Location = new System.Drawing.Point(6, 261);
+            this.rdbPermanentSection.Location = new System.Drawing.Point(12, 259);
             this.rdbPermanentSection.Name = "rdbPermanentSection";
             this.rdbPermanentSection.Size = new System.Drawing.Size(66, 19);
             this.rdbPermanentSection.TabIndex = 180;
@@ -269,7 +280,7 @@
             // rdbPermanentAll
             // 
             this.rdbPermanentAll.AutoSize = true;
-            this.rdbPermanentAll.Location = new System.Drawing.Point(527, 261);
+            this.rdbPermanentAll.Location = new System.Drawing.Point(488, 259);
             this.rdbPermanentAll.Name = "rdbPermanentAll";
             this.rdbPermanentAll.Size = new System.Drawing.Size(38, 19);
             this.rdbPermanentAll.TabIndex = 179;
@@ -284,9 +295,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbEmployee.DisplayMember = "Employee";
             this.cmbEmployee.FormattingEnabled = true;
-            this.cmbEmployee.Location = new System.Drawing.Point(573, 254);
+            this.cmbEmployee.Location = new System.Drawing.Point(532, 258);
             this.cmbEmployee.Name = "cmbEmployee";
-            this.cmbEmployee.Size = new System.Drawing.Size(172, 23);
+            this.cmbEmployee.Size = new System.Drawing.Size(129, 23);
             this.cmbEmployee.TabIndex = 182;
             this.cmbEmployee.ValueMember = "EmpID";
             this.cmbEmployee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbEmployee_KeyDown);
@@ -295,7 +306,7 @@
             // 
             this.txtFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFrom.Location = new System.Drawing.Point(876, 254);
+            this.txtFrom.Location = new System.Drawing.Point(789, 257);
             this.txtFrom.Mask = "00:00";
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(42, 24);
@@ -307,7 +318,7 @@
             // 
             this.txtTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTo.Location = new System.Drawing.Point(952, 254);
+            this.txtTo.Location = new System.Drawing.Point(864, 257);
             this.txtTo.Mask = "00:00";
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(42, 24);
@@ -332,7 +343,7 @@
             this.txtActivity.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtActivity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtActivity.ForeColor = System.Drawing.Color.LightCoral;
-            this.txtActivity.Location = new System.Drawing.Point(764, 12);
+            this.txtActivity.Location = new System.Drawing.Point(870, 12);
             this.txtActivity.Name = "txtActivity";
             this.txtActivity.Size = new System.Drawing.Size(228, 29);
             this.txtActivity.TabIndex = 187;
@@ -356,7 +367,7 @@
             this.dgvActivity.Location = new System.Drawing.Point(12, 73);
             this.dgvActivity.Name = "dgvActivity";
             this.dgvActivity.ReadOnly = true;
-            this.dgvActivity.Size = new System.Drawing.Size(981, 177);
+            this.dgvActivity.Size = new System.Drawing.Size(1087, 177);
             this.dgvActivity.TabIndex = 188;
             this.dgvActivity.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActivity_CellClick);
             // 
@@ -435,7 +446,7 @@
             // 
             this.btnFinishPacking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinishPacking.Enabled = false;
-            this.btnFinishPacking.Location = new System.Drawing.Point(652, 8);
+            this.btnFinishPacking.Location = new System.Drawing.Point(758, 8);
             this.btnFinishPacking.Name = "btnFinishPacking";
             this.btnFinishPacking.Size = new System.Drawing.Size(106, 32);
             this.btnFinishPacking.TabIndex = 194;
@@ -447,7 +458,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(922, 296);
+            this.label4.Location = new System.Drawing.Point(1024, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 15);
             this.label4.TabIndex = 3;
@@ -456,7 +467,7 @@
             // txtOTMinutes
             // 
             this.txtOTMinutes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOTMinutes.Location = new System.Drawing.Point(951, 290);
+            this.txtOTMinutes.Location = new System.Drawing.Point(1058, 259);
             this.txtOTMinutes.Name = "txtOTMinutes";
             this.txtOTMinutes.Size = new System.Drawing.Size(41, 21);
             this.txtOTMinutes.TabIndex = 197;
@@ -464,9 +475,9 @@
             // 
             // btnMultiple
             // 
-            this.btnMultiple.Location = new System.Drawing.Point(353, 257);
+            this.btnMultiple.Location = new System.Drawing.Point(323, 257);
             this.btnMultiple.Name = "btnMultiple";
-            this.btnMultiple.Size = new System.Drawing.Size(75, 24);
+            this.btnMultiple.Size = new System.Drawing.Size(75, 25);
             this.btnMultiple.TabIndex = 198;
             this.btnMultiple.Text = "Multiple";
             this.btnMultiple.UseVisualStyleBackColor = true;
@@ -476,9 +487,9 @@
             // 
             this.cmbSection.DisplayMember = "SectionName";
             this.cmbSection.FormattingEnabled = true;
-            this.cmbSection.Location = new System.Drawing.Point(83, 257);
+            this.cmbSection.Location = new System.Drawing.Point(84, 258);
             this.cmbSection.Name = "cmbSection";
-            this.cmbSection.Size = new System.Drawing.Size(264, 23);
+            this.cmbSection.Size = new System.Drawing.Size(233, 23);
             this.cmbSection.TabIndex = 199;
             this.cmbSection.ValueMember = "SectionID";
             this.cmbSection.SelectedIndexChanged += new System.EventHandler(this.cmbSection_SelectedIndexChanged);
@@ -488,7 +499,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(409, 49);
+            this.label10.Location = new System.Drawing.Point(515, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 16);
             this.label10.TabIndex = 204;
@@ -499,16 +510,137 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(726, 49);
+            this.label9.Location = new System.Drawing.Point(832, 49);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(268, 16);
             this.label9.TabIndex = 205;
             this.label9.Text = "F2 - To View/Issue Materials to Batch ";
             // 
+            // txtMachineStop
+            // 
+            this.txtMachineStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMachineStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMachineStop.Location = new System.Drawing.Point(1049, 310);
+            this.txtMachineStop.Mask = "00:00";
+            this.txtMachineStop.Name = "txtMachineStop";
+            this.txtMachineStop.Size = new System.Drawing.Size(49, 26);
+            this.txtMachineStop.TabIndex = 209;
+            this.txtMachineStop.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtMachineStart
+            // 
+            this.txtMachineStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMachineStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMachineStart.Location = new System.Drawing.Point(970, 310);
+            this.txtMachineStart.Mask = "00:00";
+            this.txtMachineStart.Name = "txtMachineStart";
+            this.txtMachineStart.Size = new System.Drawing.Size(48, 26);
+            this.txtMachineStart.TabIndex = 210;
+            this.txtMachineStart.ValidatingType = typeof(System.DateTime);
+            // 
+            // cmbMachine
+            // 
+            this.cmbMachine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbMachine.DisplayMember = "MachineName";
+            this.cmbMachine.FormattingEnabled = true;
+            this.cmbMachine.Location = new System.Drawing.Point(712, 313);
+            this.cmbMachine.Name = "cmbMachine";
+            this.cmbMachine.Size = new System.Drawing.Size(210, 23);
+            this.cmbMachine.TabIndex = 208;
+            this.cmbMachine.ValueMember = "MachineID";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1024, 316);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 15);
+            this.label7.TabIndex = 206;
+            this.label7.Text = "To";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(928, 316);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 15);
+            this.label8.TabIndex = 207;
+            this.label8.Text = "From";
+            // 
+            // dgvMachineDetails
+            // 
+            this.dgvMachineDetails.AllowUserToAddRows = false;
+            this.dgvMachineDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMachineDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMachineDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MachineRecID,
+            this.MachineCode,
+            this.Machine,
+            this.From_Machine,
+            this.To_Machine});
+            this.dgvMachineDetails.Location = new System.Drawing.Point(712, 342);
+            this.dgvMachineDetails.Name = "dgvMachineDetails";
+            this.dgvMachineDetails.ReadOnly = true;
+            this.dgvMachineDetails.Size = new System.Drawing.Size(388, 258);
+            this.dgvMachineDetails.TabIndex = 211;
+            // 
+            // MachineRecID
+            // 
+            this.MachineRecID.DataPropertyName = "MachineRecID";
+            this.MachineRecID.HeaderText = "MachineRecID";
+            this.MachineRecID.Name = "MachineRecID";
+            this.MachineRecID.ReadOnly = true;
+            this.MachineRecID.Visible = false;
+            // 
+            // MachineCode
+            // 
+            this.MachineCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MachineCode.DataPropertyName = "MachineCode";
+            this.MachineCode.HeaderText = "MachineCode";
+            this.MachineCode.Name = "MachineCode";
+            this.MachineCode.ReadOnly = true;
+            this.MachineCode.Visible = false;
+            // 
+            // Machine
+            // 
+            this.Machine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Machine.DataPropertyName = "MachineName";
+            this.Machine.FillWeight = 150F;
+            this.Machine.HeaderText = "Machine";
+            this.Machine.Name = "Machine";
+            this.Machine.ReadOnly = true;
+            // 
+            // From_Machine
+            // 
+            this.From_Machine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.From_Machine.DataPropertyName = "MachineStart";
+            this.From_Machine.HeaderText = "From";
+            this.From_Machine.Name = "From_Machine";
+            this.From_Machine.ReadOnly = true;
+            // 
+            // To_Machine
+            // 
+            this.To_Machine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.To_Machine.DataPropertyName = "MachineStop";
+            this.To_Machine.HeaderText = "To";
+            this.To_Machine.Name = "To_Machine";
+            this.To_Machine.ReadOnly = true;
+            // 
             // frmBatchPacking_Secondary
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1004, 612);
+            this.ClientSize = new System.Drawing.Size(1110, 612);
+            this.Controls.Add(this.dgvMachineDetails);
+            this.Controls.Add(this.txtMachineStop);
+            this.Controls.Add(this.txtMachineStart);
+            this.Controls.Add(this.cmbMachine);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cmbSection);
@@ -552,6 +684,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSecondaryProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSecondaryActivityList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSections)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMachineDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,5 +742,16 @@
         private System.Windows.Forms.BindingSource objSourceSections;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox txtMachineStop;
+        private System.Windows.Forms.MaskedTextBox txtMachineStart;
+        private System.Windows.Forms.ComboBox cmbMachine;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dgvMachineDetails;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MachineRecID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MachineCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Machine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn From_Machine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn To_Machine;
     }
 }

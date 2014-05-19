@@ -144,8 +144,8 @@ namespace MRP_GUI.Sales
                     objSalesForecastDetails.RevisionID = 0;
                     objSalesForecastDetails.ProductCode = temptxtProduct;
                     objSalesForecastDetails.Qty = Convert.ToInt32(tempqty);
-                    //objSalesForecastDetails_DL.Add(objSalesForecastDetails);
-                    objCustomer_DL.test(objSalesForeCast, objSalesForecastDetails);
+                    objSalesForecastDetails_DL.Add(objSalesForeCast, objSalesForecastDetails);
+                    //objCustomer_DL.test(objSalesForeCast, objSalesForecastDetails);
                     x++;
                 }
                 MessageBox.Show(this, "Sales Forecast Details successfully added", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);

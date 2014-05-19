@@ -63,3 +63,10 @@ D:\Work Space\MRP4\MRP_DL\bin\Debug\MRP_REF.pdb
 D:\Work Space\MRP4\MRP_DL\obj\Debug\MRP_DL.csprojResolveAssemblyReference.cache
 D:\Work Space\MRP4\MRP_DL\obj\Debug\MRP_DL.dll
 D:\Work Space\MRP4\MRP_DL\obj\Debug\MRP_DL.pdb
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\bin\Debug\MRP_DL.dll
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\bin\Debug\MRP_DL.pdb
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\bin\Debug\MRP_REF.dll
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\bin\Debug\MRP_REF.pdb
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\obj\Debug\MRP_DL.csprojResolveAssemblyReference.cache
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\obj\Debug\MRP_DL.dll
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_DL\obj\Debug\MRP_DL.pdb

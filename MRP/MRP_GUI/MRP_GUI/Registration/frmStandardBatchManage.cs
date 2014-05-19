@@ -65,6 +65,7 @@ namespace MRP_GUI
                     objStdBatch.STDBatchType = "Basic";
 
                     objStdBatch.STDBatchID = objSTDBatchDL.Add_Basic(objStdBatch);
+                    
                 }
                 else if (cmbProductType.SelectedIndex == 2)
                 {
@@ -302,8 +303,11 @@ namespace MRP_GUI
             DialogResult dr = MessageBox.Show(this, "You are about to delete a Activity\n\nClick yes to permently delete. you won't be able to undo these deletions", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (dr == DialogResult.Yes)
             {
-                objActivityCollec.RemoveAt(gvActivityList.CurrentRow.Index);
-
+                Activity obj = new Activity();
+                obj.ActivityID = Convert.ToInt64(gvActivityList.CurrentRow.Cells["ActivityID"].Value.ToString());
+                objActivityDL.Delete(obj);
+                //objActivityCollec.RemoveAt(gvActivityList.CurrentRow.Index);
+                
 
             }
 
@@ -343,20 +347,20 @@ namespace MRP_GUI
 
                 if ((cmbActivity.SelectedValue != null)&&(cmbPart.Text!=""))
                 {
-                        Activity obj = new Activity();
+                    Activity obj = new Activity();
 
-                        obj.ActCost = 0;
-                        obj.ActDuration = 0;
-                        obj.ActMainActivity = objMainActivtyDL.Get(Convert.ToInt64(cmbActivity.SelectedValue));
-                        obj.ActManHours = 0;
-                        obj.BlockNextActivity = false;
-                        obj.InstructedBy = CurrentUser.EmployeeID;
-                        obj.Part = cmbPart.Text;
-                        obj.SequenceNo = 1;
-                      
+                    obj.ActCost = 0;
+                    obj.ActDuration = 0;
+                    obj.ActMainActivity = objMainActivtyDL.Get(Convert.ToInt64(cmbActivity.SelectedValue));
+                    obj.ActManHours = 0;
+                    obj.BlockNextActivity = false;
+                    obj.InstructedBy = CurrentUser.EmployeeID;
+                    obj.Part = cmbPart.Text;
+                    obj.SequenceNo = 1;
 
+                    objStdBatch.STDBatchID = dgvBatchList.CurrentRow.Cells["STDBatchID"].Value.ToString();
+                    obj.ActSTDBatch = objStdBatch;
                     objActivityDL.Add(obj);
-
                     Load_ActivityList();
 
                 }
@@ -376,11 +380,11 @@ namespace MRP_GUI
 
 
             DeleteActivity();
-
-            gvActivityList.AutoGenerateColumns = false;
-            objSourceActivity.DataSource = objActivityCollec;
-            gvActivityList.DataSource = objSourceActivity;
-            objSourceActivity.ResetBindings(true);
+            Load_ActivityList();
+            //gvActivityList.AutoGenerateColumns = false;
+            //objSourceActivity.DataSource = objActivityCollec;
+            //gvActivityList.DataSource = objSourceActivity;
+            //objSourceActivity.ResetBindings(true);
 
              }
             catch (Exception ex)
