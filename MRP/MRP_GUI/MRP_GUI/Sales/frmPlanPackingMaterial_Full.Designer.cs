@@ -281,7 +281,7 @@
             // RMName
             // 
             this.RMName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RMName.DataPropertyName = "Material";
+            this.RMName.DataPropertyName = "MaterialDescription";
             this.RMName.FillWeight = 300F;
             this.RMName.HeaderText = "Material";
             this.RMName.Name = "RMName";
