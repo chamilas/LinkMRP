@@ -869,6 +869,28 @@ namespace DL
             }
         }
 
+        public DataTable Get_Packing_PrimaryBatchRemainningQty(int PrimaryBatchID, BatchActivity.Status Status_Finished, BatchActivity.Status Status_Secondary)
+        {
+            try
+            {
+
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@BatchActStatus_Finished",Status_Finished),
+                 new SqlParameter("@BatchActStatus_Secondary",Status_Secondary),
+                 new SqlParameter("@PrimaryBatchID",PrimaryBatchID)
+                };
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_Packing_PrimaryBatchRemainningQty", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
 
         public DataTable Get_DataView_Packing_Secondary(BatchActivity.Status Status, long UserID)
               {
