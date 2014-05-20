@@ -283,23 +283,33 @@ namespace MRP_GUI
             this.label9 = new System.Windows.Forms.Label();
             this.tpMaterialType = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtLeadTime = new System.Windows.Forms.TextBox();
             this.btnMaterialTypeClear = new System.Windows.Forms.Button();
             this.btnMaterialTypeDelete = new System.Windows.Forms.Button();
             this.btnMaterialTypeSave = new System.Windows.Forms.Button();
             this.gvMaterialType = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LeadTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaterialTypeDescription = new System.Windows.Forms.TextBox();
             this.txtMaterialType = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpMaterialMainCategory = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtLeadTime = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvSM = new System.Windows.Forms.DataGridView();
+            this.SMID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SMDesctiption = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSMDesctiption = new System.Windows.Forms.TextBox();
+            this.txtSMID = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.btnSMDelete = new System.Windows.Forms.Button();
+            this.btnSMsave = new System.Windows.Forms.Button();
             this.ucMaterialCategory1 = new MRP_GUI.Components.ucMaterialCategory();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LeadTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
@@ -339,6 +349,8 @@ namespace MRP_GUI
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterialType)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpMaterialMainCategory.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSM)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -2704,6 +2716,13 @@ namespace MRP_GUI
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Material Type";
             // 
+            // txtLeadTime
+            // 
+            this.txtLeadTime.Location = new System.Drawing.Point(140, 84);
+            this.txtLeadTime.Name = "txtLeadTime";
+            this.txtLeadTime.Size = new System.Drawing.Size(100, 20);
+            this.txtLeadTime.TabIndex = 8;
+            // 
             // btnMaterialTypeClear
             // 
             this.btnMaterialTypeClear.Location = new System.Drawing.Point(382, 84);
@@ -2779,6 +2798,30 @@ namespace MRP_GUI
             this.gvMaterialType.TabIndex = 4;
             this.gvMaterialType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMaterialType_CellClick);
             // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "MatType";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Material Type Code";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "MaterialType";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            // 
+            // LeadTime
+            // 
+            this.LeadTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LeadTime.DataPropertyName = "LeadTime";
+            this.LeadTime.HeaderText = "LeadTime";
+            this.LeadTime.Name = "LeadTime";
+            this.LeadTime.ReadOnly = true;
+            // 
             // txtMaterialTypeDescription
             // 
             this.txtMaterialTypeDescription.Location = new System.Drawing.Point(140, 60);
@@ -2792,6 +2835,24 @@ namespace MRP_GUI
             this.txtMaterialType.Name = "txtMaterialType";
             this.txtMaterialType.Size = new System.Drawing.Size(232, 20);
             this.txtMaterialType.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(246, 91);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(31, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Days";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(55, 92);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 13);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Lead Time";
             // 
             // label54
             // 
@@ -2823,6 +2884,7 @@ namespace MRP_GUI
             this.tabControl1.Controls.Add(this.tpShift);
             this.tabControl1.Controls.Add(this.tpMachineCategory);
             this.tabControl1.Controls.Add(this.tpEmpRole);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -2842,30 +2904,108 @@ namespace MRP_GUI
             this.tpMaterialMainCategory.Text = "Material Main Category";
             this.tpMaterialMainCategory.UseVisualStyleBackColor = true;
             // 
-            // label15
+            // tabPage1
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(55, 92);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 13);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Lead Time";
+            this.tabPage1.Controls.Add(this.dgvSM);
+            this.tabPage1.Controls.Add(this.txtSMDesctiption);
+            this.tabPage1.Controls.Add(this.txtSMID);
+            this.tabPage1.Controls.Add(this.label27);
+            this.tabPage1.Controls.Add(this.label33);
+            this.tabPage1.Controls.Add(this.btnSMDelete);
+            this.tabPage1.Controls.Add(this.btnSMsave);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(976, 597);
+            this.tabPage1.TabIndex = 17;
+            this.tabPage1.Text = " Sales Method";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // txtLeadTime
+            // dgvSM
             // 
-            this.txtLeadTime.Location = new System.Drawing.Point(140, 84);
-            this.txtLeadTime.Name = "txtLeadTime";
-            this.txtLeadTime.Size = new System.Drawing.Size(100, 20);
-            this.txtLeadTime.TabIndex = 8;
+            this.dgvSM.AllowUserToAddRows = false;
+            this.dgvSM.AllowUserToDeleteRows = false;
+            this.dgvSM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SMID,
+            this.SMDesctiption});
+            this.dgvSM.Location = new System.Drawing.Point(12, 79);
+            this.dgvSM.MultiSelect = false;
+            this.dgvSM.Name = "dgvSM";
+            this.dgvSM.ReadOnly = true;
+            this.dgvSM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSM.Size = new System.Drawing.Size(956, 510);
+            this.dgvSM.TabIndex = 14;
             // 
-            // label24
+            // SMID
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(246, 91);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Days";
+            this.SMID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SMID.DataPropertyName = "SalesMethodID";
+            this.SMID.HeaderText = "Sales Method ID";
+            this.SMID.Name = "SMID";
+            this.SMID.ReadOnly = true;
+            // 
+            // SMDesctiption
+            // 
+            this.SMDesctiption.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SMDesctiption.DataPropertyName = "SMDesctiption";
+            this.SMDesctiption.HeaderText = "Sales Method Desctiption";
+            this.SMDesctiption.Name = "SMDesctiption";
+            this.SMDesctiption.ReadOnly = true;
+            // 
+            // txtSMDesctiption
+            // 
+            this.txtSMDesctiption.Location = new System.Drawing.Point(150, 53);
+            this.txtSMDesctiption.Name = "txtSMDesctiption";
+            this.txtSMDesctiption.Size = new System.Drawing.Size(193, 20);
+            this.txtSMDesctiption.TabIndex = 13;
+            // 
+            // txtSMID
+            // 
+            this.txtSMID.Location = new System.Drawing.Point(150, 23);
+            this.txtSMID.Name = "txtSMID";
+            this.txtSMID.Size = new System.Drawing.Size(193, 20);
+            this.txtSMID.TabIndex = 12;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(9, 60);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(134, 13);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Sales Method Desctiption :";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(52, 30);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(92, 13);
+            this.label33.TabIndex = 10;
+            this.label33.Text = "Sales Method ID :";
+            // 
+            // btnSMDelete
+            // 
+            this.btnSMDelete.Location = new System.Drawing.Point(349, 50);
+            this.btnSMDelete.Name = "btnSMDelete";
+            this.btnSMDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnSMDelete.TabIndex = 9;
+            this.btnSMDelete.Text = "Delete";
+            this.btnSMDelete.UseVisualStyleBackColor = true;
+            this.btnSMDelete.Click += new System.EventHandler(this.btnSMDelete_Click);
+            // 
+            // btnSMsave
+            // 
+            this.btnSMsave.Location = new System.Drawing.Point(349, 20);
+            this.btnSMsave.Name = "btnSMsave";
+            this.btnSMsave.Size = new System.Drawing.Size(75, 23);
+            this.btnSMsave.TabIndex = 8;
+            this.btnSMsave.Text = "Save";
+            this.btnSMsave.UseVisualStyleBackColor = true;
+            this.btnSMsave.Click += new System.EventHandler(this.btnSMsave_Click);
             // 
             // ucMaterialCategory1
             // 
@@ -2874,30 +3014,6 @@ namespace MRP_GUI
             this.ucMaterialCategory1.Name = "ucMaterialCategory1";
             this.ucMaterialCategory1.Size = new System.Drawing.Size(970, 591);
             this.ucMaterialCategory1.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.DataPropertyName = "MatType";
-            this.dataGridViewTextBoxColumn32.HeaderText = "Material Type Code";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.ReadOnly = true;
-            this.dataGridViewTextBoxColumn32.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "MaterialType";
-            this.dataGridViewTextBoxColumn33.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
-            // 
-            // LeadTime
-            // 
-            this.LeadTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LeadTime.DataPropertyName = "LeadTime";
-            this.LeadTime.HeaderText = "LeadTime";
-            this.LeadTime.Name = "LeadTime";
-            this.LeadTime.ReadOnly = true;
             // 
             // frmCatTypeUnit
             // 
@@ -2959,6 +3075,9 @@ namespace MRP_GUI
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterialType)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tpMaterialMainCategory.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSM)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3188,5 +3307,15 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn LeadTime;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dgvSM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SMID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SMDesctiption;
+        private System.Windows.Forms.TextBox txtSMDesctiption;
+        private System.Windows.Forms.TextBox txtSMID;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button btnSMDelete;
+        private System.Windows.Forms.Button btnSMsave;
     }
 }

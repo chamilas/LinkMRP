@@ -131,7 +131,7 @@
             // 
             // cmbCustomer
             // 
-            this.cmbCustomer.DisplayMember = "CustomerID";
+            this.cmbCustomer.DisplayMember = "Customer";
             this.cmbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCustomer.FormattingEnabled = true;
             this.cmbCustomer.Items.AddRange(new object[] {

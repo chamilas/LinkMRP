@@ -20,6 +20,7 @@ namespace MRP_GUI
         {
             CurrentUser = objUser;
             InitializeComponent();
+            LoadSMTable();
         }
 
 
@@ -67,6 +68,8 @@ namespace MRP_GUI
 
         private bool EmpRoleSelect = false;
         private EmployeeRole objEmployeeRole = new EmployeeRole();
+
+        private SalesMethod_DL objSalesMethod_DL = new SalesMethod_DL(ConnectionStringClass.GetConnection());
 
         //----- Form Load Event ----------------------------------------------
         private void frmCatTypeUnit_Load(object sender, EventArgs e)
@@ -2073,8 +2076,43 @@ namespace MRP_GUI
         {
 
         }
-        
 
+        private void btnSMsave_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtSMID.Text) || String.IsNullOrWhiteSpace(txtSMDesctiption.Text))
+            {
+                MessageBox.Show(this, "Please Fill all Fields", "Blank Fields", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            else
+            {
+                objSalesMethod_DL.Add(txtSMID.Text, txtSMDesctiption.Text);
+                MessageBox.Show(this, "Succesfully Added to Database", "Succesfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadSMTable();
+            }
+        }
+
+        private void btnSMDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvSM.CurrentCell.RowIndex > -1)
+            {
+                DialogResult dr = MessageBox.Show(this, "Are you sure, You want to Delete selected Record?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    objSalesMethod_DL.Delete(dgvSM.CurrentRow.Cells["SMID"].Value.ToString());
+                    MessageBox.Show(this, "Succesfully Deleted from Database", "Succesfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadSMTable();
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "please select a record to delete", "MRP System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public void LoadSMTable()
+        {
+            dgvSM.DataSource = objSalesMethod_DL.Get();
+        }
 
 
     }

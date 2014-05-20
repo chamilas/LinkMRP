@@ -2994,7 +2994,7 @@ namespace MRP_GUI
 
         private void forecastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser);
+            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser,"AP");
             ShowForm(frm);
         }
 

@@ -131,11 +131,19 @@ namespace DL
             }
         }
 
-        public DataTable GetFinishProduct()
+        public DataTable GetFinishProduct(String ProductType)
         {
             try
             {
-                return Execute.RunSP_DataTable(Connection, "SPGET_FinishProduct_DataView_All_RPT");
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@ProductCategory", ProductType),
+                new SqlParameter("@Status",1)
+                };
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_FinishProduct_ByCategory", paramList);
+
             }
             catch (Exception ex)
             {

@@ -16,7 +16,7 @@ namespace MRP_GUI.Sales
     {
         DataTable dtCheck = new DataTable();
         private User _objCurrentUser;
-
+        private String CurrentProductType;
         public User CurrentUser
         {
             get { return _objCurrentUser; }
@@ -35,12 +35,14 @@ namespace MRP_GUI.Sales
         DataTable dtDistributorsList = new DataTable();
         DataTable dtFinishProductList = new DataTable();
 
-        public frmSalesForeCast(User objUser)
+        public frmSalesForeCast(User objUser,String ProductType)
         {
             CurrentUser = objUser;
+            CurrentProductType = ProductType;
             InitializeComponent();
             LoadFinishProductList();
             //LoadDistributorsList();
+            
         }
 
         private void frmSalesForeCast_Load(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace MRP_GUI.Sales
             try
             {
                 cmbProductList.Items.Clear();
-                dtFinishProductList = objCustomer_DL.GetFinishProduct();
+                dtFinishProductList = objCustomer_DL.GetFinishProduct(CurrentProductType);
                 bsFinishProductList.DataSource = dtFinishProductList;
                 cmbProductList.DataSource = bsFinishProductList;
                 cmbWeekNo.SelectedIndex = 0;

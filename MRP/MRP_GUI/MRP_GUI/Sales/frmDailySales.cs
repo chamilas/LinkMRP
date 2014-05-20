@@ -55,6 +55,8 @@ namespace MRP_GUI.Sales
         {
             if (!cmbSalesMethod.Text.Equals(null))
             {
+                cmbTerritory.DataSource = null;
+                cmbTerritory.Items.Clear();
                 LoadCustomers();
             }
         }
@@ -65,7 +67,7 @@ namespace MRP_GUI.Sales
             {
                 cmbTerritory.DataSource = null;
                 cmbTerritory.Items.Clear();
-                dtCustomerTerritory = objCustomer_DL.GetTerritoryByCustomerID(cmbCustomer.Text);
+                dtCustomerTerritory = objCustomer_DL.GetTerritoryByCustomerID(cmbCustomer.SelectedValue.ToString());
                 cmbTerritory.DataSource = dtCustomerTerritory;
                 cmbTerritory.BindingContext = this.BindingContext;
                 cmbTerritory.DisplayMember = "TerritoryName";
@@ -88,7 +90,8 @@ namespace MRP_GUI.Sales
                 dtCustomers = objCustomer_DL.GegCustomerBySalesMethod(cmbSalesMethod.Text);
                 cmbCustomer.DataSource = dtCustomers;
                 cmbCustomer.BindingContext = this.BindingContext;
-                cmbCustomer.DisplayMember = "CustomerID";
+                cmbCustomer.DisplayMember = "Customer";
+                cmbCustomer.ValueMember = "CustomerID";
 
             }
             catch (Exception ex)
@@ -104,14 +107,35 @@ namespace MRP_GUI.Sales
         {
             try
             {
-                cmbProduct.Items.Clear();
-                dtFinishProductList = objCustomer_DL.GetFinishProduct();
-                cmbProduct.DataSource = dtFinishProductList;
-                cmbProduct.BindingContext = this.BindingContext;
+                //cmbProduct.Items.Clear();
+                //dtFinishProductList = objCustomer_DL.GetFinishProduct("AP");
+                //cmbProduct.DataSource = dtFinishProductList;
+                //cmbProduct.BindingContext = this.BindingContext;
+                
                 //cmbProduct.DisplayMember = "FinishProduct";
 
                 bsSalesMethod.DataSource = objSalesMethod_DL.Get();
                 cmbSalesMethod.DataSource = bsSalesMethod;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadFinishProductList(String ProductType)
+        {
+            try
+            {
+                cmbProduct.DataSource = null;
+                cmbProduct.Items.Clear();
+                dtFinishProductList = objCustomer_DL.GetFinishProduct(ProductType);
+                cmbProduct.DataSource = dtFinishProductList;
+                cmbProduct.DisplayMember = "FinishProduct";
+                cmbProduct.BindingContext = this.BindingContext;
+                //cmbProduct.DataSource = null;
 
             }
             catch (Exception ex)
@@ -214,7 +238,7 @@ namespace MRP_GUI.Sales
                         }
 
                         objDispatchNote.DispatchID = DISPATCHID;
-                        objDispatchNote.DistributorID = cmbCustomer.Text;
+                        objDispatchNote.DistributorID = cmbCustomer.SelectedValue.ToString();
                         objDispatchNote.EnteredBy = CurrentUser.UserEmp.EmployeeID;
                         objDispatchNote_DL.Add(objDispatchNote);
 
@@ -255,10 +279,14 @@ namespace MRP_GUI.Sales
 
         private void cmbCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (!cmbCustomer.Text.Equals(null))
+            if (cmbCustomer.SelectedIndex!=-1)
             {
                 //MessageBox.Show("thjfjhfgjg" + comboBox1.SelectedText);
+                String productType = Convert.ToString(dtCustomers.Rows[cmbCustomer.SelectedIndex]["ProductType"]);
+                LoadFinishProductList(productType);
+
                 LoadCustomerTerritory();
+                //MessageBox.Show(x);
             }
         }
 
