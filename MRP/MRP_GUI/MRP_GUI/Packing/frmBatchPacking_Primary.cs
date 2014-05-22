@@ -241,6 +241,7 @@ namespace MRP_GUI
                 if (objBatchActivity.BatchActID != 0)
                 {
                      dt = objBatchLabourDetails_DL.Get_ByBatchActID(Convert.ToInt32(objBatchActivity.BatchActID));
+                     
                 }
                 else
                 {

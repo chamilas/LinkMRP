@@ -526,6 +526,7 @@
             this.txtMachineStop.Size = new System.Drawing.Size(49, 26);
             this.txtMachineStop.TabIndex = 209;
             this.txtMachineStop.ValidatingType = typeof(System.DateTime);
+            this.txtMachineStop.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMachineStop_KeyDown);
             // 
             // txtMachineStart
             // 
@@ -537,6 +538,7 @@
             this.txtMachineStart.Size = new System.Drawing.Size(48, 26);
             this.txtMachineStart.TabIndex = 210;
             this.txtMachineStart.ValidatingType = typeof(System.DateTime);
+            this.txtMachineStart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMachineStart_KeyDown);
             // 
             // cmbMachine
             // 
@@ -549,6 +551,7 @@
             this.cmbMachine.Size = new System.Drawing.Size(210, 23);
             this.cmbMachine.TabIndex = 208;
             this.cmbMachine.ValueMember = "MachineID";
+            this.cmbMachine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbMachine_KeyDown);
             // 
             // label7
             // 

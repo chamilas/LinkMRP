@@ -52,14 +52,14 @@ namespace MRP_GUI
         {
 
             Load_Sections();
-
+            
 
             objActivity = objMainActivity_DL.GetByName("Packing_Secondary");
 
             txtActivity.Text = objActivity.MainActivityTitle;
-
+            Load_Machine();
             Load_employee();
-
+            
 
             rdbPermanentSection.Checked = true;
 
@@ -395,10 +395,11 @@ namespace MRP_GUI
                 objBatch = objBatch_DL.Get(dgvActivity.CurrentRow.Cells["BatchID"].Value.ToString());
                 txtBatchID.Text = objBatch.BatchID;
 
-
+                
                 objBatchActivity = objBatchActivity_DL.GetByID(Convert.ToInt32(dgvActivity.CurrentRow.Cells["BatchActID"].Value));
-
+                
                 Load_BatchLabourDetails();
+                Load_BatchMachineDetails();
 
                 if (objBatchActivity.BatchActStatus == BatchActivity.Status.SecondaryPacking_Start)
                 {
@@ -559,7 +560,130 @@ namespace MRP_GUI
             }
         }
 
-       
 
+        private void Load_Machine()
+        {
+            try
+            {
+                DataTable dt = objMachineActivity_DL.GetDataByAct(objActivity.MainActID);
+
+                objSourceMachineList.DataSource = dt;
+                cmbMachine.DataSource = objSourceMachineList;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(this, "Error occured while loading Machine List", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void txtMachineStart_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtMachineStop.Select();
+            }
+
+            if (e.KeyCode == Keys.End)
+            {
+                cmbEmployee.Select();
+            }
+        }
+
+        private void txtMachineStop_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    if (objBatchActivity.BatchActStatus == BatchActivity.Status.Finished)
+                    {
+                        MessageBox.Show(this, "Activity is already Finished", "Wrong Attempt", MessageBoxButtons.OK);
+
+                        txtMachineStart.Text = "";
+                        txtMachineStop.Text = "";
+                    }
+                    else
+                    {
+                        if (DataValidation.IsTimeShift(txtMachineStart.Text, txtMachineStop.Text))
+                        {
+                            BatchMachineDetails obj = new BatchMachineDetails();
+
+                            obj.BatchAct = objBatchActivity;
+                            obj.StartTime = txtMachineStart.Text;
+                            obj.StopTime = txtMachineStop.Text;
+                            obj.TheMachine = objMachine_DL.Get(cmbMachine.SelectedValue.ToString());
+                            //MessageBox.Show(""+obj.BatchAct.BatchActID);
+                            objBatchMachineDetails_DL.Add(obj);
+                            Load_BatchMachineDetails();
+
+                            txtMachineStart.Text = "";
+                            txtMachineStop.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "please enter valid time period", "MRP System", MessageBoxButtons.OK);
+                        }
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show(this, "Error occured while loading Machine Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtMachineStart.Text = "";
+                    txtMachineStop.Text = "";
+                    cmbMachine.Select();
+                }
+            }
+        }
+
+        private void Load_BatchMachineDetails()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                if (objBatchActivity.BatchActID != 0)
+                {
+                    dt = objBatchMachineDetails_DL.Get_ByBatchActID(Convert.ToInt32(objBatchActivity.BatchActID));
+                }
+                else
+                {
+                    dt = null;
+                }
+
+                dgvMachineDetails.AutoGenerateColumns = false;
+                objSourceBatchMachine.DataSource = dt;
+                dgvMachineDetails.DataSource = objSourceBatchMachine;
+                objSourceBatchMachine.ResetBindings(true);
+
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(this, "Error occured while loading Machine Details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
+
+        private void cmbMachine_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            if (cmbMachine.SelectedValue != null)
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtMachineStart.Select();
+                }
+            }
+
+            if (e.KeyCode == Keys.End)
+            {
+                cmbEmployee.Select();
+            }
+        }
     }
 }

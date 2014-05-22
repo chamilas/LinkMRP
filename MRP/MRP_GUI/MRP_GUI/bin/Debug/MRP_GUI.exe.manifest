@@ -247,14 +247,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_GUI.exe" size="9179648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_GUI.exe" size="9181696">
       <assemblyIdentity name="MRP_GUI" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ikSs/nAfBLCdUa6G68+DLfQzQFw=</dsig:DigestValue>
+        <dsig:DigestValue>Jk6SfgMWl/vj71HVpcu1iyKSttY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
