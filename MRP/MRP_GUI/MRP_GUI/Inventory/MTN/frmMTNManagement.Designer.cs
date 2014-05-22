@@ -69,6 +69,11 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNEnterdByName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNApprovedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNApproveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemList)).BeginInit();
@@ -295,7 +300,12 @@
             this.Column10,
             this.Column11,
             this.Col,
-            this.Column12});
+            this.Column12,
+            this.GRNNO,
+            this.GRNEnterdByName,
+            this.GRNDate,
+            this.GRNApprovedBy,
+            this.GRNApproveDate});
             this.gvMTNList.DataSource = this.bindMtnList;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
@@ -350,14 +360,15 @@
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.DataPropertyName = "MTNTGRNNO";
             this.Column2.HeaderText = "TGRN No";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 75;
             // 
             // MTNReceivedByName
             // 
+            this.MTNReceivedByName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MTNReceivedByName.DataPropertyName = "MTNReceivedByName";
             this.MTNReceivedByName.HeaderText = "Received By";
             this.MTNReceivedByName.Name = "MTNReceivedByName";
@@ -365,6 +376,7 @@
             // 
             // MTNReceivedDate
             // 
+            this.MTNReceivedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MTNReceivedDate.DataPropertyName = "MTNReceivedDate";
             this.MTNReceivedDate.HeaderText = "Received Date";
             this.MTNReceivedDate.Name = "MTNReceivedDate";
@@ -372,43 +384,83 @@
             // 
             // Column10
             // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column10.DataPropertyName = "MTNBatchID";
             dataGridViewCellStyle5.NullValue = "N/A";
             this.Column10.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column10.HeaderText = "Batch No";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 75;
             // 
             // Column11
             // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column11.DataPropertyName = "MTNRePackBatchID";
             dataGridViewCellStyle6.NullValue = "N/A";
             this.Column11.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column11.HeaderText = "Repack Batch";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 75;
             // 
             // Col
             // 
+            this.Col.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Col.DataPropertyName = "MTNReworkBatchID";
             dataGridViewCellStyle7.NullValue = "N/A";
             this.Col.DefaultCellStyle = dataGridViewCellStyle7;
             this.Col.HeaderText = "Rework Batch";
             this.Col.Name = "Col";
             this.Col.ReadOnly = true;
-            this.Col.Width = 75;
             // 
             // Column12
             // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column12.DataPropertyName = "MTNMatReworkBatchID";
             dataGridViewCellStyle8.NullValue = "N/A";
             this.Column12.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column12.HeaderText = "Mat Rework";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 75;
+            // 
+            // GRNNO
+            // 
+            this.GRNNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNNO.DataPropertyName = "GRNNO";
+            this.GRNNO.HeaderText = "GRN NO";
+            this.GRNNO.Name = "GRNNO";
+            this.GRNNO.ReadOnly = true;
+            // 
+            // GRNEnterdByName
+            // 
+            this.GRNEnterdByName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNEnterdByName.DataPropertyName = "GRNEnterdByName";
+            this.GRNEnterdByName.HeaderText = "MTN GRN by";
+            this.GRNEnterdByName.Name = "GRNEnterdByName";
+            this.GRNEnterdByName.ReadOnly = true;
+            // 
+            // GRNDate
+            // 
+            this.GRNDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNDate.DataPropertyName = "GRNDate";
+            this.GRNDate.HeaderText = "GRN Date";
+            this.GRNDate.Name = "GRNDate";
+            this.GRNDate.ReadOnly = true;
+            // 
+            // GRNApprovedBy
+            // 
+            this.GRNApprovedBy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNApprovedBy.DataPropertyName = "GRNApprovedByName";
+            this.GRNApprovedBy.HeaderText = "GRN Approved By";
+            this.GRNApprovedBy.Name = "GRNApprovedBy";
+            this.GRNApprovedBy.ReadOnly = true;
+            // 
+            // GRNApproveDate
+            // 
+            this.GRNApproveDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNApproveDate.DataPropertyName = "GRNApproveDate";
+            this.GRNApproveDate.HeaderText = "GRN Approved Date";
+            this.GRNApproveDate.Name = "GRNApproveDate";
+            this.GRNApproveDate.ReadOnly = true;
             // 
             // frmMTNManagement
             // 
@@ -464,6 +516,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNEnterdByName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNApprovedBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNApproveDate;
 
     }
 }
