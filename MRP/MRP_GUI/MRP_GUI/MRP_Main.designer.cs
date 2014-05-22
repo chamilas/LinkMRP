@@ -177,9 +177,6 @@ namespace MRP_GUI
             this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
             this.forecastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forecastApproveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.test2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.frmPlanPackingMaterialFullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.itemToStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rawToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -568,8 +565,8 @@ namespace MRP_GUI
             // packingMaterialRequirementToolStripMenuItem
             // 
             this.packingMaterialRequirementToolStripMenuItem.Name = "packingMaterialRequirementToolStripMenuItem";
-            this.packingMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
-            this.packingMaterialRequirementToolStripMenuItem.Text = "Packing Material Requirement";
+            this.packingMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.packingMaterialRequirementToolStripMenuItem.Text = "Packing Material Requirement Plan";
             this.packingMaterialRequirementToolStripMenuItem.Click += new System.EventHandler(this.packingMaterialRequirementToolStripMenuItem_Click);
             // 
             // toolStripMenuItem23
@@ -1481,10 +1478,7 @@ namespace MRP_GUI
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem26,
             this.forecastToolStripMenuItem,
-            this.forecastApproveToolStripMenuItem,
-            this.testToolStripMenuItem,
-            this.test2ToolStripMenuItem,
-            this.frmPlanPackingMaterialFullToolStripMenuItem});
+            this.forecastApproveToolStripMenuItem});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(51, 20);
             this.helpMenu.Text = "Sales";
@@ -1509,27 +1503,6 @@ namespace MRP_GUI
             this.forecastApproveToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.forecastApproveToolStripMenuItem.Text = "Forecast Approve";
             this.forecastApproveToolStripMenuItem.Click += new System.EventHandler(this.forecastApproveToolStripMenuItem_Click);
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.testToolStripMenuItem.Text = "test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
-            // test2ToolStripMenuItem
-            // 
-            this.test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
-            this.test2ToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.test2ToolStripMenuItem.Text = "test2";
-            this.test2ToolStripMenuItem.Click += new System.EventHandler(this.test2ToolStripMenuItem_Click);
-            // 
-            // frmPlanPackingMaterialFullToolStripMenuItem
-            // 
-            this.frmPlanPackingMaterialFullToolStripMenuItem.Name = "frmPlanPackingMaterialFullToolStripMenuItem";
-            this.frmPlanPackingMaterialFullToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.frmPlanPackingMaterialFullToolStripMenuItem.Text = "PlanPackingMaterial_Full";
-            this.frmPlanPackingMaterialFullToolStripMenuItem.Click += new System.EventHandler(this.frmPlanPackingMaterialFullToolStripMenuItem_Click);
             // 
             // toolStripMenuItem17
             // 
@@ -2452,7 +2425,7 @@ namespace MRP_GUI
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip.Location = new System.Drawing.Point(0, 719);
+            this.statusStrip.Location = new System.Drawing.Point(0, 711);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1016, 22);
             this.statusStrip.TabIndex = 2;
@@ -2538,7 +2511,7 @@ namespace MRP_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 741);
+            this.ClientSize = new System.Drawing.Size(1016, 733);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2840,9 +2813,6 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem projectMaterialConumptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem packingMaterialRequirementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forecastApproveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem test2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem frmPlanPackingMaterialFullToolStripMenuItem;
     }
 }
 

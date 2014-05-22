@@ -3012,7 +3012,9 @@ namespace MRP_GUI
 
         private void packingMaterialRequirementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPackingMaterialsForecast frm = new frmPackingMaterialsForecast();
+            //frmPackingMaterialsForecast frm = new frmPackingMaterialsForecast();
+            //ShowForm(frm);
+            frmPlanPackingMaterial_Full frm = new frmPlanPackingMaterial_Full();
             ShowForm(frm);
         }
 
@@ -3039,6 +3041,11 @@ namespace MRP_GUI
         {
             frmPlanPackingMaterial_Full frm = new frmPlanPackingMaterial_Full();
             ShowForm(frm);
+        }
+
+        private void planPackingMaterialFullToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
 
