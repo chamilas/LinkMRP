@@ -75,6 +75,7 @@ namespace MRP_GUI.Sales
         private void btnAddToList_Click(object sender, EventArgs e)
         {
             //String temptxtProduct = dtFinishProductList.Rows[cmbProductList.SelectedIndex].ItemArray[0].ToString();
+            
             if (txtQty.Text != "" && DataValidation.IsNumericNumber(txtQty.Text))
             {
                 //dgvProduct.Rows.Add(cmbProductList.Text, txtQty.Text);
@@ -91,7 +92,7 @@ namespace MRP_GUI.Sales
                 if (dgvProduct.Rows.Count == 0 || !availability)
                 {
                     String temptxtProduct = dtFinishProductList.Rows[cmbProductList.SelectedIndex].ItemArray[0].ToString();
-                    dgvProduct.Rows.Add(cmbProductList.Text, temptxtProduct, txtQty.Text);
+                    dgvProduct.Rows.Add(cmbProductList.Text, cmbProductList.SelectedValue.ToString(), txtQty.Text);
                 }
                 else
                 {

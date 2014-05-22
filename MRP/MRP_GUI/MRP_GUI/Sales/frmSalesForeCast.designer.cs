@@ -34,9 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.bsFinishProductList = new System.Windows.Forms.BindingSource(this.components);
@@ -56,6 +53,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRevID = new System.Windows.Forms.Label();
             this.txtEnteredDate = new System.Windows.Forms.Label();
+            this.product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFinishProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDistributorsList)).BeginInit();
@@ -73,6 +73,7 @@
             this.cmbProductList.Name = "cmbProductList";
             this.cmbProductList.Size = new System.Drawing.Size(181, 21);
             this.cmbProductList.TabIndex = 5;
+            this.cmbProductList.ValueMember = "FinishProductCode";
             // 
             // label3
             // 
@@ -118,29 +119,6 @@
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(968, 358);
             this.dgvProduct.TabIndex = 9;
-            // 
-            // product_name
-            // 
-            this.product_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.product_name.DataPropertyName = "ProductName";
-            this.product_name.HeaderText = "Product Name";
-            this.product_name.Name = "product_name";
-            this.product_name.ReadOnly = true;
-            // 
-            // ProductCode
-            // 
-            this.ProductCode.HeaderText = "ProductCode";
-            this.ProductCode.Name = "ProductCode";
-            this.ProductCode.ReadOnly = true;
-            this.ProductCode.Width = 94;
-            // 
-            // Qty
-            // 
-            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Qty.DataPropertyName = "Qty";
-            this.Qty.HeaderText = "Quantity";
-            this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
             // 
             // btnSave
             // 
@@ -380,6 +358,29 @@
             this.txtEnteredDate.TabIndex = 24;
             this.txtEnteredDate.Text = "Entered Date -";
             // 
+            // product_name
+            // 
+            this.product_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.product_name.DataPropertyName = "ProductName";
+            this.product_name.HeaderText = "Product Name";
+            this.product_name.Name = "product_name";
+            this.product_name.ReadOnly = true;
+            // 
+            // ProductCode
+            // 
+            this.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductCode.HeaderText = "ProductCode";
+            this.ProductCode.Name = "ProductCode";
+            this.ProductCode.ReadOnly = true;
+            // 
+            // Qty
+            // 
+            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Qty.DataPropertyName = "Qty";
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            // 
             // frmSalesForeCast
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,9 +423,6 @@
         private System.Windows.Forms.ComboBox cmbWeekNo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn product_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.ComboBox cmbMonth;
         private System.Windows.Forms.Label label1;
@@ -434,5 +432,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label txtRevID;
         private System.Windows.Forms.Label txtEnteredDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn product_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
     }
 }
