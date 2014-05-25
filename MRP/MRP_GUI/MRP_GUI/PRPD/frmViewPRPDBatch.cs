@@ -81,9 +81,8 @@ namespace MRP_GUI.PRPD
             try
             {
                 Load_Activity();
-
                 Load_QC();
-
+                Load_Instructions();
                 //bool IsStart = false;
                 if (objPRPDBatch.Type == PRPDBatch.PRPDType.Rework)
                 {
@@ -161,6 +160,14 @@ namespace MRP_GUI.PRPD
                 MessageBox.Show(this, "Error occured while loading", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+        }
+
+        private void Load_Instructions()
+        {
+            dgvInstructions.AutoGenerateColumns = false;
+            binddgvInstructions.DataSource = objPRPDBatchActivityInstructions_DL.GetDataByBatchID(objPRPDBatch.PRPDBatchID);
+            dgvInstructions.DataSource = binddgvInstructions;
+            binddgvInstructions.ResetBindings(true);
         }
 
         private void Load_QC()
@@ -268,6 +275,11 @@ namespace MRP_GUI.PRPD
                 MessageBox.Show(this, "Error occured while loading report", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+
+        }
+
+        private void btnCost_Click(object sender, EventArgs e)
+        {
 
         }
 

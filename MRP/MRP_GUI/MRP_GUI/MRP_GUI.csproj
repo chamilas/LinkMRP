@@ -155,6 +155,12 @@
     <Compile Include="frmChangePassword.designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\frmStockAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\frmStockAdjustment.Designer.cs">
+      <DependentUpon>frmStockAdjustment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\frmTGRN_Import.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     </Compile>
     <Compile Include="Inventory\frmPOMaterialSelection.Designer.cs">
       <DependentUpon>frmPOMaterialSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\GRN\frmGRN_Edit.Designer.cs">
+      <DependentUpon>frmGRN_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\MR\frmMRT_Batch_FG.cs">
       <SubType>Form</SubType>
@@ -1317,6 +1329,12 @@
     <Compile Include="Sales\frmSalesForeCast.designer.cs">
       <DependentUpon>frmSalesForeCast.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmSalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSalesReturn.Designer.cs">
+      <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -1344,14 +1362,23 @@
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\frmStockAdjustment.resx">
+      <DependentUpon>frmStockAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\frmTGRN_Import.resx">
       <DependentUpon>frmTGRN_Import.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\frmPOMaterialSelection.resx">
       <DependentUpon>frmPOMaterialSelection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\GRN\frmGRN_Edit.resx">
+      <DependentUpon>frmGRN_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventory\MR\frmMRT_Batch_FG.resx">
       <DependentUpon>frmMRT_Batch_FG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchCreate.resx">
+      <DependentUpon>frmBatchCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmPackingMaterialsForecast.resx">
       <DependentUpon>frmPackingMaterialsForecast.cs</DependentUpon>
@@ -1930,6 +1957,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmSalesForeCast.resx">
       <DependentUpon>frmSalesForeCast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSalesReturn.resx">
+      <DependentUpon>frmSalesReturn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

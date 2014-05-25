@@ -149,7 +149,8 @@ namespace MRP_GUI
             txtFrom.Text = "";
             txtTo.Text = "";
             txtNos.Text = "";
-            txtOT.Text = "";
+            txtOT.Text = "00";
+            txtOTMinutes.Text = "00";
             cmbEmployee.Select();
         }
 
@@ -412,7 +413,7 @@ namespace MRP_GUI
                 }
                 else
                 {
-                    btnFinishPacking.Enabled = false;
+                    btnFinishPacking.Enabled = true;
                 }
 
             }

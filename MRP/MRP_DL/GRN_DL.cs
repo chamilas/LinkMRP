@@ -356,6 +356,30 @@ namespace DL
         }
 
 
+        public System.Data.DataTable GetDataView(int GNRType, GRN.Status Status)
+        {
+            try
+            {
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                new SqlParameter("@Type",GNRType),
+                new SqlParameter("@Status",Status)
+                };
+
+                DataTable dt = Execute.RunSP_DataTable(Connection, "SPGET_GRN_DataviewByTypeAndStatus", paramList);
+
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+
         public System.Data.DataTable GetDataView(long DepID,DateTime From,DateTime To, GRN.Status Status)
         {
             try

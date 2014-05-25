@@ -59,7 +59,7 @@ namespace DL
                 new SqlParameter("@Original_GRNNO", GRNNO),
                 new SqlParameter("@Original_BasicProductCode", BasicProductCode)};
 
-                return Execute.RunSP_RowsEffected(Connection, "SDDELETE_GRNBasicProduct", paramList);
+                return Execute.RunSP_RowsEffected(Connection, "SPDELETE_GRNBasicProduct", paramList);
 
             }
             catch (Exception ex)

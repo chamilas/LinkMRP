@@ -79,8 +79,8 @@ namespace DL
 
                 SqlParameter[] paramList = new SqlParameter[] {
                 
-                new SqlParameter("@GRNNO", GRNNO),
-                new SqlParameter("@MaterialCode", MaterialCode)};
+                new SqlParameter("@Original_GRNNO", GRNNO),
+                new SqlParameter("@Original_MaterialCode", MaterialCode)};
 
                 return Execute.RunSP_RowsEffected(Connection, "SPDELETE_GRNMaterials", paramList);
 
@@ -110,7 +110,7 @@ namespace DL
                 new SqlParameter("@Original_GRNNO", GRNNO),
                 new SqlParameter("@Original_MaterialCode", MaterialCode)};
 
-                return Execute.RunSP_RowsEffected(Connection, "SPADD_GRNMaterials", paramList);
+                return Execute.RunSP_RowsEffected(Connection, "SPUPDATE_GRNMaterials", paramList);
 
             }
             catch (Exception ex)

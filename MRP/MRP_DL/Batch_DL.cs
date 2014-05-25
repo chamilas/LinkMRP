@@ -1620,5 +1620,25 @@ namespace DL
         }
 
 
+        public DataTable GetPreviousBatchDetails(String  BasicProdut)
+        {
+            try
+            {
+
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@BasicProduct",BasicProdut)};
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_Batch_BatchPreviousDetails", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
     }
 }

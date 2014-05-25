@@ -3048,6 +3048,18 @@ namespace MRP_GUI
 
         }
 
+        private void testToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmGRN_Edit frm = new frmGRN_Edit();
+            ShowForm(frm);
+        }
+
+        private void test2ToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmStockAdjustment frm = new frmStockAdjustment();
+            ShowForm(frm);
+        }
+
 
 
 

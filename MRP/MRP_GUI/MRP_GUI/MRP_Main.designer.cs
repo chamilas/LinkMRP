@@ -177,6 +177,8 @@ namespace MRP_GUI
             this.toolStripMenuItem26 = new System.Windows.Forms.ToolStripMenuItem();
             this.forecastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forecastApproveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.test2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.itemToStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rawToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -308,6 +310,7 @@ namespace MRP_GUI
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRPDBatchEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cvcxbvxcbvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -509,56 +512,56 @@ namespace MRP_GUI
             // planningWeeksToolStripMenuItem
             // 
             this.planningWeeksToolStripMenuItem.Name = "planningWeeksToolStripMenuItem";
-            this.planningWeeksToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.planningWeeksToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.planningWeeksToolStripMenuItem.Text = "Planning Weeks";
             this.planningWeeksToolStripMenuItem.Click += new System.EventHandler(this.planningWeeksToolStripMenuItem_Click);
             // 
             // batchPlanToolStripMenuItem
             // 
             this.batchPlanToolStripMenuItem.Name = "batchPlanToolStripMenuItem";
-            this.batchPlanToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.batchPlanToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.batchPlanToolStripMenuItem.Text = "Batch Plan";
             this.batchPlanToolStripMenuItem.Click += new System.EventHandler(this.batchPlanToolStripMenuItem_Click);
             // 
             // rPDMaterialRequirementToolStripMenuItem
             // 
             this.rPDMaterialRequirementToolStripMenuItem.Name = "rPDMaterialRequirementToolStripMenuItem";
-            this.rPDMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.rPDMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.rPDMaterialRequirementToolStripMenuItem.Text = "RPD Material Requirement";
             this.rPDMaterialRequirementToolStripMenuItem.Click += new System.EventHandler(this.rPDMaterialRequirementToolStripMenuItem_Click);
             // 
             // rPDMaterialRequirementPlanToolStripMenuItem
             // 
             this.rPDMaterialRequirementPlanToolStripMenuItem.Name = "rPDMaterialRequirementPlanToolStripMenuItem";
-            this.rPDMaterialRequirementPlanToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.rPDMaterialRequirementPlanToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.rPDMaterialRequirementPlanToolStripMenuItem.Text = "RPD Material Requirement Plan";
             this.rPDMaterialRequirementPlanToolStripMenuItem.Click += new System.EventHandler(this.rPDMaterialRequirementPlanToolStripMenuItem_Click);
             // 
             // pRPDMaterialRequirementToolStripMenuItem
             // 
             this.pRPDMaterialRequirementToolStripMenuItem.Name = "pRPDMaterialRequirementToolStripMenuItem";
-            this.pRPDMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.pRPDMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.pRPDMaterialRequirementToolStripMenuItem.Text = "PRPD Material Requirement";
             this.pRPDMaterialRequirementToolStripMenuItem.Click += new System.EventHandler(this.pRPDMaterialRequirementToolStripMenuItem_Click);
             // 
             // pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem
             // 
             this.pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem.Name = "pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem";
-            this.pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem.Text = "PRPD Material Requirement Plan";
             this.pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem.Click += new System.EventHandler(this.pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem_Click);
             // 
             // storesMaterialRequirementToolStripMenuItem
             // 
             this.storesMaterialRequirementToolStripMenuItem.Name = "storesMaterialRequirementToolStripMenuItem";
-            this.storesMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.storesMaterialRequirementToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.storesMaterialRequirementToolStripMenuItem.Text = "Store Material Requirement";
             this.storesMaterialRequirementToolStripMenuItem.Click += new System.EventHandler(this.storesMaterialRequirementToolStripMenuItem_Click);
             // 
             // storeMaterialRequirementPlanToolStripMenuItem
             // 
             this.storeMaterialRequirementPlanToolStripMenuItem.Name = "storeMaterialRequirementPlanToolStripMenuItem";
-            this.storeMaterialRequirementPlanToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
+            this.storeMaterialRequirementPlanToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.storeMaterialRequirementPlanToolStripMenuItem.Text = "Store Material Requirement Plan";
             this.storeMaterialRequirementPlanToolStripMenuItem.Click += new System.EventHandler(this.storeMaterialRequirementPlanToolStripMenuItem_Click);
             // 
@@ -1478,7 +1481,10 @@ namespace MRP_GUI
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem26,
             this.forecastToolStripMenuItem,
-            this.forecastApproveToolStripMenuItem});
+            this.forecastApproveToolStripMenuItem,
+            this.testToolStripMenuItem,
+            this.test2ToolStripMenuItem,
+            this.cvcxbvxcbvToolStripMenuItem});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(51, 20);
             this.helpMenu.Text = "Sales";
@@ -1486,23 +1492,37 @@ namespace MRP_GUI
             // toolStripMenuItem26
             // 
             this.toolStripMenuItem26.Name = "toolStripMenuItem26";
-            this.toolStripMenuItem26.Size = new System.Drawing.Size(216, 22);
+            this.toolStripMenuItem26.Size = new System.Drawing.Size(176, 22);
             this.toolStripMenuItem26.Text = "Daily Sales";
             this.toolStripMenuItem26.Click += new System.EventHandler(this.toolStripMenuItem26_Click_1);
             // 
             // forecastToolStripMenuItem
             // 
             this.forecastToolStripMenuItem.Name = "forecastToolStripMenuItem";
-            this.forecastToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.forecastToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.forecastToolStripMenuItem.Text = "Forecast";
             this.forecastToolStripMenuItem.Click += new System.EventHandler(this.forecastToolStripMenuItem_Click);
             // 
             // forecastApproveToolStripMenuItem
             // 
             this.forecastApproveToolStripMenuItem.Name = "forecastApproveToolStripMenuItem";
-            this.forecastApproveToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.forecastApproveToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.forecastApproveToolStripMenuItem.Text = "Forecast Approve";
             this.forecastApproveToolStripMenuItem.Click += new System.EventHandler(this.forecastApproveToolStripMenuItem_Click);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_1);
+            // 
+            // test2ToolStripMenuItem
+            // 
+            this.test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
+            this.test2ToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.test2ToolStripMenuItem.Text = "test 2";
+            this.test2ToolStripMenuItem.Click += new System.EventHandler(this.test2ToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem17
             // 
@@ -2507,6 +2527,12 @@ namespace MRP_GUI
             this.pRPDBatchEditToolStripMenuItem.Text = "Manage";
             this.pRPDBatchEditToolStripMenuItem.Click += new System.EventHandler(this.pRPDBatchEditToolStripMenuItem_Click);
             // 
+            // cvcxbvxcbvToolStripMenuItem
+            // 
+            this.cvcxbvxcbvToolStripMenuItem.Name = "cvcxbvxcbvToolStripMenuItem";
+            this.cvcxbvxcbvToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.cvcxbvxcbvToolStripMenuItem.Text = "cvcxbvxcbv";
+            // 
             // MRP_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2813,6 +2839,9 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem projectMaterialConumptionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem packingMaterialRequirementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem forecastApproveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem test2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cvcxbvxcbvToolStripMenuItem;
     }
 }
 

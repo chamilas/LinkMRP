@@ -228,13 +228,17 @@ namespace MRP_GUI
                dgvBatchFormula.DataSource = objSourceFormula;
                objSourceFormula.ResetBindings(true);
 
-
-               btnCreate.Visible = true;
+                dgPreviousBatch.AutoGenerateColumns = false;
+                bsPreviousBatch.DataSource=objBatch_DL.GetPreviousBatchDetails(lstBasicProductList.SelectedValue.ToString());
+                dgPreviousBatch.DataSource = bsPreviousBatch;
+                bsPreviousBatch.ResetBindings(true);             
+                
+                btnCreate.Visible = true;
                txtBatchSize.Text = "";
                txtBatchSize.Select();
                txtPrefix.Text = "";
                chkPrefix.Checked = false;
-
+               
             }
 
             cmbBatchSize.Select();

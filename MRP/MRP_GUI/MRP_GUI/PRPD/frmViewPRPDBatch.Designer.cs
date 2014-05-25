@@ -30,11 +30,12 @@ namespace MRP_GUI.PRPD
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtBatchState = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -55,6 +56,13 @@ namespace MRP_GUI.PRPD
             this.txtBatchNo = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.gvActivity = new System.Windows.Forms.DataGridView();
+            this.PRPDBatchActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MainActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SupervisedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StopQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindActivities = new System.Windows.Forms.BindingSource(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -84,6 +92,9 @@ namespace MRP_GUI.PRPD
             this.txtRDQAOfficer = new System.Windows.Forms.TextBox();
             this.txtTestBy = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvInstructions = new System.Windows.Forms.DataGridView();
             this.bindReports = new System.Windows.Forms.BindingSource(this.components);
             this.lblUnit3 = new System.Windows.Forms.Label();
             this.lblUnit2 = new System.Windows.Forms.Label();
@@ -98,7 +109,6 @@ namespace MRP_GUI.PRPD
             this.label10 = new System.Windows.Forms.Label();
             this.txtFinalQty = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnCost = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,13 +119,15 @@ namespace MRP_GUI.PRPD
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRPDBatchActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MainActivity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupervisedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StopQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCost = new System.Windows.Forms.Button();
+            this.binddgvInstructions = new System.Windows.Forms.BindingSource(this.components);
+            this.PRPDBatchActivityInstructionsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ParticleSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InstructionDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MainActivityi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvActivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindActivities)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -123,7 +135,11 @@ namespace MRP_GUI.PRPD
             this.tabPage2.SuspendLayout();
             this.grpQC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInstructions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindReports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binddgvInstructions)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -319,6 +335,69 @@ namespace MRP_GUI.PRPD
             this.gvActivity.TabIndex = 96;
             this.gvActivity.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvActivity_CellDoubleClick);
             // 
+            // PRPDBatchActivity
+            // 
+            this.PRPDBatchActivity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PRPDBatchActivity.DataPropertyName = "PRPDBatchActivity";
+            this.PRPDBatchActivity.HeaderText = "PRPDBatchActivity";
+            this.PRPDBatchActivity.Name = "PRPDBatchActivity";
+            this.PRPDBatchActivity.ReadOnly = true;
+            this.PRPDBatchActivity.Visible = false;
+            // 
+            // MainActivity
+            // 
+            this.MainActivity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MainActivity.DataPropertyName = "MainActivity";
+            this.MainActivity.HeaderText = "Activity";
+            this.MainActivity.Name = "MainActivity";
+            this.MainActivity.ReadOnly = true;
+            // 
+            // SupervisedBy
+            // 
+            this.SupervisedBy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SupervisedBy.DataPropertyName = "SupervisedBy";
+            this.SupervisedBy.HeaderText = "SupervisedBy";
+            this.SupervisedBy.Name = "SupervisedBy";
+            this.SupervisedBy.ReadOnly = true;
+            // 
+            // StartedDate
+            // 
+            this.StartedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StartedDate.DataPropertyName = "StartedDate";
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.StartedDate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.StartedDate.HeaderText = "StartedDate";
+            this.StartedDate.Name = "StartedDate";
+            this.StartedDate.ReadOnly = true;
+            // 
+            // EndDate
+            // 
+            this.EndDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EndDate.DataPropertyName = "EndDate";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.EndDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.EndDate.HeaderText = "EndDate";
+            this.EndDate.Name = "EndDate";
+            this.EndDate.ReadOnly = true;
+            // 
+            // StartQty
+            // 
+            this.StartQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StartQty.DataPropertyName = "StartQty";
+            this.StartQty.HeaderText = "StartQty";
+            this.StartQty.Name = "StartQty";
+            this.StartQty.ReadOnly = true;
+            // 
+            // StopQty
+            // 
+            this.StopQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StopQty.DataPropertyName = "StopQty";
+            this.StopQty.HeaderText = "StopQty";
+            this.StopQty.Name = "StopQty";
+            this.StopQty.ReadOnly = true;
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -337,6 +416,7 @@ namespace MRP_GUI.PRPD
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 192);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -628,6 +708,53 @@ namespace MRP_GUI.PRPD
             this.label22.TabIndex = 122;
             this.label22.Text = "Test By";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(952, 359);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Instructions";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvInstructions);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(946, 353);
+            this.groupBox1.TabIndex = 134;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Instructions";
+            // 
+            // dgvInstructions
+            // 
+            this.dgvInstructions.AllowUserToAddRows = false;
+            this.dgvInstructions.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvInstructions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvInstructions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInstructions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInstructions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PRPDBatchActivityInstructionsID,
+            this.ActivityID,
+            this.MachineID,
+            this.ParticleSize,
+            this.InstructionDesc,
+            this.MainActivityi,
+            this.MachineName});
+            this.dgvInstructions.Location = new System.Drawing.Point(8, 19);
+            this.dgvInstructions.Name = "dgvInstructions";
+            this.dgvInstructions.ReadOnly = true;
+            this.dgvInstructions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInstructions.Size = new System.Drawing.Size(932, 180);
+            this.dgvInstructions.TabIndex = 96;
+            // 
             // lblUnit3
             // 
             this.lblUnit3.AutoSize = true;
@@ -746,18 +873,6 @@ namespace MRP_GUI.PRPD
             this.label9.TabIndex = 102;
             this.label9.Text = "Final Qty";
             // 
-            // btnCost
-            // 
-            this.btnCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCost.Enabled = false;
-            this.btnCost.Location = new System.Drawing.Point(12, 583);
-            this.btnCost.Name = "btnCost";
-            this.btnCost.Size = new System.Drawing.Size(110, 23);
-            this.btnCost.TabIndex = 112;
-            this.btnCost.Text = "Cost Report";
-            this.btnCost.UseVisualStyleBackColor = true;
-            this.btnCost.Visible = false;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MainActivity";
@@ -769,8 +884,8 @@ namespace MRP_GUI.PRPD
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "StartedDate";
-            dataGridViewCellStyle5.Format = "d";
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Format = "d";
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn2.HeaderText = "Start Date";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -778,8 +893,8 @@ namespace MRP_GUI.PRPD
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "EndDate";
-            dataGridViewCellStyle6.Format = "d";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Format = "d";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn3.HeaderText = "Stop Date";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -842,68 +957,70 @@ namespace MRP_GUI.PRPD
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
-            // PRPDBatchActivity
+            // btnCost
             // 
-            this.PRPDBatchActivity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PRPDBatchActivity.DataPropertyName = "PRPDBatchActivity";
-            this.PRPDBatchActivity.HeaderText = "PRPDBatchActivity";
-            this.PRPDBatchActivity.Name = "PRPDBatchActivity";
-            this.PRPDBatchActivity.ReadOnly = true;
-            this.PRPDBatchActivity.Visible = false;
+            this.btnCost.Location = new System.Drawing.Point(12, 583);
+            this.btnCost.Name = "btnCost";
+            this.btnCost.Size = new System.Drawing.Size(75, 23);
+            this.btnCost.TabIndex = 112;
+            this.btnCost.Text = "Costing";
+            this.btnCost.UseVisualStyleBackColor = true;
             // 
-            // MainActivity
+            // PRPDBatchActivityInstructionsID
             // 
-            this.MainActivity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MainActivity.DataPropertyName = "MainActivity";
-            this.MainActivity.HeaderText = "Activity";
-            this.MainActivity.Name = "MainActivity";
-            this.MainActivity.ReadOnly = true;
+            this.PRPDBatchActivityInstructionsID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PRPDBatchActivityInstructionsID.DataPropertyName = "PRPDBatchActivityInstructionsID";
+            this.PRPDBatchActivityInstructionsID.HeaderText = "Instructions ID";
+            this.PRPDBatchActivityInstructionsID.Name = "PRPDBatchActivityInstructionsID";
+            this.PRPDBatchActivityInstructionsID.ReadOnly = true;
             // 
-            // SupervisedBy
+            // ActivityID
             // 
-            this.SupervisedBy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SupervisedBy.DataPropertyName = "SupervisedBy";
-            this.SupervisedBy.HeaderText = "SupervisedBy";
-            this.SupervisedBy.Name = "SupervisedBy";
-            this.SupervisedBy.ReadOnly = true;
+            this.ActivityID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ActivityID.DataPropertyName = "ActivityID";
+            this.ActivityID.HeaderText = "Activity ID";
+            this.ActivityID.Name = "ActivityID";
+            this.ActivityID.ReadOnly = true;
             // 
-            // StartedDate
+            // MachineID
             // 
-            this.StartedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StartedDate.DataPropertyName = "StartedDate";
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.StartedDate.DefaultCellStyle = dataGridViewCellStyle2;
-            this.StartedDate.HeaderText = "StartedDate";
-            this.StartedDate.Name = "StartedDate";
-            this.StartedDate.ReadOnly = true;
+            this.MachineID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MachineID.DataPropertyName = "MachineID";
+            this.MachineID.HeaderText = "Machine ID";
+            this.MachineID.Name = "MachineID";
+            this.MachineID.ReadOnly = true;
             // 
-            // EndDate
+            // ParticleSize
             // 
-            this.EndDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EndDate.DataPropertyName = "EndDate";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.EndDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.EndDate.HeaderText = "EndDate";
-            this.EndDate.Name = "EndDate";
-            this.EndDate.ReadOnly = true;
+            this.ParticleSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ParticleSize.DataPropertyName = "ParticleSize";
+            this.ParticleSize.HeaderText = "Particle Size";
+            this.ParticleSize.Name = "ParticleSize";
+            this.ParticleSize.ReadOnly = true;
             // 
-            // StartQty
+            // InstructionDesc
             // 
-            this.StartQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StartQty.DataPropertyName = "StartQty";
-            this.StartQty.HeaderText = "StartQty";
-            this.StartQty.Name = "StartQty";
-            this.StartQty.ReadOnly = true;
+            this.InstructionDesc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.InstructionDesc.DataPropertyName = "InstructionDesc";
+            this.InstructionDesc.HeaderText = "Instruction Description";
+            this.InstructionDesc.Name = "InstructionDesc";
+            this.InstructionDesc.ReadOnly = true;
             // 
-            // StopQty
+            // MainActivityi
             // 
-            this.StopQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StopQty.DataPropertyName = "StopQty";
-            this.StopQty.HeaderText = "StopQty";
-            this.StopQty.Name = "StopQty";
-            this.StopQty.ReadOnly = true;
+            this.MainActivityi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MainActivityi.DataPropertyName = "MainActivity";
+            this.MainActivityi.HeaderText = "Main Activity";
+            this.MainActivityi.Name = "MainActivityi";
+            this.MainActivityi.ReadOnly = true;
+            // 
+            // MachineName
+            // 
+            this.MachineName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MachineName.DataPropertyName = "MachineName";
+            this.MachineName.HeaderText = "Machine Name";
+            this.MachineName.Name = "MachineName";
+            this.MachineName.ReadOnly = true;
             // 
             // frmViewPRPDBatch
             // 
@@ -956,7 +1073,11 @@ namespace MRP_GUI.PRPD
             this.grpQC.ResumeLayout(false);
             this.grpQC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInstructions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindReports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binddgvInstructions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1037,7 +1158,6 @@ namespace MRP_GUI.PRPD
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtFinalQty;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
@@ -1055,5 +1175,17 @@ namespace MRP_GUI.PRPD
         private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn StopQty;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvInstructions;
+        private System.Windows.Forms.Button btnCost;
+        private System.Windows.Forms.BindingSource binddgvInstructions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRPDBatchActivityInstructionsID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivityID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MachineID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ParticleSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InstructionDesc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MainActivityi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MachineName;
     }
 }
