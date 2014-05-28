@@ -202,6 +202,7 @@ namespace MRP_GUI.Sales
                         // objGRN.GRNMR = objMR;
                         //objGRN.GRNMTNNo = objMTN;
                         objGRN.GRNRPDBatch = "N/A";
+
                         objGRN.GRNStatus = GRN.Status.Initial;
                         objGRN.GRNStore = objStore;
                         objGRN.GRNCategory = 0;
