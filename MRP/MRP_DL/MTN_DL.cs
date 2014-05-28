@@ -215,6 +215,36 @@ namespace DL
             }
         }
 
+        public long Add_FinishedGoodsReturns(MTN obj)
+        {
+
+            try
+            {
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                
+   
+                new SqlParameter("@MTNEnterdBy", obj.MTNEnterdBy.EmployeeID),
+                new SqlParameter("@MTNFromDepID", obj.MTNDepartmentFrom.DepID),
+                new SqlParameter("@MTNToDepID", obj.MTNDepartmentTo.DepID),
+                new SqlParameter("@MTNStatus", obj.MTNStatus),
+                new SqlParameter("@MTNType", obj.MTNType),
+                new SqlParameter("@MTNItemType", obj.MTNItemType),
+                new SqlParameter("@Store", obj.MTNStore.StoreID),
+                new SqlParameter("@outParam",SqlDbType.Int){Direction=ParameterDirection.Output}
+        };
+
+                return Execute.RunSP_Output(Connection, "SPADD_MTN_FinishedGoodsReturns", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+
         public long Add_Other(MTN obj)
         {
 
@@ -229,10 +259,11 @@ namespace DL
                 new SqlParameter("@MTNToDepID", obj.MTNDepartmentTo.DepID),
                 new SqlParameter("@MTNStatus", obj.MTNStatus),
                 new SqlParameter("@MTNType", obj.MTNType),
-                new SqlParameter("@MTNItemType", obj.MTNItemType)
+                new SqlParameter("@MTNItemType", obj.MTNItemType),
+                new SqlParameter("@outParam",SqlDbType.Int){Direction=ParameterDirection.Output}
         };
 
-                return Execute.RunSP_RowsEffected(Connection, "SPADD_MTN_ProductReturn", paramList);
+                return Execute.RunSP_Output(Connection, "SPADD_MTN_Other", paramList);
 
             }
             catch (Exception ex)

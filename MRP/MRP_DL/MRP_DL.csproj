@@ -56,6 +56,7 @@
     <Compile Include="BatchPackingMR_DL.cs" />
     <Compile Include="CustomerTerritoryList_DL.cs" />
     <Compile Include="Customer_DL.cs" />
+    <Compile Include="FinishGoodsReturn_DL.cs" />
     <Compile Include="PlanBatch_DL.cs" />
     <Compile Include="PlanWeek_DL.cs" />
     <Compile Include="PlanMaterials_DL.cs" />

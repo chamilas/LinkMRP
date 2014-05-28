@@ -251,5 +251,24 @@ namespace DL
             }
         }
 
+        public DataTable CkeckPrimaryBasicProductByBasicProductID(String BasicProduct)
+        {
+            try
+            {
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                new SqlParameter("@BasicProductCode",BasicProduct)
+                };
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_PrimaryBasicProductByBasicProductID", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
     }
 }

@@ -24,15 +24,14 @@ namespace DL
                 SqlParameter[] paramList = new SqlParameter[] {
                 
                 new SqlParameter("@MTNNO", obj.MTN.MTNNo),
-                new SqlParameter("@MTNBasicProductID", obj.FinishProduct.FinishProductCode),
-                new SqlParameter("@MTNBatchNo", obj.Batch),
-                new SqlParameter("@MTNDescription", obj.Description),
+                new SqlParameter("@MTNFinishProductID", obj.FinishProduct.FinishProductCode),
                 new SqlParameter("@MTNTransferQty", obj.TransferQty),
                 new SqlParameter("@MTNUnitRate", obj.UnitRate),
-                new SqlParameter("@MTNRceivedQty",  obj.ReceivedQty)
+                new SqlParameter("@MTNRceivedQty", obj.ReceivedQty),
+                new SqlParameter("@MTNUnitRate_Budget", obj.UnitRate_Budget)
         };
 
-                return Execute.RunSP_RowsEffected(Connection, "SPADD_MTNBasicProduct", paramList);
+                return Execute.RunSP_RowsEffected(Connection, "SPADD_MTN_FinishProduct", paramList);
 
             }
             catch (Exception ex)

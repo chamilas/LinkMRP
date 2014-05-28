@@ -34,6 +34,7 @@ namespace MRP_GUI
         Stock_DL objStock_DL = new Stock_DL(ConnectionStringClass.GetConnection());
         User_DL objUser_DL = new User_DL(ConnectionStringClass.GetConnection());
         Stock_DL objStocks_DL = new Stock_DL(ConnectionStringClass.GetConnection());
+        PlanBatch_DL objPlanBatch_DL = new PlanBatch_DL(ConnectionStringClass.GetConnection());
 
         Department objDepartment = new Department();
 
@@ -88,19 +89,58 @@ namespace MRP_GUI
                dgvTotal.DataSource = objSourceWeeklyRunning;
                objSourceWeeklyRunning.ResetBindings(true);
 
-                if(dt.Rows.Count>0)
-                {
-                    if (Convert.ToInt32(dt.Rows[0]["Status"]) == 1)
-                    {
-                        btnFix.Enabled = false;
-                        btnGenerate.Enabled = false;
-                    }
-                    else
-                    {
-                        btnFix.Enabled = true;
-                        btnGenerate.Enabled = true;
-                    }
-                }
+               if (dt.Rows.Count > 0)
+               {
+                   if (Convert.ToInt32(dt.Rows[0]["Status"]) == 1)
+                   {
+                       btnFix.Enabled = false;
+                       btnGenerate.Enabled = false;
+                   }
+                   else
+                   {
+                       btnFix.Enabled = true;
+                       btnGenerate.Enabled = true;
+
+                       foreach (DataGridViewRow row2 in dgvTotal.Rows)
+                       {
+                           DataTable tempMaterial = new DataTable();
+                           String tempWeekID = row2.Cells[0].Value.ToString();
+                           String tempcheckBasicproduct = row2.Cells[1].Value.ToString();
+                           String tempQty = row2.Cells[2].Value.ToString();
+
+                           tempMaterial = objPlanMaterials_DL.CkeckPrimaryBasicProductByBasicProductID(tempcheckBasicproduct);
+                           if (tempMaterial.Rows.Count > 0)
+                           {
+                               PlanBatch obj = new PlanBatch();
+
+                               obj.BatchSize = Convert.ToDecimal(tempQty);
+                               obj.WeekID = Convert.ToInt32(tempWeekID);
+                               obj.Month = Convert.ToString(cmbMonth.Text);
+                               obj.Nos = 1;
+                               obj.ProductCode = tempcheckBasicproduct;
+                               obj.Year = Convert.ToInt32(cmbYear.Text);
+                               obj.RevisionID = 0;
+                               obj.Status = 0;
+                               obj.BatchLevel = 1;
+
+                               objPlanBatch_DL.Add(obj);
+                           }
+                           //if (tempcheckproduct == temptxtProduct)
+                          // {
+                           //    availability = true;
+                               //break;
+                         //  }
+                       }
+
+
+
+                   }
+               }
+               else 
+               {
+                   btnFix.Enabled = true;
+                   btnGenerate.Enabled = true;
+               }
 
             }
             catch (Exception ex)
@@ -130,6 +170,7 @@ namespace MRP_GUI
             if (PlanType == "RPD")
             {
                 objPlanMaterials_DL.Add(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, PlanType, 0);
+
             }
             else if (PlanType == "PRPD")
             {

@@ -33,7 +33,9 @@ namespace DL
                 new SqlParameter("@ProductCode", objPlanBatch.ProductCode),
                 new SqlParameter("@WeekID", objPlanBatch.WeekID),
                 new SqlParameter("@BatchSize", objPlanBatch.BatchSize),
-                new SqlParameter("@Nos", objPlanBatch.Nos)};
+                new SqlParameter("@Nos", objPlanBatch.Nos),
+                new SqlParameter("@Status", objPlanBatch.Status),
+                new SqlParameter("@BatchLevel", objPlanBatch.BatchLevel)};
 
 
                 return Execute.RunSP_RowsEffected(Connection, "SPADD_PlanBatch", paramList);

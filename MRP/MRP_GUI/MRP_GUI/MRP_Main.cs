@@ -3056,7 +3056,32 @@ namespace MRP_GUI
 
         private void test2ToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmStockAdjustment frm = new frmStockAdjustment();
+
+        }
+
+        private void rPDStoresToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frmGRN_Direct objFrm = new frmGRN_Direct(CurrentUser, "RPD_Main", "Raw");
+            ShowForm(objFrm);
+        }
+
+        private void gRNEditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGRN_Edit frm = new frmGRN_Edit();
+            ShowForm(frm);
+        }
+
+
+
+        private void stockAdjesmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStockAdjustment frm = new frmStockAdjustment(CurrentUser, "HP", "Stock Adjustment", "Dispose_FG");
+            ShowForm(frm);
+        }
+
+        private void salesReturnsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalesReturn frm = new frmSalesReturn(CurrentUser, "HP", "Return_FG");
             ShowForm(frm);
         }
 

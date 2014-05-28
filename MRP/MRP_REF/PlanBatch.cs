@@ -76,6 +76,21 @@ namespace SESD.MRP.REF
             set { _intNos = value; }
         }
 
+        private Int32 _Status;
+
+        public Int32 Status
+        {
+            get { return _Status; }
+            set { _Status = value; }
+        }
+
+        private Int32 _BatchLevel;
+
+        public Int32 BatchLevel
+        {
+            get { return _BatchLevel; }
+            set { _BatchLevel = value; }
+        }
 
         public class PlanBatchCollec : CollectionBase
         {

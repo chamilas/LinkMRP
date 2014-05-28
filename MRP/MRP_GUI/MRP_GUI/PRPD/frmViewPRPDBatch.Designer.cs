@@ -121,13 +121,13 @@ namespace MRP_GUI.PRPD
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCost = new System.Windows.Forms.Button();
             this.binddgvInstructions = new System.Windows.Forms.BindingSource(this.components);
-            this.PRPDBatchActivityInstructionsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ParticleSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InstructionDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainActivityi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InstructionDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ParticleSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MachineID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRPDBatchActivityInstructionsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvActivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindActivities)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -741,13 +741,13 @@ namespace MRP_GUI.PRPD
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInstructions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInstructions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PRPDBatchActivityInstructionsID,
-            this.ActivityID,
-            this.MachineID,
-            this.ParticleSize,
-            this.InstructionDesc,
             this.MainActivityi,
-            this.MachineName});
+            this.InstructionDesc,
+            this.ParticleSize,
+            this.MachineID,
+            this.MachineName,
+            this.ActivityID,
+            this.PRPDBatchActivityInstructionsID});
             this.dgvInstructions.Location = new System.Drawing.Point(8, 19);
             this.dgvInstructions.Name = "dgvInstructions";
             this.dgvInstructions.ReadOnly = true;
@@ -966,37 +966,13 @@ namespace MRP_GUI.PRPD
             this.btnCost.Text = "Costing";
             this.btnCost.UseVisualStyleBackColor = true;
             // 
-            // PRPDBatchActivityInstructionsID
+            // MainActivityi
             // 
-            this.PRPDBatchActivityInstructionsID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PRPDBatchActivityInstructionsID.DataPropertyName = "PRPDBatchActivityInstructionsID";
-            this.PRPDBatchActivityInstructionsID.HeaderText = "Instructions ID";
-            this.PRPDBatchActivityInstructionsID.Name = "PRPDBatchActivityInstructionsID";
-            this.PRPDBatchActivityInstructionsID.ReadOnly = true;
-            // 
-            // ActivityID
-            // 
-            this.ActivityID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ActivityID.DataPropertyName = "ActivityID";
-            this.ActivityID.HeaderText = "Activity ID";
-            this.ActivityID.Name = "ActivityID";
-            this.ActivityID.ReadOnly = true;
-            // 
-            // MachineID
-            // 
-            this.MachineID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MachineID.DataPropertyName = "MachineID";
-            this.MachineID.HeaderText = "Machine ID";
-            this.MachineID.Name = "MachineID";
-            this.MachineID.ReadOnly = true;
-            // 
-            // ParticleSize
-            // 
-            this.ParticleSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ParticleSize.DataPropertyName = "ParticleSize";
-            this.ParticleSize.HeaderText = "Particle Size";
-            this.ParticleSize.Name = "ParticleSize";
-            this.ParticleSize.ReadOnly = true;
+            this.MainActivityi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MainActivityi.DataPropertyName = "MainActivity";
+            this.MainActivityi.HeaderText = "Main Activity";
+            this.MainActivityi.Name = "MainActivityi";
+            this.MainActivityi.ReadOnly = true;
             // 
             // InstructionDesc
             // 
@@ -1006,13 +982,21 @@ namespace MRP_GUI.PRPD
             this.InstructionDesc.Name = "InstructionDesc";
             this.InstructionDesc.ReadOnly = true;
             // 
-            // MainActivityi
+            // ParticleSize
             // 
-            this.MainActivityi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MainActivityi.DataPropertyName = "MainActivity";
-            this.MainActivityi.HeaderText = "Main Activity";
-            this.MainActivityi.Name = "MainActivityi";
-            this.MainActivityi.ReadOnly = true;
+            this.ParticleSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ParticleSize.DataPropertyName = "ParticleSize";
+            this.ParticleSize.HeaderText = "Particle Size";
+            this.ParticleSize.Name = "ParticleSize";
+            this.ParticleSize.ReadOnly = true;
+            // 
+            // MachineID
+            // 
+            this.MachineID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MachineID.DataPropertyName = "MachineID";
+            this.MachineID.HeaderText = "Machine ID";
+            this.MachineID.Name = "MachineID";
+            this.MachineID.ReadOnly = true;
             // 
             // MachineName
             // 
@@ -1021,6 +1005,24 @@ namespace MRP_GUI.PRPD
             this.MachineName.HeaderText = "Machine Name";
             this.MachineName.Name = "MachineName";
             this.MachineName.ReadOnly = true;
+            // 
+            // ActivityID
+            // 
+            this.ActivityID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ActivityID.DataPropertyName = "ActivityID";
+            this.ActivityID.HeaderText = "Activity ID";
+            this.ActivityID.Name = "ActivityID";
+            this.ActivityID.ReadOnly = true;
+            this.ActivityID.Visible = false;
+            // 
+            // PRPDBatchActivityInstructionsID
+            // 
+            this.PRPDBatchActivityInstructionsID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PRPDBatchActivityInstructionsID.DataPropertyName = "PRPDBatchActivityInstructionsID";
+            this.PRPDBatchActivityInstructionsID.HeaderText = "Instructions ID";
+            this.PRPDBatchActivityInstructionsID.Name = "PRPDBatchActivityInstructionsID";
+            this.PRPDBatchActivityInstructionsID.ReadOnly = true;
+            this.PRPDBatchActivityInstructionsID.Visible = false;
             // 
             // frmViewPRPDBatch
             // 
@@ -1180,12 +1182,12 @@ namespace MRP_GUI.PRPD
         private System.Windows.Forms.DataGridView dgvInstructions;
         private System.Windows.Forms.Button btnCost;
         private System.Windows.Forms.BindingSource binddgvInstructions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRPDBatchActivityInstructionsID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ActivityID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MachineID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ParticleSize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InstructionDesc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MainActivityi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InstructionDesc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ParticleSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MachineID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MachineName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActivityID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRPDBatchActivityInstructionsID;
     }
 }

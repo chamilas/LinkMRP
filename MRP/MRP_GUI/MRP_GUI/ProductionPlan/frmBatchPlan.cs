@@ -147,17 +147,18 @@ namespace MRP_GUI
             {
                 PlanBatch obj = new PlanBatch();
 
-                            obj.BatchSize = Convert.ToDecimal(txtBatchSize.Text);
-                            obj.WeekID = Convert.ToInt32(dgvWeeks.CurrentRow.Cells["WeekIDD"].Value);
-                            obj.Month = Convert.ToString(cmbMonth.Text);
-                            obj.Nos = Convert.ToInt32(txtNos.Text);
-                            obj.ProductCode = lstBasicProductList.SelectedValue.ToString();
-                            obj.Year = Convert.ToInt32(cmbYear.Text);
-                            obj.RevisionID = Convert.ToInt32(dgvWeeks.CurrentRow.Cells["RevisionID"].Value);
+                obj.BatchSize = Convert.ToDecimal(txtBatchSize.Text);
+                obj.WeekID = Convert.ToInt32(dgvWeeks.CurrentRow.Cells["WeekIDD"].Value);
+                obj.Month = Convert.ToString(cmbMonth.Text);
+                obj.Nos = Convert.ToInt32(txtNos.Text);
+                obj.ProductCode = lstBasicProductList.SelectedValue.ToString();
+                obj.Year = Convert.ToInt32(cmbYear.Text);
+                obj.RevisionID = Convert.ToInt32(dgvWeeks.CurrentRow.Cells["RevisionID"].Value);
+                obj.Status = 0;
+                obj.BatchLevel = 0;
 
-                            objPlanBatch_DL.Add(obj);
-
-                            Load_Data();
+                objPlanBatch_DL.Add(obj);
+                Load_Data();
                 
             }
             catch (Exception ex)
