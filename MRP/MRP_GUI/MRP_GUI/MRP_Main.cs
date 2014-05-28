@@ -2965,7 +2965,7 @@ namespace MRP_GUI
 
         private void pRPDMaterialRequirementPlanRPDMaterialRequirementPlanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPlanMaterial_Full objFrm = new frmPlanMaterial_Full(CurrentUser, "PRPD");
+            frmPlanMaterial_Full objFrm = new frmPlanMaterial_Full(CurrentUser, "PRPD-temp");
             ShowForm(objFrm);
         }
 
@@ -2994,7 +2994,7 @@ namespace MRP_GUI
 
         private void forecastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser,"AP");
+            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser,"HP");
             ShowForm(frm);
         }
 

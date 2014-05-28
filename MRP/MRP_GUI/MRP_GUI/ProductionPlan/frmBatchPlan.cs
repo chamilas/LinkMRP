@@ -270,7 +270,7 @@ namespace MRP_GUI
         private void dgvWeeks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             long cc = objSalesForeCast_DL.GetBasicProductForecastByBPandDate(Convert.ToInt16(cmbYear.Text), cmbMonth.Text, Convert.ToInt16(dgvWeeks.CurrentRow.Cells["WeekIDD"].Value), lstBasicProductList.SelectedValue.ToString());
-            lblAvailability.Text = "" + cc;
+            lblAvailability.Text = "Forecasted Requirement: " + cc;
             Load_Data();
 
         }

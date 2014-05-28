@@ -34,6 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtQty = new System.Windows.Forms.TextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.bsFinishProductList = new System.Windows.Forms.BindingSource(this.components);
@@ -53,9 +56,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRevID = new System.Windows.Forms.Label();
             this.txtEnteredDate = new System.Windows.Forms.Label();
-            this.product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFinishProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDistributorsList)).BeginInit();
@@ -71,7 +71,7 @@
             this.cmbProductList.FormattingEnabled = true;
             this.cmbProductList.Location = new System.Drawing.Point(96, 24);
             this.cmbProductList.Name = "cmbProductList";
-            this.cmbProductList.Size = new System.Drawing.Size(181, 21);
+            this.cmbProductList.Size = new System.Drawing.Size(309, 21);
             this.cmbProductList.TabIndex = 5;
             this.cmbProductList.ValueMember = "FinishProductCode";
             // 
@@ -87,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(295, 27);
+            this.label4.Location = new System.Drawing.Point(411, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 7;
@@ -95,7 +95,7 @@
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(353, 24);
+            this.txtQty.Location = new System.Drawing.Point(469, 24);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(80, 20);
             this.txtQty.TabIndex = 8;
@@ -119,6 +119,29 @@
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(968, 358);
             this.dgvProduct.TabIndex = 9;
+            // 
+            // product_name
+            // 
+            this.product_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.product_name.DataPropertyName = "ProductName";
+            this.product_name.HeaderText = "Product Name";
+            this.product_name.Name = "product_name";
+            this.product_name.ReadOnly = true;
+            // 
+            // ProductCode
+            // 
+            this.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductCode.HeaderText = "ProductCode";
+            this.ProductCode.Name = "ProductCode";
+            this.ProductCode.ReadOnly = true;
+            // 
+            // Qty
+            // 
+            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Qty.DataPropertyName = "Qty";
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
             // 
             // btnSave
             // 
@@ -144,7 +167,7 @@
             // 
             // btnAddToList
             // 
-            this.btnAddToList.Location = new System.Drawing.Point(439, 24);
+            this.btnAddToList.Location = new System.Drawing.Point(555, 24);
             this.btnAddToList.Name = "btnAddToList";
             this.btnAddToList.Size = new System.Drawing.Size(75, 23);
             this.btnAddToList.TabIndex = 13;
@@ -154,7 +177,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(439, 53);
+            this.btnDelete.Location = new System.Drawing.Point(555, 53);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
@@ -357,29 +380,6 @@
             this.txtEnteredDate.Size = new System.Drawing.Size(108, 16);
             this.txtEnteredDate.TabIndex = 24;
             this.txtEnteredDate.Text = "Entered Date -";
-            // 
-            // product_name
-            // 
-            this.product_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.product_name.DataPropertyName = "ProductName";
-            this.product_name.HeaderText = "Product Name";
-            this.product_name.Name = "product_name";
-            this.product_name.ReadOnly = true;
-            // 
-            // ProductCode
-            // 
-            this.ProductCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductCode.HeaderText = "ProductCode";
-            this.ProductCode.Name = "ProductCode";
-            this.ProductCode.ReadOnly = true;
-            // 
-            // Qty
-            // 
-            this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Qty.DataPropertyName = "Qty";
-            this.Qty.HeaderText = "Quantity";
-            this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
             // 
             // frmSalesForeCast
             // 

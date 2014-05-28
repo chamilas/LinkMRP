@@ -396,12 +396,12 @@
             // 
             this.lblAvailability.AutoSize = true;
             this.lblAvailability.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailability.ForeColor = System.Drawing.Color.Chartreuse;
-            this.lblAvailability.Location = new System.Drawing.Point(505, 100);
+            this.lblAvailability.ForeColor = System.Drawing.Color.Navy;
+            this.lblAvailability.Location = new System.Drawing.Point(375, 90);
             this.lblAvailability.Name = "lblAvailability";
-            this.lblAvailability.Size = new System.Drawing.Size(33, 19);
+            this.lblAvailability.Size = new System.Drawing.Size(204, 19);
             this.lblAvailability.TabIndex = 31;
-            this.lblAvailability.Text = "000";
+            this.lblAvailability.Text = "Forecasted Requirement : 00";
             // 
             // frmBatchPlan
             // 

@@ -222,7 +222,7 @@ namespace MRP_GUI
                 }
                 else
                 {
-                    objPlanMaterials_DL.Add_PRPD(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, PlanType, 0);
+                    objPlanMaterials_DL.Add_Stores(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, PlanType, 0);
 
                     for (int i = 1; i < 5; i++)
                     {

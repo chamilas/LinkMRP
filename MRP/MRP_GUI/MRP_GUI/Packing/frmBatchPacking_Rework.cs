@@ -393,7 +393,8 @@ namespace MRP_GUI
             txtFrom.Text = "";
             txtTo.Text = "";
             txtNos.Text = "";
-            txtOT.Text = "";
+            txtOT.Text = "0";
+            txtOTMinutes.Text = "00";
             cmbEmployee.Select();
         }
 

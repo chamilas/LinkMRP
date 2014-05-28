@@ -175,6 +175,7 @@
             this.txtOT.Name = "txtOT";
             this.txtOT.Size = new System.Drawing.Size(42, 22);
             this.txtOT.TabIndex = 2;
+            this.txtOT.Text = "0";
             this.txtOT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOT_KeyDown);
             // 
             // label1
@@ -697,6 +698,7 @@
             this.txtOTMinutes.Name = "txtOTMinutes";
             this.txtOTMinutes.Size = new System.Drawing.Size(42, 22);
             this.txtOTMinutes.TabIndex = 198;
+            this.txtOTMinutes.Text = "00";
             this.txtOTMinutes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOTMinutes_KeyDown);
             // 
             // btnMultiple
