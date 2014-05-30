@@ -313,7 +313,6 @@ namespace MRP_GUI
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRPDBatchEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -1524,8 +1523,7 @@ namespace MRP_GUI
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem26,
             this.forecastToolStripMenuItem,
-            this.forecastApproveToolStripMenuItem,
-            this.testToolStripMenuItem});
+            this.forecastApproveToolStripMenuItem});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(51, 20);
             this.helpMenu.Text = "Sales";
@@ -2554,13 +2552,6 @@ namespace MRP_GUI
             this.pRPDBatchEditToolStripMenuItem.Text = "Manage";
             this.pRPDBatchEditToolStripMenuItem.Click += new System.EventHandler(this.pRPDBatchEditToolStripMenuItem_Click);
             // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.testToolStripMenuItem.Text = "test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_2);
-            // 
             // MRP_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2872,7 +2863,6 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem rPDStoresToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem stockAdjesmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesReturnsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 
