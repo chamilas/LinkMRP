@@ -191,6 +191,12 @@
     <Compile Include="Packing\frmBatchCreate.designer.cs">
       <DependentUpon>frmBatchCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductionPlan\frmBatchPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionPlan\frmBatchPlan.designer.cs">
+      <DependentUpon>frmBatchPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductionPlan\frmPackingMaterialsForecast.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,12 +208,6 @@
     </Compile>
     <Compile Include="ProductionPlan\frmPlanMaterials_Full.designer.cs">
       <DependentUpon>frmPlanMaterials_Full.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductionPlan\frmBatchPlan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductionPlan\frmBatchPlan.designer.cs">
-      <DependentUpon>frmBatchPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductionPlan\frmDepartmentPlanningWeeks.cs">
       <SubType>Form</SubType>
@@ -1305,6 +1305,12 @@
     <Compile Include="Sales\frmApproveSalesForeCast.designer.cs">
       <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmBatchPlan_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmBatchPlan_admin.designer.cs">
+      <DependentUpon>frmBatchPlan_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\frmCustomerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1380,14 +1386,14 @@
     <EmbeddedResource Include="Packing\frmBatchCreate.resx">
       <DependentUpon>frmBatchCreate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductionPlan\frmBatchPlan.resx">
+      <DependentUpon>frmBatchPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmPackingMaterialsForecast.resx">
       <DependentUpon>frmPackingMaterialsForecast.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmPlanMaterials_Full.resx">
       <DependentUpon>frmPlanMaterials_Full.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductionPlan\frmBatchPlan.resx">
-      <DependentUpon>frmBatchPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmDepartmentPlanningWeeks.resx">
       <DependentUpon>frmDepartmentPlanningWeeks.cs</DependentUpon>
@@ -1945,6 +1951,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmApproveSalesForeCast.resx">
       <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmBatchPlan_admin.resx">
+      <DependentUpon>frmBatchPlan_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmCustomerRegistration.resx">
       <DependentUpon>frmCustomerRegistration.cs</DependentUpon>

@@ -230,7 +230,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Vp+b5qM9CbKNQrDZulHVq1Vd3rE=</dsig:DigestValue>
+        <dsig:DigestValue>6Q7UIw7tUMj+5Ympps+oHv59sek=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -242,19 +242,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>PhTIyskZZ8OLd+AwT0PJehfezJk=</dsig:DigestValue>
+        <dsig:DigestValue>EdfhjxFSwh2qjjODvOY9u4DtCi0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_GUI.exe" size="9211904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_GUI.exe" size="9222144">
       <assemblyIdentity name="MRP_GUI" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>q7FHHvV39YY6qT4EC3IRZBXDitk=</dsig:DigestValue>
+        <dsig:DigestValue>JRs4rJNjU4o0ydzAQupRHtLCbxo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -279,13 +279,13 @@
       <dsig:DigestValue>QuKrUo96eqPQZo7b39NcPcoARes=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MRP_GUI.exe.config" size="2911">
+  <file name="MRP_GUI.exe.config" size="2926">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>hN/RFBwYKfIGUeURf7RZjAodNUA=</dsig:DigestValue>
+      <dsig:DigestValue>7KlJzG2uUStptSG5mHLrgVDzfPk=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

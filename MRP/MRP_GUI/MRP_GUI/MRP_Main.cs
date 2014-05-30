@@ -2994,7 +2994,7 @@ namespace MRP_GUI
 
         private void forecastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser,"HP");
+            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser,"AP");
             ShowForm(frm);
         }
 
@@ -3083,6 +3083,12 @@ namespace MRP_GUI
         {
             frmSalesReturn frm = new frmSalesReturn(CurrentUser, "HP", "Return_FG");
             ShowForm(frm);
+        }
+
+        private void testToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            frmBatchPlan_admin objFrm = new frmBatchPlan_admin(CurrentUser);
+            ShowForm(objFrm);
         }
 
 

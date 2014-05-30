@@ -49,7 +49,7 @@ namespace MRP_GUI.Sales
         {
             cmbYear.Text = DateTime.Today.Year.ToString();
             cmbMonth.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Today.Month);
-            cmbForcastedIn.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Today.Month);
+            //cmbForcastedIn.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(DateTime.Today.Month);
             cmbWeekNo.Text = "1";
         }
 
@@ -61,9 +61,9 @@ namespace MRP_GUI.Sales
                 dtFinishProductList = objCustomer_DL.GetFinishProduct(CurrentProductType);
                 bsFinishProductList.DataSource = dtFinishProductList;
                 cmbProductList.DataSource = bsFinishProductList;
-                cmbWeekNo.SelectedIndex = 0;
-                cmbMonth.SelectedIndex = 0;
-                cmbYear.SelectedIndex = 0;
+                //cmbWeekNo.SelectedIndex = 0;
+                //cmbMonth.SelectedIndex = 0;
+                //cmbYear.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -189,20 +189,58 @@ namespace MRP_GUI.Sales
             dtCheck = objPlanMaterials_DL.CkeckPackingMaterialsForecast(Year, Month, Week);
             if (dtCheck.Rows.Count > 0)
             {
-                
-                //txtRevID.Text = "Hello";
-                //txtEnteredDate.Text = "ccc";
+                int revID = Convert.ToInt32(dtCheck.Rows[0]["RevisionNo"].ToString());
+                DateTime Date = Convert.ToDateTime(dtCheck.Rows[0]["EnteredDate"].ToString());
+                String StringDate = Date.ToString("yyyy-MM-dd");
+                if (revID == 0) 
+                {
+                    txtRevID.Text = "Annual Forecast Available";
+                    txtEnteredDate.Text = StringDate;
+                }
+                else if (revID == 1) 
+                {
+                    txtRevID.Text = "Forcast for 1st Month Available";
+                    txtEnteredDate.Text = StringDate;
+                }
+                else if (revID == 2)
+                {
+                    txtRevID.Text = "Forcast for 2st Month Available";
+                    txtEnteredDate.Text = StringDate;
+                }
+                else 
+                {
+                    txtRevID.Text = "Error";
+                    txtEnteredDate.Text = "Error";
+                }
             }
             else 
             {
-                //txtRevID.Text = "ZZZZZ";
-                //txtEnteredDate.Text = "ZZZZ";
+                txtRevID.Text = "No Forecast";
+                txtEnteredDate.Text = "No Data";
             }
         }
 
         private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckPackingPaterial(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, Convert.ToInt32(cmbWeekNo.Text));
+            if (cmbYear.SelectedIndex != -1 && cmbMonth.SelectedIndex != -1 && cmbWeekNo.SelectedIndex != -1)
+            {
+                CheckPackingPaterial(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, Convert.ToInt32(cmbWeekNo.Text));
+            }
+        }
+        private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbYear.SelectedIndex != -1 && cmbMonth.SelectedIndex != -1 && cmbWeekNo.SelectedIndex != -1)
+            {
+                CheckPackingPaterial(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, Convert.ToInt32(cmbWeekNo.Text));
+            }
+        }
+
+        private void cmbWeekNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbYear.SelectedIndex != -1 && cmbMonth.SelectedIndex != -1 && cmbWeekNo.SelectedIndex != -1)
+            {
+                CheckPackingPaterial(Convert.ToInt32(cmbYear.Text), cmbMonth.Text, Convert.ToInt32(cmbWeekNo.Text));
+            }
         }
     }
 }

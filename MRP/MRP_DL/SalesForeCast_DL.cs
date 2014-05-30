@@ -48,7 +48,7 @@ namespace DL
             }
         }
 
-        public long GetBasicProductForecastByBPandDate(int year,String month,int weekID,String BasicproductID)
+        public long GetBasicProductForecastByBPandDate(int year,String month,String BasicproductID)
         {
             try
             {
@@ -60,7 +60,6 @@ namespace DL
                 
                 new SqlParameter("@prmYear", year),
                 new SqlParameter("@prmMonth", month),
-                new SqlParameter("@prmweekID", weekID),
                 new SqlParameter("@prmBasicProductCode", BasicproductID),
                 new SqlParameter("@outParam",SqlDbType.Int){Direction=ParameterDirection.Output}
 

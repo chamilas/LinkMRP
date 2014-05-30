@@ -56,6 +56,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRevID = new System.Windows.Forms.Label();
             this.txtEnteredDate = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsFinishProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsDistributorsList)).BeginInit();
@@ -207,6 +209,7 @@
             this.cmbWeekNo.Name = "cmbWeekNo";
             this.cmbWeekNo.Size = new System.Drawing.Size(121, 21);
             this.cmbWeekNo.TabIndex = 16;
+            this.cmbWeekNo.SelectedIndexChanged += new System.EventHandler(this.cmbWeekNo_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -247,6 +250,7 @@
             // cmbForcastedIn
             // 
             this.cmbForcastedIn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbForcastedIn.Enabled = false;
             this.cmbForcastedIn.FormattingEnabled = true;
             this.cmbForcastedIn.Items.AddRange(new object[] {
             "January",
@@ -308,6 +312,7 @@
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(153, 21);
             this.cmbMonth.TabIndex = 20;
+            this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
             // 
             // cmbYear
             // 
@@ -344,6 +349,8 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtRevID);
             this.groupBox2.Controls.Add(this.txtEnteredDate);
             this.groupBox2.Controls.Add(this.cmbProductList);
@@ -364,22 +371,44 @@
             this.txtRevID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRevID.AutoSize = true;
             this.txtRevID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRevID.Location = new System.Drawing.Point(739, 27);
+            this.txtRevID.Location = new System.Drawing.Point(769, 27);
             this.txtRevID.Name = "txtRevID";
-            this.txtRevID.Size = new System.Drawing.Size(93, 16);
+            this.txtRevID.Size = new System.Drawing.Size(32, 16);
             this.txtRevID.TabIndex = 23;
-            this.txtRevID.Text = "Revition ID -";
+            this.txtRevID.Text = "000";
             // 
             // txtEnteredDate
             // 
             this.txtEnteredDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEnteredDate.AutoSize = true;
             this.txtEnteredDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnteredDate.Location = new System.Drawing.Point(724, 56);
+            this.txtEnteredDate.Location = new System.Drawing.Point(769, 56);
             this.txtEnteredDate.Name = "txtEnteredDate";
-            this.txtEnteredDate.Size = new System.Drawing.Size(108, 16);
+            this.txtEnteredDate.Size = new System.Drawing.Size(32, 16);
             this.txtEnteredDate.TabIndex = 24;
-            this.txtEnteredDate.Text = "Entered Date -";
+            this.txtEnteredDate.Text = "000";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(700, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 16);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Status : ";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(652, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 16);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Entered Date : ";
             // 
             // frmSalesForeCast
             // 
@@ -435,5 +464,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn product_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

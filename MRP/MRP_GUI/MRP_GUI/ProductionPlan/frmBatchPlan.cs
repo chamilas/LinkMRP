@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -269,8 +269,9 @@ namespace MRP_GUI
 
         private void dgvWeeks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            long cc = objSalesForeCast_DL.GetBasicProductForecastByBPandDate(Convert.ToInt16(cmbYear.Text), cmbMonth.Text, Convert.ToInt16(dgvWeeks.CurrentRow.Cells["WeekIDD"].Value), lstBasicProductList.SelectedValue.ToString());
-            lblAvailability.Text = "Forecasted Requirement: " + cc;
+            long cc = objSalesForeCast_DL.GetBasicProductForecastByBPandDate(Convert.ToInt16(cmbYear.Text), cmbMonth.Text, lstBasicProductList.SelectedValue.ToString());
+            String unit = dtBasicProductList.Rows[lstBasicProductList.SelectedIndex]["UnitCode"].ToString();
+            lblAvailability.Text = "Forecasted Requirement: " + cc + " " + unit;
             Load_Data();
 
         }

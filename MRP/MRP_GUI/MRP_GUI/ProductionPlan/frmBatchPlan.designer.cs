@@ -1,4 +1,4 @@
-﻿namespace MRP_GUI
+﻿﻿namespace MRP_GUI
 {
     partial class frmBatchPlan
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbCategoryList = new System.Windows.Forms.ComboBox();
             this.dgvBatchList = new System.Windows.Forms.DataGridView();
             this.RevisionIDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,13 +41,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.objSourceCategoryList = new System.Windows.Forms.BindingSource(this.components);
-            this.objSourceBasicProductList = new System.Windows.Forms.BindingSource(this.components);
-            this.objSourceWeeks = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.lstBasicProductList = new System.Windows.Forms.ListBox();
-            this.objSourceBatchListWeekly = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -62,14 +58,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblAvailability = new System.Windows.Forms.Label();
+            this.objSourceCategoryList = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceBasicProductList = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceWeeks = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceBatchListWeekly = new System.Windows.Forms.BindingSource(this.components);
+            this.btnFinalize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchList)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWeeks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceCategoryList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBasicProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceWeeks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchListWeekly)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWeeks)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCategoryList
@@ -88,8 +89,8 @@
             // 
             this.dgvBatchList.AllowUserToAddRows = false;
             this.dgvBatchList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            this.dgvBatchList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            this.dgvBatchList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBatchList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBatchList.BackgroundColor = System.Drawing.Color.Tan;
@@ -102,11 +103,11 @@
             this.BatchSize,
             this.Nos});
             this.dgvBatchList.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvBatchList.Location = new System.Drawing.Point(379, 190);
+            this.dgvBatchList.Location = new System.Drawing.Point(379, 232);
             this.dgvBatchList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBatchList.Name = "dgvBatchList";
             this.dgvBatchList.ReadOnly = true;
-            this.dgvBatchList.Size = new System.Drawing.Size(620, 409);
+            this.dgvBatchList.Size = new System.Drawing.Size(620, 367);
             this.dgvBatchList.TabIndex = 3;
             // 
             // RevisionIDD
@@ -281,7 +282,7 @@
             "2030"});
             this.cmbYear.Location = new System.Drawing.Point(84, 13);
             this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(128, 26);
+            this.cmbYear.Size = new System.Drawing.Size(164, 26);
             this.cmbYear.TabIndex = 18;
             this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
@@ -329,7 +330,7 @@
             this.dgvWeeks.Location = new System.Drawing.Point(657, 4);
             this.dgvWeeks.Name = "dgvWeeks";
             this.dgvWeeks.ReadOnly = true;
-            this.dgvWeeks.Size = new System.Drawing.Size(342, 179);
+            this.dgvWeeks.Size = new System.Drawing.Size(342, 221);
             this.dgvWeeks.TabIndex = 29;
             this.dgvWeeks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWeeks_CellClick);
             // 
@@ -403,12 +404,22 @@
             this.lblAvailability.TabIndex = 31;
             this.lblAvailability.Text = "Forecasted Requirement : 00";
             // 
+            // btnFinalize
+            // 
+            this.btnFinalize.Location = new System.Drawing.Point(456, 186);
+            this.btnFinalize.Name = "btnFinalize";
+            this.btnFinalize.Size = new System.Drawing.Size(181, 39);
+            this.btnFinalize.TabIndex = 34;
+            this.btnFinalize.Text = "Finalize";
+            this.btnFinalize.UseVisualStyleBackColor = true;
+            // 
             // frmBatchPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(1004, 612);
+            this.Controls.Add(this.btnFinalize);
             this.Controls.Add(this.lblAvailability);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -427,15 +438,15 @@
             this.Text = "Batch Plan";
             this.Load += new System.EventHandler(this.frmBatchPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceCategoryList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceBasicProductList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceWeeks)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchListWeekly)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWeeks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceCategoryList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceBasicProductList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceWeeks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchListWeekly)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,5 +486,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BatchSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nos;
         private System.Windows.Forms.Label lblAvailability;
+        private System.Windows.Forms.Button btnFinalize;
     }
 }

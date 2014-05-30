@@ -163,6 +163,8 @@ namespace MRP_GUI
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gRNEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rPDStoresToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockAdjesmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesReturnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchasingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rawToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
@@ -311,8 +313,7 @@ namespace MRP_GUI
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRPDBatchEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockAdjesmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salesReturnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -1400,6 +1401,20 @@ namespace MRP_GUI
             this.rPDStoresToolStripMenuItem4.Text = "Stock Adjusment- RPD";
             this.rPDStoresToolStripMenuItem4.Click += new System.EventHandler(this.rPDStoresToolStripMenuItem4_Click);
             // 
+            // stockAdjesmentToolStripMenuItem
+            // 
+            this.stockAdjesmentToolStripMenuItem.Name = "stockAdjesmentToolStripMenuItem";
+            this.stockAdjesmentToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.stockAdjesmentToolStripMenuItem.Text = "Stock Adjesment";
+            this.stockAdjesmentToolStripMenuItem.Click += new System.EventHandler(this.stockAdjesmentToolStripMenuItem_Click);
+            // 
+            // salesReturnsToolStripMenuItem
+            // 
+            this.salesReturnsToolStripMenuItem.Name = "salesReturnsToolStripMenuItem";
+            this.salesReturnsToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.salesReturnsToolStripMenuItem.Text = "Sales Returns";
+            this.salesReturnsToolStripMenuItem.Click += new System.EventHandler(this.salesReturnsToolStripMenuItem_Click);
+            // 
             // purchasingToolStripMenuItem
             // 
             this.purchasingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1509,7 +1524,8 @@ namespace MRP_GUI
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem26,
             this.forecastToolStripMenuItem,
-            this.forecastApproveToolStripMenuItem});
+            this.forecastApproveToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(51, 20);
             this.helpMenu.Text = "Sales";
@@ -2538,19 +2554,12 @@ namespace MRP_GUI
             this.pRPDBatchEditToolStripMenuItem.Text = "Manage";
             this.pRPDBatchEditToolStripMenuItem.Click += new System.EventHandler(this.pRPDBatchEditToolStripMenuItem_Click);
             // 
-            // stockAdjesmentToolStripMenuItem
+            // testToolStripMenuItem
             // 
-            this.stockAdjesmentToolStripMenuItem.Name = "stockAdjesmentToolStripMenuItem";
-            this.stockAdjesmentToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.stockAdjesmentToolStripMenuItem.Text = "Stock Adjesment";
-            this.stockAdjesmentToolStripMenuItem.Click += new System.EventHandler(this.stockAdjesmentToolStripMenuItem_Click);
-            // 
-            // salesReturnsToolStripMenuItem
-            // 
-            this.salesReturnsToolStripMenuItem.Name = "salesReturnsToolStripMenuItem";
-            this.salesReturnsToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.salesReturnsToolStripMenuItem.Text = "Sales Returns";
-            this.salesReturnsToolStripMenuItem.Click += new System.EventHandler(this.salesReturnsToolStripMenuItem_Click);
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_2);
             // 
             // MRP_Main
             // 
@@ -2863,6 +2872,7 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem rPDStoresToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem stockAdjesmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesReturnsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 

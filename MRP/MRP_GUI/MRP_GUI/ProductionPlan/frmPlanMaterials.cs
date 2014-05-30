@@ -232,7 +232,8 @@ namespace MRP_GUI
                     MessageBox.Show(this, "Stores Plan is Fixed and Now you can Generate Stores Plan Report", "Fixed", MessageBoxButtons.OK); 
                 }
 
-               
+                btnFix.Enabled = false;
+                btnGenerate.Enabled = false;
 
             }
             catch (Exception ex)
