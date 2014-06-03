@@ -38,22 +38,22 @@
             this.objSourceBatchMachine = new System.Windows.Forms.BindingSource(this.components);
             this.objSourceMachineList = new System.Windows.Forms.BindingSource(this.components);
             this.objSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvActivity = new System.Windows.Forms.DataGridView();
-            this.objSourceFinishedProducts = new System.Windows.Forms.BindingSource(this.components);
-            this.btnSendtoPacking = new System.Windows.Forms.Button();
+            this.dgvActivityz = new System.Windows.Forms.DataGridView();
             this.BatchActStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BatchActID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrimaryFinishProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objSourceFinishedProducts = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSendtoPacking = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchLabour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchMachine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceMachineList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActivityz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceFinishedProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,37 +78,26 @@
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 2;
             // 
-            // dgvActivity
+            // dgvActivityz
             // 
-            this.dgvActivity.AllowUserToAddRows = false;
-            this.dgvActivity.AllowUserToDeleteRows = false;
-            this.dgvActivity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvActivityz.AllowUserToAddRows = false;
+            this.dgvActivityz.AllowUserToDeleteRows = false;
+            this.dgvActivityz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvActivity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActivity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvActivityz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActivityz.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BatchActStatus,
             this.BatchID,
             this.BatchActID,
             this.PrimaryFinishProduct,
             this.ProductName,
             this.Qty});
-            this.dgvActivity.Location = new System.Drawing.Point(12, 12);
-            this.dgvActivity.Name = "dgvActivity";
-            this.dgvActivity.ReadOnly = true;
-            this.dgvActivity.Size = new System.Drawing.Size(980, 543);
-            this.dgvActivity.TabIndex = 188;
-            this.dgvActivity.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActivity_CellClick);
-            // 
-            // btnSendtoPacking
-            // 
-            this.btnSendtoPacking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSendtoPacking.Location = new System.Drawing.Point(783, 561);
-            this.btnSendtoPacking.Name = "btnSendtoPacking";
-            this.btnSendtoPacking.Size = new System.Drawing.Size(209, 39);
-            this.btnSendtoPacking.TabIndex = 192;
-            this.btnSendtoPacking.Text = "Finish Primary Packing";
-            this.btnSendtoPacking.UseVisualStyleBackColor = true;
-            this.btnSendtoPacking.Click += new System.EventHandler(this.btnSendtoPacking_Click);
+            this.dgvActivityz.Location = new System.Drawing.Point(12, 12);
+            this.dgvActivityz.Name = "dgvActivityz";
+            this.dgvActivityz.ReadOnly = true;
+            this.dgvActivityz.Size = new System.Drawing.Size(980, 543);
+            this.dgvActivityz.TabIndex = 188;
+            this.dgvActivityz.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActivity_CellClick);
             // 
             // BatchActStatus
             // 
@@ -161,12 +150,23 @@
             this.Qty.Name = "Qty";
             this.Qty.ReadOnly = true;
             // 
+            // btnSendtoPacking
+            // 
+            this.btnSendtoPacking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSendtoPacking.Location = new System.Drawing.Point(783, 561);
+            this.btnSendtoPacking.Name = "btnSendtoPacking";
+            this.btnSendtoPacking.Size = new System.Drawing.Size(209, 39);
+            this.btnSendtoPacking.TabIndex = 192;
+            this.btnSendtoPacking.Text = "Finish Primary Packing";
+            this.btnSendtoPacking.UseVisualStyleBackColor = true;
+            this.btnSendtoPacking.Click += new System.EventHandler(this.btnSendtoPacking_Click);
+            // 
             // frmBatchList_Transfer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1004, 612);
             this.Controls.Add(this.btnSendtoPacking);
-            this.Controls.Add(this.dgvActivity);
+            this.Controls.Add(this.dgvActivityz);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
@@ -180,7 +180,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchMachine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceMachineList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActivityz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceFinishedProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +198,7 @@
         private System.Windows.Forms.BindingSource objSourceBatchMachine;
         private System.Windows.Forms.BindingSource objSourceMachineList;
         private System.Windows.Forms.BindingSource objSourceEmployee;
-        private System.Windows.Forms.DataGridView dgvActivity;
+        private System.Windows.Forms.DataGridView dgvActivityz;
         private System.Windows.Forms.BindingSource objSourceFinishedProducts;
         private System.Windows.Forms.Button btnSendtoPacking;
         private System.Windows.Forms.DataGridViewTextBoxColumn BatchActStatus;

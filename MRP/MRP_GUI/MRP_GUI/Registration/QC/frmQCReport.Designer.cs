@@ -66,6 +66,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.objSourceBatchList = new System.Windows.Forms.BindingSource(this.components);
             this.txtResult = new System.Windows.Forms.TextBox();
+            this.btnPrevious = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindDetails)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,7 +87,7 @@
             // btnSaveTest
             // 
             this.btnSaveTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveTest.Location = new System.Drawing.Point(952, 133);
+            this.btnSaveTest.Location = new System.Drawing.Point(1010, 128);
             this.btnSaveTest.Name = "btnSaveTest";
             this.btnSaveTest.Size = new System.Drawing.Size(109, 30);
             this.btnSaveTest.TabIndex = 2;
@@ -107,10 +108,10 @@
             this.Parameter,
             this.Result,
             this.Acceptance});
-            this.gvTest.Location = new System.Drawing.Point(192, 176);
+            this.gvTest.Location = new System.Drawing.Point(189, 164);
             this.gvTest.Name = "gvTest";
             this.gvTest.ReadOnly = true;
-            this.gvTest.Size = new System.Drawing.Size(869, 292);
+            this.gvTest.Size = new System.Drawing.Size(930, 316);
             this.gvTest.TabIndex = 5;
             this.gvTest.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTest_CellClick);
             // 
@@ -153,7 +154,7 @@
             this.cmbTestBy.FormattingEnabled = true;
             this.cmbTestBy.Location = new System.Drawing.Point(336, 486);
             this.cmbTestBy.Name = "cmbTestBy";
-            this.cmbTestBy.Size = new System.Drawing.Size(421, 24);
+            this.cmbTestBy.Size = new System.Drawing.Size(446, 24);
             this.cmbTestBy.TabIndex = 6;
             this.cmbTestBy.ValueMember = "EmpID";
             // 
@@ -164,7 +165,7 @@
             this.cmbRDQAOfficer.FormattingEnabled = true;
             this.cmbRDQAOfficer.Location = new System.Drawing.Point(336, 518);
             this.cmbRDQAOfficer.Name = "cmbRDQAOfficer";
-            this.cmbRDQAOfficer.Size = new System.Drawing.Size(421, 24);
+            this.cmbRDQAOfficer.Size = new System.Drawing.Size(446, 24);
             this.cmbRDQAOfficer.TabIndex = 7;
             this.cmbRDQAOfficer.ValueMember = "EmpID";
             // 
@@ -172,9 +173,9 @@
             // 
             this.cmbParameter.DisplayMember = "Parameter";
             this.cmbParameter.FormattingEnabled = true;
-            this.cmbParameter.Location = new System.Drawing.Point(312, 98);
+            this.cmbParameter.Location = new System.Drawing.Point(312, 70);
             this.cmbParameter.Name = "cmbParameter";
-            this.cmbParameter.Size = new System.Drawing.Size(362, 24);
+            this.cmbParameter.Size = new System.Drawing.Size(457, 24);
             this.cmbParameter.TabIndex = 8;
             this.cmbParameter.ValueMember = "ParameterID";
             // 
@@ -185,7 +186,7 @@
             this.cmbAnalizedBy.FormattingEnabled = true;
             this.cmbAnalizedBy.Location = new System.Drawing.Point(336, 550);
             this.cmbAnalizedBy.Name = "cmbAnalizedBy";
-            this.cmbAnalizedBy.Size = new System.Drawing.Size(421, 24);
+            this.cmbAnalizedBy.Size = new System.Drawing.Size(446, 24);
             this.cmbAnalizedBy.TabIndex = 9;
             this.cmbAnalizedBy.ValueMember = "EmpID";
             // 
@@ -221,7 +222,7 @@
             // 
             // txtBatch
             // 
-            this.txtBatch.Location = new System.Drawing.Point(312, 24);
+            this.txtBatch.Location = new System.Drawing.Point(312, 12);
             this.txtBatch.Name = "txtBatch";
             this.txtBatch.ReadOnly = true;
             this.txtBatch.Size = new System.Drawing.Size(168, 22);
@@ -231,7 +232,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(240, 24);
+            this.label4.Location = new System.Drawing.Point(240, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 10;
@@ -240,7 +241,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(235, 101);
+            this.label5.Location = new System.Drawing.Point(235, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 10;
@@ -248,7 +249,7 @@
             // 
             // txtReportID
             // 
-            this.txtReportID.Location = new System.Drawing.Point(598, 24);
+            this.txtReportID.Location = new System.Drawing.Point(598, 12);
             this.txtReportID.Name = "txtReportID";
             this.txtReportID.ReadOnly = true;
             this.txtReportID.Size = new System.Drawing.Size(171, 22);
@@ -256,7 +257,7 @@
             // 
             // txtSendBy
             // 
-            this.txtSendBy.Location = new System.Drawing.Point(598, 64);
+            this.txtSendBy.Location = new System.Drawing.Point(598, 42);
             this.txtSendBy.Name = "txtSendBy";
             this.txtSendBy.ReadOnly = true;
             this.txtSendBy.Size = new System.Drawing.Size(171, 22);
@@ -264,7 +265,7 @@
             // 
             // txtSendDate
             // 
-            this.txtSendDate.Location = new System.Drawing.Point(312, 61);
+            this.txtSendDate.Location = new System.Drawing.Point(312, 42);
             this.txtSendDate.Name = "txtSendDate";
             this.txtSendDate.ReadOnly = true;
             this.txtSendDate.Size = new System.Drawing.Size(168, 22);
@@ -274,11 +275,11 @@
             // 
             this.txtRemarks.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRemarks.Location = new System.Drawing.Point(875, 18);
+            this.txtRemarks.Location = new System.Drawing.Point(875, 12);
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.ReadOnly = true;
-            this.txtRemarks.Size = new System.Drawing.Size(186, 68);
+            this.txtRemarks.Size = new System.Drawing.Size(244, 82);
             this.txtRemarks.TabIndex = 15;
             // 
             // panel1
@@ -287,7 +288,7 @@
             this.panel1.Controls.Add(this.rbReject);
             this.panel1.Controls.Add(this.rbAccept);
             this.panel1.Controls.Add(this.btnSaveReport);
-            this.panel1.Location = new System.Drawing.Point(864, 490);
+            this.panel1.Location = new System.Drawing.Point(922, 492);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(197, 84);
             this.panel1.TabIndex = 16;
@@ -317,7 +318,7 @@
             // cbAccept
             // 
             this.cbAccept.AutoSize = true;
-            this.cbAccept.Location = new System.Drawing.Point(732, 139);
+            this.cbAccept.Location = new System.Drawing.Point(875, 134);
             this.cbAccept.Name = "cbAccept";
             this.cbAccept.Size = new System.Drawing.Size(69, 20);
             this.cbAccept.TabIndex = 17;
@@ -326,9 +327,9 @@
             // 
             // txtComment
             // 
-            this.txtComment.Location = new System.Drawing.Point(312, 134);
+            this.txtComment.Location = new System.Drawing.Point(312, 100);
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(362, 22);
+            this.txtComment.Size = new System.Drawing.Size(457, 22);
             this.txtComment.TabIndex = 18;
             // 
             // dgvBatchList
@@ -359,7 +360,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(518, 24);
+            this.label6.Location = new System.Drawing.Point(518, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 16);
             this.label6.TabIndex = 10;
@@ -369,7 +370,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(486, 61);
+            this.label7.Location = new System.Drawing.Point(486, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 16);
             this.label7.TabIndex = 10;
@@ -379,7 +380,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(799, 21);
+            this.label8.Location = new System.Drawing.Point(799, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 16);
             this.label8.TabIndex = 10;
@@ -389,7 +390,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(194, 64);
+            this.label9.Location = new System.Drawing.Point(194, 45);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 16);
             this.label9.TabIndex = 10;
@@ -398,7 +399,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(680, 106);
+            this.label10.Location = new System.Drawing.Point(823, 106);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 16);
             this.label10.TabIndex = 10;
@@ -407,7 +408,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(241, 140);
+            this.label11.Location = new System.Drawing.Point(241, 106);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 16);
             this.label11.TabIndex = 10;
@@ -417,15 +418,26 @@
             // 
             this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResult.Location = new System.Drawing.Point(732, 100);
+            this.txtResult.Location = new System.Drawing.Point(875, 100);
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(326, 22);
+            this.txtResult.Size = new System.Drawing.Size(244, 22);
             this.txtResult.TabIndex = 25;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(609, 132);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(160, 23);
+            this.btnPrevious.TabIndex = 26;
+            this.btnPrevious.Text = "Previous QC Reports";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // frmQCReport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1073, 588);
+            this.ClientSize = new System.Drawing.Size(1131, 588);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.dgvBatchList);
             this.Controls.Add(this.txtComment);
@@ -507,5 +519,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Result;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acceptance;
         private System.Windows.Forms.TextBox txtResult;
+        private System.Windows.Forms.Button btnPrevious;
     }
 }

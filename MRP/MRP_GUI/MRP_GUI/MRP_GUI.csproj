@@ -557,6 +557,12 @@
     <Compile Include="Registration\QC\frmQCDetailView.designer.cs">
       <DependentUpon>frmQCDetailView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration\QC\frmQCReportHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\QC\frmQCReportHistory.Designer.cs">
+      <DependentUpon>frmQCReportHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration\QC\frmQCReport_RPD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1562,6 +1568,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\QC\frmQCDetailView.resx">
       <DependentUpon>frmQCDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\QC\frmQCReportHistory.resx">
+      <DependentUpon>frmQCReportHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\QC\frmQCReport_RPD.resx">
       <DependentUpon>frmQCReport_RPD.cs</DependentUpon>

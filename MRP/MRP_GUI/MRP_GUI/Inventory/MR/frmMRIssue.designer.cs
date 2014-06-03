@@ -30,12 +30,12 @@ namespace MRP_GUI
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMRIssue));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -44,6 +44,11 @@ namespace MRP_GUI
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnReject = new System.Windows.Forms.Button();
             this.gvItemList = new System.Windows.Forms.DataGridView();
+            this.ColMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MRDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColReqdQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIssuedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindItemList = new System.Windows.Forms.BindingSource(this.components);
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,12 +71,6 @@ namespace MRP_GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gvMRList = new System.Windows.Forms.DataGridView();
-            this.MRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindMRList = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,11 +82,13 @@ namespace MRP_GUI
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MRDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColReqdQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColIssuedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvItemList)).BeginInit();
@@ -222,6 +223,53 @@ namespace MRP_GUI
             this.gvItemList.TabIndex = 27;
             this.gvItemList.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvItemList_CellEndEdit);
             this.gvItemList.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.gvItemList_DataError);
+            // 
+            // ColMaterial
+            // 
+            this.ColMaterial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMaterial.DataPropertyName = "Item";
+            this.ColMaterial.FillWeight = 250F;
+            this.ColMaterial.HeaderText = "Item";
+            this.ColMaterial.Name = "ColMaterial";
+            this.ColMaterial.ReadOnly = true;
+            this.ColMaterial.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // MRDescription
+            // 
+            this.MRDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MRDescription.DataPropertyName = "Description";
+            this.MRDescription.FillWeight = 150F;
+            this.MRDescription.HeaderText = "MRDescription";
+            this.MRDescription.Name = "MRDescription";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "UnitCode";
+            this.Column3.HeaderText = "Unit";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // ColReqdQty
+            // 
+            this.ColReqdQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColReqdQty.DataPropertyName = "ReqdQty";
+            this.ColReqdQty.HeaderText = "Reqd Qty.";
+            this.ColReqdQty.Name = "ColReqdQty";
+            this.ColReqdQty.ReadOnly = true;
+            // 
+            // ColIssuedQty
+            // 
+            this.ColIssuedQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColIssuedQty.DataPropertyName = "IssuedQty";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Format = "N3";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ColIssuedQty.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColIssuedQty.HeaderText = "Issued Qty";
+            this.ColIssuedQty.Name = "ColIssuedQty";
             // 
             // txtRemarks
             // 
@@ -414,6 +462,7 @@ namespace MRP_GUI
             this.gvMRList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvMRList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MRNO,
+            this.BatchID,
             this.Column2,
             this.Column11,
             this.Column4,
@@ -440,54 +489,6 @@ namespace MRP_GUI
             this.gvMRList.Size = new System.Drawing.Size(990, 156);
             this.gvMRList.TabIndex = 0;
             this.gvMRList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMRList_CellClick);
-            // 
-            // MRNO
-            // 
-            this.MRNO.DataPropertyName = "MRNO";
-            this.MRNO.HeaderText = "MRN No";
-            this.MRNO.Name = "MRNO";
-            this.MRNO.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "DepName";
-            this.Column2.HeaderText = "Department";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 120;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "MRDate";
-            dataGridViewCellStyle4.Format = "d";
-            this.Column11.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column11.HeaderText = "Date";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "EnterdBy";
-            this.Column4.HeaderText = "Request By";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 130;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ApproveBy";
-            this.Column5.HeaderText = "Certify By";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 130;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column12.DataPropertyName = "MRRemarks";
-            this.Column12.HeaderText = "Remarks";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -563,52 +564,60 @@ namespace MRP_GUI
             this.dataGridViewTextBoxColumn11.HeaderText = "Remarks";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // ColMaterial
+            // MRNO
             // 
-            this.ColMaterial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMaterial.DataPropertyName = "Item";
-            this.ColMaterial.FillWeight = 250F;
-            this.ColMaterial.HeaderText = "Item";
-            this.ColMaterial.Name = "ColMaterial";
-            this.ColMaterial.ReadOnly = true;
-            this.ColMaterial.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MRNO.DataPropertyName = "MRNO";
+            this.MRNO.HeaderText = "MRN No";
+            this.MRNO.Name = "MRNO";
+            this.MRNO.ReadOnly = true;
             // 
-            // MRDescription
+            // BatchID
             // 
-            this.MRDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MRDescription.DataPropertyName = "Description";
-            this.MRDescription.FillWeight = 150F;
-            this.MRDescription.HeaderText = "MRDescription";
-            this.MRDescription.Name = "MRDescription";
+            this.BatchID.DataPropertyName = "BatchID";
+            this.BatchID.HeaderText = "Batch ID";
+            this.BatchID.Name = "BatchID";
+            this.BatchID.ReadOnly = true;
             // 
-            // Column3
+            // Column2
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "UnitCode";
-            this.Column3.HeaderText = "Unit";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Column2.DataPropertyName = "DepName";
+            this.Column2.HeaderText = "Department";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 120;
             // 
-            // ColReqdQty
+            // Column11
             // 
-            this.ColReqdQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColReqdQty.DataPropertyName = "ReqdQty";
-            this.ColReqdQty.HeaderText = "Reqd Qty.";
-            this.ColReqdQty.Name = "ColReqdQty";
-            this.ColReqdQty.ReadOnly = true;
+            this.Column11.DataPropertyName = "MRDate";
+            dataGridViewCellStyle4.Format = "d";
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column11.HeaderText = "Date";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
-            // ColIssuedQty
+            // Column4
             // 
-            this.ColIssuedQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColIssuedQty.DataPropertyName = "IssuedQty";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "N3";
-            dataGridViewCellStyle1.NullValue = null;
-            this.ColIssuedQty.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ColIssuedQty.HeaderText = "Issued Qty";
-            this.ColIssuedQty.Name = "ColIssuedQty";
+            this.Column4.DataPropertyName = "EnterdBy";
+            this.Column4.HeaderText = "Request By";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 130;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ApproveBy";
+            this.Column5.HeaderText = "Certify By";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 130;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.DataPropertyName = "MRRemarks";
+            this.Column12.HeaderText = "Remarks";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
             // frmMRIssue
             // 
@@ -676,16 +685,17 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MRNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn MRDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColReqdQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIssuedQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MRNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BatchID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
     }
 }

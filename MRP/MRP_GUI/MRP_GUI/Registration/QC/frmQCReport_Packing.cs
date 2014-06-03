@@ -330,5 +330,11 @@ namespace MRP_GUI
             }
 
         }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            frmQCReportHistory objFrm = new frmQCReportHistory("Packing");
+            objFrm.Show();
+        }
     }
 }

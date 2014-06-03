@@ -31,20 +31,16 @@ namespace MRP_GUI
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGRNManagement));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.gvGRNList = new System.Windows.Forms.DataGridView();
-            this.ColGRNNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRecevedBY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindGRN = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -65,6 +61,12 @@ namespace MRP_GUI
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindItemList = new System.Windows.Forms.BindingSource(this.components);
+            this.ColGRNNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNApprovedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNApproveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRecevedBY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvGRNList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindGRN)).BeginInit();
@@ -121,6 +123,8 @@ namespace MRP_GUI
             this.ColGRNNO,
             this.ColDoc,
             this.ColDate,
+            this.GRNApprovedBy,
+            this.GRNApproveDate,
             this.ColRecevedBY});
             this.gvGRNList.DataSource = this.bindGRN;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -140,39 +144,6 @@ namespace MRP_GUI
             this.gvGRNList.Size = new System.Drawing.Size(960, 177);
             this.gvGRNList.TabIndex = 13;
             this.gvGRNList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvGRNList_CellClick);
-            // 
-            // ColGRNNO
-            // 
-            this.ColGRNNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColGRNNO.DataPropertyName = "GRNNO";
-            this.ColGRNNO.HeaderText = "GRNNO";
-            this.ColGRNNO.Name = "ColGRNNO";
-            this.ColGRNNO.ReadOnly = true;
-            // 
-            // ColDoc
-            // 
-            this.ColDoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDoc.DataPropertyName = "Doc";
-            this.ColDoc.HeaderText = "MTN/MR/RPD";
-            this.ColDoc.Name = "ColDoc";
-            this.ColDoc.ReadOnly = true;
-            // 
-            // ColDate
-            // 
-            this.ColDate.DataPropertyName = "GRNDate";
-            dataGridViewCellStyle2.Format = "d";
-            this.ColDate.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColDate.HeaderText = "Date";
-            this.ColDate.Name = "ColDate";
-            this.ColDate.ReadOnly = true;
-            // 
-            // ColRecevedBY
-            // 
-            this.ColRecevedBY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColRecevedBY.DataPropertyName = "EnterdByName";
-            this.ColRecevedBY.HeaderText = "Received By";
-            this.ColRecevedBY.Name = "ColRecevedBY";
-            this.ColRecevedBY.ReadOnly = true;
             // 
             // button1
             // 
@@ -367,6 +338,55 @@ namespace MRP_GUI
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
+            // ColGRNNO
+            // 
+            this.ColGRNNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColGRNNO.DataPropertyName = "GRNNO";
+            this.ColGRNNO.HeaderText = "GRNNO";
+            this.ColGRNNO.Name = "ColGRNNO";
+            this.ColGRNNO.ReadOnly = true;
+            // 
+            // ColDoc
+            // 
+            this.ColDoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDoc.DataPropertyName = "Doc";
+            this.ColDoc.HeaderText = "MTN/MR/RPD";
+            this.ColDoc.Name = "ColDoc";
+            this.ColDoc.ReadOnly = true;
+            // 
+            // ColDate
+            // 
+            this.ColDate.DataPropertyName = "GRNDate";
+            dataGridViewCellStyle2.Format = "d";
+            this.ColDate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColDate.HeaderText = "Date";
+            this.ColDate.Name = "ColDate";
+            this.ColDate.ReadOnly = true;
+            // 
+            // GRNApprovedBy
+            // 
+            this.GRNApprovedBy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNApprovedBy.DataPropertyName = "GRNApproveByName";
+            this.GRNApprovedBy.HeaderText = "GRN Approved By";
+            this.GRNApprovedBy.Name = "GRNApprovedBy";
+            this.GRNApprovedBy.ReadOnly = true;
+            // 
+            // GRNApproveDate
+            // 
+            this.GRNApproveDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNApproveDate.DataPropertyName = "GRNApproveDate";
+            this.GRNApproveDate.HeaderText = "GRN Approve Date";
+            this.GRNApproveDate.Name = "GRNApproveDate";
+            this.GRNApproveDate.ReadOnly = true;
+            // 
+            // ColRecevedBY
+            // 
+            this.ColRecevedBY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColRecevedBY.DataPropertyName = "EnterdByName";
+            this.ColRecevedBY.HeaderText = "Received By";
+            this.ColRecevedBY.Name = "ColRecevedBY";
+            this.ColRecevedBY.ReadOnly = true;
+            // 
             // frmGRNManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,10 +423,6 @@ namespace MRP_GUI
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView gvGRNList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColGRNNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRecevedBY;
         private System.Windows.Forms.BindingSource bindGRN;
         private System.Windows.Forms.BindingSource bindItemList;
         private System.Windows.Forms.DataGridView gvItemList;
@@ -417,5 +433,11 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColGRNNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNApprovedBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNApproveDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRecevedBY;
     }
 }

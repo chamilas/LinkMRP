@@ -3091,6 +3091,12 @@ namespace MRP_GUI
             ShowForm(objFrm);
         }
 
+        private void fffToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmQCReportHistory objFrm = new frmQCReportHistory("Production");
+            ShowForm(objFrm);
+        }
+
 
 
 

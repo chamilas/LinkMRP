@@ -313,6 +313,7 @@ namespace MRP_GUI
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRPDBatchEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fffToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -1523,7 +1524,8 @@ namespace MRP_GUI
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem26,
             this.forecastToolStripMenuItem,
-            this.forecastApproveToolStripMenuItem});
+            this.forecastApproveToolStripMenuItem,
+            this.fffToolStripMenuItem1});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(51, 20);
             this.helpMenu.Text = "Sales";
@@ -2552,6 +2554,13 @@ namespace MRP_GUI
             this.pRPDBatchEditToolStripMenuItem.Text = "Manage";
             this.pRPDBatchEditToolStripMenuItem.Click += new System.EventHandler(this.pRPDBatchEditToolStripMenuItem_Click);
             // 
+            // fffToolStripMenuItem1
+            // 
+            this.fffToolStripMenuItem1.Name = "fffToolStripMenuItem1";
+            this.fffToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.fffToolStripMenuItem1.Text = "fff";
+            this.fffToolStripMenuItem1.Click += new System.EventHandler(this.fffToolStripMenuItem1_Click);
+            // 
             // MRP_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2863,6 +2872,7 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem rPDStoresToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem stockAdjesmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesReturnsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fffToolStripMenuItem1;
     }
 }
 

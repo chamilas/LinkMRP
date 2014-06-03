@@ -1717,9 +1717,9 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Edit.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_FG.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchCreate.resources
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPackingMaterialsForecast.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPlanMaterial_Full.resources
-C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmDepartmentPlanningWeeks.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPackType.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWIP_Packing.resources
@@ -1776,6 +1776,7 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBasicProductRegistration.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQC.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCDetailView.resources
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReportHistory.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_RPD.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Rework.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCView.resources
@@ -1899,6 +1900,7 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDProduction.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Form1.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmApproveSalesForeCast.resources
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan_admin.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmCustomerRegistration.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmDailySales.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPlanPackingMaterial_Full.resources
@@ -1912,4 +1914,3 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
-C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan_admin.resources

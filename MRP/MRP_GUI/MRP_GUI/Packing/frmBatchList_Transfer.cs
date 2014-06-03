@@ -61,10 +61,9 @@ namespace MRP_GUI
             try
             {
                     DataTable dt = objBatchActivity_DL.GetView_ToTransfer_ToSecondary(Convert.ToInt32(BatchActivity.Status.Finished));
-
-                    objSourceActivityList.DataSource = dt;
-                    dgvActivity.AutoGenerateColumns = false;
-                    dgvActivity.DataSource = objSourceActivityList;
+                    //objSourceActivityList.DataSource = dt;
+                    dgvActivityz.AutoGenerateColumns = false;
+                    dgvActivityz.DataSource = dt; //objSourceActivityList;
                     objSourceActivityList.ResetBindings(true);
 
 
@@ -79,15 +78,15 @@ namespace MRP_GUI
 
         private void SetColors()
         {
-            for (int i = 0; i < dgvActivity.Rows.Count; i++)
+            for (int i = 0; i < dgvActivityz.Rows.Count; i++)
             {
-                if ((dgvActivity.Rows[i].Cells["BatchActStatus"].Value).ToString() == "2")
+                if ((dgvActivityz.Rows[i].Cells["BatchActStatus"].Value).ToString() == "2")
                 {
-                    dgvActivity.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                    dgvActivityz.Rows[i].DefaultCellStyle.BackColor = Color.Green;
                 }
                 else
                 {
-                    dgvActivity.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                    dgvActivityz.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 }
             }
         }
@@ -100,10 +99,10 @@ namespace MRP_GUI
 
                 FinishProduct objFinishProduct = new FinishProduct();
 
-                objFinishProduct = objFinishProduct_DL.Get(dgvActivity.CurrentRow.Cells["PrimaryFinishProduct"].Value.ToString());
+                objFinishProduct = objFinishProduct_DL.Get(dgvActivityz.CurrentRow.Cells["PrimaryFinishProduct"].Value.ToString());
 
 
-            objBatchActivity = objBatchActivity_DL.GetByID(Convert.ToInt32(dgvActivity.CurrentRow.Cells["BatchActID"].Value));
+            objBatchActivity = objBatchActivity_DL.GetByID(Convert.ToInt32(dgvActivityz.CurrentRow.Cells["BatchActID"].Value));
 
 
             }
@@ -147,9 +146,9 @@ namespace MRP_GUI
             try
             {
                 int theCount = 0;
-                 DataTable dtReports=  objQCReport_DL.Get_IsPackingQCPass(dgvActivity.CurrentRow.Cells["BatchID"].Value.ToString(), Convert.ToInt32(QCReport.ReportStatus.Accept),"Packing");
+                 DataTable dtReports=  objQCReport_DL.Get_IsPackingQCPass(dgvActivityz.CurrentRow.Cells["BatchID"].Value.ToString(), Convert.ToInt32(QCReport.ReportStatus.Accept),"Packing");
 
-                 theCount=objFinishProduct_DL.Get_SecondaryProductList(dgvActivity.CurrentRow.Cells["PrimaryFinishProduct"].Value.ToString()).Rows.Count;
+                 theCount=objFinishProduct_DL.Get_SecondaryProductList(dgvActivityz.CurrentRow.Cells["PrimaryFinishProduct"].Value.ToString()).Rows.Count;
 
                  if (dtReports.Rows.Count > 0)
                  {
