@@ -144,6 +144,11 @@ namespace MRP_GUI.RPD
             this.btnSavePackingAct = new System.Windows.Forms.Button();
             this.grpPackingDetails = new System.Windows.Forms.GroupBox();
             this.gvPackingDetails = new System.Windows.Forms.DataGridView();
+            this.RPDPackDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Material_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NoOfPackets = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PackSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitCode_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClearPackingDetails = new System.Windows.Forms.Button();
             this.btnDeletePackingDetails = new System.Windows.Forms.Button();
             this.btnSavePackingDetails = new System.Windows.Forms.Button();
@@ -237,11 +242,6 @@ namespace MRP_GUI.RPD
             this.bindMR = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objSourcePackingIssued = new System.Windows.Forms.BindingSource(this.components);
-            this.RPDPackDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Material_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NoOfPackets = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PackSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitCode_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.grpStart.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -697,6 +697,7 @@ namespace MRP_GUI.RPD
             this.tbRPDBatch.SelectedIndex = 0;
             this.tbRPDBatch.Size = new System.Drawing.Size(1004, 300);
             this.tbRPDBatch.TabIndex = 36;
+            this.tbRPDBatch.Click += new System.EventHandler(this.tbRPDBatch_Click);
             // 
             // tpActivities
             // 
@@ -1332,6 +1333,49 @@ namespace MRP_GUI.RPD
             this.gvPackingDetails.Size = new System.Drawing.Size(965, 81);
             this.gvPackingDetails.TabIndex = 64;
             this.gvPackingDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvPackingDetails_CellClick);
+            // 
+            // RPDPackDetails
+            // 
+            this.RPDPackDetails.DataPropertyName = "RPDPackDetails";
+            this.RPDPackDetails.HeaderText = "RPDPackDetails";
+            this.RPDPackDetails.Name = "RPDPackDetails";
+            this.RPDPackDetails.ReadOnly = true;
+            this.RPDPackDetails.Visible = false;
+            // 
+            // Material_
+            // 
+            this.Material_.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Material_.DataPropertyName = "Material";
+            this.Material_.HeaderText = "Material";
+            this.Material_.Name = "Material_";
+            this.Material_.ReadOnly = true;
+            // 
+            // NoOfPackets
+            // 
+            this.NoOfPackets.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NoOfPackets.DataPropertyName = "NoOfPackets";
+            this.NoOfPackets.FillWeight = 200F;
+            this.NoOfPackets.HeaderText = "No Of Packets";
+            this.NoOfPackets.Name = "NoOfPackets";
+            this.NoOfPackets.ReadOnly = true;
+            // 
+            // PackSize
+            // 
+            this.PackSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PackSize.DataPropertyName = "PackSize";
+            this.PackSize.FillWeight = 75F;
+            this.PackSize.HeaderText = "PackSize";
+            this.PackSize.Name = "PackSize";
+            this.PackSize.ReadOnly = true;
+            // 
+            // UnitCode_
+            // 
+            this.UnitCode_.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UnitCode_.DataPropertyName = "UnitCode";
+            this.UnitCode_.FillWeight = 50F;
+            this.UnitCode_.HeaderText = "Unit";
+            this.UnitCode_.Name = "UnitCode_";
+            this.UnitCode_.ReadOnly = true;
             // 
             // btnClearPackingDetails
             // 
@@ -2192,49 +2236,6 @@ namespace MRP_GUI.RPD
             this.colMaterial.HeaderText = "Material Code";
             this.colMaterial.Name = "colMaterial";
             this.colMaterial.ReadOnly = true;
-            // 
-            // RPDPackDetails
-            // 
-            this.RPDPackDetails.DataPropertyName = "RPDPackDetails";
-            this.RPDPackDetails.HeaderText = "RPDPackDetails";
-            this.RPDPackDetails.Name = "RPDPackDetails";
-            this.RPDPackDetails.ReadOnly = true;
-            this.RPDPackDetails.Visible = false;
-            // 
-            // Material_
-            // 
-            this.Material_.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Material_.DataPropertyName = "Material";
-            this.Material_.HeaderText = "Material";
-            this.Material_.Name = "Material_";
-            this.Material_.ReadOnly = true;
-            // 
-            // NoOfPackets
-            // 
-            this.NoOfPackets.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NoOfPackets.DataPropertyName = "NoOfPackets";
-            this.NoOfPackets.FillWeight = 200F;
-            this.NoOfPackets.HeaderText = "No Of Packets";
-            this.NoOfPackets.Name = "NoOfPackets";
-            this.NoOfPackets.ReadOnly = true;
-            // 
-            // PackSize
-            // 
-            this.PackSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PackSize.DataPropertyName = "PackSize";
-            this.PackSize.FillWeight = 75F;
-            this.PackSize.HeaderText = "PackSize";
-            this.PackSize.Name = "PackSize";
-            this.PackSize.ReadOnly = true;
-            // 
-            // UnitCode_
-            // 
-            this.UnitCode_.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UnitCode_.DataPropertyName = "UnitCode";
-            this.UnitCode_.FillWeight = 50F;
-            this.UnitCode_.HeaderText = "Unit";
-            this.UnitCode_.Name = "UnitCode_";
-            this.UnitCode_.ReadOnly = true;
             // 
             // frmRPDProduction
             // 

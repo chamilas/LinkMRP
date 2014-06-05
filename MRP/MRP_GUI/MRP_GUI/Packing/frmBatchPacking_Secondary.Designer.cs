@@ -90,6 +90,7 @@
             this.Machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.From_Machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.To_Machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchLabourDetails)).BeginInit();
@@ -501,7 +502,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(515, 49);
+            this.label10.Location = new System.Drawing.Point(341, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 16);
             this.label10.TabIndex = 204;
@@ -512,7 +513,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(832, 49);
+            this.label9.Location = new System.Drawing.Point(621, 49);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(268, 16);
             this.label9.TabIndex = 205;
@@ -636,10 +637,22 @@
             this.To_Machine.Name = "To_Machine";
             this.To_Machine.ReadOnly = true;
             // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(895, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(205, 16);
+            this.label12.TabIndex = 212;
+            this.label12.Text = "F3 - To Enter Rejected Items";
+            // 
             // frmBatchPacking_Secondary
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1110, 612);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.dgvMachineDetails);
             this.Controls.Add(this.txtMachineStop);
             this.Controls.Add(this.txtMachineStart);
@@ -758,5 +771,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Machine;
         private System.Windows.Forms.DataGridViewTextBoxColumn From_Machine;
         private System.Windows.Forms.DataGridViewTextBoxColumn To_Machine;
+        private System.Windows.Forms.Label label12;
     }
 }

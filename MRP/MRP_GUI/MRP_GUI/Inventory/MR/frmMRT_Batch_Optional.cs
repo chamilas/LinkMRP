@@ -295,7 +295,7 @@ namespace MRP_GUI
                 
                    if (objMRMaterialCollec.Count > 0)
                    {
-                       long MRNO = objMRDL.Add_BatchMR_Optional("N/A", objBatch.BatchID, objStore.StoreID, CurrentUser.EmployeeID, "Optional MR", MR.Status.Initial, MR.Type.Material, (int)MR.Origin.ToBatch);
+                       long MRNO = objMRDL.Add_BatchMR_Optional("N/A", objBatch.BatchID, objStore.StoreID, CurrentUser.EmployeeID, "Optional MR "+objBatch.BatchID, MR.Status.Initial, MR.Type.Material, (int)MR.Origin.ToBatch);
 
                        if (MRNO > 0)
                        {

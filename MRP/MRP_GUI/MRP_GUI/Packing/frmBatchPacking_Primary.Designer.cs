@@ -101,6 +101,7 @@
             this.lblUnit = new System.Windows.Forms.Label();
             this.lblUnit1 = new System.Windows.Forms.Label();
             this.chkOutsource = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatcList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
@@ -130,7 +131,7 @@
             this.dgvBatcList.Location = new System.Drawing.Point(12, 54);
             this.dgvBatcList.Name = "dgvBatcList";
             this.dgvBatcList.ReadOnly = true;
-            this.dgvBatcList.Size = new System.Drawing.Size(321, 473);
+            this.dgvBatcList.Size = new System.Drawing.Size(321, 453);
             this.dgvBatcList.TabIndex = 0;
             this.dgvBatcList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBatcList_CellClick);
             // 
@@ -610,7 +611,7 @@
             // btnTransferBP
             // 
             this.btnTransferBP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTransferBP.Location = new System.Drawing.Point(12, 533);
+            this.btnTransferBP.Location = new System.Drawing.Point(12, 512);
             this.btnTransferBP.Name = "btnTransferBP";
             this.btnTransferBP.Size = new System.Drawing.Size(173, 30);
             this.btnTransferBP.TabIndex = 190;
@@ -676,7 +677,7 @@
             // 
             this.txtBasicQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBasicQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBasicQty.Location = new System.Drawing.Point(225, 534);
+            this.txtBasicQty.Location = new System.Drawing.Point(225, 513);
             this.txtBasicQty.Name = "txtBasicQty";
             this.txtBasicQty.Size = new System.Drawing.Size(77, 26);
             this.txtBasicQty.TabIndex = 196;
@@ -730,7 +731,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 587);
+            this.label9.Location = new System.Drawing.Point(12, 566);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(290, 16);
             this.label9.TabIndex = 201;
@@ -741,7 +742,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 567);
+            this.label10.Location = new System.Drawing.Point(12, 546);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 16);
             this.label10.TabIndex = 201;
@@ -751,7 +752,7 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(191, 544);
+            this.label11.Location = new System.Drawing.Point(191, 523);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 16);
             this.label11.TabIndex = 202;
@@ -770,7 +771,7 @@
             // 
             this.lblUnit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUnit1.AutoSize = true;
-            this.lblUnit1.Location = new System.Drawing.Point(305, 544);
+            this.lblUnit1.Location = new System.Drawing.Point(305, 523);
             this.lblUnit1.Name = "lblUnit1";
             this.lblUnit1.Size = new System.Drawing.Size(42, 16);
             this.lblUnit1.TabIndex = 202;
@@ -786,10 +787,22 @@
             this.chkOutsource.Text = "Outsource";
             this.chkOutsource.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 588);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(205, 16);
+            this.label12.TabIndex = 205;
+            this.label12.Text = "F3 - To Enter Rejected Items";
+            // 
             // frmBatchPacking_Priamry
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1004, 612);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.chkOutsource);
             this.Controls.Add(this.lblUnit);
             this.Controls.Add(this.lblUnit1);
@@ -928,5 +941,6 @@
         private System.Windows.Forms.Label lblUnit;
         private System.Windows.Forms.Label lblUnit1;
         private System.Windows.Forms.CheckBox chkOutsource;
+        private System.Windows.Forms.Label label12;
     }
 }

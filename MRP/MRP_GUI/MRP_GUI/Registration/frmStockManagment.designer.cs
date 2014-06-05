@@ -73,10 +73,12 @@ namespace MRP_GUI
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.objSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvStockList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindStockList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -433,6 +435,7 @@ namespace MRP_GUI
             this.cmbItem.Size = new System.Drawing.Size(332, 21);
             this.cmbItem.TabIndex = 2;
             this.cmbItem.SelectedIndexChanged += new System.EventHandler(this.cmbItem_SelectedIndexChanged);
+            this.cmbItem.TextChanged += new System.EventHandler(this.cmbItem_TextChanged);
             // 
             // label3
             // 
@@ -499,6 +502,7 @@ namespace MRP_GUI
             ((System.ComponentModel.ISupportInitialize)(this.bindItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvStockList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindStockList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,5 +549,6 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMinimumStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaxStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEconStock;
+        private System.Windows.Forms.BindingSource objSource;
     }
 }

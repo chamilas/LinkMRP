@@ -697,6 +697,20 @@ namespace MRP_GUI
                 }
             }
 
+            if (keyData == Keys.F3)
+            {
+                if (dgvActivity.CurrentRow != null)
+                {
+
+                    frmBatchPacking_DamagedGoods objForm = new frmBatchPacking_DamagedGoods(Convert.ToInt64(dgvActivity.CurrentRow.Cells["BatchActID"].Value), "Primary");
+                    objForm.ShowDialog(this);
+                }
+                else 
+                {
+                    MessageBox.Show("Please select a Packing Batch");
+                }
+            }
+
             return base.ProcessCmdKey(ref msg, keyData);
 
             // Call the base class

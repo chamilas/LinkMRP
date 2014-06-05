@@ -87,6 +87,7 @@
             this.objSourceProductList = new System.Windows.Forms.BindingSource(this.components);
             this.txtOutputQty = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchLabourDetails)).BeginInit();
@@ -499,7 +500,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(409, 49);
+            this.label10.Location = new System.Drawing.Point(233, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 16);
             this.label10.TabIndex = 204;
@@ -510,7 +511,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(726, 49);
+            this.label9.Location = new System.Drawing.Point(513, 49);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(268, 16);
             this.label9.TabIndex = 205;
@@ -580,10 +581,22 @@
             this.label11.TabIndex = 206;
             this.label11.Text = "Output Code";
             // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(787, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(205, 16);
+            this.label12.TabIndex = 211;
+            this.label12.Text = "F3 - To Enter Rejected Items";
+            // 
             // frmBatchPacking_Secondary_Edit
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1004, 612);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.txtOutputQty);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.cmbOutputCode);
@@ -700,5 +713,6 @@
         private System.Windows.Forms.BindingSource objSourceProductList;
         private System.Windows.Forms.TextBox txtOutputQty;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -191,6 +191,12 @@
     <Compile Include="Packing\frmBatchCreate.designer.cs">
       <DependentUpon>frmBatchCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Packing\frmBatchPacking_DamagedGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packing\frmBatchPacking_DamagedGoods.Designer.cs">
+      <DependentUpon>frmBatchPacking_DamagedGoods.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductionPlan\frmBatchPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +412,18 @@
     </Compile>
     <Compile Include="ProductionPlan\frmRegisterProject.designer.cs">
       <DependentUpon>frmRegisterProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmBatchSendQC_MaterialReq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmBatchSendQC_MaterialReq.designer.cs">
+      <DependentUpon>frmBatchSendQC_MaterialReq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmViewRejectedItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmViewRejectedItems.Designer.cs">
+      <DependentUpon>frmViewRejectedItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Production\frmWIP.cs">
       <SubType>Form</SubType>
@@ -1392,6 +1410,9 @@
     <EmbeddedResource Include="Packing\frmBatchCreate.resx">
       <DependentUpon>frmBatchCreate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Packing\frmBatchPacking_DamagedGoods.resx">
+      <DependentUpon>frmBatchPacking_DamagedGoods.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmBatchPlan.resx">
       <DependentUpon>frmBatchPlan.cs</DependentUpon>
     </EmbeddedResource>
@@ -1499,6 +1520,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmRegisterProject.resx">
       <DependentUpon>frmRegisterProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmBatchSendQC_MaterialReq.resx">
+      <DependentUpon>frmBatchSendQC_MaterialReq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmViewRejectedItems.resx">
+      <DependentUpon>frmViewRejectedItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmWIP.resx">
       <DependentUpon>frmWIP.cs</DependentUpon>

@@ -475,5 +475,18 @@ namespace MRP_GUI
             }
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                
+                    frmViewRejectedItems objForm = new frmViewRejectedItems(cmbBatchID.Text);
+                    //objForm.ShowDialog(this);
+                    objForm.Show();
+                
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
     }
 }

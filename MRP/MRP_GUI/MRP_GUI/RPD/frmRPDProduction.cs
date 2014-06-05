@@ -357,7 +357,11 @@ namespace MRP_GUI.RPD
                         }
                         else if (objRPDBatchActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
                         {
-
+                            grpStopAct.Enabled = false;
+                        }
+                        else 
+                        {
+                            //grpStopAct.Enabled = false;
                         }
                         
                        
@@ -1113,6 +1117,11 @@ namespace MRP_GUI.RPD
         private void cmbSupervisedByPackingDetails_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tbRPDBatch_Click(object sender, EventArgs e)
+        {
+            LoadPackingDetails();
         }
 
     

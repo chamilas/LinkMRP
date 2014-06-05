@@ -355,6 +355,21 @@ namespace MRP_GUI
 
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                if (dgvBatcList.CurrentRow != null)
+                {
+                    frmBatchSendQC_MaterialReq objForm = new frmBatchSendQC_MaterialReq(dgvBatcList.CurrentRow.Cells["BatchNo"].Value.ToString());
+                    objForm.ShowDialog(this);
+                    //objForm.Show();
+                }
+
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
 
     }
 }

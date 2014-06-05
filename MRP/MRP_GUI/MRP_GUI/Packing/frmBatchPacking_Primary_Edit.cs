@@ -658,6 +658,20 @@ namespace MRP_GUI
                 objForm.ShowDialog(this);
             }
 
+            if (keyData == Keys.F3)
+            {
+                if (dgvActivity.CurrentRow != null)
+                {
+
+                    frmBatchPacking_DamagedGoods objForm = new frmBatchPacking_DamagedGoods(Convert.ToInt64(dgvActivity.CurrentRow.Cells["BatchActID"].Value), "Primary");
+                    objForm.ShowDialog(this);
+                }
+                else
+                {
+                    MessageBox.Show("Please select a Packing Batch");
+                }
+            }
+
             return base.ProcessCmdKey(ref msg, keyData);
 
             // Call the base class
@@ -878,7 +892,7 @@ namespace MRP_GUI
 
         private void btnEditBatch_Click(object sender, EventArgs e)
         {
-            if (DataValidation.Is3DecimalPointNumber(txtPackingQty.Text) && DataValidation.IsNumericNumber(txtOutputQty.Text))
+            if (DataValidation.Is3DecimalPointNumber(txtPackingQty.Text))
             {
                 try
                 {

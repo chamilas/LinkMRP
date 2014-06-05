@@ -30,7 +30,7 @@ namespace MRP_GUI
         Supplier objSupplier = new Supplier();
 
 
-        DeliverNoteMaterialsCollec objCollec = new DeliverNoteMaterialsCollec();
+        DeliverNoteMaterialsCollec objCollec;
 
         Material_DL objMaterial_DL = new Material_DL(ConnectionStringClass.GetConnection());
         Employee_DL objEmployee_DL = new Employee_DL(ConnectionStringClass.GetConnection());
@@ -71,7 +71,7 @@ namespace MRP_GUI
         {
             try
             {
-
+                objCollec = new DeliverNoteMaterialsCollec();
                 DeliverNoteMaterials obj = new DeliverNoteMaterials();
                 bool DuplicateFound = false;
               
@@ -189,7 +189,7 @@ protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
                 }
 
 
-
+                obj = new DeliverNote();
                 objCollec = null;
 
                 dgvDeliverNoteList.AutoGenerateColumns = false;

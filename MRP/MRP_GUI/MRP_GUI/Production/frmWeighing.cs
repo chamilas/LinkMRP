@@ -610,7 +610,7 @@ namespace MRP_GUI
         {
             try
             {
-                frmMultipleLabour objForm = new frmMultipleLabour(objBatchActivity, (int)objMainAct.SectionID);
+                frmMultipleLabour objForm = new frmMultipleLabour(objBatchActivity, Convert.ToInt32(cmbSection.SelectedValue));
                 objForm.ShowDialog(this);
 
                 Load_LabourDetails();

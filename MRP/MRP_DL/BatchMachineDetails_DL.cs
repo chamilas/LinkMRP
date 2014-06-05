@@ -92,5 +92,26 @@ namespace DL
                 throw new Exception(ex.Message, ex);
             }
         }
+
+        public DataTable Get_BySecondaryPackingBatchActID(int BatchActID)
+        {
+            try
+            {
+
+
+                SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@BatchActID", BatchActID)
+                };
+
+                return Execute.RunSP_DataTable(Connection, "SPGET_BatchMachineDetails_By_SecondaryBatchActID", paramList);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+        }
     }
 }

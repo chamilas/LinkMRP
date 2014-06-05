@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.objSourceBatchList = new System.Windows.Forms.BindingSource(this.components);
-            this.objSourceActivityList = new System.Windows.Forms.BindingSource(this.components);
             this.dgvActivity = new System.Windows.Forms.DataGridView();
             this.BatchActID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainActID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,10 +52,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.objSourceBatchLabour = new System.Windows.Forms.BindingSource(this.components);
-            this.objSourceBatchMachine = new System.Windows.Forms.BindingSource(this.components);
-            this.objSourceMachineList = new System.Windows.Forms.BindingSource(this.components);
-            this.objSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtFinalQty = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,34 +65,42 @@
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RejectedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chkRaw = new System.Windows.Forms.CheckBox();
             this.chkPacking = new System.Windows.Forms.CheckBox();
             this.chkSemi = new System.Windows.Forms.CheckBox();
-            this.objSourceItemLsit = new System.Windows.Forms.BindingSource(this.components);
             this.cmbBatchID = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbBatchState = new System.Windows.Forms.ComboBox();
-            this.objSourceBatches = new System.Windows.Forms.BindingSource(this.components);
             this.dgvTransferred = new System.Windows.Forms.DataGridView();
             this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransferredQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objSourceTransferred = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
+            this.objSourceBatchList = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceActivityList = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceBatchLabour = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceBatchMachine = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceMachineList = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceEmployee = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceItemLsit = new System.Windows.Forms.BindingSource(this.components);
+            this.objSourceBatches = new System.Windows.Forms.BindingSource(this.components);
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchLabourDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMachineDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMTItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransferred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceTransferred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchLabour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchMachine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceMachineList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMTItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceItemLsit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatches)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransferred)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceTransferred)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvActivity
@@ -398,11 +400,12 @@
             this.Item,
             this.MRNO,
             this.Qty,
+            this.RejectedQty,
             this.Unit});
             this.dgvMTItems.Location = new System.Drawing.Point(15, 215);
             this.dgvMTItems.Name = "dgvMTItems";
             this.dgvMTItems.ReadOnly = true;
-            this.dgvMTItems.Size = new System.Drawing.Size(386, 243);
+            this.dgvMTItems.Size = new System.Drawing.Size(386, 208);
             this.dgvMTItems.TabIndex = 14;
             // 
             // Item
@@ -432,6 +435,14 @@
             this.Qty.HeaderText = "Qty";
             this.Qty.Name = "Qty";
             this.Qty.ReadOnly = true;
+            // 
+            // RejectedQty
+            // 
+            this.RejectedQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RejectedQty.DataPropertyName = "RejectedQty";
+            this.RejectedQty.HeaderText = "RejectedQty";
+            this.RejectedQty.Name = "RejectedQty";
+            this.RejectedQty.ReadOnly = true;
             // 
             // Unit
             // 
@@ -517,10 +528,10 @@
             this.ProductCode,
             this.TransferredQty});
             this.dgvTransferred.DataSource = this.objSourceTransferred;
-            this.dgvTransferred.Location = new System.Drawing.Point(15, 483);
+            this.dgvTransferred.Location = new System.Drawing.Point(15, 445);
             this.dgvTransferred.Name = "dgvTransferred";
             this.dgvTransferred.ReadOnly = true;
-            this.dgvTransferred.Size = new System.Drawing.Size(386, 117);
+            this.dgvTransferred.Size = new System.Drawing.Size(386, 136);
             this.dgvTransferred.TabIndex = 18;
             // 
             // ProductCode
@@ -544,16 +555,28 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 461);
+            this.label4.Location = new System.Drawing.Point(12, 426);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 16);
             this.label4.TabIndex = 19;
             this.label4.Text = "Primary Product Transfers";
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 584);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(202, 16);
+            this.label10.TabIndex = 202;
+            this.label10.Text = "F1 - To View Rejected Items";
+            // 
             // frmBatchRegister
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1004, 612);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvTransferred);
             this.Controls.Add(this.cmbBatchState);
@@ -582,20 +605,20 @@
             this.Name = "frmBatchRegister";
             this.Text = "Batch Register";
             this.Load += new System.EventHandler(this.frmBatchList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActivity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatchLabourDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMachineDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMTItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransferred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceTransferred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchLabour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchMachine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceMachineList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMTItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceItemLsit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatches)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransferred)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objSourceTransferred)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,10 +668,6 @@
         private System.Windows.Forms.CheckBox chkPacking;
         private System.Windows.Forms.CheckBox chkSemi;
         private System.Windows.Forms.BindingSource objSourceItemLsit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MRNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.ComboBox cmbBatchID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbBatchState;
@@ -658,5 +677,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransferredQty;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MRNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RejectedQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
+        private System.Windows.Forms.Label label10;
     }
 }

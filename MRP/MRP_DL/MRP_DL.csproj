@@ -54,6 +54,7 @@
     <Compile Include="ConnectionStringClass.cs" />
     <Compile Include="BatchMachineDetails_DL.cs" />
     <Compile Include="BatchPackingMR_DL.cs" />
+    <Compile Include="BatchActivityMachineDetails_DL.cs" />
     <Compile Include="CustomerTerritoryList_DL.cs" />
     <Compile Include="Customer_DL.cs" />
     <Compile Include="FinishGoodsReturn_DL.cs" />

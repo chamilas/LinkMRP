@@ -60,6 +60,7 @@
     <Compile Include="CAPProduct.cs" />
     <Compile Include="CompanyOverHeadRate.cs" />
     <Compile Include="BatchMachineDetails.cs" />
+    <Compile Include="BatchActivityMachineDetails.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerTerritoryList.cs" />
     <Compile Include="PlanMaterials.cs" />

@@ -1717,6 +1717,7 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Edit.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_FG.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchCreate.resources
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Packing.frmBatchPacking_DamagedGoods.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPackingMaterialsForecast.resources
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPlanMaterial_Full.resources
@@ -1914,3 +1915,5 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmViewRejectedItems.resources
+C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_MaterialReq.resources
