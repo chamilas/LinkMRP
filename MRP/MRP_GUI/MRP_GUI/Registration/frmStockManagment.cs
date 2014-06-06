@@ -43,8 +43,8 @@ namespace MRP_GUI
             txtMinimum.Text = "0.00";
             txtReorderLevel.Text = "0.00";
             txtStock.Text = "0.00";
-            cmbItem.SelectedIndex = 0;
-            cmbStockType.SelectedIndex = 0;
+            //cmbItem.SelectedIndex = 0;
+            //cmbStockType.SelectedIndex = 0;
 
             this.StockSelect = false;
         }
@@ -77,7 +77,7 @@ namespace MRP_GUI
         {
             try
             {
-                cmbStockType.SelectedIndex = -1;
+                //cmbStockType.SelectedIndex = -1;
                 cmbStores.DataSource = objStoreDL.Get();
             }
             catch (Exception ex)
@@ -109,7 +109,7 @@ namespace MRP_GUI
             try
             {
                 Store objStore = (Store)cmbStores.SelectedItem;
-                objStockTemp.ItemCode = cmbItem.SelectedValue.ToString();
+                //objStockTemp.ItemCode = cmbItem.SelectedValue.ToString();
                 objStockTemp.StockEconomicalQty = Convert.ToDecimal(txtEconomicalQty.Text);
                 objStockTemp.StockMaximumQty = Convert.ToDecimal(txtMaximum.Text);
                 objStockTemp.StockMinimumQty = Convert.ToDecimal(txtMinimum.Text);
@@ -118,6 +118,7 @@ namespace MRP_GUI
                 objStockTemp.StockQty = Convert.ToDecimal(txtStock.Text);
                 objStockTemp.StockStatus = Stock.Status.Enable;
                 objStockTemp.StockStore = objStore;
+                /*
                 if (cmbStockType.SelectedItem.Equals("Material"))
                 {
                     objStockTemp.StockType = Stock.Type.Material;
@@ -130,7 +131,7 @@ namespace MRP_GUI
                 {
                     objStockTemp.StockType = Stock.Type.FinishProduct;
                 }
-
+                */
                 if (this.StockSelect)
                 {
                     objStockTemp.StockID = objStock.StockID;
@@ -176,6 +177,7 @@ namespace MRP_GUI
 
         private void cmbStockType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             try
             {
                 //bindItems.DataSource = null;
@@ -218,6 +220,7 @@ namespace MRP_GUI
             {
                     MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+             */
         }
 
         private void gvStockList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -234,6 +237,7 @@ namespace MRP_GUI
                     txtReorderLevel.Text = objStock.StockReorderLevel.ToString();
                     txtStock.Text = objStock.StockQty.ToString();
 
+                    /*
                     cmbStores.SelectedItem = objStock.StockStore;
                     if (objStock.StockType == Stock.Type.Material)
                     {
@@ -253,6 +257,7 @@ namespace MRP_GUI
                         cmbItem.SelectedValue = objStock.StockFinishProduct.FinishProductCode;
                         objStock.ItemCode = objStock.StockFinishProduct.FinishProductCode;
                     }
+                    */
                     this.StockSelect = true;
                     
                 }
@@ -313,6 +318,7 @@ namespace MRP_GUI
 
         private void cmbItem_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             try
             {
                 bindStockList.Filter = string.Format("MaterialIDName LIKE '%{0}%'", cmbItem.Text);
@@ -352,6 +358,7 @@ namespace MRP_GUI
             {
                 MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+             */
         }
 
         private void txtReorderLevel_KeyPress(object sender, KeyPressEventArgs e)
@@ -388,7 +395,7 @@ namespace MRP_GUI
 
         private void cmbItem_KeyDown(object sender, KeyEventArgs e)
         {
-            bindStockList.Filter = string.Format("MaterialIDName LIKE '%{0}%'", cmbItem.Text);
+            //bindStockList.Filter = string.Format("MaterialIDName LIKE '%{0}%'", cmbItem.Text);
 
             /*
             if (cmbStockType.SelectedItem.Equals("Material"))
@@ -404,6 +411,11 @@ namespace MRP_GUI
                 bindItems.Filter = string.Format("FinishProductCode LIKE '%{0}%'", cmbItem.Text);
             }
              */
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            bindStockList.Filter = string.Format("MaterialIDName LIKE '%{0}%'", txtSearch.Text);
         }
     }
 }

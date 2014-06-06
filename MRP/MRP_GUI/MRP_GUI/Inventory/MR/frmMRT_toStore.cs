@@ -60,8 +60,10 @@ namespace MRP_GUI
 
         public void ClearItem()
         {
+            txtMaterialCode.Text = "";
             txtDescription.Text = "";
             txtQty.Text = "0.00";
+            objSourceMaterial.Filter = string.Format("Material LIKE '%{0}%'", txtMaterialCode.Text);
             cmbItem.SelectedIndex = 0;
             this.ItemSelect = false;
         }
@@ -237,7 +239,7 @@ namespace MRP_GUI
                             if (objMat != null)
                             {
                                 lblUnit.Text = objMat.MatUnit.UnitCode;
-                                txtMaterialCode.Text = objMat.MaterialCode;
+                                //txtMaterialCode.Text = objMat.MaterialCode;
                             }
                             else
                             {
@@ -380,6 +382,11 @@ namespace MRP_GUI
         private void txtQty_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.Validate_3Decimals(sender, e);
+        }
+
+        private void txtMaterialCode_KeyDown(object sender, KeyEventArgs e)
+        {
+                objSourceMaterial.Filter = string.Format("Material LIKE '%{0}%'", txtMaterialCode.Text);
         }
 
 

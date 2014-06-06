@@ -149,10 +149,11 @@ namespace MRP_GUI
             // 
             // txtMaterialCode
             // 
-            this.txtMaterialCode.Location = new System.Drawing.Point(560, 35);
+            this.txtMaterialCode.Location = new System.Drawing.Point(541, 35);
             this.txtMaterialCode.Name = "txtMaterialCode";
-            this.txtMaterialCode.Size = new System.Drawing.Size(188, 21);
+            this.txtMaterialCode.Size = new System.Drawing.Size(276, 21);
             this.txtMaterialCode.TabIndex = 10;
+            this.txtMaterialCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaterialCode_KeyDown);
             // 
             // button4
             // 

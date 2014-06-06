@@ -50,6 +50,15 @@ namespace MRP_GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.gvStockList = new System.Windows.Forms.DataGridView();
+            this.ColStockID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaterialIDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStockQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStockReorderLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMinimumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMaxStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEconStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindStockList = new System.Windows.Forms.BindingSource(this.components);
             this.txtEconomicalQty = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,18 +71,9 @@ namespace MRP_GUI
             this.cmbItem = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbStockType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.cmbStores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ColStockID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaterialIDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColItemCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStockQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStockReorderLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMinimumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaxStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEconStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvStockList)).BeginInit();
@@ -82,6 +82,7 @@ namespace MRP_GUI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSearch);
             this.groupBox1.Controls.Add(this.listItemList);
             this.groupBox1.Controls.Add(this.lblUnit6);
             this.groupBox1.Controls.Add(this.lblUnit5);
@@ -108,7 +109,6 @@ namespace MRP_GUI
             this.groupBox1.Controls.Add(this.cmbItem);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cmbStockType);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cmbStores);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -122,11 +122,13 @@ namespace MRP_GUI
             // listItemList
             // 
             this.listItemList.DataSource = this.bindItems;
+            this.listItemList.Enabled = false;
             this.listItemList.FormattingEnabled = true;
-            this.listItemList.Location = new System.Drawing.Point(128, 100);
+            this.listItemList.Location = new System.Drawing.Point(128, 140);
             this.listItemList.Name = "listItemList";
-            this.listItemList.Size = new System.Drawing.Size(332, 95);
+            this.listItemList.Size = new System.Drawing.Size(332, 30);
             this.listItemList.TabIndex = 29;
+            this.listItemList.Visible = false;
             // 
             // lblUnit6
             // 
@@ -291,6 +293,81 @@ namespace MRP_GUI
             this.gvStockList.TabIndex = 10;
             this.gvStockList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStockList_CellClick);
             // 
+            // ColStockID
+            // 
+            this.ColStockID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColStockID.DataPropertyName = "StockID";
+            this.ColStockID.HeaderText = "StockID";
+            this.ColStockID.Name = "ColStockID";
+            this.ColStockID.ReadOnly = true;
+            // 
+            // MaterialIDName
+            // 
+            this.MaterialIDName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaterialIDName.DataPropertyName = "MaterialIDName";
+            this.MaterialIDName.HeaderText = "MaterialIDName";
+            this.MaterialIDName.Name = "MaterialIDName";
+            this.MaterialIDName.ReadOnly = true;
+            // 
+            // ColItemCode
+            // 
+            this.ColItemCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColItemCode.DataPropertyName = "ItemCode";
+            this.ColItemCode.HeaderText = "Item Code";
+            this.ColItemCode.Name = "ColItemCode";
+            this.ColItemCode.ReadOnly = true;
+            // 
+            // ColItem
+            // 
+            this.ColItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColItem.DataPropertyName = "Item";
+            this.ColItem.HeaderText = "Item";
+            this.ColItem.MinimumWidth = 200;
+            this.ColItem.Name = "ColItem";
+            this.ColItem.ReadOnly = true;
+            // 
+            // ColStockQty
+            // 
+            this.ColStockQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColStockQty.DataPropertyName = "StockQty";
+            this.ColStockQty.HeaderText = "Stock";
+            this.ColStockQty.Name = "ColStockQty";
+            this.ColStockQty.ReadOnly = true;
+            // 
+            // ColStockReorderLevel
+            // 
+            this.ColStockReorderLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColStockReorderLevel.DataPropertyName = "StockReorderLevel";
+            this.ColStockReorderLevel.HeaderText = "Re-Order Level";
+            this.ColStockReorderLevel.Name = "ColStockReorderLevel";
+            this.ColStockReorderLevel.ReadOnly = true;
+            // 
+            // ColMinimumStock
+            // 
+            this.ColMinimumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMinimumStock.DataPropertyName = "StockMinimumQty";
+            this.ColMinimumStock.HeaderText = "Minimum Stock";
+            this.ColMinimumStock.Name = "ColMinimumStock";
+            this.ColMinimumStock.ReadOnly = true;
+            // 
+            // ColMaxStock
+            // 
+            this.ColMaxStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMaxStock.DataPropertyName = "StockMaximumQty";
+            this.ColMaxStock.HeaderText = "Maximum Stock";
+            this.ColMaxStock.Name = "ColMaxStock";
+            this.ColMaxStock.ReadOnly = true;
+            // 
+            // ColEconStock
+            // 
+            this.ColEconStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColEconStock.DataPropertyName = "StockEconomicalQty";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ColEconStock.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColEconStock.HeaderText = "Economical Stock";
+            this.ColEconStock.Name = "ColEconStock";
+            this.ColEconStock.ReadOnly = true;
+            // 
             // txtEconomicalQty
             // 
             this.txtEconomicalQty.Location = new System.Drawing.Point(609, 137);
@@ -368,18 +445,20 @@ namespace MRP_GUI
             this.cmbItem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbItem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbItem.DataSource = this.bindItems;
+            this.cmbItem.Enabled = false;
             this.cmbItem.FormattingEnabled = true;
-            this.cmbItem.Location = new System.Drawing.Point(128, 72);
+            this.cmbItem.Location = new System.Drawing.Point(128, 115);
             this.cmbItem.Name = "cmbItem";
             this.cmbItem.Size = new System.Drawing.Size(332, 21);
             this.cmbItem.TabIndex = 2;
+            this.cmbItem.Visible = false;
             this.cmbItem.SelectedIndexChanged += new System.EventHandler(this.cmbItem_SelectedIndexChanged);
             this.cmbItem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbItem_KeyDown);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 75);
+            this.label3.Location = new System.Drawing.Point(84, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 4;
@@ -392,20 +471,12 @@ namespace MRP_GUI
             "Material",
             "Basic Product",
             "Finish Product"});
-            this.cmbStockType.Location = new System.Drawing.Point(128, 45);
+            this.cmbStockType.Location = new System.Drawing.Point(128, 90);
             this.cmbStockType.Name = "cmbStockType";
             this.cmbStockType.Size = new System.Drawing.Size(332, 21);
             this.cmbStockType.TabIndex = 1;
+            this.cmbStockType.Visible = false;
             this.cmbStockType.SelectedIndexChanged += new System.EventHandler(this.cmbStockType_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Stock Type";
             // 
             // cmbStores
             // 
@@ -426,80 +497,13 @@ namespace MRP_GUI
             this.label1.TabIndex = 0;
             this.label1.Text = "Store";
             // 
-            // ColStockID
+            // txtSearch
             // 
-            this.ColStockID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColStockID.DataPropertyName = "StockID";
-            this.ColStockID.HeaderText = "StockID";
-            this.ColStockID.Name = "ColStockID";
-            this.ColStockID.ReadOnly = true;
-            // 
-            // MaterialIDName
-            // 
-            this.MaterialIDName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaterialIDName.DataPropertyName = "MaterialIDName";
-            this.MaterialIDName.HeaderText = "MaterialIDName";
-            this.MaterialIDName.Name = "MaterialIDName";
-            this.MaterialIDName.ReadOnly = true;
-            // 
-            // ColItemCode
-            // 
-            this.ColItemCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColItemCode.DataPropertyName = "ItemCode";
-            this.ColItemCode.HeaderText = "Item Code";
-            this.ColItemCode.Name = "ColItemCode";
-            this.ColItemCode.ReadOnly = true;
-            // 
-            // ColItem
-            // 
-            this.ColItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColItem.DataPropertyName = "Item";
-            this.ColItem.HeaderText = "Item";
-            this.ColItem.MinimumWidth = 200;
-            this.ColItem.Name = "ColItem";
-            this.ColItem.ReadOnly = true;
-            // 
-            // ColStockQty
-            // 
-            this.ColStockQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColStockQty.DataPropertyName = "StockQty";
-            this.ColStockQty.HeaderText = "Stock";
-            this.ColStockQty.Name = "ColStockQty";
-            this.ColStockQty.ReadOnly = true;
-            // 
-            // ColStockReorderLevel
-            // 
-            this.ColStockReorderLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColStockReorderLevel.DataPropertyName = "StockReorderLevel";
-            this.ColStockReorderLevel.HeaderText = "Re-Order Level";
-            this.ColStockReorderLevel.Name = "ColStockReorderLevel";
-            this.ColStockReorderLevel.ReadOnly = true;
-            // 
-            // ColMinimumStock
-            // 
-            this.ColMinimumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMinimumStock.DataPropertyName = "StockMinimumQty";
-            this.ColMinimumStock.HeaderText = "Minimum Stock";
-            this.ColMinimumStock.Name = "ColMinimumStock";
-            this.ColMinimumStock.ReadOnly = true;
-            // 
-            // ColMaxStock
-            // 
-            this.ColMaxStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMaxStock.DataPropertyName = "StockMaximumQty";
-            this.ColMaxStock.HeaderText = "Maximum Stock";
-            this.ColMaxStock.Name = "ColMaxStock";
-            this.ColMaxStock.ReadOnly = true;
-            // 
-            // ColEconStock
-            // 
-            this.ColEconStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColEconStock.DataPropertyName = "StockEconomicalQty";
-            dataGridViewCellStyle2.NullValue = null;
-            this.ColEconStock.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColEconStock.HeaderText = "Economical Stock";
-            this.ColEconStock.Name = "ColEconStock";
-            this.ColEconStock.ReadOnly = true;
+            this.txtSearch.Location = new System.Drawing.Point(128, 45);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(332, 20);
+            this.txtSearch.TabIndex = 30;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // frmStockManagment
             // 
@@ -526,7 +530,6 @@ namespace MRP_GUI
         private System.Windows.Forms.ComboBox cmbItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbStockType;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbStores;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEconomicalQty;
@@ -563,5 +566,6 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMinimumStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaxStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEconStock;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
