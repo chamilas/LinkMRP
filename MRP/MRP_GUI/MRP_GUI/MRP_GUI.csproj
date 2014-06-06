@@ -563,6 +563,12 @@
     <Compile Include="Registration\frmBasicProductRegistration.designer.cs">
       <DependentUpon>frmBasicProductRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration\frmStockManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmStockManagment.designer.cs">
+      <DependentUpon>frmStockManagment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration\QC\frmQC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1099,12 +1105,6 @@
     <Compile Include="Registration\frmStandardBatch.designer.cs">
       <DependentUpon>frmStandardBatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registration\frmStockManagment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registration\frmStockManagment.designer.cs">
-      <DependentUpon>frmStockManagment.cs</DependentUpon>
-    </Compile>
     <Compile Include="Registration\frmSubContractor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1590,6 +1590,9 @@
     <EmbeddedResource Include="Registration\frmBasicProductRegistration.resx">
       <DependentUpon>frmBasicProductRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmStockManagment.resx">
+      <DependentUpon>frmStockManagment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration\QC\frmQC.resx">
       <DependentUpon>frmQC.cs</DependentUpon>
     </EmbeddedResource>
@@ -1863,9 +1866,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\frmStandardBatch.resx">
       <DependentUpon>frmStandardBatch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registration\frmStockManagment.resx">
-      <DependentUpon>frmStockManagment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\frmSubContractor.resx">
       <DependentUpon>frmSubContractor.cs</DependentUpon>

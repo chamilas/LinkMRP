@@ -34,7 +34,6 @@ namespace MRP_GUI
         private BasicProduct_DL objBasicProductDL = new BasicProduct_DL(ConnectionStringClass.GetConnection());
         private FinishProduct_DL objFinishProductDL = new FinishProduct_DL(ConnectionStringClass.GetConnection());
 
-        private DataTable dtItems = new DataTable();
         //------------------------- Methods ------------------------
 
         public void ClearForm()
@@ -100,7 +99,7 @@ namespace MRP_GUI
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -314,10 +313,9 @@ namespace MRP_GUI
 
         private void cmbItem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             try
             {
-
+                bindStockList.Filter = string.Format("MaterialIDName LIKE '%{0}%'", cmbItem.Text);
                 if (cmbItem.SelectedValue != null)
                 {
                     if (cmbStockType.SelectedItem.Equals("Material"))
@@ -354,7 +352,6 @@ namespace MRP_GUI
             {
                 MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-             
         }
 
         private void txtReorderLevel_KeyPress(object sender, KeyPressEventArgs e)
@@ -389,34 +386,24 @@ namespace MRP_GUI
             }
         }
 
-        private void ReLoad(string search)
+        private void cmbItem_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            bindStockList.Filter = string.Format("MaterialIDName LIKE '%{0}%'", cmbItem.Text);
+
+            /*
+            if (cmbStockType.SelectedItem.Equals("Material"))
             {
-                cmbStores.DataSource = null;
-                cmbStores.Items.Clear();
-                dtItems = objMaterialDl.GetData_Search(search, (int)Material.Status.Enable, "Raw");
-                objSource.DataSource = dtItems;
-
-
-                //dgvItems.AutoGenerateColumns = false;
-                //objSource.DataSource = dtItems;
-                //dgvItems.DataSource = objSource;
-                //objSource.ResetBindings(true);
-                cmbStores.DataSource = objSource;
-
+                bindItems.Filter = string.Format("MaterialCode LIKE '%{0}%'", cmbItem.Text);
             }
-            catch (Exception ex)
+            else if (cmbStockType.SelectedItem.Equals("Basic Product"))
             {
-
-                throw new Exception(ex.Message, ex); ;
+                bindItems.Filter = string.Format("BasicProductCode LIKE '%{0}%'", cmbItem.Text);
             }
-        }
-
-        private void cmbItem_TextChanged(object sender, EventArgs e)
-        {
-            String search=cmbItem.Text;
-            ReLoad(search);
+            else if (cmbStockType.SelectedItem.Equals("Finish Product"))
+            {
+                bindItems.Filter = string.Format("FinishProductCode LIKE '%{0}%'", cmbItem.Text);
+            }
+             */
         }
     }
 }

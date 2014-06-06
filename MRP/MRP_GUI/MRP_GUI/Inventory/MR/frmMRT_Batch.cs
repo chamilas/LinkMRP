@@ -100,9 +100,6 @@ namespace MRP_GUI
         {
             try
             {
-
-                
-
                 if ((cmbBatchNo.SelectedValue != null) && (cmbPart.Text !=""))
                 {
 
