@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>D:\pub\|D:\CIC\|publish\|C:\Program Files %28x86%29\Microsoft Visual Studio 11.0\|D:\Publish\</PublishUrlHistory>
+    <PublishUrlHistory>D:\MRP 2014-06-08\|D:\pub\|D:\CIC\|publish\|C:\Program Files %28x86%29\Microsoft Visual Studio 11.0\</PublishUrlHistory>
     <InstallUrlHistory>\\192.168.1.100\it\MRP\|http://192.168.1.20/mrpdc/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory>\\192.168.1.100\it\MRP\</UpdateUrlHistory>

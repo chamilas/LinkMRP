@@ -63,6 +63,7 @@ namespace MRP_GUI
             this.bindItemList = new System.Windows.Forms.BindingSource(this.components);
             this.ColGRNNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnterdByName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRNApprovedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRNApproveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,6 +123,7 @@ namespace MRP_GUI
             this.gvGRNList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColGRNNO,
             this.ColDoc,
+            this.EnterdByName,
             this.ColDate,
             this.GRNApprovedBy,
             this.GRNApproveDate,
@@ -354,12 +356,20 @@ namespace MRP_GUI
             this.ColDoc.Name = "ColDoc";
             this.ColDoc.ReadOnly = true;
             // 
+            // EnterdByName
+            // 
+            this.EnterdByName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EnterdByName.DataPropertyName = "EnterdByName";
+            this.EnterdByName.HeaderText = "Enterd By Name";
+            this.EnterdByName.Name = "EnterdByName";
+            this.EnterdByName.ReadOnly = true;
+            // 
             // ColDate
             // 
             this.ColDate.DataPropertyName = "GRNDate";
             dataGridViewCellStyle2.Format = "d";
             this.ColDate.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColDate.HeaderText = "Date";
+            this.ColDate.HeaderText = "Enterd Date";
             this.ColDate.Name = "ColDate";
             this.ColDate.ReadOnly = true;
             // 
@@ -435,6 +445,7 @@ namespace MRP_GUI
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColGRNNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EnterdByName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRNApprovedBy;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRNApproveDate;

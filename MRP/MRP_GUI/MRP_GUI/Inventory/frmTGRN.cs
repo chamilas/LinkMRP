@@ -65,13 +65,13 @@ namespace MRP_GUI
         private void frmTGRN_Load(object sender, EventArgs e)
         {
           //  Load_Data();
+            objCollec = new DeliverNoteMaterialsCollec();
         }
 
         private void Load_Data()
         {
             try
             {
-                objCollec = new DeliverNoteMaterialsCollec();
                 DeliverNoteMaterials obj = new DeliverNoteMaterials();
                 bool DuplicateFound = false;
               
@@ -135,7 +135,7 @@ namespace MRP_GUI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (DataValidation.IsNumericNumber(txtQuantity.Text))
+                if (DataValidation.Is3DecimalPointNumber(txtQuantity.Text))
                 {
 
                     Load_Data();
@@ -198,6 +198,7 @@ protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
                 dgvDeliverNoteList.DataSource = objSourceDeliverNotes;
                 objSourceDeliverNotes.ResetBindings(true);
 
+                objCollec = new DeliverNoteMaterialsCollec();
                 txtDeliverNote.Text = "";
                 txtSupplier.Text = "";
                 txtSupplierCode.Text = "";

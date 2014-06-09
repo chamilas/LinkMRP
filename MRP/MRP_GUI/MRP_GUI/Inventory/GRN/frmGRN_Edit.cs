@@ -257,7 +257,7 @@ namespace MRP_GUI
             {
                 if (DataValidation.Is3DecimalPointNumber(txtQty.Text) && DataValidation.Is2DecimalPointNumber(txtUnitPrice.Text))
                 {
-                    DialogResult dr = MessageBox.Show(this, "Are you sure, You want to Delete selected Record?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult dr = MessageBox.Show(this, "Are you sure, You want to Update selected Record?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr == DialogResult.Yes)
                     {
                         if (cmbGRNType.SelectedIndex + 1 == Convert.ToInt32(GRN.Type.Material))
@@ -265,6 +265,7 @@ namespace MRP_GUI
                             objGRNMaterials.GrossQty = Convert.ToDecimal(txtQty.Text);
                             objGRNMaterials.NetQty = Convert.ToDecimal(txtQty.Text);
                             objGRNMaterials.UnitPrice = Convert.ToDecimal(txtUnitPrice.Text);
+                            objGRNMaterials.Remarks = "No";
                             objGRNMaterials_DL.Update(objGRNMaterials, objGRN.GRNNo, objMaterial.MaterialCode);       
                         }
                         else if (cmbGRNType.SelectedIndex + 1 == Convert.ToInt32(GRN.Type.BasicProduct))

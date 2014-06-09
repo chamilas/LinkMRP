@@ -66,7 +66,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 215;
-            this.label4.Text = "Indut Quantity :";
+            this.label4.Text = "Input Quantity :";
             // 
             // txtRejectedQty
             // 

@@ -15,7 +15,7 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\pub\</PublishUrl>
+    <PublishUrl>D:\MRP 2014-06-08\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -55,13 +55,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>9B262CA619B7DAF75D15EA76F35D97D840EB780A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>EB2F7D86C188CACEC513BA6946C8D09CC59FA9F8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MRP_GUI_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MRP_GUI_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -2009,6 +2009,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="MRP_GUI_1_TemporaryKey.pfx" />
     <None Include="MRP_GUI_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
