@@ -47,6 +47,7 @@
               <xs:element name="MRType" msprop:Generator_ColumnVarNameInTable="columnMRType" msprop:Generator_ColumnPropNameInRow="MRType" msprop:Generator_ColumnPropNameInTable="MRTypeColumn" msprop:Generator_UserColumnName="MRType" type="xs:string" minOccurs="0" />
               <xs:element name="MRState" msprop:Generator_ColumnVarNameInTable="columnMRState" msprop:Generator_ColumnPropNameInRow="MRState" msprop:Generator_ColumnPropNameInTable="MRStateColumn" msprop:Generator_UserColumnName="MRState" type="xs:string" minOccurs="0" />
               <xs:element name="IssuedQty" msprop:Generator_ColumnVarNameInTable="columnIssuedQty" msprop:Generator_ColumnPropNameInRow="IssuedQty" msprop:Generator_ColumnPropNameInTable="IssuedQtyColumn" msprop:Generator_UserColumnName="IssuedQty" type="xs:string" minOccurs="0" />
+              <xs:element name="MRDescription" msprop:Generator_ColumnVarNameInTable="columnMRDescription" msprop:Generator_ColumnPropNameInRow="MRDescription" msprop:Generator_ColumnPropNameInTable="MRDescriptionColumn" msprop:Generator_UserColumnName="MRDescription" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

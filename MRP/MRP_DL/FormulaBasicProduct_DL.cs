@@ -75,10 +75,10 @@ namespace DL
 
                 SqlParameter[] paramList = new SqlParameter[] {
                 
-                new SqlParameter("@FormulaID", FormulaID),
-                new SqlParameter("@FormulaProductQty", BasicProductCode),
-                new SqlParameter("@Original_FormulaID", FormulaPart)};
-
+                new SqlParameter("@Original_FormulaID", FormulaID),
+                new SqlParameter("@Original_FormulaBasicProductCode", BasicProductCode),
+                new SqlParameter("@FormulaPart", FormulaPart)};
+                    
                 return Execute.RunSP_RowsEffected(Connection, "SPDELETE_FormulaBasicProduct", paramList);
 
             }
@@ -148,7 +148,7 @@ namespace DL
                 
                 new SqlParameter("@FormulaID", FormulaID)};
 
-                return Execute.RunSP_DataTable(Connection, "SPGET_FormulaFinishProduct_By_FormulaID", paramList);
+                return Execute.RunSP_DataTable(Connection, "SPGET_FormulaBasicProduct_By_FormulaID", paramList);
 
             }
             catch (Exception ex)

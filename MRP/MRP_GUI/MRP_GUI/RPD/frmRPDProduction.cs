@@ -173,10 +173,6 @@ namespace MRP_GUI.RPD
                     cmbSupervisedByPackingDetails.SelectedValue = objRPDBatchPackingActivity.SupervisedBy;
                     dtPackingStartDate.Value = objRPDBatchPackingActivity.StartDate;
                     
-                if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
-                {
-                    
-                }
                     
                 dtPackingStartDate.Enabled = false;
                 cmbSupervisedByPackingDetails.Enabled = false;
@@ -199,6 +195,7 @@ namespace MRP_GUI.RPD
                     btnPackingLabour.Visible = false;
                     grpPackingDetails.Enabled = false;
                     btnSavePackingAct.Enabled = false;
+                    btnSavePackingAct.Text = "Start Packing Activity";
                     bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
                     //if (objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID,(int)QCReport.ReportStatus.Accept))
                     //{
@@ -451,7 +448,10 @@ namespace MRP_GUI.RPD
             }
             else if (objRPDBatchActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
             {
-                MessageBox.Show(this, "Activity Finished", "Activity Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                frmRPDBatchActivity obj = new frmRPDBatchActivity(_CurrentUser, objRPDBatchActivity.RPDBatchActID);
+                obj.ShowDialog();
+                obj.StartPosition = FormStartPosition.CenterScreen;
+                //MessageBox.Show(this, "Activity Finished", "Activity Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
@@ -1122,6 +1122,7 @@ namespace MRP_GUI.RPD
         private void tbRPDBatch_Click(object sender, EventArgs e)
         {
             LoadPackingDetails();
+
         }
 
     

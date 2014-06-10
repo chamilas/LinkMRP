@@ -90,9 +90,6 @@ namespace MRP_GUI.RPD
             this.bindProduction = new System.Windows.Forms.BindingSource(this.components);
             this.tpMaterialUsage = new System.Windows.Forms.TabPage();
             this.gvMaterial = new System.Windows.Forms.DataGridView();
-            this.colMRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaterialCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindMaterialUsage = new System.Windows.Forms.BindingSource(this.components);
             this.tpPacking = new System.Windows.Forms.TabPage();
             this.grpPackingDetails = new System.Windows.Forms.GroupBox();
@@ -140,6 +137,10 @@ namespace MRP_GUI.RPD
             this.bindMR = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnExit = new System.Windows.Forms.Button();
+            this.colMRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaterialCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tbRPDBatch.SuspendLayout();
@@ -686,6 +687,7 @@ namespace MRP_GUI.RPD
             this.gvMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMRNO,
             this.colMaterialCode,
+            this.Item,
             this.Column18});
             this.gvMaterial.DataSource = this.bindMaterialUsage;
             this.gvMaterial.Location = new System.Drawing.Point(3, 3);
@@ -695,29 +697,6 @@ namespace MRP_GUI.RPD
             this.gvMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvMaterial.Size = new System.Drawing.Size(934, 318);
             this.gvMaterial.TabIndex = 5;
-            // 
-            // colMRNO
-            // 
-            this.colMRNO.DataPropertyName = "MRNO";
-            this.colMRNO.HeaderText = "MRNO";
-            this.colMRNO.Name = "colMRNO";
-            this.colMRNO.ReadOnly = true;
-            // 
-            // colMaterialCode
-            // 
-            this.colMaterialCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colMaterialCode.DataPropertyName = "MaterialCode";
-            this.colMaterialCode.HeaderText = "Material Code";
-            this.colMaterialCode.Name = "colMaterialCode";
-            this.colMaterialCode.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.DataPropertyName = "Qty";
-            this.Column18.HeaderText = "Quantity";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Width = 150;
             // 
             // tpPacking
             // 
@@ -1174,6 +1153,38 @@ namespace MRP_GUI.RPD
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // colMRNO
+            // 
+            this.colMRNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMRNO.DataPropertyName = "MRNO";
+            this.colMRNO.HeaderText = "MRNO";
+            this.colMRNO.Name = "colMRNO";
+            this.colMRNO.ReadOnly = true;
+            // 
+            // colMaterialCode
+            // 
+            this.colMaterialCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMaterialCode.DataPropertyName = "ItemCode";
+            this.colMaterialCode.HeaderText = "Material Code";
+            this.colMaterialCode.Name = "colMaterialCode";
+            this.colMaterialCode.ReadOnly = true;
+            // 
+            // Item
+            // 
+            this.Item.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Item.DataPropertyName = "Item";
+            this.Item.HeaderText = "Item Name";
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.DataPropertyName = "UsedQty";
+            this.Column18.HeaderText = "Quantity";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
             // frmRPDBatchFileView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1267,9 +1278,6 @@ namespace MRP_GUI.RPD
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.TabPage tpMaterialUsage;
         private System.Windows.Forms.DataGridView gvMaterial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMRNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaterialCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.TabPage tpPacking;
         private System.Windows.Forms.GroupBox grpPackingDetails;
         private System.Windows.Forms.DataGridView gvPackingDetails;
@@ -1326,6 +1334,10 @@ namespace MRP_GUI.RPD
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRPDBatchActID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMRNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaterialCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
 
     }
 }

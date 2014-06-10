@@ -46,6 +46,9 @@ namespace MRP_GUI.RPD
         private GRN_DL objGRNDL = new GRN_DL(ConnectionStringClass.GetConnection());
         private GRNMaterials_DL objGRNMaterialsDL = new GRNMaterials_DL(ConnectionStringClass.GetConnection());
         private QCReport objQCReport = null;
+        BatchPackingMR_DL objBatchPackingMR_DL = new BatchPackingMR_DL(ConnectionStringClass.GetConnection());
+
+
         public frmRPDBatchFileView(User objUser,RPDBatch objRPDBatch)
         {
             this.objRPDBatch = objRPDBatch;
@@ -85,7 +88,8 @@ namespace MRP_GUI.RPD
 
                     //}
                     bindProduction.DataSource = objRPDBatchProductionDL.GetDataByBatchID(objRPDBatch.RPDBatchID);
-                    bindMaterialUsage.DataSource = objRPDBatchPackingMaterialUsageDL.GetDataByBatchID(objRPDBatch.RPDBatchID);
+                    //bindMaterialUsage.DataSource = objRPDBatchPackingMaterialUsageDL.GetDataByBatchID(objRPDBatch.RPDBatchID);
+                    bindMaterialUsage.DataSource = objBatchPackingMR_DL.GetData_ByBatchID(objRPDBatch.RPDBatchID);
                     bindReports.DataSource = objQCReport_DL.GetView_RPD(objRPDBatch.RPDBatchID);
                     bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
                     //if (objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID))

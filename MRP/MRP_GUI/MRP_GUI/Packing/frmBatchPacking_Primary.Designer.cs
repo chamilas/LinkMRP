@@ -65,7 +65,6 @@
             this.objSourceBatchMachine = new System.Windows.Forms.BindingSource(this.components);
             this.objSourceMachineList = new System.Windows.Forms.BindingSource(this.components);
             this.txtMachineStart = new System.Windows.Forms.MaskedTextBox();
-            this.txtMachineStop = new System.Windows.Forms.MaskedTextBox();
             this.rdbOutsource = new System.Windows.Forms.RadioButton();
             this.rdbPermanentSection = new System.Windows.Forms.RadioButton();
             this.rdbPermanentAll = new System.Windows.Forms.RadioButton();
@@ -102,6 +101,7 @@
             this.lblUnit1 = new System.Windows.Forms.Label();
             this.chkOutsource = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtMachineStop = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBatcList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceActivityList)).BeginInit();
@@ -425,18 +425,6 @@
             this.txtMachineStart.TabIndex = 7;
             this.txtMachineStart.ValidatingType = typeof(System.DateTime);
             this.txtMachineStart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMachineStart_KeyDown);
-            // 
-            // txtMachineStop
-            // 
-            this.txtMachineStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMachineStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMachineStop.Location = new System.Drawing.Point(950, 9);
-            this.txtMachineStop.Mask = "00:00";
-            this.txtMachineStop.Name = "txtMachineStop";
-            this.txtMachineStop.Size = new System.Drawing.Size(49, 26);
-            this.txtMachineStop.TabIndex = 7;
-            this.txtMachineStop.ValidatingType = typeof(System.DateTime);
-            this.txtMachineStop.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMachineStop_KeyDown);
             // 
             // rdbOutsource
             // 
@@ -798,6 +786,18 @@
             this.label12.TabIndex = 205;
             this.label12.Text = "F3 - To Enter Rejected Items";
             // 
+            // txtMachineStop
+            // 
+            this.txtMachineStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMachineStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMachineStop.Location = new System.Drawing.Point(950, 9);
+            this.txtMachineStop.Mask = "00:00";
+            this.txtMachineStop.Name = "txtMachineStop";
+            this.txtMachineStop.Size = new System.Drawing.Size(49, 26);
+            this.txtMachineStop.TabIndex = 7;
+            this.txtMachineStop.ValidatingType = typeof(System.DateTime);
+            this.txtMachineStop.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMachineStop_KeyDown);
+            // 
             // frmBatchPacking_Priamry
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -890,7 +890,6 @@
         private System.Windows.Forms.BindingSource objSourceBatchMachine;
         private System.Windows.Forms.BindingSource objSourceMachineList;
         private System.Windows.Forms.MaskedTextBox txtMachineStart;
-        private System.Windows.Forms.MaskedTextBox txtMachineStop;
         private System.Windows.Forms.RadioButton rdbOutsource;
         private System.Windows.Forms.RadioButton rdbPermanentSection;
         private System.Windows.Forms.RadioButton rdbPermanentAll;
@@ -942,5 +941,6 @@
         private System.Windows.Forms.Label lblUnit1;
         private System.Windows.Forms.CheckBox chkOutsource;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox txtMachineStop;
     }
 }

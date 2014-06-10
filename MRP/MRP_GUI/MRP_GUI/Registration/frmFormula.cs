@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using SESD.MRP.REF;
 using DL;
+using MRP_GUI.Sales;
 
 namespace MRP_GUI
 {
@@ -400,19 +401,23 @@ namespace MRP_GUI
             FormulaBasicProduct objFormulaBasicProduct = new FormulaBasicProduct();
             try
             {
-                if (cmbBasicProducts.Items.Count > 0)
+                if (cmbBasicProducts.Items.Count > 0 && DataValidation.Is3DecimalPointNumber(txtBasicProductQty.Text))
                 {
                     objFormulaBasicProduct.BasicProduct = objBasicProductDL.Get(cmbBasicProducts.SelectedValue.ToString());
                     objFormulaBasicProduct.Formula = objFormula;
                     objFormulaBasicProduct.FormulaPart = cmbBasicPart.SelectedItem.ToString();
                     objFormulaBasicProduct.FormulaProductQty = Convert.ToDecimal(txtBasicProductQty.Text);
 
-                    objFormulaBasicProductDL.Add(objFormulaBasicProduct,CurrentUser.UserEmp);
+                    objFormulaBasicProductDL.Add(objFormulaBasicProduct, CurrentUser.UserEmp);
                     bindBasicProduct.DataSource = objFormulaBasicProductDL.GetDataView_FormulaID(objFormula.FormulaID);
                     bindItemList.DataSource = objFormulaDL.GetDataView_Items(objFormula.FormulaID);
 
 
 
+                }
+                else 
+                {
+                    MessageBox.Show(this, "Quantity should be a Numaric value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (FormatException fex)

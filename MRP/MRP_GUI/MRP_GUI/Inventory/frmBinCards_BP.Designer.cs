@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtvFromDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.cmMaterial = new System.Windows.Forms.ComboBox();
@@ -50,13 +50,6 @@
             this.txtEOQ = new System.Windows.Forms.TextBox();
             this.lblUnit1 = new System.Windows.Forms.Label();
             this.dgvBinCard = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRNNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRNQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IssuedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objSource = new System.Windows.Forms.BindingSource(this.components);
             this.objSourceMaterials = new System.Windows.Forms.BindingSource(this.components);
             this.txtMaterialCode = new System.Windows.Forms.TextBox();
@@ -72,6 +65,14 @@
             this.dgvBalanceStock = new System.Windows.Forms.DataGridView();
             this.BalancStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objSourceBalanceStock = new System.Windows.Forms.BindingSource(this.components);
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNBatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRNQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MRNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IssuedQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBinCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceMaterials)).BeginInit();
@@ -213,6 +214,7 @@
             this.dgvBinCard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
             this.GRNNO,
+            this.GRNBatchID,
             this.GRNQty,
             this.UnitPrice,
             this.MRNO,
@@ -223,81 +225,6 @@
             this.dgvBinCard.ReadOnly = true;
             this.dgvBinCard.Size = new System.Drawing.Size(823, 351);
             this.dgvBinCard.TabIndex = 15;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.DataPropertyName = "TheDate";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // GRNNO
-            // 
-            this.GRNNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GRNNO.DataPropertyName = "GRNNO";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.GRNNO.DefaultCellStyle = dataGridViewCellStyle2;
-            this.GRNNO.HeaderText = "GRNNO";
-            this.GRNNO.Name = "GRNNO";
-            this.GRNNO.ReadOnly = true;
-            // 
-            // GRNQty
-            // 
-            this.GRNQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GRNQty.DataPropertyName = "GRNQty";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Format = "N3";
-            dataGridViewCellStyle3.NullValue = null;
-            this.GRNQty.DefaultCellStyle = dataGridViewCellStyle3;
-            this.GRNQty.HeaderText = "GRN Qty";
-            this.GRNQty.Name = "GRNQty";
-            this.GRNQty.ReadOnly = true;
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UnitPrice.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle4;
-            this.UnitPrice.HeaderText = "Unit Price";
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.ReadOnly = true;
-            // 
-            // MRNO
-            // 
-            this.MRNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MRNO.DataPropertyName = "MRNO";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.MRNO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MRNO.HeaderText = "MRNO";
-            this.MRNO.Name = "MRNO";
-            this.MRNO.ReadOnly = true;
-            // 
-            // IssuedQty
-            // 
-            this.IssuedQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IssuedQty.DataPropertyName = "IssuedQty";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Format = "N3";
-            dataGridViewCellStyle6.NullValue = null;
-            this.IssuedQty.DefaultCellStyle = dataGridViewCellStyle6;
-            this.IssuedQty.HeaderText = "Issued Qty";
-            this.IssuedQty.Name = "IssuedQty";
-            this.IssuedQty.ReadOnly = true;
-            // 
-            // BatchNo
-            // 
-            this.BatchNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BatchNo.DataPropertyName = "BatchID";
-            this.BatchNo.HeaderText = "Batch No";
-            this.BatchNo.Name = "BatchNo";
-            this.BatchNo.ReadOnly = true;
             // 
             // txtMaterialCode
             // 
@@ -432,6 +359,89 @@
             this.BalancStock.Name = "BalancStock";
             this.BalancStock.ReadOnly = true;
             // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.DataPropertyName = "TheDate";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // GRNNO
+            // 
+            this.GRNNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNNO.DataPropertyName = "GRNNO";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.GRNNO.DefaultCellStyle = dataGridViewCellStyle2;
+            this.GRNNO.HeaderText = "GRNNO";
+            this.GRNNO.Name = "GRNNO";
+            this.GRNNO.ReadOnly = true;
+            // 
+            // GRNBatchID
+            // 
+            this.GRNBatchID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNBatchID.DataPropertyName = "GRNBatchID";
+            this.GRNBatchID.HeaderText = "GRNBatchID";
+            this.GRNBatchID.Name = "GRNBatchID";
+            this.GRNBatchID.ReadOnly = true;
+            // 
+            // GRNQty
+            // 
+            this.GRNQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GRNQty.DataPropertyName = "GRNQty";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Format = "N3";
+            dataGridViewCellStyle3.NullValue = null;
+            this.GRNQty.DefaultCellStyle = dataGridViewCellStyle3;
+            this.GRNQty.HeaderText = "GRN Qty";
+            this.GRNQty.Name = "GRNQty";
+            this.GRNQty.ReadOnly = true;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.UnitPrice.DataPropertyName = "UnitPrice";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.UnitPrice.DefaultCellStyle = dataGridViewCellStyle4;
+            this.UnitPrice.HeaderText = "Unit Price";
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.ReadOnly = true;
+            // 
+            // MRNO
+            // 
+            this.MRNO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MRNO.DataPropertyName = "MRNO";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MRNO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MRNO.HeaderText = "MRNO";
+            this.MRNO.Name = "MRNO";
+            this.MRNO.ReadOnly = true;
+            // 
+            // IssuedQty
+            // 
+            this.IssuedQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IssuedQty.DataPropertyName = "IssuedQty";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.Format = "N3";
+            dataGridViewCellStyle6.NullValue = null;
+            this.IssuedQty.DefaultCellStyle = dataGridViewCellStyle6;
+            this.IssuedQty.HeaderText = "Issued Qty";
+            this.IssuedQty.Name = "IssuedQty";
+            this.IssuedQty.ReadOnly = true;
+            // 
+            // BatchNo
+            // 
+            this.BatchNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BatchNo.DataPropertyName = "BatchID";
+            this.BatchNo.HeaderText = "Batch No";
+            this.BatchNo.Name = "BatchNo";
+            this.BatchNo.ReadOnly = true;
+            // 
             // frmBinCards_BP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -499,6 +509,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BalancStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRNNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRNBatchID;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRNQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn MRNO;

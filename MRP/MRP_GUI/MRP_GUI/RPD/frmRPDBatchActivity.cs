@@ -57,8 +57,33 @@ namespace MRP_GUI
             Load_Machine_List();
 
             rdbPermanentSection.Checked = true;
-           
 
+            if (objRPDBatchActivity.ActivityStatus == RPDBatchActivity.Status.Finalized) 
+            {
+                cmbMachine.Visible = false;
+                label4.Visible = false;
+                txtMachineStart.Visible = false;
+                label5.Visible = false;
+                txtMachineStop.Visible = false;
+                btnMultiple.Visible = false;
+                cmbEmployee.Visible = false;
+                cmbSections.Visible = false;
+                label1.Visible = false;
+                txtFrom.Visible = false;
+                label2.Visible = false;
+                txtTo.Visible = false;
+                label3.Visible = false;
+                txtOT.Visible = false;
+                label7.Visible = false;
+                txtOTMinutes.Visible = false;
+                txtNos.Visible = false;
+                label6.Visible = false;
+                rdbPermanentSection.Visible = false;
+                rdbOutsource.Visible = false;
+                rdbPermanentAll.Visible = false;
+
+
+            }
         }
 
         private void Load_Sections()
