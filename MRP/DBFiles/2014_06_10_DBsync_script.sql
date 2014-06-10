@@ -1,7 +1,7 @@
 USE [MRP-Live]
 GO
 
-/*Script created at 6/6/2014 9:17 AM.
+/*Script created at 6/10/2014 12:48 PM.
 Please back up your database before running this script.*/
 
 PRINT N'Synchronizing objects from MRP to MRP-Live'
@@ -264,6 +264,22 @@ GO
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
+ALTER VIEW [dbo].[dtv_Material_Received]
+AS
+SELECT CAST(NULL AS varchar(10)) AS [TheDate], CAST(NULL AS numeric(8,0)) AS [GRNNO], CAST(NULL AS datetime) AS [GRNDate], CAST(NULL AS varchar(50)) AS [GRNStoreID], CAST(NULL AS varchar(50)) AS [MaterialCode], CAST(NULL AS varchar(500)) AS [MaterialDescription], CAST(NULL AS varchar(50)) AS [UnitCode], CAST(NULL AS numeric(20,6)) AS [StockQty], CAST(NULL AS numeric(20,6)) AS [StockReorderLevel], CAST(NULL AS numeric(20,6)) AS [StockMinimumQty], CAST(NULL AS numeric(20,6)) AS [StockMaximumQty], CAST(NULL AS numeric(20,6)) AS [StockEconomicalQty], CAST(NULL AS numeric(20,6)) AS [StockReservedQty], CAST(NULL AS int) AS [StockStatus], CAST(NULL AS numeric(18,2)) AS [StockUnitPrice], CAST(NULL AS numeric(20,6)) AS [GrossQty], CAST(NULL AS numeric(20,6)) AS [NetQty], CAST(NULL AS numeric(18,2)) AS [UnitPrice], CAST(NULL AS int) AS [GRNStatus], CAST(NULL AS numeric(18,0)) AS [StockID], CAST(NULL AS varchar(50)) AS [GRNRPDBatchID]
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+ALTER VIEW [dbo].[View_BatchFormula_Item]
+AS
+SELECT CAST(NULL AS varchar(50)) AS [BatchID], CAST(NULL AS varchar(50)) AS [Item], CAST(NULL AS numeric(38,4)) AS [Qty]
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
 ALTER VIEW [dbo].[View_FinishProduct]
 AS
 SELECT CAST(NULL AS varchar(50)) AS [FinishProductCode], CAST(NULL AS varchar(2053)) AS [FinishProduct], CAST(NULL AS varchar(50)) AS [BasicProductCode], CAST(NULL AS numeric(18,0)) AS [FinishProdutFormulaID], CAST(NULL AS numeric(18,0)) AS [FinishProdutPackingTypeID], CAST(NULL AS varchar(50)) AS [PackingTitle], CAST(NULL AS numeric(18,2)) AS [PackingQty], CAST(NULL AS varchar(103)) AS [Packing], CAST(NULL AS varchar(2000)) AS [FinishProdutDescription], CAST(NULL AS numeric(18,4)) AS [FinishProdutBasicQty], CAST(NULL AS numeric(10,2)) AS [FinishProdutAvgCost], CAST(NULL AS bit) AS [FinishProdutStatus], CAST(NULL AS varchar(2000)) AS [BasicProductDescription], CAST(NULL AS numeric(18,0)) AS [UnitID], CAST(NULL AS varchar(50)) AS [UnitName], CAST(NULL AS varchar(50)) AS [UnitCode], CAST(NULL AS varchar(50)) AS [PrimaryFinishProductCode], CAST(NULL AS numeric(18,0)) AS [PrimaryFinishProductQty], CAST(NULL AS varchar(50)) AS [FinishProductType]
@@ -380,6 +396,90 @@ select @ID=DepID from tblProductManufacturing where ProductCode=@BasicProductCod
 END
 
 RETURN ISNULL(@ID,0)
+
+END
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Return Minutes of actual work>
+-- =============================================
+CREATE FUNCTION [dbo].[GetBatchNo_of_GRN]
+(
+	-- Add the parameters for the function here
+
+	@GRNNO numeric
+
+)
+RETURNS varchar(50)
+AS
+BEGIN
+	-- Declare the return variable her
+DECLARE @MTNOUT int,@GRN_MTN int,@count_PRPD int,@BatchID varchar(50)
+
+set @BatchID='N/A'
+
+select @BatchID=tblGRN.GRNRPDBatchID from tblGRN where GRNNO=@GRNNO
+
+if @BatchID is null
+BEGIN
+	SET @BatchID='N/A'
+	select @GRN_MTN=tblGRN.GRNMTNNO from tblGRN where GRNNO=@GRNNO 
+	select @BatchID=tblPRPDBatch.PRPDBatchID from tblPRPDBatch  where MTNOUT=@GRN_MTN
+	--SET @BatchID=@GRN_MTN
+END
+
+	RETURN @BatchID
+
+END
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date, ,>
+-- Description:	<Return Minutes of actual work>
+-- =============================================
+CREATE FUNCTION [dbo].[GetBatchNo_of_GRN_BP]
+(
+	-- Add the parameters for the function here
+
+	@GRNNO numeric
+
+)
+RETURNS varchar(50)
+AS
+BEGIN
+	-- Declare the return variable her
+DECLARE @MTNOUT int,@GRN_MTN int,@count_PRPD int,@BatchID varchar(50)
+
+set @BatchID='N/A'
+
+select @BatchID=tblGRN.GRNRPDBatchID from tblGRN where GRNNO=@GRNNO
+
+if @BatchID is null
+BEGIN
+	SET @BatchID='N/A'
+	select @GRN_MTN=tblGRN.GRNMTNNO from tblGRN where GRNNO=@GRNNO 
+	select @BatchID=tblMTN.MTNBatchID from tblMTN  where MTNNO=@GRN_MTN
+	--SET @BatchID=@GRN_MTN
+END
+
+	RETURN @BatchID
 
 END
 GO
@@ -616,6 +716,34 @@ GO
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
+CREATE STATISTICS [_WA_Sys_00000010_72002FC0]
+ON [dbo].[tblPO] ([POChangedApprove])
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+CREATE STATISTICS [_WA_Sys_0000000E_72002FC0]
+ON [dbo].[tblPO] ([POChangedBy])
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+CREATE STATISTICS [_WA_Sys_00000006_72002FC0]
+ON [dbo].[tblPO] ([POEnterdBy])
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+CREATE STATISTICS [_WA_Sys_00000004_72002FC0]
+ON [dbo].[tblPO] ([POApporvedBy])
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
 ALTER TABLE [dbo].[tblUser]
  ADD [ExpiryDate] datetime NULL,
 	[Online] bit NULL,
@@ -804,8 +932,8 @@ CREATE TABLE [dbo].[tblPlanBatch] (
 	[BatchSize] decimal(18, 2) NOT NULL,
 	[Nos] int NULL,
 	[Status] int NULL,
-	[BatchLevel] int NULL,
-	CONSTRAINT [PK_tblPlanBatch] PRIMARY KEY ([Year] ASC, [Month] ASC, [RevisionID] ASC, [ProductCode] ASC, [WeekID] ASC) WITH (FILLFACTOR=100,
+	[BatchLevel] int NOT NULL,
+	CONSTRAINT [PK_tblPlanBatch] PRIMARY KEY ([Year] ASC, [Month] ASC, [RevisionID] ASC, [ProductCode] ASC, [WeekID] ASC, [BatchLevel] ASC) WITH (FILLFACTOR=100,
 		DATA_COMPRESSION = NONE) ON [PRIMARY]
 )
 GO
@@ -820,50 +948,36 @@ GO
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
-CREATE STATISTICS [_WA_Sys_00000005_5E4E3CCE]
+CREATE STATISTICS [_WA_Sys_00000009_21652A1F]
+ON [dbo].[tblPlanBatch] ([BatchLevel])
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+CREATE STATISTICS [_WA_Sys_00000005_21652A1F]
 ON [dbo].[tblPlanBatch] ([WeekID])
 GO
 
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
-CREATE STATISTICS [_WA_Sys_00000003_5E4E3CCE]
-ON [dbo].[tblPlanBatch] ([RevisionID])
-GO
-
-IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
-GO
-
-CREATE STATISTICS [_WA_Sys_00000002_5E4E3CCE]
-ON [dbo].[tblPlanBatch] ([Month])
-GO
-
-IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
-GO
-
-CREATE STATISTICS [_WA_Sys_00000004_5E4E3CCE]
+CREATE STATISTICS [_WA_Sys_00000004_21652A1F]
 ON [dbo].[tblPlanBatch] ([ProductCode])
 GO
 
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
-CREATE STATISTICS [_WA_Sys_00000007_5E4E3CCE]
-ON [dbo].[tblPlanBatch] ([Nos])
+CREATE STATISTICS [_WA_Sys_00000002_21652A1F]
+ON [dbo].[tblPlanBatch] ([Month])
 GO
 
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
-CREATE STATISTICS [_WA_Sys_00000006_5E4E3CCE]
-ON [dbo].[tblPlanBatch] ([BatchSize])
-GO
-
-IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
-GO
-
-CREATE STATISTICS [_WA_Sys_00000009_5E4E3CCE]
-ON [dbo].[tblPlanBatch] ([BatchLevel])
+CREATE STATISTICS [_WA_Sys_00000003_21652A1F]
+ON [dbo].[tblPlanBatch] ([RevisionID])
 GO
 
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
@@ -1193,6 +1307,27 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
+ALTER VIEW dbo.dtv_Material_Received
+AS
+SELECT        SUBSTRING(CONVERT(varchar(50), dbo.tblGRN.GRNDate, 111), 1, 10) AS TheDate, dbo.tblGRN.GRNNO, dbo.tblGRN.GRNDate, dbo.tblGRN.GRNStoreID, dbo.tblGRNMaterials.MaterialCode, 
+                         dbo.tblMaterial.MaterialDescription, dbo.tblUnit.UnitCode, dbo.tblStock.StockQty, dbo.tblStock.StockReorderLevel, dbo.tblStock.StockMinimumQty, dbo.tblStock.StockMaximumQty, 
+                         dbo.tblStock.StockEconomicalQty, dbo.tblStock.StockReservedQty, dbo.tblStock.StockStatus, dbo.tblStock.StockUnitPrice, dbo.tblGRNMaterials.GrossQty, dbo.tblGRNMaterials.NetQty, 
+                         dbo.tblGRNMaterials.UnitPrice, dbo.tblGRN.GRNStatus, dbo.tblStock.StockID, dbo.tblGRN.GRNRPDBatchID
+FROM            dbo.tblGRN INNER JOIN
+                         dbo.tblGRNMaterials ON dbo.tblGRN.GRNNO = dbo.tblGRNMaterials.GRNNO INNER JOIN
+                         dbo.tblMaterial ON dbo.tblGRNMaterials.MaterialCode = dbo.tblMaterial.MaterialCode INNER JOIN
+                         dbo.tblUnit ON dbo.tblMaterial.UnitID = dbo.tblUnit.UnitID LEFT OUTER JOIN
+                         dbo.tblStock ON dbo.tblGRN.GRNStoreID = dbo.tblStock.StoreID AND dbo.tblGRNMaterials.MaterialCode = dbo.tblStock.StockMaterialID
+WHERE        (dbo.tblGRN.GRNStatus = 1)
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
 ALTER VIEW [dbo].[Plan_1UnitOf_BasicProduct_To_MaterialOnly]
 AS
 SELECT        dbo.tblFormulaMaterial.FormulaMaterialCode, dbo.tblFormulaMaterial.FormulaQty / 1000 AS Qty, dbo.tblBasicProduct.BasicProductCode
@@ -1441,6 +1576,25 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
+ALTER VIEW [dbo].[View_BatchFormula_Item]
+AS
+SELECT        dbo.View_BatchFormulaMaterial.BatchID, View_BatchFormulaMaterial.MaterialCode AS Item, SUM(dbo.View_BatchFormulaMaterial.Qty) AS Qty
+FROM            dbo.View_BatchFormulaMaterial
+WHERE        dbo.View_BatchFormulaMaterial.MatCatID = 'Raw'
+GROUP BY  dbo.View_BatchFormulaMaterial.BatchID,View_BatchFormulaMaterial.MaterialCode
+UNION
+SELECT        dbo.View_BatchFormulaBasicProducts.BatchID, dbo.View_BatchFormulaBasicProducts.BasicProductCode AS Item, 
+                         dbo.View_BatchFormulaBasicProducts.Qty
+FROM            dbo.View_BatchFormulaBasicProducts
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
 ALTER VIEW [dbo].[View_FinishProduct]
 AS
 SELECT     dbo.tblFinishProduct.FinishProductCode, dbo.tblFinishProduct.FinishProductCode + ' - ' + dbo.tblFinishProduct.FinishProdutDescription AS FinishProduct, 
@@ -1489,14 +1643,14 @@ AS
 SELECT        tblMTN.MTNNO, tblMTN.MTNBatchID, tblMTN.MTNDate, tblMTN.MTNApprovedBy, View_Employee_2.Employee AS MTNApprovedByName, tblMTN.MTNApproveDate, tblMTN.MTNEnterdBy, 
                          View_Employee_1.Employee AS MTNEnterdByName, tblMTN.MTNFromDepID, tblDepartment_1.DepName AS FromDepName, tblMTN.MTNToDepID, tblDepartment.DepName AS DepNameTo, 
                          tblMTN.MTNReceivedBy, View_Employee_3.Employee AS MTNReceivedByName, tblMTN.MTNReceivedDate, tblMTN.MTNStatus, tblMTN.MTNType, tblMTN.MTNItemType, tblMTN.MTNStore, tblStore.StoreName, 
-                         tblMTN.MTNPRPDBatchID, tblMTN.MTNPackingBatch, tblMTN.MTNBudgetCostBy, tblMTN.MTNBudgetCostDate, tblGRN.GRNNO, tblGRN.GRNDate, tblGRN.GRNEnterdBy, View_Employee.Employee as GRNEnterdByName, 
-                         tblGRN.GRNApproveDate, tblGRN.GRNApprovedBy, View_Employee_4.Employee AS GRNApprovedByName
-FROM            tblMTN INNER JOIN
-                         tblDepartment ON tblMTN.MTNToDepID = tblDepartment.DepID INNER JOIN
-                         tblGRN ON tblMTN.MTNNO = tblGRN.GRNMTNNO INNER JOIN
-                         View_Employee ON tblGRN.GRNEnterdBy = View_Employee.EmpID INNER JOIN
-                         View_Employee AS View_Employee_4 ON tblGRN.GRNApprovedBy = View_Employee_4.EmpID LEFT OUTER JOIN
-                         tblStore ON tblGRN.GRNStoreID = tblStore.StoreID AND tblMTN.MTNStore = tblStore.StoreID LEFT OUTER JOIN
+                         tblMTN.MTNPRPDBatchID, tblMTN.MTNPackingBatch, tblMTN.MTNBudgetCostBy, tblMTN.MTNBudgetCostDate, tblGRN.GRNNO, tblGRN.GRNDate, tblGRN.GRNEnterdBy, 
+                         View_Employee.Employee AS GRNEnterdByName, tblGRN.GRNApproveDate, tblGRN.GRNApprovedBy, View_Employee_4.Employee AS GRNApprovedByName
+FROM            View_Employee INNER JOIN
+                         tblGRN ON View_Employee.EmpID = tblGRN.GRNEnterdBy INNER JOIN
+                         View_Employee AS View_Employee_4 ON tblGRN.GRNApprovedBy = View_Employee_4.EmpID RIGHT OUTER JOIN
+                         tblMTN INNER JOIN
+                         tblDepartment ON tblMTN.MTNToDepID = tblDepartment.DepID ON tblGRN.GRNMTNNO = tblMTN.MTNNO LEFT OUTER JOIN
+                         tblStore ON tblMTN.MTNStore = tblStore.StoreID LEFT OUTER JOIN
                          tblDepartment AS tblDepartment_1 ON tblMTN.MTNFromDepID = tblDepartment_1.DepID LEFT OUTER JOIN
                          View_Employee AS View_Employee_3 ON tblMTN.MTNReceivedBy = View_Employee_3.EmpID LEFT OUTER JOIN
                          View_Employee AS View_Employee_1 ON tblMTN.MTNEnterdBy = View_Employee_1.EmpID LEFT OUTER JOIN
@@ -5336,6 +5490,33 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
+ALTER PROCEDURE [dbo].[SPGET_BatchPackingMR_ByBatchID]
+(
+@BatchID varchar(50)
+)
+
+AS
+	SET NOCOUNT OFF;
+
+
+BEGIN
+SELECT        ISNULL(tblBatchPackingMR.BatchNO, 'No') AS BatchNO,tblBatchPackingMR.MaterialCode AS ItemCode,tblBatchPackingMR.MaterialCode+' - '+dbo.Get_ItemName(tblBatchPackingMR.MaterialCode) AS Item, SUM(tblBatchPackingMR.BatchUsed) AS UsedQty,SUM(tblBatchPackingMR.BatchDamaged), SUM(tblBatchPackingMR.BatchReturned),SUM(tblMRMaterial.MRIssuedQty),
+dbo.Get_Unit_Of_Item(tblBatchPackingMR.MaterialCode) AS Unit,tblBatchPackingMR.MRNO
+FROM            tblBatchPackingMR INNER JOIN
+                         tblMRMaterial ON tblBatchPackingMR.MRNO = tblMRMaterial.MRNO AND tblBatchPackingMR.MaterialCode = tblMRMaterial.MRMaterialCode
+WHERE        (tblBatchPackingMR.State = 1) AND tblBatchPackingMR.BatchNO=@BatchID
+GROUP BY tblBatchPackingMR.BatchNO,tblBatchPackingMR.MaterialCode,tblBatchPackingMR.MRNO
+
+END
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
 ALTER PROCEDURE [dbo].[SPGET_CustomersBySalesMethod]
 (
 	@SalesMethod varchar(50)
@@ -5792,6 +5973,53 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 
+ALTER PROCEDURE [dbo].[SPGET_MRItem_By_MR]
+(
+	@MRNO numeric(8, 0)
+)
+AS
+	SET NOCOUNT ON;
+
+DECLARE @MRType int
+SELECT @MRType=MRType from tblMR where MRNO=@MRNO
+
+IF @MRType=1
+BEGIN
+SELECT        tblMRMaterial.MRNO, tblMRMaterial.MRMaterialCode AS ItemCode, View_Material.MaterialDescription AS ItemName, 
+                         tblMRMaterial.MRMaterialCode + ' - ' + View_Material.MaterialDescription AS Item, dbo.RemoveZero(tblMRMaterial.MRReqdQty) AS ReqQty, 
+                         dbo.RemoveZero(tblMRMaterial.MRIssuedQty) AS IssuedQty, ISNULL(tblMRMaterial.MRUnitRate, 0) AS MRUnitRate, tblMR.MRStore AS StoreID, 
+                         tblMR.MRDate AS RequestedDate, tblMR.MREnterdBy AS RequestedBy, tblMR.MRApprovedBy AS ApprovedBy, tblMR.MRApproveDate AS ApprovedDate, 
+                         tblMR.MRStatus AS MRState, tblMR.MRType, dbo.GetBatchNo_of_MR(tblMRMaterial.MRNO) AS BatchID, View_Material.UnitCode AS Unit, 
+                         tblDepartment.DepName AS FromDep,tblMRMaterial.MRDescription
+FROM            tblMRMaterial INNER JOIN
+                         tblMR ON tblMRMaterial.MRNO = tblMR.MRNO INNER JOIN
+                         View_Material ON tblMRMaterial.MRMaterialCode = View_Material.MaterialCode INNER JOIN
+                         tblDepartment ON tblMR.MRFromDepID = tblDepartment.DepID
+WHERE        (tblMRMaterial.MRNO = @MRNO)
+END
+ELSE
+BEGIN
+SELECT        tblMRBasicProduct.MRNO, tblMRBasicProduct.MRBasicProductID AS ItemCode, View_BasicProduct.BasicProductDescription AS ItemName, 
+                         tblMRBasicProduct.MRBasicProductID + ' - ' + View_BasicProduct.BasicProductDescription AS Item, tblMRBasicProduct.MRReqdQty AS ReqQty, 
+                         tblMRBasicProduct.MRIssuedQty AS IssuedQty, ISNULL(tblMRBasicProduct.MRUnitRate, 0) AS MRUnitRate, tblMR.MRStore AS StoreID, 
+                         tblMR.MRDate AS RequestedDate, tblMR.MREnterdBy AS RequestedBy, tblMR.MRApprovedBy AS ApprovedBy, tblMR.MRApproveDate AS ApprovedDate, 
+                         tblMR.MRStatus AS MRState, tblMR.MRType, dbo.GetBatchNo_of_MR(tblMRBasicProduct.MRNO) AS BatchID, View_BasicProduct.UnitCode AS Unit, 
+                         tblDepartment.DepName AS FromDep,tblMRBasicProduct.MRDescription
+FROM            tblMRBasicProduct INNER JOIN
+                         tblMR ON tblMRBasicProduct.MRNO = tblMR.MRNO INNER JOIN
+                         View_BasicProduct ON tblMRBasicProduct.MRBasicProductID = View_BasicProduct.BasicProductCode INNER JOIN
+                         tblDepartment ON tblMR.MRFromDepID = tblDepartment.DepID
+WHERE        (tblMRBasicProduct.MRNO = @MRNO)
+END
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
 ALTER PROCEDURE [dbo].[SPGET_MRMaterial_BulkPrint_Dataview]
 (
 	@StoreID varchar(50),
@@ -5971,6 +6199,78 @@ AS
 SELECT   tblSalesForecastDetails.ProductCode, tblFinishProduct.FinishProdutDescription, tblSalesForecastDetails.Qty
 FROM     tblSalesForecastDetails INNER JOIN tblFinishProduct ON tblSalesForecastDetails.ProductCode = tblFinishProduct.FinishProductCode
 WHERE	 SalesForecastID=@SalesForecastID
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[SPGET_Stock_BINCard]
+(
+	@FromDate datetime,
+	@MaterialCode varchar(50),
+	@StoreID varchar(50)
+)
+AS
+	SET NOCOUNT ON;
+
+SELECT     BinCard.TheDate, BinCard.GRNNO, BinCard.GRNQty, 
+                      BinCard.UnitPrice, BinCard.MRNO, BinCard.IssuedQty,BinCard.BatchID,BinCard.GRNBatchID
+FROM
+
+(SELECT     dtv_BinCard_Dates.TheDate, ISNULL(CONVERT(varchar(50),dtv_Material_Received.GRNNO), '-') AS GRNNO, ISNULL(CONVERT(varchar(50),dtv_Material_Received.GrossQty), '-') AS GRNQty, 
+                      ISNULL(CONVERT(varchar(50),dtv_Material_Received.UnitPrice), '-') AS UnitPrice, '-' AS MRNO, '-' AS IssuedQty,'N/A' AS BatchID, dbo.GetBatchNo_of_GRN(dtv_Material_Received.GRNNO) as GRNBatchID
+FROM         dtv_BinCard_Dates LEFT OUTER JOIN
+                      dtv_Material_Received ON dtv_BinCard_Dates.TheDate = dtv_Material_Received.TheDate
+WHERE     (dtv_Material_Received.GRNStoreID = @StoreID) AND (dtv_Material_Received.MaterialCode = @MaterialCode) AND (dtv_BinCard_Dates.TheDate <= getdate() AND dtv_BinCard_Dates.TheDate >= @FromDate)
+UNION
+
+SELECT     dtv_BinCard_Dates.TheDate,'-' as GRNNO,'-' AS GRNQty,'-' AS UnitPrice, ISNULL(CONVERT(varchar(50),dtv_Material_Issued.MRNO),'-') AS MRNO, 
+                      ISNULL(CONVERT(varchar(50),dtv_Material_Issued.MRIssuedQty),'-') AS IssuedQty,dbo.GetBatchNo_of_MR(dtv_Material_Issued.MRNO) AS BatchID, 'N/A' AS GRNBatchID
+FROM         dtv_BinCard_Dates LEFT OUTER JOIN
+                      dtv_Material_Issued ON dtv_BinCard_Dates.TheDate = dtv_Material_Issued.TheDate
+WHERE     (dtv_Material_Issued.MRStore = @StoreID) AND (dtv_Material_Issued.MRMaterialCode = @MaterialCode)AND (dtv_BinCard_Dates.TheDate <= getdate() AND dtv_BinCard_Dates.TheDate >= @FromDate)) AS BinCard
+
+ORDER BY BinCard.TheDate DESC
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[SPGET_Stock_BINCard_BP]
+(
+	@FromDate datetime,
+	@BasicProductCode varchar(50),
+	@StoreID varchar(50)
+)
+AS
+	SET NOCOUNT ON;
+
+SELECT     BinCard.TheDate, BinCard.GRNNO, BinCard.GRNQty, 
+                      BinCard.UnitPrice, BinCard.MRNO, BinCard.IssuedQty,BinCard.BatchID,BinCard.GRNBatchID
+FROM
+
+(SELECT     dtv_BinCard_Dates.TheDate, ISNULL(CONVERT(varchar(50),dtv_BasicProduct_Received.GRNNO), '-') AS GRNNO, ISNULL(CONVERT(varchar(50),dtv_BasicProduct_Received.GrossQty), '-') AS GRNQty, 
+                      ISNULL(CONVERT(varchar(50),dtv_BasicProduct_Received.UnitPrice), '-') AS UnitPrice, '-' AS MRNO, '-' AS IssuedQty,'N/A' AS BatchID, dbo.GetBatchNo_of_GRN_BP(dtv_BasicProduct_Received.GRNNO) as GRNBatchID
+FROM         dtv_BinCard_Dates LEFT OUTER JOIN
+                      dtv_BasicProduct_Received ON dtv_BinCard_Dates.TheDate = dtv_BasicProduct_Received.TheDate
+WHERE     (dtv_BasicProduct_Received.GRNStoreID = @StoreID) AND (dtv_BasicProduct_Received.BasicProductCode = @BasicProductCode) AND (dtv_BinCard_Dates.TheDate <= getdate() AND dtv_BinCard_Dates.TheDate >= @FromDate)
+UNION
+
+SELECT     dtv_BinCard_Dates.TheDate,'-' as GRNNO,'-' AS GRNQty,'-' AS UnitPrice, ISNULL(CONVERT(varchar(50),dtv_BasicProduct_Issued.MRNO),'-') AS MRNO, 
+                      ISNULL(CONVERT(varchar(50),dtv_BasicProduct_Issued.MRIssuedQty),'-') AS IssuedQty,dbo.GetBatchNo_of_MR(dtv_BasicProduct_Issued.MRNO) AS BatchID,'N/A' AS GRNBatchID
+FROM         dtv_BinCard_Dates LEFT OUTER JOIN
+                      dtv_BasicProduct_Issued ON dtv_BinCard_Dates.TheDate = dtv_BasicProduct_Issued.TheDate
+WHERE     (dtv_BasicProduct_Issued.MRStore = @StoreID) AND (dtv_BasicProduct_Issued.MRBasicProductID = @BasicProductCode)AND (dtv_BinCard_Dates.TheDate <= getdate() AND dtv_BinCard_Dates.TheDate >= @FromDate)) AS BinCard
+
+ORDER BY BinCard.TheDate DESC
 GO
 
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
@@ -6206,14 +6506,6 @@ GO
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
 GO
 
-ALTER TABLE [dbo].[tblBatchActivityMachineDetails]
- ADD CONSTRAINT [FK_tblBatchActivityMachineDetails_tblBatchActivity] FOREIGN KEY ([BatchID]) 
-		REFERENCES [dbo].[tblBatchActivity] ([BatchActID]) 
-GO
-
-IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
-GO
-
 ALTER TABLE [dbo].[tblCustomer]
  ADD CONSTRAINT [FK_tblCustomer_tblSalesMethod] FOREIGN KEY ([SalesMethod]) 
 		REFERENCES [dbo].[tblSalesMethod] ([SalesMethodID]) 
@@ -6313,6 +6605,210 @@ GO
 ALTER TABLE [dbo].[tblUser]
  ADD CONSTRAINT [FK_tblUser_tblEmployee] FOREIGN KEY ([EmpID]) 
 		REFERENCES [dbo].[tblEmployee] ([EmpID]) 
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+EXECUTE [sp_dropextendedproperty]
+	@name = N'MS_DiagramPane1',
+	@level0type = 'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = 'VIEW',
+	@level1name = N'dtv_Material_Received'
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+EXECUTE [sp_addextendedproperty]
+	@name = N'MS_DiagramPane1',
+	@value = N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
+Begin DesignProperties = 
+   Begin PaneConfigurations = 
+      Begin PaneConfiguration = 0
+         NumPanes = 4
+         Configuration = "(H (1[59] 4[5] 2[34] 3) )"
+      End
+      Begin PaneConfiguration = 1
+         NumPanes = 3
+         Configuration = "(H (1 [50] 4 [25] 3))"
+      End
+      Begin PaneConfiguration = 2
+         NumPanes = 3
+         Configuration = "(H (1 [50] 2 [25] 3))"
+      End
+      Begin PaneConfiguration = 3
+         NumPanes = 3
+         Configuration = "(H (4 [30] 2 [40] 3))"
+      End
+      Begin PaneConfiguration = 4
+         NumPanes = 2
+         Configuration = "(H (1 [56] 3))"
+      End
+      Begin PaneConfiguration = 5
+         NumPanes = 2
+         Configuration = "(H (2 [66] 3))"
+      End
+      Begin PaneConfiguration = 6
+         NumPanes = 2
+         Configuration = "(H (4 [50] 3))"
+      End
+      Begin PaneConfiguration = 7
+         NumPanes = 1
+         Configuration = "(V (3))"
+      End
+      Begin PaneConfiguration = 8
+         NumPanes = 3
+         Configuration = "(H (1[56] 4[18] 2) )"
+      End
+      Begin PaneConfiguration = 9
+         NumPanes = 2
+         Configuration = "(H (1 [75] 4))"
+      End
+      Begin PaneConfiguration = 10
+         NumPanes = 2
+         Configuration = "(H (1[66] 2) )"
+      End
+      Begin PaneConfiguration = 11
+         NumPanes = 2
+         Configuration = "(H (4 [60] 2))"
+      End
+      Begin PaneConfiguration = 12
+         NumPanes = 1
+         Configuration = "(H (1) )"
+      End
+      Begin PaneConfiguration = 13
+         NumPanes = 1
+         Configuration = "(V (4))"
+      End
+      Begin PaneConfiguration = 14
+         NumPanes = 1
+         Configuration = "(V (2))"
+      End
+      ActivePaneConfig = 0
+   End
+   Begin DiagramPane = 
+      Begin Origin = 
+         Top = 0
+         Left = 0
+      End
+      Begin Tables = 
+         Begin Table = "tblGRN"
+            Begin Extent = 
+               Top = 6
+               Left = 38
+               Bottom = 222
+               Right = 212
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+         Begin Table = "tblGRNMaterials"
+            Begin Extent = 
+               Top = 6
+               Left = 250
+               Bottom = 125
+               Right = 410
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+         Begin Table = "tblMaterial"
+            Begin Extent = 
+               Top = 6
+               Left = 448
+               Bottom = 125
+               Right = 629
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+         Begin Table = "tblUnit"
+            Begin Extent = 
+               Top = 6
+               Left = 667
+               Bottom = 110
+               Right = 827
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+         Begin Table = "tblStock"
+            Begin Extent = 
+               Top = 6
+               Left = 865
+               Bottom = 125
+               Right = 1050
+            End
+            DisplayFlags = 280
+            TopColumn = 0
+         End
+      End
+   End
+   Begin SQLPane = 
+   End
+   Begin DataPane = 
+      Begin ParameterDefaults = ""
+      End
+      Begin ColumnWidths = 9
+         Width = 284
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+         Width = 1500
+      End
+   End
+   Begin CriteriaPane = 
+      Begin ColumnWidths = 11
+         Column = 1440
+         Alias = 900
+ ',
+	@level0type = 'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = 'VIEW',
+	@level1name = N'dtv_Material_Received'
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+EXECUTE [sp_dropextendedproperty]
+	@name = N'MS_DiagramPane2',
+	@level0type = 'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = 'VIEW',
+	@level1name = N'dtv_Material_Received'
+GO
+
+IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
+GO
+
+EXECUTE [sp_addextendedproperty]
+	@name = N'MS_DiagramPane2',
+	@value = N'        Table = 1170
+         Output = 720
+         Append = 1400
+         NewValue = 1170
+         SortType = 1350
+         SortOrder = 1410
+         GroupBy = 1350
+         Filter = 1350
+         Or = 1350
+         Or = 1350
+         Or = 1350
+      End
+   End
+End
+',
+	@level0type = 'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = 'VIEW',
+	@level1name = N'dtv_Material_Received'
 GO
 
 IF @@ERROR <> 0 BEGIN IF @@TRANCOUNT > 0 ROLLBACK SET NOEXEC ON END
