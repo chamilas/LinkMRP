@@ -80,6 +80,7 @@ namespace MRP_GUI
             this.bindBatchList = new System.Windows.Forms.BindingSource(this.components);
             this.bindActivity = new System.Windows.Forms.BindingSource(this.components);
             this.Sequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Part = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActivityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -173,6 +174,7 @@ namespace MRP_GUI
             this.gvActivityList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvActivityList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sequence,
+            this.Part,
             this.ActivityID,
             this.Column17,
             this.Column19,
@@ -560,6 +562,14 @@ namespace MRP_GUI
             this.Sequence.Name = "Sequence";
             this.Sequence.ReadOnly = true;
             // 
+            // Part
+            // 
+            this.Part.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Part.DataPropertyName = "Part";
+            this.Part.HeaderText = "Part";
+            this.Part.Name = "Part";
+            this.Part.ReadOnly = true;
+            // 
             // ActivityID
             // 
             this.ActivityID.DataPropertyName = "ActivityID";
@@ -673,6 +683,7 @@ namespace MRP_GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeDuration;
         private System.Windows.Forms.BindingSource bindActivity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sequence;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Part;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActivityID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
