@@ -127,6 +127,7 @@ namespace MRP_GUI.Components
        
         public void Load(SqlConnection con)
         {
+            /*
             try
             {
                 Connection = con;
@@ -142,6 +143,7 @@ namespace MRP_GUI.Components
 
                 MessageBox.Show(this,"Error Loading while loading","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
+             */
         }
 
         private void cmbDivision_SelectedIndexChanged(object sender, EventArgs e)

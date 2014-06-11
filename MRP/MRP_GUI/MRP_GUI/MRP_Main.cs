@@ -3097,6 +3097,102 @@ namespace MRP_GUI
             ShowForm(objFrm);
         }
 
+        private void addDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDetails frm = new AddDetails();
+            ShowForm(frm);
+        }
+
+        private void approveToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            Approve frm = new Approve();
+            ShowForm(frm);
+        }
+
+        private void companyDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompanyDetails frm = new CompanyDetails(1,1);
+            ShowForm(frm);
+        }
+
+        private void comRegDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComRegDetails frm = new ComRegDetails(1,1);
+            ShowForm(frm);
+        }
+
+        private void financeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FinanceDetails frm = new FinanceDetails(1, 1);
+            ShowForm(frm);
+        }
+
+        private void frmAssignQuantityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAssignQuantity frm = new frmAssignQuantity();
+            ShowForm(frm);
+        }
+
+        private void frmHigherApprovalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHigherApproval frm = new frmHigherApproval();
+            ShowForm(frm);
+        }
+
+        private void frmInvoiceApproveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvoiceApprove frm = new frmInvoiceApprove();
+            ShowForm(frm);
+        }
+
+        private void frmNewOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewOrder frm = new frmNewOrder();
+            ShowForm(frm);
+        }
+
+        private void frmOrderApprovalBySalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderApprovalBySales frm = new frmOrderApprovalBySales();
+            ShowForm(frm);
+        }
+
+        private void frmOrderApprovalByStoreManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderApprovalByStoreManager frm = new frmOrderApprovalByStoreManager();
+            ShowForm(frm);
+        }
+
+        private void frmOrderApproveByFinanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderApproveByFinance frm = new frmOrderApproveByFinance();
+            ShowForm(frm);
+        }
+
+        private void frmOrderSortingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderSorting frm = new frmOrderSorting();
+            ShowForm(frm);
+        }
+
+        private void newCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewCustomer frm = new NewCustomer(1676);
+            ShowForm(frm);
+        }
+
+        private void transactionDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TransactionDetails frm = new TransactionDetails(1,1);
+            ShowForm(frm);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Update frm = new Update();
+            ShowForm(frm);
+        }
+
 
 
 

@@ -56,8 +56,33 @@ namespace MRP_GUI
             Load_Machine_List();
 
             rdbPermanentSection.Checked = true;
-           
 
+            if (objPRPDBatchActivity.State == PRPDBatchActivity.ActStatus.Finished) 
+            { 
+                cmbSections.Enabled=false;
+                btnMultiple.Enabled=false;
+                rdbPermanentAll.Enabled=false;
+                rdbOutsource.Enabled=false;
+                rdbPermanentSection.Enabled=false;
+                txtNos.Enabled=false;
+                label6.Enabled=false;
+                txtNos.Enabled=false;
+                cmbMachine.Enabled=false;
+                label4.Enabled=false;
+                txtMachineStart.Enabled=false;
+                label5.Enabled=false;
+                txtMachineStop.Enabled=false;
+                label1.Enabled=false;
+                txtFrom.Enabled=false;
+                label2.Enabled=false;
+                txtTo.Enabled=false;
+                label3.Enabled=false;
+                txtOT.Enabled=false;
+                label7.Enabled=false;
+                txtOTMinutes.Enabled=false;
+                cmbEmployee.Enabled = false;
+
+            }
         }
 
 

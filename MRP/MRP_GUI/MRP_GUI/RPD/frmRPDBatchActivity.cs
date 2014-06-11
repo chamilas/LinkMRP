@@ -60,27 +60,27 @@ namespace MRP_GUI
 
             if (objRPDBatchActivity.ActivityStatus == RPDBatchActivity.Status.Finalized) 
             {
-                cmbMachine.Visible = false;
-                label4.Visible = false;
-                txtMachineStart.Visible = false;
-                label5.Visible = false;
-                txtMachineStop.Visible = false;
-                btnMultiple.Visible = false;
-                cmbEmployee.Visible = false;
-                cmbSections.Visible = false;
-                label1.Visible = false;
-                txtFrom.Visible = false;
-                label2.Visible = false;
-                txtTo.Visible = false;
-                label3.Visible = false;
-                txtOT.Visible = false;
-                label7.Visible = false;
-                txtOTMinutes.Visible = false;
-                txtNos.Visible = false;
-                label6.Visible = false;
-                rdbPermanentSection.Visible = false;
-                rdbOutsource.Visible = false;
-                rdbPermanentAll.Visible = false;
+                cmbMachine.Enabled = false;
+                label4.Enabled = false;
+                txtMachineStart.Enabled = false;
+                label5.Enabled = false;
+                txtMachineStop.Enabled = false;
+                btnMultiple.Enabled = false;
+                cmbEmployee.Enabled = false;
+                cmbSections.Enabled = false;
+                label1.Enabled = false;
+                txtFrom.Enabled = false;
+                label2.Enabled = false;
+                txtTo.Enabled = false;
+                label3.Enabled = false;
+                txtOT.Enabled = false;
+                label7.Enabled = false;
+                txtOTMinutes.Enabled = false;
+                txtNos.Enabled = false;
+                label6.Enabled = false;
+                rdbPermanentSection.Enabled = false;
+                rdbOutsource.Enabled = false;
+                rdbPermanentAll.Enabled = false;
 
 
             }

@@ -313,6 +313,22 @@ namespace MRP_GUI
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRPDBatchEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.approveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.companyDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comRegDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmAssignQuantityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmHigherApprovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmInvoiceApproveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmNewOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmOrderApprovalBySalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmOrderApprovalByStoreManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmOrderApproveByFinanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmOrderSortingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactionDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -1523,7 +1539,23 @@ namespace MRP_GUI
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem26,
             this.forecastToolStripMenuItem,
-            this.forecastApproveToolStripMenuItem});
+            this.forecastApproveToolStripMenuItem,
+            this.addDetailsToolStripMenuItem,
+            this.approveToolStripMenuItem,
+            this.companyDetailsToolStripMenuItem,
+            this.comRegDetailsToolStripMenuItem,
+            this.financeDetailsToolStripMenuItem,
+            this.frmAssignQuantityToolStripMenuItem,
+            this.frmHigherApprovalToolStripMenuItem,
+            this.frmInvoiceApproveToolStripMenuItem,
+            this.frmNewOrderToolStripMenuItem,
+            this.frmOrderApprovalBySalesToolStripMenuItem,
+            this.frmOrderApprovalByStoreManagerToolStripMenuItem,
+            this.frmOrderApproveByFinanceToolStripMenuItem,
+            this.frmOrderSortingToolStripMenuItem,
+            this.newCustomerToolStripMenuItem,
+            this.transactionDetailsToolStripMenuItem,
+            this.updateToolStripMenuItem});
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(51, 20);
             this.helpMenu.Text = "Sales";
@@ -2552,6 +2584,118 @@ namespace MRP_GUI
             this.pRPDBatchEditToolStripMenuItem.Text = "Manage";
             this.pRPDBatchEditToolStripMenuItem.Click += new System.EventHandler(this.pRPDBatchEditToolStripMenuItem_Click);
             // 
+            // addDetailsToolStripMenuItem
+            // 
+            this.addDetailsToolStripMenuItem.Name = "addDetailsToolStripMenuItem";
+            this.addDetailsToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.addDetailsToolStripMenuItem.Text = "AddDetails";
+            this.addDetailsToolStripMenuItem.Click += new System.EventHandler(this.addDetailsToolStripMenuItem_Click);
+            // 
+            // approveToolStripMenuItem
+            // 
+            this.approveToolStripMenuItem.Name = "approveToolStripMenuItem";
+            this.approveToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.approveToolStripMenuItem.Text = "Approve";
+            this.approveToolStripMenuItem.Click += new System.EventHandler(this.approveToolStripMenuItem_Click_2);
+            // 
+            // companyDetailsToolStripMenuItem
+            // 
+            this.companyDetailsToolStripMenuItem.Name = "companyDetailsToolStripMenuItem";
+            this.companyDetailsToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.companyDetailsToolStripMenuItem.Text = "CompanyDetails";
+            this.companyDetailsToolStripMenuItem.Click += new System.EventHandler(this.companyDetailsToolStripMenuItem_Click);
+            // 
+            // comRegDetailsToolStripMenuItem
+            // 
+            this.comRegDetailsToolStripMenuItem.Name = "comRegDetailsToolStripMenuItem";
+            this.comRegDetailsToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.comRegDetailsToolStripMenuItem.Text = "ComRegDetails";
+            this.comRegDetailsToolStripMenuItem.Click += new System.EventHandler(this.comRegDetailsToolStripMenuItem_Click);
+            // 
+            // financeDetailsToolStripMenuItem
+            // 
+            this.financeDetailsToolStripMenuItem.Name = "financeDetailsToolStripMenuItem";
+            this.financeDetailsToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.financeDetailsToolStripMenuItem.Text = "FinanceDetails";
+            this.financeDetailsToolStripMenuItem.Click += new System.EventHandler(this.financeDetailsToolStripMenuItem_Click);
+            // 
+            // frmAssignQuantityToolStripMenuItem
+            // 
+            this.frmAssignQuantityToolStripMenuItem.Name = "frmAssignQuantityToolStripMenuItem";
+            this.frmAssignQuantityToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmAssignQuantityToolStripMenuItem.Text = "frmAssignQuantity";
+            this.frmAssignQuantityToolStripMenuItem.Click += new System.EventHandler(this.frmAssignQuantityToolStripMenuItem_Click);
+            // 
+            // frmHigherApprovalToolStripMenuItem
+            // 
+            this.frmHigherApprovalToolStripMenuItem.Name = "frmHigherApprovalToolStripMenuItem";
+            this.frmHigherApprovalToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmHigherApprovalToolStripMenuItem.Text = "frmHigherApproval";
+            this.frmHigherApprovalToolStripMenuItem.Click += new System.EventHandler(this.frmHigherApprovalToolStripMenuItem_Click);
+            // 
+            // frmInvoiceApproveToolStripMenuItem
+            // 
+            this.frmInvoiceApproveToolStripMenuItem.Name = "frmInvoiceApproveToolStripMenuItem";
+            this.frmInvoiceApproveToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmInvoiceApproveToolStripMenuItem.Text = "frmInvoiceApprove";
+            this.frmInvoiceApproveToolStripMenuItem.Click += new System.EventHandler(this.frmInvoiceApproveToolStripMenuItem_Click);
+            // 
+            // frmNewOrderToolStripMenuItem
+            // 
+            this.frmNewOrderToolStripMenuItem.Name = "frmNewOrderToolStripMenuItem";
+            this.frmNewOrderToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmNewOrderToolStripMenuItem.Text = "frmNewOrder";
+            this.frmNewOrderToolStripMenuItem.Click += new System.EventHandler(this.frmNewOrderToolStripMenuItem_Click);
+            // 
+            // frmOrderApprovalBySalesToolStripMenuItem
+            // 
+            this.frmOrderApprovalBySalesToolStripMenuItem.Name = "frmOrderApprovalBySalesToolStripMenuItem";
+            this.frmOrderApprovalBySalesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmOrderApprovalBySalesToolStripMenuItem.Text = "frmOrderApprovalBySales";
+            this.frmOrderApprovalBySalesToolStripMenuItem.Click += new System.EventHandler(this.frmOrderApprovalBySalesToolStripMenuItem_Click);
+            // 
+            // frmOrderApprovalByStoreManagerToolStripMenuItem
+            // 
+            this.frmOrderApprovalByStoreManagerToolStripMenuItem.Name = "frmOrderApprovalByStoreManagerToolStripMenuItem";
+            this.frmOrderApprovalByStoreManagerToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmOrderApprovalByStoreManagerToolStripMenuItem.Text = "frmOrderApprovalByStoreManager";
+            this.frmOrderApprovalByStoreManagerToolStripMenuItem.Click += new System.EventHandler(this.frmOrderApprovalByStoreManagerToolStripMenuItem_Click);
+            // 
+            // frmOrderApproveByFinanceToolStripMenuItem
+            // 
+            this.frmOrderApproveByFinanceToolStripMenuItem.Name = "frmOrderApproveByFinanceToolStripMenuItem";
+            this.frmOrderApproveByFinanceToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmOrderApproveByFinanceToolStripMenuItem.Text = "frmOrderApproveByFinance";
+            this.frmOrderApproveByFinanceToolStripMenuItem.Click += new System.EventHandler(this.frmOrderApproveByFinanceToolStripMenuItem_Click);
+            // 
+            // frmOrderSortingToolStripMenuItem
+            // 
+            this.frmOrderSortingToolStripMenuItem.Name = "frmOrderSortingToolStripMenuItem";
+            this.frmOrderSortingToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.frmOrderSortingToolStripMenuItem.Text = "frmOrderSorting";
+            this.frmOrderSortingToolStripMenuItem.Click += new System.EventHandler(this.frmOrderSortingToolStripMenuItem_Click);
+            // 
+            // newCustomerToolStripMenuItem
+            // 
+            this.newCustomerToolStripMenuItem.Name = "newCustomerToolStripMenuItem";
+            this.newCustomerToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.newCustomerToolStripMenuItem.Text = "NewCustomer";
+            this.newCustomerToolStripMenuItem.Click += new System.EventHandler(this.newCustomerToolStripMenuItem_Click);
+            // 
+            // transactionDetailsToolStripMenuItem
+            // 
+            this.transactionDetailsToolStripMenuItem.Name = "transactionDetailsToolStripMenuItem";
+            this.transactionDetailsToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.transactionDetailsToolStripMenuItem.Text = "TransactionDetails";
+            this.transactionDetailsToolStripMenuItem.Click += new System.EventHandler(this.transactionDetailsToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
             // MRP_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2863,6 +3007,22 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem rPDStoresToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem stockAdjesmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesReturnsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem approveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem companyDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comRegDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem financeDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmAssignQuantityToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmHigherApprovalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmInvoiceApproveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmNewOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmOrderApprovalBySalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmOrderApprovalByStoreManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmOrderApproveByFinanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmOrderSortingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newCustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transactionDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }
 

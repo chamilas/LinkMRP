@@ -1317,6 +1317,36 @@
       <DependentUpon>frmRPDProduction.cs</DependentUpon>
     </Compile>
     <Compile Include="DataValidation.cs" />
+    <Compile Include="Sales\AddDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\AddDetails.designer.cs">
+      <DependentUpon>AddDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Approve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Approve.designer.cs">
+      <DependentUpon>Approve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\CompanyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\CompanyDetails.designer.cs">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\ComRegDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\ComRegDetails.designer.cs">
+      <DependentUpon>ComRegDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\FinanceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\FinanceDetails.designer.cs">
+      <DependentUpon>FinanceDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1328,6 +1358,12 @@
     </Compile>
     <Compile Include="Sales\frmApproveSalesForeCast.designer.cs">
       <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmAssignQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmAssignQuantity.designer.cs">
+      <DependentUpon>frmAssignQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\frmBatchPlan_admin.cs">
       <SubType>Form</SubType>
@@ -1347,6 +1383,48 @@
     <Compile Include="Sales\frmDailySales.designer.cs">
       <DependentUpon>frmDailySales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmHigherApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmHigherApproval.designer.cs">
+      <DependentUpon>frmHigherApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmInvoiceApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmInvoiceApprove.designer.cs">
+      <DependentUpon>frmInvoiceApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmNewOrder.designer.cs">
+      <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmOrderApprovalBySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmOrderApprovalBySales.designer.cs">
+      <DependentUpon>frmOrderApprovalBySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmOrderApprovalByStoreManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmOrderApprovalByStoreManager.designer.cs">
+      <DependentUpon>frmOrderApprovalByStoreManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmOrderApproveByFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmOrderApproveByFinance.designer.cs">
+      <DependentUpon>frmOrderApproveByFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmOrderSorting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmOrderSorting.designer.cs">
+      <DependentUpon>frmOrderSorting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\frmPlanPackingMaterial_Full.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1364,6 +1442,36 @@
     </Compile>
     <Compile Include="Sales\frmSalesReturn.Designer.cs">
       <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\NewCustomer.designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\TransactionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\TransactionDetails.designer.cs">
+      <DependentUpon>TransactionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\Update.designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\UpdateAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\UpdateAddress.designer.cs">
+      <DependentUpon>UpdateAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\UpdateName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\UpdateName.designer.cs">
+      <DependentUpon>UpdateName.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
     <EmbeddedResource Include="About.resx">
@@ -1982,11 +2090,29 @@
     <EmbeddedResource Include="RPD\frmRPDProduction.resx">
       <DependentUpon>frmRPDProduction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\AddDetails.resx">
+      <DependentUpon>AddDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Approve.resx">
+      <DependentUpon>Approve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\CompanyDetails.resx">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\ComRegDetails.resx">
+      <DependentUpon>ComRegDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\FinanceDetails.resx">
+      <DependentUpon>FinanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmApproveSalesForeCast.resx">
       <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmAssignQuantity.resx">
+      <DependentUpon>frmAssignQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmBatchPlan_admin.resx">
       <DependentUpon>frmBatchPlan_admin.cs</DependentUpon>
@@ -1997,6 +2123,27 @@
     <EmbeddedResource Include="Sales\frmDailySales.resx">
       <DependentUpon>frmDailySales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmHigherApproval.resx">
+      <DependentUpon>frmHigherApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmInvoiceApprove.resx">
+      <DependentUpon>frmInvoiceApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmNewOrder.resx">
+      <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmOrderApprovalBySales.resx">
+      <DependentUpon>frmOrderApprovalBySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmOrderApprovalByStoreManager.resx">
+      <DependentUpon>frmOrderApprovalByStoreManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmOrderApproveByFinance.resx">
+      <DependentUpon>frmOrderApproveByFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmOrderSorting.resx">
+      <DependentUpon>frmOrderSorting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmPlanPackingMaterial_Full.resx">
       <DependentUpon>frmPlanPackingMaterial_Full.cs</DependentUpon>
     </EmbeddedResource>
@@ -2005,6 +2152,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmSalesReturn.resx">
       <DependentUpon>frmSalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\TransactionDetails.resx">
+      <DependentUpon>TransactionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\UpdateAddress.resx">
+      <DependentUpon>UpdateAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\UpdateName.resx">
+      <DependentUpon>UpdateName.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

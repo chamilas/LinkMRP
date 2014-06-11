@@ -913,7 +913,11 @@ namespace MRP_GUI
                         btnDetails.Enabled = false;
                         btnEdit.Enabled = false;
                         btnDelete.Enabled = false;
-                        MessageBox.Show(this, "Activity Finished", "Activity Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show(this, "Activity Finished", "Activity Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        frmPRPDBatchActivity obj = new frmPRPDBatchActivity(_CurrentUser, objPRPDBatchActivity.PRPDBatchActivityID);
+                        obj.ShowDialog();
+                        obj.StartPosition = FormStartPosition.CenterScreen;
+
 
                     }
 
