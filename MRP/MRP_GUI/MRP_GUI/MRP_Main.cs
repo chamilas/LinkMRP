@@ -3020,7 +3020,7 @@ namespace MRP_GUI
 
         private void forecastApproveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmApproveSalesForeCast frm = new frmApproveSalesForeCast();
+            frmApproveSalesForeCast frm = new frmApproveSalesForeCast(CurrentUser, "AP");
             ShowForm(frm);
         }
 

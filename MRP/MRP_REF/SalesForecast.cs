@@ -47,14 +47,6 @@ namespace SESD.MRP.REF
             set { _intWeekID = value; }
         }
 
-        private DateTime _dtDate;
-
-        public DateTime Date
-        {
-            get { return _dtDate; }
-            set { _dtDate = value; }
-        }
-
         private String _strAccuracy;
 
         public String Accuracy
@@ -78,6 +70,39 @@ namespace SESD.MRP.REF
             get { return _EenteredBy; }
             set { _EenteredBy = value; }
         }
+
+        private DateTime _EnteredDate;
+
+        public DateTime EnteredDate
+        {
+            get { return _EnteredDate; }
+            set { _EnteredDate = value; }
+        }
+
+        private String _ApprovedBy;
+
+        public String ApprovedBy
+        {
+            get { return _ApprovedBy; }
+            set { _ApprovedBy = value; }
+        }
+
+        private DateTime _ApprovedDate;
+
+        public DateTime ApprovedDate
+        {
+            get { return _ApprovedDate; }
+            set { _ApprovedDate = value; }
+        }
+
+        private String _ProductCategory;
+
+        public String ProductCategory
+        {
+            get { return _ProductCategory; }
+            set { _ProductCategory = value; }
+        }
+
 	
     }
 

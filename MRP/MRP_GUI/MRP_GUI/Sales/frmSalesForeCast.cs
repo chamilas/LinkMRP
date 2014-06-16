@@ -136,7 +136,8 @@ namespace MRP_GUI.Sales
                 objSalesForeCast.State = 0;
                 objSalesForeCast.WeekID = Convert.ToInt32(cmbWeekNo.Text);
                 objSalesForeCast.Accuracy = "none";
-                objSalesForeCast.Date = System.DateTime.Now.ToLocalTime();
+                objSalesForeCast.ProductCategory = CurrentProductType;
+                //objSalesForeCast.Date = System.DateTime.Now.ToLocalTime();
                 objSalesForeCast.EenteredBy = CurrentUser.UserEmp.EmployeeID;
                 long SalesForeCastID= objSalesForeCast_DL.Add(objSalesForeCast);
 

@@ -36,6 +36,7 @@ namespace DL
                 new SqlParameter("@Accuracy", obj.Accuracy),
                 new SqlParameter("@State", obj.State),
                 new SqlParameter("@EenteredBy", obj.EenteredBy),
+                new SqlParameter("@ProductCategory", obj.ProductCategory),
                 new SqlParameter("@outParam",SqlDbType.Int,120){Direction=ParameterDirection.Output}
         };
                 return Execute.RunSP_Output(Connection, "SPADD_SalesForecast", paramList);
@@ -76,14 +77,15 @@ namespace DL
             }
         }
 
-        public System.Data.DataTable GetForeCastByStatus(int State)
+        public System.Data.DataTable GetForeCastByStatus(int State, String ProductType)
         {
             try
             {
 
                 SqlParameter[] paramList = new SqlParameter[] {
                 
-                new SqlParameter("@State", State)};
+                new SqlParameter("@State", State),
+                new SqlParameter("@ProductType", ProductType)};
 
                 return Execute.RunSP_DataTable(Connection, "SPGET_SalesForecast_By_Status", paramList);
 
@@ -114,7 +116,7 @@ namespace DL
             }
         }
 
-        public int Update_Status(int FSID,int Status)
+        public int Update_Status(int FSID,int Status,String ApprovedBy)
         {
             try
             {
@@ -123,6 +125,7 @@ namespace DL
                 SqlParameter[] paramList = new SqlParameter[] {
                 
                 new SqlParameter("@SFStatus", Status),
+                new SqlParameter("@ApprovedBy", ApprovedBy),
                 new SqlParameter("@FSID", FSID)};
 
                 return Execute.RunSP_RowsEffected(Connection, "SPUPDATE_SalesForecast_Status", paramList);

@@ -182,8 +182,9 @@ namespace MRP_GUI.RPD
                 if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
                 {
                     btnPackingLabour.Visible = true;
-                    btnSavePackingAct.Enabled = true;
-                    btnSavePackingAct.Text = "Stop Activity";
+                    btnSavePackingAct.Enabled = false;//checking
+                    //btnSavePackingAct.Text = "Stop Activity";//checking
+                    btnStopPackingAct.Visible = true;
 
                 }
                 else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
@@ -194,8 +195,9 @@ namespace MRP_GUI.RPD
                     dtPackingFinishDate.Enabled = false;
                     btnPackingLabour.Visible = false;
                     grpPackingDetails.Enabled = false;
-                    btnSavePackingAct.Enabled = false;
-                    btnSavePackingAct.Text = "Start Packing Activity";
+                    //btnSavePackingAct.Enabled = true;//checking
+                    //btnSavePackingAct.Enabled = false;//checking
+                    //btnSavePackingAct.Text = "Start Packing Activity";//checking
                     bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
                     //if (objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID,(int)QCReport.ReportStatus.Accept))
                     //{
@@ -217,10 +219,11 @@ namespace MRP_GUI.RPD
             else
             {
                 btnPackingLabour.Visible = false;
-                btnSavePackingAct.Enabled = true;
+                btnSavePackingAct.Enabled = false;
                 grpPackingDetails.Enabled = false;
                 dtPackingFinishDate.Enabled = false;
                 dtPackingStartDate.Enabled = true;
+                btnStopPackingAct.Enabled = true; //ckecking
                 cmbSupervisedByPackingDetails.Enabled = true;
             }
 
@@ -1123,6 +1126,50 @@ namespace MRP_GUI.RPD
         {
             LoadPackingDetails();
 
+        }
+
+        private void btnStopPackingAct_Click(object sender, EventArgs e)
+        {
+            if (!objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID, (int)QCReport.ReportStatus.Accept))
+            {
+                MessageBox.Show(this, "Sysem does not allow to start Packing activity until quality test accepted", "QC Check Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (objRPDBatchPackingActivity != null)
+                {
+                    long ID = 0;
+
+                    if (dtPackingFinishDate.Checked)
+                    {
+                        objRPDBatchPackingActivity.StopDate = dtPackingFinishDate.Value;
+                        objRPDBatchPackingActivity.ActivityStatus = RPDBatchActivity.Status.Finalized;
+
+                        ID = objRPDBatchActivityDL.Update(objRPDBatchPackingActivity);
+                    }
+                    else
+                    {
+                        objRPDBatchPackingActivity.ActivityStatus = SESD.MRP.REF.RPDBatchActivity.Status.Started;
+                        ID = objRPDBatchActivityDL.Add(objRPDBatchPackingActivity);
+                    }
+
+                    if (ID > 0)
+                    {
+
+                        LoadPackingDetails();
+                        if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
+                        {
+                            objRPDBatchActualProductionDL.Add(objRPDBatch.RPDBatchID);
+                            bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
+                        }
+                        else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
+                        {
+                            //btnSavePackingAct.Text = "Stop Activity";
+                        }
+                    }
+
+                }
+            }
         }
 
     
