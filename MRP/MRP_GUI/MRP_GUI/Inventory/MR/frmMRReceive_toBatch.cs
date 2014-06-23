@@ -38,6 +38,7 @@ namespace MRP_GUI
         MR_DL objMRDL = new MR_DL(ConnectionStringClass.GetConnection());
         MRMaterial_DL objMRMaterialDL = new MRMaterial_DL(ConnectionStringClass.GetConnection());
         MRBasicProduct_DL objMRBasicProduct_DL = new MRBasicProduct_DL(ConnectionStringClass.GetConnection());
+        MRFinishProduct_DL objMRFinishProduct_DL = new MRFinishProduct_DL(ConnectionStringClass.GetConnection());
         MRMaterialCollec objMRMaterialCollec = new MRMaterialCollec();
         Batch_DL objBatch_DL = new Batch_DL(ConnectionStringClass.GetConnection());
 
@@ -105,6 +106,11 @@ namespace MRP_GUI
                         if (objMRTemp.MRType == MR.Type.BasicProduct)
                         {
                              dt = objMRBasicProduct_DL.GetBasicProductList(objMRTemp.MRNO);
+                        }
+
+                        if (objMRTemp.MRType == MR.Type.FinishProduct)
+                        {
+                            dt = objMRFinishProduct_DL.GetData_View(objMRTemp.MRNO);
                         }
 
 

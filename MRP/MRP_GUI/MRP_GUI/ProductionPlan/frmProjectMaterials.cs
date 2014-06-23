@@ -29,6 +29,7 @@ namespace MRP_GUI.Sales
 
         DataTable dtMt =new DataTable();
         DataTable tempAvailabalProduct = new DataTable();
+        DataTable t1 = new DataTable();
 
         public frmProjectMaterials(User objUser)
         {
@@ -45,10 +46,18 @@ namespace MRP_GUI.Sales
 
         private void cmbProjectName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            objProjectMaterial.ProjectID = Convert.ToInt32(((DataRowView)this.bsProjets.Current).Row["ProjectID"].ToString());
-            LoadMaterials();
-            //System.Threading.Thread.Sleep(2000);
-            LoadDGVmaterials();
+            //objProjectMaterial.ProjectID = Convert.ToInt32(((DataRowView)this.bsProjets.Current).Row["ProjectID"].ToString());
+            if (cmbProjectName.SelectedIndex > -1)
+            {
+                DataRowView items = (DataRowView)this.bsProjets.List[cmbProjectName.SelectedIndex];
+                objProjectMaterial.ProjectID = Convert.ToInt32(items["ProjectID"].ToString());
+                //MessageBox.Show(">> " + xx2);
+
+
+                LoadMaterials();
+                //System.Threading.Thread.Sleep(2000);
+                LoadDGVmaterials();
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -80,6 +89,7 @@ namespace MRP_GUI.Sales
                 if (tempAvailabalProduct.Rows.Count > 0)
                 {
                     objProjectMaterials_DL.Add(objProjectMaterial);
+                    LoadMaterials();
                     LoadDGVmaterials();
                 }
                 else
@@ -122,8 +132,13 @@ namespace MRP_GUI.Sales
         {
             if (cbmMaterial.SelectedValue != null)
             {
-                String availableQty = ((DataRowView)this.bsMaterials.Current).Row["StockQty"].ToString();
+                //String availableQty = ((DataRowView)this.bsMaterials.Current).Row["StockQty"].ToString();
+                //lblAvailaableQty.Text = "Available Quantity : " + availableQty;
+
+                DataRowView items = (DataRowView)this.bsMaterials.List[cbmMaterial.SelectedIndex];
+                String availableQty = items["StockQty"].ToString();
                 lblAvailaableQty.Text = "Available Quantity : " + availableQty;
+
             }
         }
 

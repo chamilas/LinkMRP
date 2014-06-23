@@ -39,6 +39,10 @@
             this.objSourceSections = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.dgvWIP = new System.Windows.Forms.DataGridView();
+            this.BatchStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WIPQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFinalQty = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -46,10 +50,6 @@
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StockQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.BatchStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BatchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WIPQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceWIP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceWIPStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceSections)).BeginInit();
@@ -131,6 +131,37 @@
             this.dgvWIP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWIP_CellClick);
             this.dgvWIP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWIP_CellContentClick);
             // 
+            // BatchStatus
+            // 
+            this.BatchStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BatchStatus.DataPropertyName = "BatchStatus";
+            this.BatchStatus.HeaderText = "Batch Status";
+            this.BatchStatus.Name = "BatchStatus";
+            this.BatchStatus.ReadOnly = true;
+            // 
+            // BatchID
+            // 
+            this.BatchID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BatchID.DataPropertyName = "BatchID";
+            this.BatchID.HeaderText = "Batch ID";
+            this.BatchID.Name = "BatchID";
+            this.BatchID.ReadOnly = true;
+            // 
+            // WIPQty
+            // 
+            this.WIPQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WIPQty.DataPropertyName = "WIPQty";
+            this.WIPQty.HeaderText = "Basic Product WIP Quantity";
+            this.WIPQty.Name = "WIPQty";
+            this.WIPQty.ReadOnly = true;
+            // 
+            // Unit
+            // 
+            this.Unit.DataPropertyName = "Unit";
+            this.Unit.HeaderText = "Unit";
+            this.Unit.Name = "Unit";
+            this.Unit.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -204,37 +235,6 @@
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // BatchStatus
-            // 
-            this.BatchStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BatchStatus.DataPropertyName = "BatchStatus";
-            this.BatchStatus.HeaderText = "Batch Status";
-            this.BatchStatus.Name = "BatchStatus";
-            this.BatchStatus.ReadOnly = true;
-            // 
-            // BatchID
-            // 
-            this.BatchID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BatchID.DataPropertyName = "BatchID";
-            this.BatchID.HeaderText = "Batch ID";
-            this.BatchID.Name = "BatchID";
-            this.BatchID.ReadOnly = true;
-            // 
-            // WIPQty
-            // 
-            this.WIPQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WIPQty.DataPropertyName = "WIPQty";
-            this.WIPQty.HeaderText = "Basic Product WIP Quantity";
-            this.WIPQty.Name = "WIPQty";
-            this.WIPQty.ReadOnly = true;
-            // 
-            // Unit
-            // 
-            this.Unit.DataPropertyName = "Unit";
-            this.Unit.HeaderText = "Unit";
-            this.Unit.Name = "Unit";
-            this.Unit.ReadOnly = true;
             // 
             // frmWIP
             // 

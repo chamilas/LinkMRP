@@ -73,6 +73,8 @@ namespace MRP_GUI
                                 //Production.BatchFile.frmBatchFile objFrm = new MRP_GUI.Production.BatchFile.frmBatchFile(objUser);
                                 objFrm.Show();
                                 this.Hide();
+                                objUser.Online = true;
+                                objUser_DL.Update_OnlineState(objUser);
                             }
                         }
                     }

@@ -42,6 +42,7 @@ namespace MRP_GUI.Sales
                 objProjects_DL.Add(txtProName.Text, ((DataRowView)this.bsDepList.Current).Row["DepID"].ToString(), cmbProType.Text);
                 MessageBox.Show(this, "Record successfully added", "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clear();
+                LoadDGVProjects();
             }
             else 
             {
@@ -62,6 +63,11 @@ namespace MRP_GUI.Sales
         private void Clear() 
         {
             txtProName.Text = "";
+        }
+
+        private void frmRegisterProject_Load(object sender, EventArgs e)
+        {
+            LoadDGVProjects();
         }
     }
 }

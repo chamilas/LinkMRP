@@ -191,7 +191,7 @@ namespace MRP_GUI
                       {
 
                           int i = objMTN_DL.CreatePackingMTN_toStores(objMTN, BatchActivity.Status.Transferred, dgvActivity.CurrentRow.Cells["SecondaryFinishProduct"].Value.ToString(), Convert.ToInt32(txtTransferQty.Text), BatchActivity.Status.Finished, BatchActivity.Status.SecondaryPacking);
-                          //objBatch_DL.Update_BatchPackingCost(objBatchActivity.BatchActID);
+                          objBatch_DL.Update_BatchPackingCost(objBatchActivity.BatchActID);
 
                           if (i > 0)
                           {

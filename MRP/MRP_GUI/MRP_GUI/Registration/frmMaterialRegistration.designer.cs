@@ -38,15 +38,15 @@ namespace MRP_GUI
             this.label9 = new System.Windows.Forms.Label();
             this.cmbMainType = new System.Windows.Forms.ComboBox();
             this.pblBasic2 = new System.Windows.Forms.Panel();
-            this.rdbGreen = new System.Windows.Forms.RadioButton();
-            this.rdbDry = new System.Windows.Forms.RadioButton();
             this.cmbToMonth = new System.Windows.Forms.ComboBox();
             this.cmbFromMonth = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
+            this.cbMaterialSeasonal = new System.Windows.Forms.CheckBox();
+            this.rdbGreen = new System.Windows.Forms.RadioButton();
+            this.rdbDry = new System.Windows.Forms.RadioButton();
             this.cbMaterialLocal = new System.Windows.Forms.CheckBox();
             this.cbMaterialImport = new System.Windows.Forms.CheckBox();
-            this.cbMaterialSeasonal = new System.Windows.Forms.CheckBox();
             this.pnlInter = new System.Windows.Forms.Panel();
             this.lblMaterialBasicMaterialUnit = new System.Windows.Forms.Label();
             this.txtMaterialBasicPartialSize = new System.Windows.Forms.TextBox();
@@ -72,6 +72,9 @@ namespace MRP_GUI
             this.btnMaterialDelete = new System.Windows.Forms.Button();
             this.btnMaterialSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pnlBasic1 = new System.Windows.Forms.Panel();
             this.rdbLab = new System.Windows.Forms.RadioButton();
             this.rdbPacking = new System.Windows.Forms.RadioButton();
             this.rdbRaw = new System.Windows.Forms.RadioButton();
@@ -108,13 +111,12 @@ namespace MRP_GUI
             this.bindSubCat2 = new System.Windows.Forms.BindingSource(this.components);
             this.bindBasicMaterials = new System.Windows.Forms.BindingSource(this.components);
             this.objsourceMaterialBasic = new System.Windows.Forms.BindingSource(this.components);
-            this.pnlBasic1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pblBasic2.SuspendLayout();
             this.pnlInter.SuspendLayout();
             this.pnlMaterial.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnlBasic1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindMaterials)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -124,7 +126,6 @@ namespace MRP_GUI
             ((System.ComponentModel.ISupportInitialize)(this.bindSubCat2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindBasicMaterials)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objsourceMaterialBasic)).BeginInit();
-            this.pnlBasic1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -133,7 +134,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 30);
+            this.label9.Location = new System.Drawing.Point(64, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 111;
@@ -147,7 +148,7 @@ namespace MRP_GUI
             "Basic",
             "Intermediate",
             "Processed"});
-            this.cmbMainType.Location = new System.Drawing.Point(61, 22);
+            this.cmbMainType.Location = new System.Drawing.Point(102, 4);
             this.cmbMainType.Name = "cmbMainType";
             this.cmbMainType.Size = new System.Drawing.Size(140, 21);
             this.cmbMainType.TabIndex = 110;
@@ -164,28 +165,6 @@ namespace MRP_GUI
             this.pblBasic2.Name = "pblBasic2";
             this.pblBasic2.Size = new System.Drawing.Size(351, 34);
             this.pblBasic2.TabIndex = 4;
-            // 
-            // rdbGreen
-            // 
-            this.rdbGreen.AutoSize = true;
-            this.rdbGreen.Location = new System.Drawing.Point(74, 7);
-            this.rdbGreen.Name = "rdbGreen";
-            this.rdbGreen.Size = new System.Drawing.Size(54, 17);
-            this.rdbGreen.TabIndex = 102;
-            this.rdbGreen.TabStop = true;
-            this.rdbGreen.Text = "Green";
-            this.rdbGreen.UseVisualStyleBackColor = true;
-            // 
-            // rdbDry
-            // 
-            this.rdbDry.AutoSize = true;
-            this.rdbDry.Location = new System.Drawing.Point(21, 7);
-            this.rdbDry.Name = "rdbDry";
-            this.rdbDry.Size = new System.Drawing.Size(41, 17);
-            this.rdbDry.TabIndex = 102;
-            this.rdbDry.TabStop = true;
-            this.rdbDry.Text = "Dry";
-            this.rdbDry.UseVisualStyleBackColor = true;
             // 
             // cmbToMonth
             // 
@@ -289,6 +268,39 @@ namespace MRP_GUI
             this.label31.TabIndex = 100;
             this.label31.Text = "To";
             // 
+            // cbMaterialSeasonal
+            // 
+            this.cbMaterialSeasonal.AutoSize = true;
+            this.cbMaterialSeasonal.Location = new System.Drawing.Point(3, 10);
+            this.cbMaterialSeasonal.Name = "cbMaterialSeasonal";
+            this.cbMaterialSeasonal.Size = new System.Drawing.Size(70, 17);
+            this.cbMaterialSeasonal.TabIndex = 0;
+            this.cbMaterialSeasonal.Text = "Seasonal";
+            this.cbMaterialSeasonal.UseVisualStyleBackColor = true;
+            this.cbMaterialSeasonal.CheckedChanged += new System.EventHandler(this.cbMaterialSeasonal_CheckedChanged);
+            // 
+            // rdbGreen
+            // 
+            this.rdbGreen.AutoSize = true;
+            this.rdbGreen.Location = new System.Drawing.Point(74, 7);
+            this.rdbGreen.Name = "rdbGreen";
+            this.rdbGreen.Size = new System.Drawing.Size(54, 17);
+            this.rdbGreen.TabIndex = 102;
+            this.rdbGreen.TabStop = true;
+            this.rdbGreen.Text = "Green";
+            this.rdbGreen.UseVisualStyleBackColor = true;
+            // 
+            // rdbDry
+            // 
+            this.rdbDry.AutoSize = true;
+            this.rdbDry.Location = new System.Drawing.Point(21, 7);
+            this.rdbDry.Name = "rdbDry";
+            this.rdbDry.Size = new System.Drawing.Size(41, 17);
+            this.rdbDry.TabIndex = 102;
+            this.rdbDry.TabStop = true;
+            this.rdbDry.Text = "Dry";
+            this.rdbDry.UseVisualStyleBackColor = true;
+            // 
             // cbMaterialLocal
             // 
             this.cbMaterialLocal.AutoSize = true;
@@ -309,17 +321,6 @@ namespace MRP_GUI
             this.cbMaterialImport.Text = "Import";
             this.cbMaterialImport.UseVisualStyleBackColor = true;
             // 
-            // cbMaterialSeasonal
-            // 
-            this.cbMaterialSeasonal.AutoSize = true;
-            this.cbMaterialSeasonal.Location = new System.Drawing.Point(3, 10);
-            this.cbMaterialSeasonal.Name = "cbMaterialSeasonal";
-            this.cbMaterialSeasonal.Size = new System.Drawing.Size(70, 17);
-            this.cbMaterialSeasonal.TabIndex = 0;
-            this.cbMaterialSeasonal.Text = "Seasonal";
-            this.cbMaterialSeasonal.UseVisualStyleBackColor = true;
-            this.cbMaterialSeasonal.CheckedChanged += new System.EventHandler(this.cbMaterialSeasonal_CheckedChanged);
-            // 
             // pnlInter
             // 
             this.pnlInter.Controls.Add(this.lblMaterialBasicMaterialUnit);
@@ -329,11 +330,10 @@ namespace MRP_GUI
             this.pnlInter.Controls.Add(this.label6);
             this.pnlInter.Controls.Add(this.cmbMaterialBasicMaterial);
             this.pnlInter.Controls.Add(this.label1);
-            this.pnlInter.Location = new System.Drawing.Point(448, 108);
+            this.pnlInter.Location = new System.Drawing.Point(448, 117);
             this.pnlInter.Name = "pnlInter";
             this.pnlInter.Size = new System.Drawing.Size(432, 94);
             this.pnlInter.TabIndex = 5;
-            this.pnlInter.Visible = false;
             // 
             // lblMaterialBasicMaterialUnit
             // 
@@ -429,20 +429,22 @@ namespace MRP_GUI
             this.pnlMaterial.Controls.Add(this.cmbMaterialUnit);
             this.pnlMaterial.Controls.Add(this.label30);
             this.pnlMaterial.Controls.Add(this.cmbMaterialForm);
+            this.pnlMaterial.Controls.Add(this.label9);
             this.pnlMaterial.Controls.Add(this.label7);
+            this.pnlMaterial.Controls.Add(this.cmbMainType);
             this.pnlMaterial.Controls.Add(this.cmbMaterialType);
             this.pnlMaterial.Controls.Add(this.label29);
             this.pnlMaterial.Controls.Add(this.label5);
             this.pnlMaterial.Controls.Add(this.txtmaterialName);
             this.pnlMaterial.Controls.Add(this.label4);
-            this.pnlMaterial.Location = new System.Drawing.Point(7, 57);
+            this.pnlMaterial.Location = new System.Drawing.Point(7, 19);
             this.pnlMaterial.Name = "pnlMaterial";
-            this.pnlMaterial.Size = new System.Drawing.Size(427, 145);
+            this.pnlMaterial.Size = new System.Drawing.Size(435, 162);
             this.pnlMaterial.TabIndex = 3;
             // 
             // txtMaterialCode
             // 
-            this.txtMaterialCode.Location = new System.Drawing.Point(96, 9);
+            this.txtMaterialCode.Location = new System.Drawing.Point(102, 31);
             this.txtMaterialCode.Name = "txtMaterialCode";
             this.txtMaterialCode.Size = new System.Drawing.Size(204, 20);
             this.txtMaterialCode.TabIndex = 0;
@@ -452,9 +454,9 @@ namespace MRP_GUI
             this.txtAcgUnitCost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAcgUnitCost.Location = new System.Drawing.Point(96, 117);
+            this.txtAcgUnitCost.Location = new System.Drawing.Point(102, 139);
             this.txtAcgUnitCost.Name = "txtAcgUnitCost";
-            this.txtAcgUnitCost.Size = new System.Drawing.Size(126, 20);
+            this.txtAcgUnitCost.Size = new System.Drawing.Size(134, 20);
             this.txtAcgUnitCost.TabIndex = 5;
             this.txtAcgUnitCost.Text = "0.00";
             this.txtAcgUnitCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAcgUnitCost_KeyPress);
@@ -466,7 +468,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(2, 120);
+            this.label63.Location = new System.Drawing.Point(8, 142);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(90, 13);
             this.label63.TabIndex = 102;
@@ -486,9 +488,9 @@ namespace MRP_GUI
             "BOTTLE",
             "BOX",
             "CAN"});
-            this.cmbMaterialUnit.Location = new System.Drawing.Point(96, 95);
+            this.cmbMaterialUnit.Location = new System.Drawing.Point(102, 117);
             this.cmbMaterialUnit.Name = "cmbMaterialUnit";
-            this.cmbMaterialUnit.Size = new System.Drawing.Size(126, 21);
+            this.cmbMaterialUnit.Size = new System.Drawing.Size(134, 21);
             this.cmbMaterialUnit.TabIndex = 4;
             this.cmbMaterialUnit.ValueMember = "UnitID";
             // 
@@ -498,7 +500,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(66, 98);
+            this.label30.Location = new System.Drawing.Point(72, 120);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(26, 13);
             this.label30.TabIndex = 99;
@@ -515,9 +517,9 @@ namespace MRP_GUI
             this.cmbMaterialForm.Items.AddRange(new object[] {
             "POWDER",
             "LIQUID"});
-            this.cmbMaterialForm.Location = new System.Drawing.Point(96, 73);
+            this.cmbMaterialForm.Location = new System.Drawing.Point(102, 95);
             this.cmbMaterialForm.Name = "cmbMaterialForm";
-            this.cmbMaterialForm.Size = new System.Drawing.Size(204, 21);
+            this.cmbMaterialForm.Size = new System.Drawing.Size(212, 21);
             this.cmbMaterialForm.TabIndex = 3;
             this.cmbMaterialForm.ValueMember = "FormID";
             // 
@@ -527,7 +529,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(61, 76);
+            this.label7.Location = new System.Drawing.Point(67, 98);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 96;
@@ -551,9 +553,9 @@ namespace MRP_GUI
             "BARK",
             "WHOLE PLANT",
             "SEEDS"});
-            this.cmbMaterialType.Location = new System.Drawing.Point(96, 51);
+            this.cmbMaterialType.Location = new System.Drawing.Point(102, 73);
             this.cmbMaterialType.Name = "cmbMaterialType";
-            this.cmbMaterialType.Size = new System.Drawing.Size(204, 21);
+            this.cmbMaterialType.Size = new System.Drawing.Size(212, 21);
             this.cmbMaterialType.TabIndex = 2;
             this.cmbMaterialType.ValueMember = "MatType";
             // 
@@ -563,7 +565,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(61, 54);
+            this.label29.Location = new System.Drawing.Point(67, 76);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(31, 13);
             this.label29.TabIndex = 93;
@@ -575,7 +577,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 12);
+            this.label5.Location = new System.Drawing.Point(64, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 88;
@@ -586,9 +588,9 @@ namespace MRP_GUI
             this.txtmaterialName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtmaterialName.Location = new System.Drawing.Point(96, 30);
+            this.txtmaterialName.Location = new System.Drawing.Point(102, 52);
             this.txtmaterialName.Name = "txtmaterialName";
-            this.txtmaterialName.Size = new System.Drawing.Size(328, 20);
+            this.txtmaterialName.Size = new System.Drawing.Size(330, 20);
             this.txtmaterialName.TabIndex = 1;
             // 
             // label4
@@ -597,7 +599,7 @@ namespace MRP_GUI
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 33);
+            this.label4.Location = new System.Drawing.Point(23, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 86;
@@ -606,7 +608,7 @@ namespace MRP_GUI
             // btnMaterialClear
             // 
             this.btnMaterialClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaterialClear.Location = new System.Drawing.Point(805, 70);
+            this.btnMaterialClear.Location = new System.Drawing.Point(805, 77);
             this.btnMaterialClear.Name = "btnMaterialClear";
             this.btnMaterialClear.Size = new System.Drawing.Size(75, 23);
             this.btnMaterialClear.TabIndex = 8;
@@ -617,7 +619,7 @@ namespace MRP_GUI
             // btnMaterialDelete
             // 
             this.btnMaterialDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaterialDelete.Location = new System.Drawing.Point(805, 41);
+            this.btnMaterialDelete.Location = new System.Drawing.Point(805, 48);
             this.btnMaterialDelete.Name = "btnMaterialDelete";
             this.btnMaterialDelete.Size = new System.Drawing.Size(75, 23);
             this.btnMaterialDelete.TabIndex = 7;
@@ -628,7 +630,7 @@ namespace MRP_GUI
             // btnMaterialSave
             // 
             this.btnMaterialSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaterialSave.Location = new System.Drawing.Point(805, 12);
+            this.btnMaterialSave.Location = new System.Drawing.Point(805, 19);
             this.btnMaterialSave.Name = "btnMaterialSave";
             this.btnMaterialSave.Size = new System.Drawing.Size(75, 23);
             this.btnMaterialSave.TabIndex = 6;
@@ -638,14 +640,12 @@ namespace MRP_GUI
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.pnlBasic1);
-            this.groupBox2.Controls.Add(this.rdbLab);
-            this.groupBox2.Controls.Add(this.rdbPacking);
-            this.groupBox2.Controls.Add(this.rdbRaw);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.cmbMainType);
             this.groupBox2.Controls.Add(this.pblBasic2);
             this.groupBox2.Controls.Add(this.pnlInter);
             this.groupBox2.Controls.Add(this.pnlMaterial);
@@ -653,21 +653,48 @@ namespace MRP_GUI
             this.groupBox2.Controls.Add(this.btnMaterialDelete);
             this.groupBox2.Controls.Add(this.btnMaterialSave);
             this.groupBox2.Controls.Add(this.gvMaterialList);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Location = new System.Drawing.Point(0, 39);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(886, 564);
+            this.groupBox2.Size = new System.Drawing.Size(886, 525);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Material";
+            this.groupBox2.Text = "Material Details";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 118;
+            this.label2.Text = "Search For";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(74, 191);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(328, 20);
+            this.textBox1.TabIndex = 117;
+            // 
+            // pnlBasic1
+            // 
+            this.pnlBasic1.Controls.Add(this.rdbDry);
+            this.pnlBasic1.Controls.Add(this.rdbGreen);
+            this.pnlBasic1.Controls.Add(this.cbMaterialImport);
+            this.pnlBasic1.Controls.Add(this.cbMaterialLocal);
+            this.pnlBasic1.Location = new System.Drawing.Point(448, 19);
+            this.pnlBasic1.Name = "pnlBasic1";
+            this.pnlBasic1.Size = new System.Drawing.Size(351, 30);
+            this.pnlBasic1.TabIndex = 116;
             // 
             // rdbLab
             // 
             this.rdbLab.AutoSize = true;
-            this.rdbLab.Location = new System.Drawing.Point(341, 24);
+            this.rdbLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbLab.Location = new System.Drawing.Point(375, 16);
             this.rdbLab.Name = "rdbLab";
-            this.rdbLab.Size = new System.Drawing.Size(43, 17);
+            this.rdbLab.Size = new System.Drawing.Size(46, 17);
             this.rdbLab.TabIndex = 115;
             this.rdbLab.TabStop = true;
             this.rdbLab.Text = "Lab";
@@ -677,9 +704,10 @@ namespace MRP_GUI
             // rdbPacking
             // 
             this.rdbPacking.AutoSize = true;
-            this.rdbPacking.Location = new System.Drawing.Point(271, 24);
+            this.rdbPacking.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbPacking.Location = new System.Drawing.Point(298, 16);
             this.rdbPacking.Name = "rdbPacking";
-            this.rdbPacking.Size = new System.Drawing.Size(64, 17);
+            this.rdbPacking.Size = new System.Drawing.Size(71, 17);
             this.rdbPacking.TabIndex = 115;
             this.rdbPacking.TabStop = true;
             this.rdbPacking.Text = "Packing";
@@ -689,9 +717,10 @@ namespace MRP_GUI
             // rdbRaw
             // 
             this.rdbRaw.AutoSize = true;
-            this.rdbRaw.Location = new System.Drawing.Point(218, 24);
+            this.rdbRaw.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbRaw.Location = new System.Drawing.Point(245, 16);
             this.rdbRaw.Name = "rdbRaw";
-            this.rdbRaw.Size = new System.Drawing.Size(47, 17);
+            this.rdbRaw.Size = new System.Drawing.Size(50, 17);
             this.rdbRaw.TabIndex = 115;
             this.rdbRaw.TabStop = true;
             this.rdbRaw.Text = "Raw";
@@ -701,15 +730,12 @@ namespace MRP_GUI
             // gvMaterialList
             // 
             this.gvMaterialList.AllowUserToAddRows = false;
-            this.gvMaterialList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gvMaterialList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gvMaterialList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gvMaterialList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.gvMaterialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvMaterialList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColMaterialCode,
             this.ColMaterialName,
@@ -734,7 +760,7 @@ namespace MRP_GUI
             this.ColUnitID,
             this.ColStatus,
             this.ColMaterial});
-            this.gvMaterialList.Location = new System.Drawing.Point(6, 262);
+            this.gvMaterialList.Location = new System.Drawing.Point(6, 217);
             this.gvMaterialList.MultiSelect = false;
             this.gvMaterialList.Name = "gvMaterialList";
             this.gvMaterialList.ReadOnly = true;
@@ -749,7 +775,7 @@ namespace MRP_GUI
             this.gvMaterialList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvMaterialList.RowTemplate.Height = 18;
             this.gvMaterialList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvMaterialList.Size = new System.Drawing.Size(874, 296);
+            this.gvMaterialList.Size = new System.Drawing.Size(874, 302);
             this.gvMaterialList.TabIndex = 1;
             this.gvMaterialList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMaterialList_CellClick);
             // 
@@ -954,39 +980,26 @@ namespace MRP_GUI
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // pnlBasic1
+            // label3
             // 
-            this.pnlBasic1.Controls.Add(this.rdbDry);
-            this.pnlBasic1.Controls.Add(this.rdbGreen);
-            this.pnlBasic1.Controls.Add(this.cbMaterialImport);
-            this.pnlBasic1.Controls.Add(this.cbMaterialLocal);
-            this.pnlBasic1.Location = new System.Drawing.Point(448, 19);
-            this.pnlBasic1.Name = "pnlBasic1";
-            this.pnlBasic1.Size = new System.Drawing.Size(351, 30);
-            this.pnlBasic1.TabIndex = 116;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(102, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 20);
-            this.textBox1.TabIndex = 117;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 226);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 118;
-            this.label2.Text = "Search For";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 13);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Select the Material Type to Load";
             // 
             // frmMaterialRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 564);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.rdbRaw);
+            this.Controls.Add(this.rdbPacking);
+            this.Controls.Add(this.rdbLab);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMaterialRegistration";
             this.Text = "Material Registration";
@@ -999,6 +1012,8 @@ namespace MRP_GUI
             this.pnlMaterial.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.pnlBasic1.ResumeLayout(false);
+            this.pnlBasic1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindMaterials)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -1008,9 +1023,8 @@ namespace MRP_GUI
             ((System.ComponentModel.ISupportInitialize)(this.bindSubCat2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindBasicMaterials)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objsourceMaterialBasic)).EndInit();
-            this.pnlBasic1.ResumeLayout(false);
-            this.pnlBasic1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1092,6 +1106,7 @@ namespace MRP_GUI
         private System.Windows.Forms.Panel pnlBasic1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
 
     }
 }

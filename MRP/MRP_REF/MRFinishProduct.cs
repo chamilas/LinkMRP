@@ -93,11 +93,8 @@ namespace SESD.MRP.REF
         private String _strUnitCode;
         public String UnitCode
         {
-            get
-            {
-                _strUnitCode = FinishProduct.FinishProductPackingType.PackingTitle;
-                return _strUnitCode;
-            }
+            get { return _strUnitCode; }
+            set { _strUnitCode = value; }
         }
 
         private Decimal _decUnitRate;

@@ -87,5 +87,10 @@ namespace MRP_GUI
                 }
             }
         }
+
+        private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -97,7 +97,7 @@
             this.Controls.Add(this.dgvMaterialDetails);
             this.Name = "frmViewRejectedItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmViewRejectedItems";
+            this.Text = "View Rejected Items";
             this.Load += new System.EventHandler(this.frmViewRejectedItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objSourceBatchMaterial)).EndInit();

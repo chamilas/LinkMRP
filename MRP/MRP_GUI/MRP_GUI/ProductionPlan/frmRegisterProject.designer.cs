@@ -211,6 +211,7 @@
             this.Controls.Add(this.dgvProjects);
             this.Name = "frmRegisterProject";
             this.Text = "frmRegisterProject";
+            this.Load += new System.EventHandler(this.frmRegisterProject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsDepList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProjects)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -1935,3 +1935,493 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MR
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.config
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.About.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.MaterialSelection.frmMaterialList.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.MaterialSelection.MaterialSelect.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucMaterialCategory.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucMaterials.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucProcessedMaterial.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.usProductInsert.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmChangePassword.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStockAdjustment.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRN_Import.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOMaterialSelection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Edit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_FG.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchCreate.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Packing.frmBatchPacking_DamagedGoods.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPackingMaterialsForecast.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPlanMaterial_Full.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmDepartmentPlanningWeeks.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPackType.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWIP_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOFinalize.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOList.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPODeliveryShedule.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOSelection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBinCards_BP.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Direct_Semi.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toStore_Semi.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toSection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toSec_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_RPD.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_AnySemi.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_AnyMaterial.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Inventory.MR.frmMRManagePOPUP.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Basic.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_RM.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive_RM.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Herbal_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Ayurveda_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNManagement.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Secondary_Edit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Priamry_Edit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_Packing_Secondary.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmIssueFinishedGoods.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPO.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPlanMaterial.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmProjectMaterials.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmRegisterProject.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_MaterialReq.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmViewRejectedItems.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWIP.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchCost.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegister_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Edit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatch_Rework_Approve.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchQCFail.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlanExclusive.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchFinish_Approve.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchActivity_View.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchCreatePreperation.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmMultipleLabour_PRPD.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchFile.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchActivity.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.frmPRPDBatchList.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.frmPRPDCostingApprove.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.frmViewPRPDBatch.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDPreperationBatchManagement.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.PRPDBatchActivityForms.frmAddPRPDActivity.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchTransfer_Preperation.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStandardBatchManage.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBasicProductRegistration.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStockManagment.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQC.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCDetailView.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReportHistory.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_RPD.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Rework.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCView.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmEmployeeRegistration.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmLogin.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMainScreen.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRNEdit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Rejects_Approval.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Rejects.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive_Rejects.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive_Semi.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRApproval_Batch.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCostingResults_BasicProduct.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Ayurveda.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Optional_Semi.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Optional.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNApproval_FG.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCostingResults_FinishedProduct.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNCosting.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toDep.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toDep_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRAResults.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRNSelection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmSupplierSelection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRNList.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNApproval.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Direct.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBinCards_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toBatch.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Partial.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBinCards_Raw.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toStore.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Section.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmAddStock.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNManagement.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRApproval.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRIssue.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRManagement.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toStore.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTN.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNApproval.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNote.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Herbal.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRemoveStock.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRN.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMaterialSelection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmSystemMgt.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.MRP_Main.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Primary.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Basic.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Secondary.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Packing.frmBatchPackingMR.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Secondary.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchActivity_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Priamry.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Secondary_Instructions.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegistry_View.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegister.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegistry.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchInitiate.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchMaterial.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchFinish.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmFormulaEdit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmMultipleLabour.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWeighingChecking.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchApproving.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmBatchActivity.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWeighing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Properties.Resources.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmActivityManagement.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Packing_Secondary.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Packing.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmFormula.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMachineRegistration.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMaterialRegistration.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmFinishedProductRegistration.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStandardBatch.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Registration.frmSubContractor.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCatTypeUnit.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCosting.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmUserRoleAssign.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucDivision.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucEmployee.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucEmployeeSelect.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucMachine.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucSection.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucSectionFilter.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmSupplier.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmBatchPackingMRBulk.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmGRNBulkPrint.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNPrint.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRPrint.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRBulkPrint.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmRptManufactPackCost.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmRptProductionCost.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRptPRPDBatchCost.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRptRPDBatchCost.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmWIP_manufacturingReport.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmWIP_Packing_MaterialTablePrint.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPackingMR_RPD.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchActivity_View.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchEditMode.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.RPDBatchActivityForms.frmAddActivity.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmMultipleLabour_RPD.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchActivity.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDBatchFileView.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchInitialize.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDBatchList.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDBatchManage.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDCostApprove.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDProduction.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.AddDetails.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Approve.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.CompanyDetails.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.ComRegDetails.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.FinanceDetails.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Form1.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmApproveSalesForeCast.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmAssignQuantity.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan_admin.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmCustomerRegistration.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmDailySales.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmHigherApproval.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmInvoiceApprove.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmNewOrder.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderApprovalBySales.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderApprovalByStoreManager.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderApproveByFinance.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderSorting.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPlanPackingMaterial_Full.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmSalesForeCast.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmSalesReturn.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.NewCustomer.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.TransactionDetails.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Update.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.UpdateAddress.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.UpdateName.resources
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.csproj.GenerateResource.Cache
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\RdlCompile.cache
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\RdlCompile.compiled
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\Report\rptGRNPrint.rdlc
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.manifest
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.application
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.pdb
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_BL.dll
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_DL.dll
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_REF.dll
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_BL.pdb
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_DL.pdb
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_REF.pdb
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.TrustInfo.xml
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe.manifest
+C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\Report\rptGRNPrint.rdlc
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.config
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe.manifest
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.application
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.exe
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_GUI.pdb
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_BL.dll
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_DL.dll
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_REF.dll
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_BL.pdb
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_DL.pdb
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\bin\Debug\MRP_REF.pdb
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.csprojResolveAssemblyReference.cache
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.About.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.MaterialSelection.frmMaterialList.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.MaterialSelection.MaterialSelect.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucMaterialCategory.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucMaterials.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucProcessedMaterial.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.usProductInsert.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmChangePassword.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStockAdjustment.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRN_Import.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOMaterialSelection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Edit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_FG.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchCreate.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Packing.frmBatchPacking_DamagedGoods.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPackingMaterialsForecast.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPlanMaterial_Full.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmDepartmentPlanningWeeks.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPackType.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWIP_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOFinalize.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOList.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPODeliveryShedule.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPOSelection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBinCards_BP.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Direct_Semi.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toStore_Semi.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toSection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toSec_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_RPD.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_AnySemi.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_AnyMaterial.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Inventory.MR.frmMRManagePOPUP.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Basic.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_RM.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive_RM.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Herbal_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Ayurveda_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNManagement.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Secondary_Edit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Priamry_Edit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_Packing_Secondary.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmIssueFinishedGoods.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPO.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPlanMaterial.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmProjectMaterials.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmRegisterProject.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_MaterialReq.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmViewRejectedItems.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWIP.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchCost.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegister_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Edit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatch_Rework_Approve.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchQCFail.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlanExclusive.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchFinish_Approve.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchActivity_View.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchCreatePreperation.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmMultipleLabour_PRPD.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchFile.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchActivity.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.frmPRPDBatchList.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.frmPRPDCostingApprove.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.frmViewPRPDBatch.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDPreperationBatchManagement.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.PRPD.PRPDBatchActivityForms.frmAddPRPDActivity.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmPRPDBatchTransfer_Preperation.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStandardBatchManage.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBasicProductRegistration.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStockManagment.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQC.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCDetailView.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReportHistory.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_RPD.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Rework.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCView.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmEmployeeRegistration.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmLogin.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMainScreen.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRNEdit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Rejects_Approval.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Rejects.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive_Rejects.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive_Semi.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRApproval_Batch.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCostingResults_BasicProduct.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Ayurveda.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Optional_Semi.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Optional.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNApproval_FG.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCostingResults_FinishedProduct.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNCosting.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toDep.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toDep_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRAResults.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRNSelection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmSupplierSelection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRNList.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNApproval.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRN_Direct.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBinCards_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toBatch.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch_Partial.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBinCards_Raw.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRReceive_toStore.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Batch.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_Section.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmAddStock.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNManagement.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRApproval.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRIssue.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRManagement.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRT_toStore.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTN.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNApproval.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNote.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceive.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMTNReceiveGRN_Herbal.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRemoveStock.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmTGRN.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMaterialSelection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmSystemMgt.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.MRP_Main.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Primary.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Basic.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer_Secondary.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Packing.frmBatchPackingMR.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Secondary.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchActivity_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList_Transfer.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Priamry.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPacking_Secondary_Instructions.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegistry_View.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegister.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchRegistry.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchInitiate.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchMaterial.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchSendQC.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchFinish.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmFormulaEdit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmMultipleLabour.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWeighingChecking.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchApproving.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchList.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmBatchActivity.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmWeighing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Properties.Resources.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmActivityManagement.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Packing_Secondary.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport_Packing.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmQCReport.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmFormula.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMachineRegistration.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMaterialRegistration.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmFinishedProductRegistration.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmStandardBatch.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Registration.frmSubContractor.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCatTypeUnit.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmCosting.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmUserRoleAssign.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucDivision.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucEmployee.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucEmployeeSelect.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.ucMachine.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucSection.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Components.ucSectionFilter.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmSupplier.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmBatchPackingMRBulk.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmGRNBulkPrint.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmGRNPrint.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRPrint.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmMRBulkPrint.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmRptManufactPackCost.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmRptProductionCost.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRptPRPDBatchCost.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRptRPDBatchCost.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmWIP_manufacturingReport.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Report.frmWIP_Packing_MaterialTablePrint.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPackingMR_RPD.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchActivity_View.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchEditMode.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.RPDBatchActivityForms.frmAddActivity.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Production.frmMultipleLabour_RPD.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchActivity.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDBatchFileView.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmRPDBatchInitialize.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDBatchList.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDBatchManage.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDCostApprove.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.RPD.frmRPDProduction.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.AddDetails.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Approve.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.CompanyDetails.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.ComRegDetails.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.FinanceDetails.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Form1.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmApproveSalesForeCast.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmAssignQuantity.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.frmBatchPlan_admin.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmCustomerRegistration.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmDailySales.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmHigherApproval.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmInvoiceApprove.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmNewOrder.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderApprovalBySales.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderApprovalByStoreManager.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderApproveByFinance.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmOrderSorting.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmPlanPackingMaterial_Full.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmSalesForeCast.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.frmSalesReturn.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.NewCustomer.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.TransactionDetails.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.Update.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.UpdateAddress.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.Sales.UpdateName.resources
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.csproj.GenerateResource.Cache
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\RdlCompile.cache
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\RdlCompile.compiled
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.TrustInfo.xml
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe.manifest
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.application
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.exe
+D:\Work Space\MRP5\MRP\MRP_GUI\MRP_GUI\obj\x86\Debug\MRP_GUI.pdb

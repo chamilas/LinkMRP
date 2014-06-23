@@ -44,6 +44,7 @@ namespace MRP_GUI
         MRBasicProduct_DL objMRBasicProduct_DL = new MRBasicProduct_DL(ConnectionStringClass.GetConnection());
         MRMaterialCollec objMRMaterialCollec = new MRMaterialCollec();
         MRFinishProduct_DL objMRFinishProductDL = new MRFinishProduct_DL(ConnectionStringClass.GetConnection());
+        MRFinishProduct_DL objMRFinishProduct_DL = new MRFinishProduct_DL(ConnectionStringClass.GetConnection());
 
         MRMaterial objMRMaterial = new MRMaterial();
        
@@ -132,7 +133,7 @@ namespace MRP_GUI
 
                     if (objMRTemp.MRType == MR.Type.FinishProduct)
                     {
-                        bindItemList.DataSource = objMRFinishProductDL.GetDataView(objMRTemp.MRNO);
+                        bindItemList.DataSource = objMRFinishProductDL.Get(objMRTemp.MRNO);
                     }
 
                     txtapprovedBy.Text = objMR.MRApprovedBy;
@@ -291,6 +292,12 @@ namespace MRP_GUI
                             {
                                 IssueSemiFinished();
                             }
+
+                            if (objMR.MRType == MR.Type.FinishProduct)
+                            {
+                                IssueFinishFinished();
+                            }
+
                            
                         }
                         else
@@ -313,7 +320,108 @@ namespace MRP_GUI
             }
         }
 
+        private void IssueFinishFinished()
+        {
+            if (cmbStore.Items.Count > 0)
+            {
+                Store objStore = (Store)cmbStore.SelectedItem;
+                if (this.ItemSelect)
+                {
+                    if (objMR.MRType == MR.Type.FinishProduct)
+                    {
+                        bool isZero = false;
+                        bool Transfer = true;
+                        int Stock = 0;
+                        int zerocount = 0;
+                        foreach (DataGridViewRow dr in gvItemList.Rows)
+                        {
+                            MRFinishProduct objMRFinish = new MRFinishProduct();
+                            objMRFinish = (MRFinishProduct)dr.DataBoundItem;
+                            Stock = objMRBasicProduct_DL.Get_FGStockByStore(objStore.StoreID, objMRFinish.FinishProduct.FinishProductCode, objMRFinish.IssuedQty);
+                            if (Stock == 0 && objMRFinish.IssuedQty != 0)
+                            {
+                                MessageBox.Show(this, objMRFinish.FinishProduct.FinishProductCode + " Stock is lower than Issued Quantity,Please enter lower quantity", "Stock is not Enough", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Transfer = false;
+                                break;
+                            }
 
+                            if (objMRFinish.IssuedQty == 0)
+                            {
+                                isZero = true;
+                                zerocount++;
+                            }
+                        }
+                        if (Transfer)
+                        {
+                            DialogResult drRes;
+                            if (zerocount >= gvItemList.Rows.Count)
+                            {
+                                MessageBox.Show(this, "Please enter a Issue Quantity", "Empty Field", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else
+                            {
+
+
+
+                                if (isZero)
+                                {
+                                    drRes = MessageBox.Show(this, "One more items does not have a quantity, Do you want to continue\n\nClick Yes to continue", "Empty Quantities", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                                    if (drRes == DialogResult.Yes)
+                                    {
+                                        foreach (DataGridViewRow dr in gvItemList.Rows)
+                                        {
+                                            MRFinishProduct objMRFinish = new MRFinishProduct();
+                                           
+                                            objMRFinish = (MRFinishProduct)dr.DataBoundItem;
+                                            objMRFinishProduct_DL.Issue(objMRFinish, objStore.StoreID);
+                                        }
+                                        objMR.MRIssuedBy = CurrentUser.UserEmp.EmployeeID;
+                                        objMR.MRStatus = MR.Status.Issued;
+
+                                        int x = objMRDL.Update_Issue(objMR);
+                                        if (x > 0)
+                                        {
+                                            bindItemList.DataSource = null;
+                                            Clear();
+
+                                            if (objStore != null)
+                                            {
+                                                bindMRList.DataSource = objMRDL.GetDataView(objStore.StoreID, MR.Status.Approved);
+
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (DataGridViewRow dr in gvItemList.Rows)
+                                    {
+                                        MRFinishProduct objMRFinish = new MRFinishProduct();
+                                        objMRFinish = (MRFinishProduct)dr.DataBoundItem;
+                                        objMRFinishProduct_DL.Issue(objMRFinish, objStore.StoreID);
+                                    }
+                                    objMR.MRIssuedBy = CurrentUser.UserEmp.EmployeeID;
+                                    objMR.MRStatus = MR.Status.Issued;
+                                    int x = objMRDL.Update_Issue(objMR);
+                                    if (x > 0)
+                                    {
+                                        bindItemList.DataSource = null;
+                                        Clear();
+
+                                        if (objStore != null)
+                                        {
+                                            bindMRList.DataSource = objMRDL.GetDataView(objStore.StoreID, MR.Status.Approved);
+
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
 
         private void IssueSemiFinished()
         {

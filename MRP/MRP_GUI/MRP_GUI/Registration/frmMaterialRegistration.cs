@@ -53,6 +53,9 @@ namespace MRP_GUI
                 gvMaterialList.DataSource = bindMaterials;
                 bindMaterials.ResetBindings(true);
 
+                objsourceMaterialBasic.DataSource = dtMaterials;
+                cmbMaterialBasicMaterial.DataSource = objsourceMaterialBasic;
+
             }
             catch (Exception ex)
             {
@@ -199,7 +202,7 @@ namespace MRP_GUI
                             {
                                 MessageBox.Show(this, "Succesfully Updated the Database", "Succesfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                Load_Materials();
+                                LoadMaterials(Category);
                             }
                         
                     }
@@ -212,6 +215,8 @@ namespace MRP_GUI
                     {
                         MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    LoadMaterials(Category);
                 }
             }
             else
@@ -229,8 +234,8 @@ namespace MRP_GUI
                         objMaterial.IsExport = cbMaterialImport.Checked;
                         objMaterial.IsLocal = cbMaterialLocal.Checked;
                         objMaterial.IsSeasanal = cbMaterialSeasonal.Checked;
+                        objMaterial.MatBasicQty = Convert.ToDecimal(txtMaterialQtyPerUnit.Text);
                         objMaterial.MatBasicMaterial = objMaterial.MaterialCode;
-                        objMaterial.MatBasicQty = 0;
                         objMaterial.MatCost = Convert.ToDecimal(txtAcgUnitCost.Text);
                         objMaterial.MateialType = objMaterialTypeDL.Get(cmbMaterialType.SelectedValue.ToString());
                         objMaterial.MaterialCategory = Category;
@@ -298,6 +303,7 @@ namespace MRP_GUI
                     {
                         MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    LoadMaterials(Category);
                 }
             }
         }
@@ -306,7 +312,7 @@ namespace MRP_GUI
         {
             if (this.MaterialSelect)
             {
-                pnlInter.Visible = false;
+                //pnlInter.Visible = false;
                 pblBasic2.Visible = true;
                // pnlMaterial.Location = new Point(3, 88);
                 //txtMaterialCode.Mask = ">AA/AAA/AA>";
@@ -337,7 +343,7 @@ namespace MRP_GUI
                         if (x > 0)
                         {
                             MessageBox.Show(this, "Succesfully Deleted From Database", "Succesfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Load_Materials();
+                            LoadMaterials(Category);
                         }
                     }
                     catch (SqlException sqlex)
@@ -371,6 +377,8 @@ namespace MRP_GUI
             {
                 if (e.RowIndex >= 0)
                 {
+                   
+
                     cmbFromMonth.SelectedIndex = 0;
                     cmbToMonth.SelectedIndex = 0;
 
@@ -392,6 +400,9 @@ namespace MRP_GUI
                         txtMaterialQtyPerUnit.Text = objSelectedMaterial.MatBasicQty.ToString();
                         txtMaterialBasicPartialSize.Text = objSelectedMaterial.MatParticleSize.ToString();
                         cmbMaterialBasicMaterial.SelectedValue = objSelectedMaterial.MatBasicMaterial;
+                        cmbMaterialBasicMaterial.ValueMember = "MaterialCode";
+                        cmbMaterialBasicMaterial.DisplayMember = "Material";
+                       
 
 
                     }
@@ -410,6 +421,10 @@ namespace MRP_GUI
                         cmbFromMonth.SelectedItem = objSelectedMaterial.MatSeasonFrom;
                         cmbToMonth.SelectedItem = objSelectedMaterial.MatSeasonTo;
                         cmbMainType.SelectedItem = objSelectedMaterial.MaterialMainType;
+                        cmbMaterialBasicMaterial.SelectedValue = objSelectedMaterial.MatBasicMaterial;
+                        cmbMaterialBasicMaterial.ValueMember = "MaterialCode";
+                        cmbMaterialBasicMaterial.DisplayMember = "Material";
+                        txtMaterialQtyPerUnit.Text = objSelectedMaterial.MatBasicQty.ToString();
 
                         if (objSelectedMaterial.MaterialType == "Dry")
                         {
@@ -519,30 +534,29 @@ namespace MRP_GUI
             }
         }
 
-        private void Load_Materials()
-        {
-            try
-            {
-                objsourceMaterialBasic.DataSource= objMaterialDL.GetDataView("Raw");
-                cmbMaterialBasicMaterial.DataSource = objsourceMaterialBasic;
-            }
-            catch (Exception ex)
-            {
+        //private void Load_Materials()
+        //{
+        //    try
+        //    {
+        //        objsourceMaterialBasic.DataSource= objMaterialDL.GetDataView("Raw");
+        //        cmbMaterialBasicMaterial.DataSource = objsourceMaterialBasic;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
         private void cmbMainType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbMainType.SelectedItem.Equals("Basic"))
             {
                 MainType = "Basic";
                 MaterialClear();
-                pnlInter.Visible = false;
+                //pnlInter.Visible = false;
                 pblBasic2.Visible = false;
 
                 IntermediateMaterialSelect = false;
-                Load_Materials();
             }
 
 
@@ -550,11 +564,10 @@ namespace MRP_GUI
             {
                 MainType = "Intermediate";
                 MaterialClear();
-                pnlInter.Visible = true;
+                //pnlInter.Visible = true;
                 pblBasic2.Visible = false;
 
                 IntermediateMaterialSelect = true;
-                Load_Materials();
             }
 
 
@@ -563,12 +576,12 @@ namespace MRP_GUI
             {
                 MainType = "Processed";
                 MaterialClear();
-                pnlInter.Visible = true;
+                //pnlInter.Visible = true;
                 pblBasic2.Visible = false;
                // pnlMaterial.Location = new Point(3, 88);
-                Load_Materials();
                 IntermediateMaterialSelect = false;
             }
+
         }
 
         private void LoadBasicMaterials()
@@ -582,6 +595,7 @@ namespace MRP_GUI
             if (rdbRaw.Checked == true)
             {
                 LoadMaterials("Raw");
+                Category = "Raw";
             }
 
         }
@@ -591,6 +605,7 @@ namespace MRP_GUI
             if (rdbPacking.Checked == true)
             {
                 LoadMaterials("Packing");
+                Category = "Packing";
             }
         }
 
@@ -599,6 +614,7 @@ namespace MRP_GUI
             if (rdbLab.Checked == true)
             {
                 LoadMaterials("Lab");
+                Category = "Lab";
             }
         }
 

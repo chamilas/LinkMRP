@@ -328,7 +328,7 @@ namespace DL
             }
         }
 
-
+        
         public int Get_StockByStore(String StoreID, String BasicProductCode, Decimal IssuedQty)
         {
             try
@@ -356,6 +356,32 @@ namespace DL
 
         }
 
+        public int Get_FGStockByStore(String StoreID, String FinishProductCode, Decimal IssuedQty)
+        {
+            try
+            {
+                SqlParameter[] paramList = new SqlParameter[] {
+                 new SqlParameter("@MRItemCode", FinishProductCode),
+                 new SqlParameter("@MRIssuedQty", IssuedQty),
+                 new SqlParameter("@StoreID", StoreID)
+                
+                
+             };
+
+
+                return Execute.RunSP_Int(Connection, "SPGET_MRFinishProduct_StockByStoreID", paramList);
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+
+        }
 
         public System.Data.DataTable Get_RequestedSemiFinished(string BatchNo, string PartNo)
         {

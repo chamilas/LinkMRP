@@ -175,11 +175,12 @@ namespace DL
                     objMRFinishProduct.Description = Convert.ToString(dt.Rows[i]["MRDescription"]);
                     objMRFinishProduct.MR = objMR_DL.Get(Convert.ToInt64(dt.Rows[i]["MRNO"]));
                     objMRFinishProduct.MRBINNo = Convert.ToString(dt.Rows[i]["MRBINNo"]);
-                    objMRFinishProduct.ReqdQty = Convert.ToDecimal(dt.Rows[i]["MRReqdQty"]);
-                    objMRFinishProduct.IssuedQty = Convert.ToDecimal(dt.Rows[i]["MRIssuedQty"]);
-                    //objMRFinishProduct.UniRate = Convert.ToDecimal(dr.MRUnitRate);
+                    objMRFinishProduct.ReqdQty = Convert.ToDecimal(dt.Rows[i]["ReqdQty"]);
+                    objMRFinishProduct.IssuedQty = Convert.ToDecimal(dt.Rows[i]["IssuedQty"]);
+                    objMRFinishProduct.UnitCode = "Nos";
 
-                    if (dt.Rows[i]["MRUnitRate"] != null)
+
+                    if (dt.Rows[i]["MRUnitRate"] != DBNull.Value)
                     {
                         objMRFinishProduct.UniRate = Convert.ToDecimal(dt.Rows[i]["MRUnitRate"]);
                     }
@@ -249,6 +250,30 @@ namespace DL
             }
 
         }
+        
+
+              public System.Data.DataTable GetData_View(long MRNO)
+        {
+            try
+            {
+                SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@MRNO", MRNO)
+                
+             };
+                DataTable dt = Execute.RunSP_DataTable(Connection, "SPGET_MRFinishProducts_By_MRNO", paramList);
+
+
+                return dt;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message, ex);
+            }
+
+        }
 
 
         public System.Data.DataTable GetDataView(long MRNO)
@@ -281,7 +306,7 @@ namespace DL
             {
                 SqlParameter[] paramList = new SqlParameter[] {
                  new SqlParameter("@MRNO", obj.MR.MRNO),
-                new SqlParameter("@MRItemCode", obj.ItemCode),
+                new SqlParameter("@MRItemCode", obj.FinishProduct.FinishProductCode),
                  new SqlParameter("@StoreID", StoreID),
                 new SqlParameter("@MRIssuedQty", obj.IssuedQty)
                 

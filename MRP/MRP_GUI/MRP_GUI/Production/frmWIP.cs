@@ -129,7 +129,7 @@ namespace MRP_GUI
         {
             if (dgvWIP.CurrentRow != null)
             {
-                txtFinalQty.Text = dgvWIP.CurrentRow.Cells["FinalQty"].Value.ToString();
+              //  txtFinalQty.Text = dgvWIP.CurrentRow.Cells["FinalQty"].Value.ToString();
             }
         }
 

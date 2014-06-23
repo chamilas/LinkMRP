@@ -54,7 +54,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindMaterialList = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.gvMTNList = new System.Windows.Forms.DataGridView();
             this.bindMtnList = new System.Windows.Forms.BindingSource(this.components);
@@ -175,6 +174,7 @@
             this.cmbDepartment.Size = new System.Drawing.Size(270, 21);
             this.cmbDepartment.TabIndex = 3;
             this.cmbDepartment.ValueMember = "Department";
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -187,15 +187,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gvItemList);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(12, 227);
+            this.groupBox2.Location = new System.Drawing.Point(12, 331);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(906, 276);
+            this.groupBox2.Size = new System.Drawing.Size(906, 172);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Details";
@@ -229,7 +227,7 @@
             this.gvItemList.ReadOnly = true;
             this.gvItemList.RowHeadersVisible = false;
             this.gvItemList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvItemList.Size = new System.Drawing.Size(891, 222);
+            this.gvItemList.Size = new System.Drawing.Size(891, 147);
             this.gvItemList.TabIndex = 15;
             // 
             // Column7
@@ -260,16 +258,6 @@
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(825, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -285,7 +273,8 @@
             this.gvMTNList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gvMTNList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.gvMTNList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gvMTNList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gvMTNList.AutoGenerateColumns = false;
             this.gvMTNList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -320,7 +309,7 @@
             this.gvMTNList.ReadOnly = true;
             this.gvMTNList.RowHeadersVisible = false;
             this.gvMTNList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvMTNList.Size = new System.Drawing.Size(906, 126);
+            this.gvMTNList.Size = new System.Drawing.Size(906, 230);
             this.gvMTNList.TabIndex = 0;
             this.gvMTNList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvMTNList_CellClick_1);
             // 
@@ -335,7 +324,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "MTNToDepID";
+            this.Column3.DataPropertyName = "DepNameTo";
             this.Column3.HeaderText = "To";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -365,6 +354,7 @@
             this.Column2.HeaderText = "TGRN No";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
             // 
             // MTNReceivedByName
             // 
@@ -421,6 +411,7 @@
             this.Column12.HeaderText = "Mat Rework";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            this.Column12.Visible = false;
             // 
             // GRNNO
             // 
@@ -497,7 +488,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView gvItemList;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView gvMTNList;
         private System.Windows.Forms.BindingSource bindMtnList;

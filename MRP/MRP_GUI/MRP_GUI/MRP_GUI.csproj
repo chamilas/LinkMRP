@@ -58,10 +58,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>EB2F7D86C188CACEC513BA6946C8D09CC59FA9F8</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9B0E49986C45ABE873ED745FE4757891AD56916E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MRP_GUI_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MRP_GUI_3_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -2172,6 +2172,8 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="MRP_GUI_1_TemporaryKey.pfx" />
+    <None Include="MRP_GUI_2_TemporaryKey.pfx" />
+    <None Include="MRP_GUI_3_TemporaryKey.pfx" />
     <None Include="MRP_GUI_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

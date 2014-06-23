@@ -310,7 +310,7 @@ namespace MRP_GUI
                         frmBatchActivity_Packing objForm = new frmBatchActivity_Packing(objBatchActivity);
                         objForm.ShowDialog(this);
 
-                        objBatch_DL.Update_BatchSeconderyPackingCost(objBatchActivity.BatchActID);
+                        //objBatch_DL.Update_BatchSeconderyPackingCost(objBatchActivity.BatchActID);
                     }
                     else
                     {

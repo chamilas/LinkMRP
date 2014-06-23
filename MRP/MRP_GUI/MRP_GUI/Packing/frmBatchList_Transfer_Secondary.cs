@@ -216,6 +216,7 @@ namespace MRP_GUI
 
                   objBatch_DL.Update_Packed(dgvActivity.CurrentRow.Cells["BatchID"].Value.ToString(), (int)Batch.Status.Packed, (int)BatchActivity.Status.Transferred, (int)MTN.Status.Reject);
                   //objBatch_DL.Update_BatchPackingCost(objBatchActivity.BatchActID);
+                  objBatch_DL.Update_BatchSeconderyPackingCost(objBatchActivity.BatchActID);
                   Load_Activity();
               }
               else

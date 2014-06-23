@@ -135,7 +135,7 @@ namespace MRP_GUI.Packing
 
         private void btnFinalize_Click(object sender, EventArgs e)
         {
-            if (DataValidation.IsNumericNumber(txtDamagedQty.Text) && DataValidation.IsNumericNumber(txtBatchUsed.Text))
+            if (DataValidation.Is3DecimalPointNumber(txtDamagedQty.Text) && DataValidation.Is3DecimalPointNumber(txtBatchUsed.Text))
             {
                 try
                 {
@@ -183,7 +183,7 @@ namespace MRP_GUI.Packing
                     txtDamagedQty.Text = "";
 
                     txtBatchUsed.Select();
-
+                    loadSectionData();
 
 
                 }
@@ -234,7 +234,22 @@ namespace MRP_GUI.Packing
             }
         }
 
+        private void loadSectionData() 
+        {
+            DataTable dtStock = new DataTable();
 
+
+            dtStock = objBatchPackingMR_DL.GetStock(ProductCode, cmbMaterial.SelectedValue.ToString());
+
+            if (dtStock.Rows.Count > 0)
+            {
+                txtSectionStock.Text = dtStock.Rows[0]["StockQty"].ToString();
+            }
+            else
+            {
+                txtSectionStock.Text = "0";
+            }
+        }
 
     }
 }

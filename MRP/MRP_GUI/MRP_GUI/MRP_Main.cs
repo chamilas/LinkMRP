@@ -551,6 +551,9 @@ namespace MRP_GUI
         {
             if (!IsLogOff)
             {
+                CurrentUser.Online = true;
+                objUser_DL.Update_OnlineState(CurrentUser);
+
                 Application.Exit();
             }
             
@@ -2994,8 +2997,7 @@ namespace MRP_GUI
 
         private void forecastToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser,"AP");
-            ShowForm(frm);
+           
         }
 
         private void createProjectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3020,8 +3022,7 @@ namespace MRP_GUI
 
         private void forecastApproveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmApproveSalesForeCast frm = new frmApproveSalesForeCast(CurrentUser, "AP");
-            ShowForm(frm);
+            
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3190,6 +3191,30 @@ namespace MRP_GUI
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Update frm = new Update();
+            ShowForm(frm);
+        }
+
+        private void ayurvedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser, "AP");
+            ShowForm(frm);
+        }
+
+        private void healthCareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalesForeCast frm = new frmSalesForeCast(CurrentUser, "HP");
+            ShowForm(frm);
+        }
+
+        private void healthCareToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmApproveSalesForeCast frm = new frmApproveSalesForeCast(CurrentUser, "HP");
+            ShowForm(frm);
+        }
+
+        private void ayurvedaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmApproveSalesForeCast frm = new frmApproveSalesForeCast(CurrentUser, "AP");
             ShowForm(frm);
         }
 

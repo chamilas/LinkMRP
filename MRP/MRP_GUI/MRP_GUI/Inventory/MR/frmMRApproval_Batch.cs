@@ -147,7 +147,7 @@ namespace MRP_GUI
 
                     if (objMRTemp.MRType == MR.Type.FinishProduct)
                     {
-                        bindItemList.DataSource = objMRFinishProductDL.GetDataView(objMRTemp.MRNO);
+                        bindItemList.DataSource = objMRFinishProductDL.GetData_View(objMRTemp.MRNO);
                     }
                     
                     
