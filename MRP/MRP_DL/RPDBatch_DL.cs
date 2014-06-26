@@ -843,6 +843,26 @@ public int Update_Cost(String RPDBatchID,string GeneratedBy)
      }
  }
 
+ public DataTable GetWIP_RPD(DateTime WIPDate)
+ {
+     try
+     {
+
+
+         SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@WIPDate", WIPDate)};
+
+         return Execute.RunSP_DataTable(Connection, "SPGET_WIP_RPD", paramList);
+
+     }
+     catch (Exception ex)
+     {
+
+         throw new Exception(ex.Message, ex);
+     }
+ }
+
 
     }
 }

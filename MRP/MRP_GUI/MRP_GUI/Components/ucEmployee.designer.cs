@@ -31,10 +31,10 @@ namespace MRP_GUI
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.ucSectionFilter1 = new MRP_GUI.Components.ucSectionFilter();
             this.txtOTRate = new System.Windows.Forms.TextBox();
@@ -53,6 +53,15 @@ namespace MRP_GUI
             this.label53 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.gvEmployee = new System.Windows.Forms.DataGridView();
+            this.ColEmpID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmpRoleTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRatePerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColOTRatePerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmpRoleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEmpStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindEmployee = new System.Windows.Forms.BindingSource(this.components);
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -64,15 +73,6 @@ namespace MRP_GUI
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmpID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmpRoleTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRatePerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColOTRatePerHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmpRoleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEmpStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindEmployee)).BeginInit();
@@ -120,6 +120,7 @@ namespace MRP_GUI
             // 
             // txtOTRate
             // 
+            this.txtOTRate.Enabled = false;
             this.txtOTRate.Location = new System.Drawing.Point(118, 144);
             this.txtOTRate.Name = "txtOTRate";
             this.txtOTRate.Size = new System.Drawing.Size(143, 20);
@@ -138,6 +139,7 @@ namespace MRP_GUI
             // 
             // txtRate
             // 
+            this.txtRate.Enabled = false;
             this.txtRate.Location = new System.Drawing.Point(118, 122);
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(143, 20);
@@ -298,6 +300,80 @@ namespace MRP_GUI
             this.gvEmployee.TabIndex = 4;
             this.gvEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvEmployee_CellClick);
             // 
+            // ColEmpID
+            // 
+            this.ColEmpID.DataPropertyName = "EmpID";
+            this.ColEmpID.HeaderText = "Employee ID";
+            this.ColEmpID.Name = "ColEmpID";
+            this.ColEmpID.ReadOnly = true;
+            this.ColEmpID.Width = 150;
+            // 
+            // ColEmpName
+            // 
+            this.ColEmpName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColEmpName.DataPropertyName = "EmpName";
+            this.ColEmpName.HeaderText = "Name";
+            this.ColEmpName.Name = "ColEmpName";
+            this.ColEmpName.ReadOnly = true;
+            // 
+            // ColEmpRoleTitle
+            // 
+            this.ColEmpRoleTitle.DataPropertyName = "EmpRoleTitle";
+            this.ColEmpRoleTitle.HeaderText = "Role";
+            this.ColEmpRoleTitle.Name = "ColEmpRoleTitle";
+            this.ColEmpRoleTitle.ReadOnly = true;
+            this.ColEmpRoleTitle.Width = 125;
+            // 
+            // ColRatePerHour
+            // 
+            this.ColRatePerHour.DataPropertyName = "RatePerHour";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColRatePerHour.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ColRatePerHour.HeaderText = "Hourly Rate";
+            this.ColRatePerHour.Name = "ColRatePerHour";
+            this.ColRatePerHour.ReadOnly = true;
+            // 
+            // ColOTRatePerHour
+            // 
+            this.ColOTRatePerHour.DataPropertyName = "OTRatePerHour";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColOTRatePerHour.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ColOTRatePerHour.HeaderText = "OT Rate";
+            this.ColOTRatePerHour.Name = "ColOTRatePerHour";
+            this.ColOTRatePerHour.ReadOnly = true;
+            // 
+            // ColEmp
+            // 
+            this.ColEmp.DataPropertyName = "Emp";
+            this.ColEmp.HeaderText = "Employee";
+            this.ColEmp.Name = "ColEmp";
+            this.ColEmp.ReadOnly = true;
+            this.ColEmp.Visible = false;
+            // 
+            // ColEmpRoleID
+            // 
+            this.ColEmpRoleID.DataPropertyName = "EmpRoleID";
+            this.ColEmpRoleID.HeaderText = "RoleID";
+            this.ColEmpRoleID.Name = "ColEmpRoleID";
+            this.ColEmpRoleID.ReadOnly = true;
+            this.ColEmpRoleID.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "SectionID";
+            this.Column1.HeaderText = "Section";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // ColEmpStatus
+            // 
+            this.ColEmpStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColEmpStatus.DataPropertyName = "EmpStatus";
+            this.ColEmpStatus.HeaderText = "Status";
+            this.ColEmpStatus.Name = "ColEmpStatus";
+            this.ColEmpStatus.ReadOnly = true;
+            this.ColEmpStatus.Width = 43;
+            // 
             // txtEmployeeID
             // 
             this.txtEmployeeID.Location = new System.Drawing.Point(118, 78);
@@ -378,80 +454,6 @@ namespace MRP_GUI
             this.dataGridViewTextBoxColumn8.HeaderText = "Section";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // ColEmpID
-            // 
-            this.ColEmpID.DataPropertyName = "EmpID";
-            this.ColEmpID.HeaderText = "Employee ID";
-            this.ColEmpID.Name = "ColEmpID";
-            this.ColEmpID.ReadOnly = true;
-            this.ColEmpID.Width = 150;
-            // 
-            // ColEmpName
-            // 
-            this.ColEmpName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColEmpName.DataPropertyName = "EmpName";
-            this.ColEmpName.HeaderText = "Name";
-            this.ColEmpName.Name = "ColEmpName";
-            this.ColEmpName.ReadOnly = true;
-            // 
-            // ColEmpRoleTitle
-            // 
-            this.ColEmpRoleTitle.DataPropertyName = "EmpRoleTitle";
-            this.ColEmpRoleTitle.HeaderText = "Role";
-            this.ColEmpRoleTitle.Name = "ColEmpRoleTitle";
-            this.ColEmpRoleTitle.ReadOnly = true;
-            this.ColEmpRoleTitle.Width = 125;
-            // 
-            // ColRatePerHour
-            // 
-            this.ColRatePerHour.DataPropertyName = "RatePerHour";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColRatePerHour.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ColRatePerHour.HeaderText = "Hourly Rate";
-            this.ColRatePerHour.Name = "ColRatePerHour";
-            this.ColRatePerHour.ReadOnly = true;
-            // 
-            // ColOTRatePerHour
-            // 
-            this.ColOTRatePerHour.DataPropertyName = "OTRatePerHour";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColOTRatePerHour.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColOTRatePerHour.HeaderText = "OT Rate";
-            this.ColOTRatePerHour.Name = "ColOTRatePerHour";
-            this.ColOTRatePerHour.ReadOnly = true;
-            // 
-            // ColEmp
-            // 
-            this.ColEmp.DataPropertyName = "Emp";
-            this.ColEmp.HeaderText = "Employee";
-            this.ColEmp.Name = "ColEmp";
-            this.ColEmp.ReadOnly = true;
-            this.ColEmp.Visible = false;
-            // 
-            // ColEmpRoleID
-            // 
-            this.ColEmpRoleID.DataPropertyName = "EmpRoleID";
-            this.ColEmpRoleID.HeaderText = "RoleID";
-            this.ColEmpRoleID.Name = "ColEmpRoleID";
-            this.ColEmpRoleID.ReadOnly = true;
-            this.ColEmpRoleID.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "SectionID";
-            this.Column1.HeaderText = "Section";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // ColEmpStatus
-            // 
-            this.ColEmpStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ColEmpStatus.DataPropertyName = "EmpStatus";
-            this.ColEmpStatus.HeaderText = "Status";
-            this.ColEmpStatus.Name = "ColEmpStatus";
-            this.ColEmpStatus.ReadOnly = true;
-            this.ColEmpStatus.Width = 43;
             // 
             // ucEmployee
             // 

@@ -50,7 +50,7 @@ namespace DL
                 DataTable dt= Execute.RunSP_DataTable(Connection, "SPGET_StockHoldingRate_Final");
 
 
-                obj.ChangedBy = Convert.ToString(dt.Rows[0]["ChangeBy"]);
+                obj.ChangedBy = Convert.ToString(dt.Rows[0]["ChangedBy"]);
                 obj.Cost = Convert.ToDecimal(dt.Rows[0]["Rate"]);
                 obj.FromDate = Convert.ToDateTime(dt.Rows[0]["FromDate"]);
                 obj.ID = Convert.ToDecimal(dt.Rows[0]["ID"]);

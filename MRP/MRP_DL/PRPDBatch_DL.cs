@@ -910,5 +910,25 @@ namespace DL
            }
        }
 
+       public DataTable GetWIP_PRPD(DateTime WIPDate)
+       {
+           try
+           {
+
+
+               SqlParameter[] paramList = new SqlParameter[] {
+                
+                new SqlParameter("@WIPDate", WIPDate)};
+
+               return Execute.RunSP_DataTable(Connection, "SPGET_WIP_PRPD", paramList);
+
+           }
+           catch (Exception ex)
+           {
+
+               throw new Exception(ex.Message, ex);
+           }
+       }
+
     }
 }

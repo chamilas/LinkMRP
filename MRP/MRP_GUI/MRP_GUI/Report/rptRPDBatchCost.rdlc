@@ -11,7 +11,7 @@
               <TextRun>
                 <Value>Batch Costing Sheet - RPD</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -34,21 +34,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Image Name="imgLogo">
-        <Source>Embedded</Source>
-        <Value>logo</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>0.33209in</Top>
-        <Left>6.24043in</Left>
-        <Height>0.36458in</Height>
-        <Width>0.6875in</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
       <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -66,11 +51,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.82167in</Top>
+        <Top>1.07167in</Top>
         <Left>0.76958in</Left>
         <Height>0.25in</Height>
-        <Width>1.07292in</Width>
-        <ZIndex>2</ZIndex>
+        <Width>1.14236in</Width>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -100,11 +85,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Material</rd:DefaultName>
-        <Top>0.80083in</Top>
+        <Top>1.05083in</Top>
         <Left>1.9675in</Left>
         <Height>0.25in</Height>
         <Width>4.96043in</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -122,7 +107,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Batch No :</Value>
+                <Value>Batch No          :</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -132,11 +117,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.08556in</Top>
+        <Top>1.33556in</Top>
         <Left>0.76958in</Left>
         <Height>0.25in</Height>
-        <Width>1.07292in</Width>
-        <ZIndex>4</ZIndex>
+        <Width>1.14931in</Width>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -154,7 +139,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Batch Size:</Value>
+                <Value>Batch Size       : </Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -164,11 +149,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>1.405in</Top>
+        <Top>1.66493in</Top>
         <Left>0.76958in</Left>
         <Height>0.25in</Height>
-        <Width>1.07292in</Width>
-        <ZIndex>5</ZIndex>
+        <Width>1.1389in</Width>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -198,11 +183,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>BatchSize</rd:DefaultName>
-        <Top>1.36333in</Top>
+        <Top>1.61333in</Top>
         <Left>1.97792in</Left>
         <Height>0.25in</Height>
         <Width>0.94791in</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -232,11 +217,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>RPDBatchID</rd:DefaultName>
-        <Top>1.0925in</Top>
+        <Top>1.3425in</Top>
         <Left>1.98833in</Left>
         <Height>0.25in</Height>
         <Width>1.94792in</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -251,19 +236,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.88335in</Width>
+              <Width>2.89585in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.84372in</Width>
+              <Width>0.85622in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.37086in</Width>
+              <Width>0.38336in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.83228in</Width>
+              <Width>0.84478in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.2177in</Width>
+              <Width>1.2302in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -281,11 +266,14 @@
                             <TextRun>
                               <Value>Material</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -294,6 +282,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -313,11 +302,14 @@
                             <TextRun>
                               <Value>Issued Qty</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -326,6 +318,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -345,11 +338,14 @@
                             <TextRun>
                               <Value>Unit</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -358,6 +354,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -377,11 +374,14 @@
                             <TextRun>
                               <Value>Unit Rate</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox6</rd:DefaultName>
@@ -390,6 +390,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -409,11 +410,14 @@
                             <TextRun>
                               <Value>Total Value</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -422,6 +426,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -445,10 +450,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Material.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Material1</rd:DefaultName>
@@ -475,10 +484,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!IssuedQty.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>IssuedQty</rd:DefaultName>
@@ -505,10 +518,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Unit.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Unit</rd:DefaultName>
@@ -535,10 +552,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!UnitRate.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>UnitRate</rd:DefaultName>
@@ -565,10 +586,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TotalValue.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>TotalValue</rd:DefaultName>
@@ -610,13 +635,13 @@
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchMaterialCost</DataSetName>
         <Top>7.19042in</Top>
-        <Left>0.78001in</Left>
+        <Left>0.7175in</Left>
         <Height>0.5in</Height>
-        <Width>6.14791in</Width>
-        <ZIndex>8</ZIndex>
+        <Width>6.21042in</Width>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -629,6 +654,7 @@
               <TextRun>
                 <Value>W4- OverHead Cost</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -638,10 +664,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>10.25569in</Top>
-        <Left>0.73834in</Left>
+        <Left>0.74876in</Left>
         <Height>0.25in</Height>
         <Width>1.73958in</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -661,6 +687,7 @@
               <TextRun>
                 <Value>W3- Fuel Cost</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -670,10 +697,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>9.17709in</Top>
-        <Left>0.73835in</Left>
+        <Left>0.74877in</Left>
         <Height>0.25in</Height>
         <Width>1.73958in</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -688,13 +715,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.8229in</Width>
+              <Width>3.82985in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.14897in</Width>
+              <Width>1.15592in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.2177in</Width>
+              <Width>1.22465in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -716,7 +743,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -725,6 +754,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -748,7 +778,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox19</rd:DefaultName>
@@ -757,6 +789,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -780,7 +813,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox21</rd:DefaultName>
@@ -789,6 +824,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -812,10 +848,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Machine.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Machine</rd:DefaultName>
@@ -842,10 +882,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!MachineHours.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>MachineHours</rd:DefaultName>
@@ -872,10 +916,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!MachineCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>MachineCost</rd:DefaultName>
@@ -915,13 +963,13 @@
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchMachineCost</DataSetName>
         <Top>9.47792in</Top>
-        <Left>0.73835in</Left>
+        <Left>0.7175in</Left>
         <Height>0.5in</Height>
-        <Width>6.18957in</Width>
-        <ZIndex>11</ZIndex>
+        <Width>6.21042in</Width>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -929,13 +977,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.73396in</Width>
+              <Width>3.73742in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.08976in</Width>
+              <Width>1.09322in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.37631in</Width>
+              <Width>1.37977in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -957,7 +1005,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox24</rd:DefaultName>
@@ -966,6 +1016,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -989,7 +1040,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox49</rd:DefaultName>
@@ -998,6 +1051,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1021,7 +1075,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox26</rd:DefaultName>
@@ -1030,6 +1086,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1053,10 +1110,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Section.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Section</rd:DefaultName>
@@ -1083,10 +1144,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!SectionHours.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>SectionHours</rd:DefaultName>
@@ -1113,10 +1178,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!OHCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>OHCost</rd:DefaultName>
@@ -1156,13 +1225,13 @@
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchOHCost</DataSetName>
         <Top>10.54389in</Top>
-        <Left>0.73834in</Left>
+        <Left>0.7175in</Left>
         <Height>0.5in</Height>
-        <Width>6.20003in</Width>
-        <ZIndex>12</ZIndex>
+        <Width>6.21042in</Width>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -1175,6 +1244,7 @@
               <TextRun>
                 <Value>W1- Material Cost</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1184,10 +1254,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>6.81542in</Top>
-        <Left>0.78001in</Left>
+        <Left>0.73001in</Left>
         <Height>0.25in</Height>
         <Width>1.73958in</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1202,13 +1272,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.84648in</Width>
+              <Width>3.86578in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.16709in</Width>
+              <Width>1.18639in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.13895in</Width>
+              <Width>1.15825in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1226,11 +1296,14 @@
                             <TextRun>
                               <Value>Employee</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -1239,6 +1312,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1258,11 +1332,14 @@
                             <TextRun>
                               <Value>Labour Hours</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox12</rd:DefaultName>
@@ -1271,6 +1348,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1290,11 +1368,14 @@
                             <TextRun>
                               <Value>Labour Cost</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox14</rd:DefaultName>
@@ -1303,6 +1384,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1326,10 +1408,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Employee.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Employee</rd:DefaultName>
@@ -1356,10 +1442,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!LabourHours.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>LabourHours</rd:DefaultName>
@@ -1386,10 +1476,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!LabourCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>LabourCost</rd:DefaultName>
@@ -1429,13 +1523,13 @@
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchLabourCost</DataSetName>
         <Top>8.18688in</Top>
-        <Left>0.78585in</Left>
+        <Left>0.7175in</Left>
         <Height>0.5in</Height>
-        <Width>6.15252in</Width>
-        <ZIndex>14</ZIndex>
+        <Width>6.21042in</Width>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -1448,6 +1542,7 @@
               <TextRun>
                 <Value>W2- Labour Consumption</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1457,10 +1552,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>7.78187in</Top>
-        <Left>0.78585in</Left>
+        <Left>0.72335in</Left>
         <Height>0.25in</Height>
         <Width>1.73958in</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1490,11 +1585,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Unit1</rd:DefaultName>
-        <Top>1.37028in</Top>
+        <Top>1.62028in</Top>
         <Left>2.9675in</Left>
         <Height>0.25in</Height>
         <Width>0.61459in</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1509,13 +1604,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.18264in</Width>
+              <Width>1.56064in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.18264in</Width>
+              <Width>1.56064in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.18264in</Width>
+              <Width>1.56064in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1546,6 +1641,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1578,6 +1674,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1595,7 +1692,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Yield</Value>
+                              <Value>Yield (%)</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -1610,6 +1707,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1737,14 +1835,15 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchCostSummary</DataSetName>
-        <Top>1.79042in</Top>
-        <Left>1.98833in</Left>
+        <Top>2.07792in</Top>
+        <Left>2.24599in</Left>
         <Height>0.5in</Height>
-        <Width>3.54792in</Width>
-        <ZIndex>17</ZIndex>
+        <Width>4.68193in</Width>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
           </Border>
         </Style>
       </Tablix>
@@ -1752,10 +1851,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.78125in</Width>
+              <Width>2.33056in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.80207in</Width>
+              <Width>2.35138in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1772,11 +1871,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!MaterialCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1804,11 +1905,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!MaterialCostPer1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1841,11 +1944,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!LabourCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1873,11 +1978,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!LabourCostPer1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1910,11 +2017,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!FuelCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1942,11 +2051,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!FuelCostPer1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1979,11 +2090,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!PackingMaterialCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2011,11 +2124,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!PackingMaterialCostPer1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2048,11 +2163,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!VariableCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2080,11 +2197,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!VariableCostPer1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2117,11 +2236,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!OverHeadCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2149,11 +2270,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!OverHeadCostPer1.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2186,11 +2309,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TotalCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2218,11 +2343,13 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!UnitCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -2266,12 +2393,13 @@
                               <TextRun>
                                 <Value>Batch Cost (Rs.)</Value>
                                 <Style>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
                             </TextRuns>
                             <Style>
-                              <TextAlign>Left</TextAlign>
+                              <TextAlign>Center</TextAlign>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
@@ -2281,6 +2409,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
+                          <BackgroundColor>LightGrey</BackgroundColor>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -2306,12 +2435,13 @@
                               <TextRun>
                                 <Value>Per Unit (Rs.)</Value>
                                 <Style>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
                             </TextRuns>
                             <Style>
-                              <TextAlign>Left</TextAlign>
+                              <TextAlign>Center</TextAlign>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
@@ -2321,6 +2451,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
+                          <BackgroundColor>LightGrey</BackgroundColor>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -2349,14 +2480,14 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchCostSummary</DataSetName>
-        <Top>3.26959in</Top>
-        <Left>2.66542in</Left>
+        <Top>3.58in</Top>
+        <Left>2.24599in</Left>
         <Height>2.08336in</Height>
-        <Width>3.58332in</Width>
-        <ZIndex>18</ZIndex>
+        <Width>4.68193in</Width>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -2369,6 +2500,7 @@
               <TextRun>
                 <Value>Material Cost (W-10)</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2377,11 +2509,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>3.54042in</Top>
-        <Left>0.905in</Left>
+        <Top>3.86542in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>19</ZIndex>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2401,6 +2533,7 @@
               <TextRun>
                 <Value>Labour Cost (W-2)</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2409,11 +2542,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>3.83209in</Top>
-        <Left>0.905in</Left>
+        <Top>4.15709in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>20</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2433,6 +2566,7 @@
               <TextRun>
                 <Value>Fuel Cost (W-3)</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2441,11 +2575,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>4.08209in</Top>
-        <Left>0.905in</Left>
+        <Top>4.40709in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>21</ZIndex>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2463,8 +2597,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Pack. Material Cost:</Value>
+                <Value>Pack. Material Cost</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2473,11 +2608,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>4.33209in</Top>
-        <Left>0.905in</Left>
+        <Top>4.65709in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2495,8 +2630,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>VC:</Value>
+                <Value>V.C</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2505,11 +2641,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>4.60986in</Top>
-        <Left>0.905in</Left>
+        <Top>4.93486in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2529,6 +2665,7 @@
               <TextRun>
                 <Value>Overhead Cost (W-4)</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2537,11 +2674,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>4.87375in</Top>
-        <Left>0.905in</Left>
+        <Top>5.19875in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>24</ZIndex>
+        <ZIndex>23</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2561,6 +2698,7 @@
               <TextRun>
                 <Value>Total Cost:</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -2569,11 +2707,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>5.10292in</Top>
-        <Left>0.905in</Left>
+        <Top>5.42792in</Top>
+        <Left>0.7175in</Left>
         <Height>0.25in</Height>
         <Width>1.44803in</Width>
-        <ZIndex>25</ZIndex>
+        <ZIndex>24</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2588,13 +2726,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.36588in</Width>
+              <Width>3.27305in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.14443in</Width>
+              <Width>1.0516in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.45012in</Width>
+              <Width>0.35729in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2611,7 +2749,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Material</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2623,6 +2763,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2641,7 +2782,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Quantity</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2653,6 +2796,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2671,7 +2815,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Unit</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2683,6 +2829,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2808,14 +2955,14 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchActualProduction</DataSetName>
-        <Top>2.47444in</Top>
-        <Left>1.9675in</Left>
+        <Top>2.72444in</Top>
+        <Left>2.24599in</Left>
         <Height>0.5in</Height>
-        <Width>4.96043in</Width>
-        <ZIndex>26</ZIndex>
+        <Width>4.68194in</Width>
+        <ZIndex>25</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -2827,18 +2974,20 @@
             <TextRuns>
               <TextRun>
                 <Value>Remarks</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox149</rd:DefaultName>
-        <Top>11.57639in</Top>
-        <Left>0.73843in</Left>
+        <Top>11.70139in</Top>
+        <Left>0.74885in</Left>
         <Height>0.25in</Height>
         <Width>1.46875in</Width>
-        <ZIndex>27</ZIndex>
+        <ZIndex>26</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2857,7 +3006,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Prepared By :</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2865,10 +3016,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox149</rd:DefaultName>
         <Top>12.31597in</Top>
-        <Left>0.75928in</Left>
+        <Left>0.7697in</Left>
         <Height>0.25in</Height>
         <Width>1.46875in</Width>
-        <ZIndex>28</ZIndex>
+        <ZIndex>27</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2887,7 +3038,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Date             :</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2895,10 +3048,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox151</rd:DefaultName>
         <Top>12.63541in</Top>
-        <Left>0.75928in</Left>
+        <Left>0.7697in</Left>
         <Height>0.25in</Height>
         <Width>1.46874in</Width>
-        <ZIndex>29</ZIndex>
+        <ZIndex>28</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2917,7 +3070,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Checked By  :</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2925,10 +3080,10 @@
         </Paragraphs>
         <rd:DefaultName>Textbox152</rd:DefaultName>
         <Top>12.95485in</Top>
-        <Left>0.75928in</Left>
+        <Left>0.7697in</Left>
         <Height>0.25in</Height>
         <Width>1.46875in</Width>
-        <ZIndex>30</ZIndex>
+        <ZIndex>29</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2944,7 +3099,7 @@
         <Left>2.34258in</Left>
         <Height>0in</Height>
         <Width>4.30317in</Width>
-        <ZIndex>31</ZIndex>
+        <ZIndex>30</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2953,10 +3108,10 @@
       </Line>
       <Line Name="Line2">
         <Top>12.07639in</Top>
-        <Left>0.75927in</Left>
+        <Left>2.34257in</Left>
         <Height>0in</Height>
-        <Width>5.89691in</Width>
-        <ZIndex>32</ZIndex>
+        <Width>4.31361in</Width>
+        <ZIndex>31</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2968,7 +3123,7 @@
         <Left>2.34257in</Left>
         <Height>0in</Height>
         <Width>4.30317in</Width>
-        <ZIndex>33</ZIndex>
+        <ZIndex>32</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2980,7 +3135,7 @@
         <Left>2.34258in</Left>
         <Height>0in</Height>
         <Width>4.30317in</Width>
-        <ZIndex>34</ZIndex>
+        <ZIndex>33</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2992,57 +3147,39 @@
         <Left>2.34258in</Left>
         <Height>0in</Height>
         <Width>4.30317in</Width>
-        <ZIndex>35</ZIndex>
+        <ZIndex>34</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
           </Border>
         </Style>
       </Line>
-      <Textbox Name="Textbox33">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>%</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>5.17525cm</Top>
-        <Left>14.16616cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.6893cm</Width>
-        <ZIndex>36</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Tablix Name="Tablix7">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.78379cm</Width>
+              <Width>3.39218cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.58886cm</Width>
+              <Width>1.7057cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.52741cm</Width>
+              <Width>1.62241cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.67304cm</Width>
+              <Width>1.7987cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.98502cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.05372cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.94031cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.27646cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -3060,11 +3197,14 @@
                             <TextRun>
                               <Value>RPDBatch ID</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -3073,6 +3213,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3092,11 +3233,14 @@
                             <TextRun>
                               <Value>Output</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox37</rd:DefaultName>
@@ -3105,6 +3249,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3124,11 +3269,14 @@
                             <TextRun>
                               <Value>Unit Cost</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox41</rd:DefaultName>
@@ -3137,6 +3285,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3154,13 +3303,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Yield</Value>
+                              <Value>Yield (%)</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox44</rd:DefaultName>
@@ -3169,6 +3321,151 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox57">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Material Per</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox57</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox59">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Machine Per</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox59</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox61">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Labour Per</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox61</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox63">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>OHPer</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox63</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3192,10 +3489,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!RPDBatchID.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>RPDBatchID1</rd:DefaultName>
@@ -3222,10 +3523,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Output.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Output1</rd:DefaultName>
@@ -3252,10 +3557,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!UnitCost.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>UnitCost1</rd:DefaultName>
@@ -3282,13 +3591,153 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Yield.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Yield1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="MaterialPer">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!MaterialPer.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>MaterialPer</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="MachinePer">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!MachinePer.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>MachinePer</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="LabourPer">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!LabourPer.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>LabourPer</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="OHPer">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!OHPer.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>OHPer</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3312,6 +3761,10 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -3325,14 +3778,14 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>dsRPDBatchPrevious</DataSetName>
-        <Top>15.39558cm</Top>
-        <Left>2.2987cm</Left>
+        <Top>15.71308cm</Top>
+        <Left>1.82245cm</Left>
         <Height>1.2cm</Height>
-        <Width>13.5731cm</Width>
-        <ZIndex>37</ZIndex>
+        <Width>15.77449cm</Width>
+        <ZIndex>35</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
         </Style>
       </Tablix>
@@ -3343,8 +3796,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Previous Batches</Value>
+                <Value>Previous Batch Cost</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -3353,41 +3807,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox43</rd:DefaultName>
-        <Top>14.33724cm</Top>
-        <Left>2.21932cm</Left>
+        <Top>14.97224cm</Top>
+        <Left>1.87007cm</Left>
         <Height>0.6cm</Height>
         <Width>3.67792cm</Width>
-        <ZIndex>38</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox34">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>%</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>16.02037cm</Top>
-        <Left>16.07116cm</Left>
-        <Height>0.6cm</Height>
-        <Width>0.6893cm</Width>
-        <ZIndex>39</ZIndex>
+        <ZIndex>36</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3405,21 +3829,24 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total </Value>
+                <Value>Total Labour Cost </Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
-        <Top>22.24106cm</Top>
-        <Left>10.53548cm</Left>
+        <Top>22.11406cm</Top>
+        <Left>8.69235cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.05009cm</Width>
-        <ZIndex>40</ZIndex>
+        <Width>2.89322cm</Width>
+        <ZIndex>37</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3439,22 +3866,25 @@
               <TextRun>
                 <Value>=SUM(Fields!LabourHours.Value, "dsRPDBatchLabourCost")</Value>
                 <Style>
-                  <FontWeight>Normal</FontWeight>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox42</rd:DefaultName>
-        <Top>22.24106cm</Top>
-        <Left>11.76612cm</Left>
+        <Top>22.08231cm</Top>
+        <Left>11.64153cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.96441cm</Width>
-        <ZIndex>41</ZIndex>
+        <Width>3.01343cm</Width>
+        <ZIndex>38</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -3470,21 +3900,26 @@
             <TextRuns>
               <TextRun>
                 <Value>=SUM(Fields!LabourCost.Value, "dsRPDBatchLabourCost")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>22.24106cm</Top>
-        <Left>14.90692cm</Left>
+        <Top>22.08231cm</Top>
+        <Left>14.65496cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.69cm</Width>
-        <ZIndex>42</ZIndex>
+        <Width>2.94195cm</Width>
+        <ZIndex>39</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -3499,21 +3934,24 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total </Value>
+                <Value>Total Machine Cost </Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox39</rd:DefaultName>
         <Top>25.34392cm</Top>
-        <Left>10.39789cm</Left>
+        <Left>7.85098cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.05009cm</Width>
-        <ZIndex>43</ZIndex>
+        <Width>3.62875cm</Width>
+        <ZIndex>40</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3532,21 +3970,24 @@
             <TextRuns>
               <TextRun>
                 <Value>=SUM(Fields!MachineHours.Value, "dsRPDBatchMachineCost")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox47</rd:DefaultName>
-        <Top>25.38095cm</Top>
-        <Left>11.67684cm</Left>
+        <Top>25.3492cm</Top>
+        <Left>11.55381cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.82712cm</Width>
-        <ZIndex>44</ZIndex>
+        <Width>2.95015cm</Width>
+        <ZIndex>41</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -3562,21 +4003,24 @@
             <TextRuns>
               <TextRun>
                 <Value>=SUM(Fields!MachineCost.Value, "dsRPDBatchMachineCost")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox48</rd:DefaultName>
-        <Top>25.41447cm</Top>
-        <Left>14.66703cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.92989cm</Width>
-        <ZIndex>45</ZIndex>
+        <Top>25.35097cm</Top>
+        <Left>14.48631cm</Left>
+        <Height>0.59823cm</Height>
+        <Width>3.1106cm</Width>
+        <ZIndex>42</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -3591,21 +4035,24 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total</Value>
+                <Value>Total Overhead Cost</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox51</rd:DefaultName>
-        <Top>28.20141cm</Top>
-        <Left>10.1561cm</Left>
+        <Top>28.10616cm</Top>
+        <Left>7.85098cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.13844cm</Width>
-        <ZIndex>46</ZIndex>
+        <Width>3.47531cm</Width>
+        <ZIndex>43</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -3624,21 +4071,24 @@
             <TextRuns>
               <TextRun>
                 <Value>=SUM(Fields!SectionHours.Value, "dsRPDBatchOHCost")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox52</rd:DefaultName>
-        <Top>28.20141cm</Top>
-        <Left>11.44798cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.61409cm</Width>
-        <ZIndex>47</ZIndex>
+        <Top>28.06206cm</Top>
+        <Left>11.29578cm</Left>
+        <Height>0.6441cm</Height>
+        <Width>2.82452cm</Width>
+        <ZIndex>44</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -3654,21 +4104,26 @@
             <TextRuns>
               <TextRun>
                 <Value>=SUM(Fields!OHCost.Value, "dsRPDBatchOHCost")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox53</rd:DefaultName>
-        <Top>28.22787cm</Top>
-        <Left>14.26045cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.33646cm</Width>
-        <ZIndex>48</ZIndex>
+        <Top>28.06912cm</Top>
+        <Left>14.15557cm</Left>
+        <Height>0.63704cm</Height>
+        <Width>3.44133cm</Width>
+        <ZIndex>45</ZIndex>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -3684,7 +4139,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!EndDate.Value, "dsRPDBatchCostSummary")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -3697,11 +4154,157 @@
         <Left>5.95013cm</Left>
         <Height>0.6cm</Height>
         <Width>5.81599cm</Width>
+        <ZIndex>46</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox50">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Manufacturing Resource Planning System</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox15</rd:DefaultName>
+        <Top>0.75in</Top>
+        <Left>3.42219in</Left>
+        <Height>0.25in</Height>
+        <Width>2.72656in</Width>
+        <ZIndex>47</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox54">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Link Natural Products (pvt) Ltd.</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.375in</Top>
+        <Left>3.35275in</Left>
+        <Height>0.30208in</Height>
+        <Width>2.79601in</Width>
+        <ZIndex>48</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="img">
+        <Source>Embedded</Source>
+        <Value>linklogo</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.25in</Top>
+        <Left>6.18465in</Left>
+        <Height>0.80388in</Height>
+        <Width>0.76344in</Width>
         <ZIndex>49</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+        </Style>
+      </Image>
+      <Line Name="Line3">
+        <Top>2.5885cm</Top>
+        <Left>1.89132cm</Left>
+        <Height>0cm</Height>
+        <Width>15.71396cm</Width>
+        <ZIndex>50</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+            <Width>3pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line5">
+        <Top>4.96975cm</Top>
+        <Left>1.89132cm</Left>
+        <Height>0cm</Height>
+        <Width>15.71396cm</Width>
+        <ZIndex>51</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+            <Width>3pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox228">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>                               Batch Cost Summary</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox228</rd:DefaultName>
+        <Top>3.26909in</Top>
+        <Left>2.24599in</Left>
+        <Height>0.25001in</Height>
+        <Width>4.68386in</Width>
+        <ZIndex>52</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>LightGrey</BackgroundColor>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -4032,10 +4635,26 @@
           <DataField>Yield</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="MaterialPer">
+          <DataField>MaterialPer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MachinePer">
+          <DataField>MachinePer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LabourPer">
+          <DataField>LabourPer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OHPer">
+          <DataField>OHPer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dsReports</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\CHAMILA\Dropbox\LinkSource (1)\MRP\MRP_GUI\MRP_GUI\Report\dsReports.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Documents\git\LinkMRP\MRP\MRP_GUI\MRP_GUI\Report\dsReports.xsd</rd:SchemaPath>
         <rd:TableName>dsRPDBatchPrevious</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -4100,6 +4719,11 @@ F+VDv6GTPVjpeC3eM7Kx00rxWl9SnKObJ/Z9di3V8nB0EunIwGvOdTV6o1sYEkljBeiugUhNyXVew2uj
 nHjWWzzbTnGl0/19+/rLkT/OYv3utEcj/cJubX5j0A1Xsa2zZh+w33a8rZb/mR35Cwoz7CkKIwDSbnhzaEQlETokqUFDOn1D+umYJLUnv5ekg669c+clJZtlu7ay7ZrmqEV5UPAvu07KPLB7p2xeaxvwHXMPvW3KjF3YIu+wxDRiznM8+8HTr3gjU0SJFb601ytu4VGvb0lCvCgf9pbr+Rs+y+LK1h9F4Pd20bzq5j/f9Xj7oOlspUKBzrlmg2l4SSS53WjtlslDEqnMSXa/XqWzdK982HZXJhrT6fjoAJXM+8+2nniwAeGd8qFlbYA2mTRZfWHXPJLNAaT9PjZ5JB2Sn5uyWnLFJFHnXXPf//3Z4xpJQqYB/bO577LdKt1+75VhCYcp+EjcEft+VXg+vtQfMqqxtg9/XoVyT9vPI31a2Yijz8jWl/bB0+9+++035wDGfJ5zP9S9PAHjug2mYaiN2zoKP+e4TadSAkl8sAEP3MpfOj1vPBxaOlWXbD07yTldG/2RSOK93cEH+V5bcv6Xnjo98vClkvbA91QwG3dJ4qE0w9f8kuRayeijya5JOYe3Hg79JzsSjzL+fN+/8/grJF6Qkeg3udxHGyOQhtY/j02ZkbgIp96Qa/najnbKtWzlevznBL9aYoiHjdfzCLGEfFe5l+XPwhw3HfpL/sYpiXRksoGOdBw3keu5zS6J5KFD8hPrUDifAyn/Nx5/xVuezid1Pl/nHBzhS+enMn7Xjnmx7edD++eQzqUN9NogT16nSp+xJNEweZz1YPwkzdld79uylvvG96iZNplU2ZHSqZblpa1DtcryZx7YHXU9f/T4K95L/ybHhwt2zaKrwD6WTMnfV6d8Sjjt+bdix9+9MrobznzpJ/VOIilmobfd2wuXCiWMAGfVM9jOJgFiK++lh07Iow3qCfrCquyf7Ple8bTe67ksjZ8nawRH2NcRuvHUgT9Ux7fX3fpAUHhmA725p8/HPRBGfFUbv7tH
 vtjzfEOJfynzm5E6iHc2fk4mbthY+/Pcw3VKwtPtXMh5+MXzr8lxhN1Uo5Bi9mXU68Ekku08SwGXxv+2yY+2gZXXmsol7I56c35+l3gZyLVf2GvfZ6cjiydZiufk48i/tg0MH6iT1BpsOY+XZvxdheRctiNFnjmf2V6DUqcvzbjJpKl8sEkF2pbpkhibscRYa8m8tO2Wfa1zvgY8PghMrj+z0UaP0e+jfup/Tmoz7lpU97YOqVONlUZK7Kfo91/WRPof//t/vbKVRdvYiXkgAdaL+boV+rP5OmeQpyz+b67KHEgkxZ5EsiPrSvt/i41/OjPTLRoogcd645pv3eT+BDmg4abtwt5r83VUwZopU9+dr0vzdXRF+2eoDfXmaJF2mLC8KkZuJH2NlibdZBKds/E7I9cbMcSriWOJPm2YsR2oT/VeDtMcbbsk5+l8gl+/qz8zetnba3W7zzd17PtkviY8N2X/cHXEEdt946TN2DfK/ri9B9qRySwS73gdbK5pJkmkBxNfFo6F2SbuuMecRPIwv9u3rNfpGWGRTA2/J+HwzTn7LYGvwXpKeVyr7YLVF5F/lRfbrt2QPBr9GpL2+U3kX+PHXK4bO7KjtB3JEJLId03ZX47wvefmc+IwlsR51hswRTLVKsj1rWyiqM0TbCb2z0weo5B9+XUzcfiD+TzqSNPmU91Qn8SgB1n03O6ctB0cPUX+1Z49X5eb94AY+tQr92k3lfm6m0CII1oeSSDt7NCeKB+vvQ/GuAbahZKRfjv3aR2TjSf0pYnrwdq9rSNZw2062m30Zn03H6HT85hT4tFOz5GHU9c2sVJsdDDHKO9dMelYfG4tvr0Y8NA+YO6xr5TlW/N1xNh5YJ/vKeBz9GBIFvmIi6vNv2ins52Z71f0fu66OI7JPm5lBw8p9txQaxbhHpcdTrk57G+Upyaev9N8KzGxXfl0NeqD1lSxTxh2Neabf9+uZcDaLW7ndKjCoZHi/Byu57fLsqvu
 HrqrVd/2pe2c7bpe6qGfA0nUJXLtXto/Q3sY1q7VVjPqKJhrZnPr5G9iVo9xhEubtyvmeLZ1HTF1/7ZkX+zmanOJjocJvteu79F1vR7d9+sR+25ey2vDOpShx77PIdcbTZn4HiyQo+9G5/fenQ1UUubz+hHy5zWVOwAgowRBsdH5GnOkUjsqRQL2mg4/AACdbXZpdieC9w2SWZseSVRHhePft0IZdfZkY4+dayySRAIAAHAPUufm2/UWjDluCsfmNJB6I8hdM9IIAABsxSAuI+9d9Roh+f8FGABVy0u+zDZMFQAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="linklogo">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>R0lGODdhZABkAKUwAAhtYxh1ayF5czGGezmKhEKOhEqSjFKWjFqalGOinGumpf+SGHOupf+WKXuyrYS2rf+eMf+iOYy6tf+mQpS+vf+uUpzDvf+yWv+yY5zHxv+6c63Lxv++e//DhLXTzv/HjL3X1v/LjP/PnP/TnMbf3v/Xrc7j3v/fvdbn5//jxt7r7//r1ufz7+308u309vf7/////////////////////////////////////////////////////////////////ywAAAAAZABkAAAG/kCYcEgsGo/IpHLJbDqf0Kh0Sq1ar9isdsvter/gsHhMLpvP6LR6zW673/C4fE6v2+/4vH7P7/v/gIGCg3YpEwsNIYRbFwuOCymLWRWPCyeSSiUjTCGPEUwrioIrFRATHSUrRxqPEJFGKSUcERAfiycfGBMNEKYXvxCVjhUYvxO9phgfr5hCJxzBwtKOEyHMzUgiDdOPF9fYSinR0h3gUCfTGOZRGMINqutP6JUX4CAEA/kDEk3jCyJEGBAoQNADExMIDBxYaKDhQgQIUBRRABFiAi4MAGgc4OTQo28DNAIQIHFJBpEAFFgIINKBEQkoLXDZIPJiE1aO3hWBKZJA/pOQAHzC4BmAxEuRD7qQEMnACYdWRmiitKnEgEYFQkBoJGkEKAIvJpg6+eDJiFaUAPgpQaCxKQwTLAW0mLjxS9i2TkY8mmB2o8gAINbihUEi7twhFrYaBSu2SYlHFYx40Lgh49bDR9gCcFt4JObOADaAubvZybwF6opMBmCQgMgCSTRzNjwEqMvRjZmkeMRBMuW3LK8ikS2ks1whmg+IIe0W1CNbqn/DOCmSQubBxufy5Lg8N5Nt/3yHHuLgb+AixAnHVT9ycRjmT6KVEC96yAGRA1ygx85yAAigyo0BX0eOXBLdeEQABYAB+5XG3gAbBBeAdd0N1oRH38CwWn1D/oDmIHL8jTTdX+7Z5d0Sjeh0IIeIxWRf
+iALolwB+FX7IBCsNHLHhEZYBUJQQ9zmYnRCuafQVbhYy8dQn9CFhVV0wBDnbSPqxp5FajCW5BFl8NXmECwKIpFx6xlUJAwXmmailEnpF5uURIAQHwANk0jbEjBuZucWAji3g5opKJPYXjHrCUCQAAXLB5xEPGCTEY38SsaMSCqAFwG1lFmFCmBrdtsVSRqKAmRAoWECAAESgE+kQ1GXARJCNnXVcEdRJp4VUGgUQgAAC6BOcp0JUw+OaRygIAGwwPJBrSUXgOdJ5WRRg6bQBMKvEprmawIQLmmn0QIQiYVkErAGIW4UH/hWlqy4CBwCrBAMNNYRVEx4kUAAB+OY7kLZHUGDAALxGFE8VhVLRqKTmFufAqEJ44IAEFEjwgKtCmEABZhtQPMQGFlDAYhEgQAtyiViEBK0FDBqREVVDPMBApQkw4ClN7iEgVG0ESNAQEgMEwG8RBByphc2z1nvEARnMWkQLATAMAldCKJBybUm9MGFUUs87rtZZHACCAUIZTStWBbhLqs8gQw2DAshSDZyjRCBAggeoGnEA11gcYJQAF4lNxAESqKAAd0WggDYRTzMrNdAOZFCATIUXwIIKAkD+N95XeE0YABmAwDIMKAzQkLQfg374EIkPsTgRBDyQwM1EPCBAxUMCtG0f5lZofmYACnwu851TD2H4z1mpvfoQOcMwgNkFnPe0yFHiXoUB0MJcxADMakU86ABYa3pSMIAZvPJJwWX5dInCUMDndw/B8BQEnH+A0MnarvznHgRQugQCIEDRAPYTwLw2IAAKGUpcaCrRqRDwuvNR4X0lagHDWuC9txTsLRag2PZI8DMUQAsEenKBB6wFAg9s4IQDS6EKV8jCFrrwhTCMoQxnSMMa2vCGOMyhDnfIwx768IdADKIQh0jEIhqxC0EAADs=</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>

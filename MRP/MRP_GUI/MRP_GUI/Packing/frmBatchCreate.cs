@@ -116,7 +116,7 @@ namespace MRP_GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (DataValidation.IsNumericNumber(txtBatchSize.Text))
+            if (DataValidation.Is3DecimalPointNumber(txtBatchSize.Text))
             {
                 try
                 {

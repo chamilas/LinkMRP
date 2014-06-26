@@ -165,74 +165,76 @@ namespace MRP_GUI.RPD
         {
             try
             {
-            cmbPackMaterial.DataSource = objMaterialDL.GetDataViewIntermediates(objRPDBatch.RPDBatchMaterial.MaterialCode);
-            objRPDBatchPackingActivity = objRPDBatchActivityDL.Get("Packing-RPD", objRPDBatch.RPDBatchID);
-            lblTransferd.Visible = false;
-            if (objRPDBatchPackingActivity.RPDBatchActID != 0)
-            {
+                cmbPackMaterial.DataSource = objMaterialDL.GetDataViewIntermediates(objRPDBatch.RPDBatchMaterial.MaterialCode);
+                objRPDBatchPackingActivity = objRPDBatchActivityDL.Get("Packing-RPD", objRPDBatch.RPDBatchID);
+                lblTransferd.Visible = false;
+                if (objRPDBatchPackingActivity.RPDBatchActID != 0)
+                {
                     cmbSupervisedByPackingDetails.SelectedValue = objRPDBatchPackingActivity.SupervisedBy;
                     dtPackingStartDate.Value = objRPDBatchPackingActivity.StartDate;
-                    
-                    
-                dtPackingStartDate.Enabled = false;
-                cmbSupervisedByPackingDetails.Enabled = false;
-                grpPackingDetails.Enabled = true;
-                dtPackingFinishDate.Enabled = true;
 
-                if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
-                {
-                    btnPackingLabour.Visible = true;
-                    btnSavePackingAct.Enabled = false;//checking
-                    //btnSavePackingAct.Text = "Stop Activity";//checking
-                    btnStopPackingAct.Visible = true;
 
+                    dtPackingStartDate.Enabled = false;
+                    cmbSupervisedByPackingDetails.Enabled = false;
+                    grpPackingDetails.Enabled = true;
+                    dtPackingFinishDate.Enabled = true;
+
+                    if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
+                    {
+                        btnPackingLabour.Visible = true;
+                        btnSavePackingAct.Enabled = true;
+                        btnSavePackingAct.Text = "Stop Activity";
+                        btnStop.Visible = true;
+                        btnStart.Visible = false;
+
+                    }
+                    else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
+                    {
+                        dtPackingFinishDate.Value = objRPDBatchPackingActivity.StopDate;
+                        txtStopQty.Text = objRPDBatchPackingActivity.StopQty.ToString();
+
+                        dtPackingFinishDate.Enabled = false;
+                        btnPackingLabour.Visible = false;
+                        grpPackingDetails.Enabled = false;
+                        btnSavePackingAct.Enabled = false;
+                        bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
+                        btnStop.Visible = false;
+                        btnStart.Visible = false;
+                        //if (objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID,(int)QCReport.ReportStatus.Accept))
+                        //{
+                        //    grpActual.Enabled = true;
+                        //}
+                        //else
+                        //{
+                        //    grpActual.Enabled = false;
+                        //}
+                        txtStoreID.Text = objStoreDL.Get("RPD_Main").StoreName;
+                    }
+                    if (objRPDBatch.Status == RPDBatch.RPDBatchStatus.Transfered)
+                    {
+                        grpActual.Enabled = false;
+                        lblTransferd.Visible = true;
+                    }
+                    bindPackingDetails.DataSource = objRPDBatchActPackingDetailsDL.Get_By_BatchAct_View(objRPDBatchPackingActivity.RPDBatchActID);
                 }
-                else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
+                else
                 {
-                    dtPackingFinishDate.Value = objRPDBatchPackingActivity.StopDate;
-                    txtStopQty.Text = objRPDBatchPackingActivity.StopQty.ToString();
-
-                    dtPackingFinishDate.Enabled = false;
                     btnPackingLabour.Visible = false;
+                    btnSavePackingAct.Enabled = true;
                     grpPackingDetails.Enabled = false;
-                    //btnSavePackingAct.Enabled = true;//checking
-                    //btnSavePackingAct.Enabled = false;//checking
-                    //btnSavePackingAct.Text = "Start Packing Activity";//checking
-                    bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
-                    //if (objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID,(int)QCReport.ReportStatus.Accept))
-                    //{
-                    //    grpActual.Enabled = true;
-                    //}
-                    //else
-                    //{
-                    //    grpActual.Enabled = false;
-                    //}
-                    txtStoreID.Text = objStoreDL.Get("RPD_Main").StoreName;
+                    dtPackingFinishDate.Enabled = false;
+                    dtPackingStartDate.Enabled = true;
+                    cmbSupervisedByPackingDetails.Enabled = true;
+                    btnStop.Visible = false;
+                    btnStart.Visible = true;
                 }
-                if (objRPDBatch.Status == RPDBatch.RPDBatchStatus.Transfered)
-                {
-                    grpActual.Enabled = false;
-                    lblTransferd.Visible = true;
-                }
-                bindPackingDetails.DataSource = objRPDBatchActPackingDetailsDL.Get_By_BatchAct_View(objRPDBatchPackingActivity.RPDBatchActID);
-            }
-            else
-            {
-                btnPackingLabour.Visible = false;
-                btnSavePackingAct.Enabled = false;
-                grpPackingDetails.Enabled = false;
-                dtPackingFinishDate.Enabled = false;
-                dtPackingStartDate.Enabled = true;
-                btnStopPackingAct.Enabled = true; //ckecking
-                cmbSupervisedByPackingDetails.Enabled = true;
-            }
 
-        }
+            }
             catch (Exception ex)
             {
 
-            MessageBox.Show(ex.Message.ToString());
-        }
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void btnStartSave_Click(object sender, EventArgs e)
@@ -357,11 +359,7 @@ namespace MRP_GUI.RPD
                         }
                         else if (objRPDBatchActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
                         {
-                            grpStopAct.Enabled = false;
-                        }
-                        else 
-                        {
-                            //grpStopAct.Enabled = false;
+
                         }
                         
                        
@@ -539,6 +537,8 @@ namespace MRP_GUI.RPD
                         else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
                         {
                             btnSavePackingAct.Text = "Stop Activity";
+                            btnStop.Visible = true;
+                            btnStart.Visible = false;
                         }
                     }
 
@@ -1122,13 +1122,7 @@ namespace MRP_GUI.RPD
 
         }
 
-        private void tbRPDBatch_Click(object sender, EventArgs e)
-        {
-            LoadPackingDetails();
-
-        }
-
-        private void btnStopPackingAct_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             if (!objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID, (int)QCReport.ReportStatus.Accept))
             {
@@ -1136,40 +1130,113 @@ namespace MRP_GUI.RPD
             }
             else
             {
-                if (objRPDBatchPackingActivity != null)
+                if (objRPDBatchPackingActivity == null)
                 {
-                    long ID = 0;
+                    objRPDBatchPackingActivity = new RPDBatchActivity();
+                }
 
-                    if (dtPackingFinishDate.Checked)
+                objRPDBatchPackingActivity.Comments = "";
+                objRPDBatchPackingActivity.MainActID = objMainActivityDL.GetByName("Packing-RPD").MainActID;
+                objRPDBatchPackingActivity.StartDate = dtPackingStartDate.Value;
+                objRPDBatchPackingActivity.RPDBatchID = objRPDBatch.RPDBatchID;
+                objRPDBatchPackingActivity.SupervisedBy = cmbSupervisedByPackingDetails.SelectedValue.ToString();
+                //objRPDBatchPackingActivity.InspectedBy = cmbInstructedBy.SelectedValue.ToString();
+
+                long ID = 0;
+
+                if (dtPackingFinishDate.Checked)
+                {
+                    //objRPDBatchPackingActivity.StopDate = dtPackingFinishDate.Value;
+                    //objRPDBatchPackingActivity.ActivityStatus = RPDBatchActivity.Status.Finalized;
+
+                    //ID = objRPDBatchActivityDL.Update(objRPDBatchPackingActivity);
+                }
+                else
+                {
+                    objRPDBatchPackingActivity.ActivityStatus = SESD.MRP.REF.RPDBatchActivity.Status.Started;
+                    ID = objRPDBatchActivityDL.Add(objRPDBatchPackingActivity);
+                }
+
+                if (ID > 0)
+                {
+
+                    LoadPackingDetails();
+                    if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
                     {
-                        objRPDBatchPackingActivity.StopDate = dtPackingFinishDate.Value;
-                        objRPDBatchPackingActivity.ActivityStatus = RPDBatchActivity.Status.Finalized;
-
-                        ID = objRPDBatchActivityDL.Update(objRPDBatchPackingActivity);
+                        objRPDBatchActualProductionDL.Add(objRPDBatch.RPDBatchID);
+                        bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
                     }
-                    else
+                    else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
                     {
-                        objRPDBatchPackingActivity.ActivityStatus = SESD.MRP.REF.RPDBatchActivity.Status.Started;
-                        ID = objRPDBatchActivityDL.Add(objRPDBatchPackingActivity);
+                        btnSavePackingAct.Text = "Stop Activity";
+                        btnStop.Visible = true;
+                        btnStart.Visible = false;
                     }
-
-                    if (ID > 0)
-                    {
-
-                        LoadPackingDetails();
-                        if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
-                        {
-                            objRPDBatchActualProductionDL.Add(objRPDBatch.RPDBatchID);
-                            bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
-                        }
-                        else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
-                        {
-                            //btnSavePackingAct.Text = "Stop Activity";
-                        }
-                    }
-
                 }
             }
+            bindActivities.DataSource = objRPDBatchActivityDL.GetDataView(objRPDBatch.RPDBatchID);
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            if (!objQCReport_DL.IsRPDBatchAccept(objRPDBatch.RPDBatchID, (int)QCReport.ReportStatus.Accept))
+            {
+                MessageBox.Show(this, "Sysem does not allow to start Packing activity until quality test accepted", "QC Check Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                /*
+                if (objRPDBatchPackingActivity == null)
+                {
+                    objRPDBatchPackingActivity = new RPDBatchActivity();
+                }
+
+                objRPDBatchPackingActivity.Comments = "";
+                objRPDBatchPackingActivity.MainActID = objMainActivityDL.GetByName("Packing-RPD").MainActID;
+                objRPDBatchPackingActivity.StartDate = dtPackingStartDate.Value;
+                objRPDBatchPackingActivity.RPDBatchID = objRPDBatch.RPDBatchID;
+                objRPDBatchPackingActivity.SupervisedBy = cmbSupervisedByPackingDetails.SelectedValue.ToString();
+                //objRPDBatchPackingActivity.InspectedBy = cmbInstructedBy.SelectedValue.ToString();
+                */
+                long ID = 0;
+
+                if (dtPackingFinishDate.Checked)
+                {
+                    objRPDBatchPackingActivity.StopDate = dtPackingFinishDate.Value;
+                    objRPDBatchPackingActivity.ActivityStatus = RPDBatchActivity.Status.Finalized;
+
+                    ID = objRPDBatchActivityDL.Update(objRPDBatchPackingActivity);
+                }
+                else
+                {
+                    //objRPDBatchPackingActivity.ActivityStatus = SESD.MRP.REF.RPDBatchActivity.Status.Started;
+                    //ID = objRPDBatchActivityDL.Add(objRPDBatchPackingActivity);
+                }
+
+                if (ID > 0)
+                {
+
+                    LoadPackingDetails();
+                    if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Finalized)
+                    {
+                        objRPDBatchActualProductionDL.Add(objRPDBatch.RPDBatchID);
+                        bindActual.DataSource = objRPDBatchActualProductionDL.Get(objRPDBatch.RPDBatchID);
+                    }
+                    else if (objRPDBatchPackingActivity.ActivityStatus == RPDBatchActivity.Status.Started)
+                    {
+                        btnSavePackingAct.Text = "Stop Activity";
+                        btnStop.Visible = true;
+                        btnStart.Visible = false;
+                    }
+                }
+            }
+            bindActivities.DataSource = objRPDBatchActivityDL.GetDataView(objRPDBatch.RPDBatchID);
+        }
+
+        private void tbRPDBatch_MouseClick(object sender, MouseEventArgs e)
+        {
+            LoadPackingDetails();
+            //MessageBox.Show("");
         }
 
     

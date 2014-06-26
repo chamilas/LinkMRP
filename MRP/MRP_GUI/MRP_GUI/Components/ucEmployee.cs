@@ -117,8 +117,8 @@ namespace MRP_GUI
                     objEmp.Section = SectionID;
                     objEmp.EmpStatus = cbStatus.Checked;
                     objEmp.EmpType = cmbEmpTYpe.SelectedItem.ToString();
-                    objEmp.OTRatePerHour = Convert.ToDecimal(txtOTRate.Text);
-                    objEmp.RatePerHour = Convert.ToDecimal(txtRate.Text);
+                    objEmp.OTRatePerHour = Convert.ToDecimal("0.00");
+                    objEmp.RatePerHour = Convert.ToDecimal("0.00");
                     
                     int x;
 

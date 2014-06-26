@@ -54,9 +54,9 @@ namespace DL
                 DataTable dt= Execute.RunSP_DataTable(Connection, "SPGET_OverheadRates");
 
 
-                obj.EnterdBy = objEmployee_DL.Get(Convert.ToString( dt.Rows[0]["EnteredBy"]));
-                obj.EnterdDate = Convert.ToDateTime(dt.Rows[0]["EnteredDate"]);
-                obj.ID = Convert.ToInt64(dt.Rows[0]["EnteredDate"]);
+                obj.EnterdBy = objEmployee_DL.Get(Convert.ToString(dt.Rows[0]["EnterdBy"]));
+                obj.EnterdDate = Convert.ToDateTime(dt.Rows[0]["Date"]);
+                obj.ID = Convert.ToInt64(dt.Rows[0]["DepID"]);
                 obj.Rate = Convert.ToDecimal(dt.Rows[0]["Rate"]);
 
 

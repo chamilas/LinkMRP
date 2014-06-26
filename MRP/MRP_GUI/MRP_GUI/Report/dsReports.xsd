@@ -2,9 +2,10 @@
 <xs:schema id="dsReports" targetNamespace="http://tempuri.org/dsReports.xsd" xmlns:mstns="http://tempuri.org/dsReports.xsd" xmlns="http://tempuri.org/dsReports.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MRP_GUI.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MRPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MRPConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MRP_GUI.Properties.Settings.GlobalReference.Default.MRPConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -14,7 +15,7 @@
   <xs:element name="dsReports" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReports" msprop:Generator_UserDSName="dsReports">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="MRBulkPrint" msprop:Generator_TableClassName="MRBulkPrintDataTable" msprop:Generator_TableVarName="tableMRBulkPrint" msprop:Generator_RowChangedName="MRBulkPrintRowChanged" msprop:Generator_TablePropName="MRBulkPrint" msprop:Generator_RowDeletingName="MRBulkPrintRowDeleting" msprop:Generator_RowChangingName="MRBulkPrintRowChanging" msprop:Generator_RowEvHandlerName="MRBulkPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="MRBulkPrintRowDeleted" msprop:Generator_RowClassName="MRBulkPrintRow" msprop:Generator_UserTableName="MRBulkPrint" msprop:Generator_RowEvArgName="MRBulkPrintRowChangeEvent">
+        <xs:element name="MRBulkPrint" msprop:Generator_TableClassName="MRBulkPrintDataTable" msprop:Generator_TableVarName="tableMRBulkPrint" msprop:Generator_TablePropName="MRBulkPrint" msprop:Generator_RowDeletingName="MRBulkPrintRowDeleting" msprop:Generator_RowChangingName="MRBulkPrintRowChanging" msprop:Generator_RowEvHandlerName="MRBulkPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="MRBulkPrintRowDeleted" msprop:Generator_UserTableName="MRBulkPrint" msprop:Generator_RowChangedName="MRBulkPrintRowChanged" msprop:Generator_RowEvArgName="MRBulkPrintRowChangeEvent" msprop:Generator_RowClassName="MRBulkPrintRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MRNO" msprop:Generator_ColumnVarNameInTable="columnMRNO" msprop:Generator_ColumnPropNameInRow="MRNO" msprop:Generator_ColumnPropNameInTable="MRNOColumn" msprop:Generator_UserColumnName="MRNO" type="xs:string" minOccurs="0" />
@@ -30,7 +31,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MRPrint" msprop:Generator_TableClassName="MRPrintDataTable" msprop:Generator_TableVarName="tableMRPrint" msprop:Generator_TablePropName="MRPrint" msprop:Generator_RowDeletingName="MRPrintRowDeleting" msprop:Generator_RowChangingName="MRPrintRowChanging" msprop:Generator_RowEvHandlerName="MRPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="MRPrintRowDeleted" msprop:Generator_UserTableName="MRPrint" msprop:Generator_RowChangedName="MRPrintRowChanged" msprop:Generator_RowEvArgName="MRPrintRowChangeEvent" msprop:Generator_RowClassName="MRPrintRow">
+        <xs:element name="MRPrint" msprop:Generator_TableClassName="MRPrintDataTable" msprop:Generator_TableVarName="tableMRPrint" msprop:Generator_RowChangedName="MRPrintRowChanged" msprop:Generator_TablePropName="MRPrint" msprop:Generator_RowDeletingName="MRPrintRowDeleting" msprop:Generator_RowChangingName="MRPrintRowChanging" msprop:Generator_RowEvHandlerName="MRPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="MRPrintRowDeleted" msprop:Generator_RowClassName="MRPrintRow" msprop:Generator_UserTableName="MRPrint" msprop:Generator_RowEvArgName="MRPrintRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MRNO" msprop:Generator_ColumnVarNameInTable="columnMRNO" msprop:Generator_ColumnPropNameInRow="MRNO" msprop:Generator_ColumnPropNameInTable="MRNOColumn" msprop:Generator_UserColumnName="MRNO" type="xs:string" minOccurs="0" />
@@ -51,7 +52,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GRNSemiPrint" msprop:Generator_TableClassName="GRNSemiPrintDataTable" msprop:Generator_TableVarName="tableGRNSemiPrint" msprop:Generator_RowChangedName="GRNSemiPrintRowChanged" msprop:Generator_TablePropName="GRNSemiPrint" msprop:Generator_RowDeletingName="GRNSemiPrintRowDeleting" msprop:Generator_RowChangingName="GRNSemiPrintRowChanging" msprop:Generator_RowEvHandlerName="GRNSemiPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="GRNSemiPrintRowDeleted" msprop:Generator_RowClassName="GRNSemiPrintRow" msprop:Generator_UserTableName="GRNSemiPrint" msprop:Generator_RowEvArgName="GRNSemiPrintRowChangeEvent">
+        <xs:element name="GRNSemiPrint" msprop:Generator_TableClassName="GRNSemiPrintDataTable" msprop:Generator_TableVarName="tableGRNSemiPrint" msprop:Generator_TablePropName="GRNSemiPrint" msprop:Generator_RowDeletingName="GRNSemiPrintRowDeleting" msprop:Generator_RowChangingName="GRNSemiPrintRowChanging" msprop:Generator_RowEvHandlerName="GRNSemiPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="GRNSemiPrintRowDeleted" msprop:Generator_UserTableName="GRNSemiPrint" msprop:Generator_RowChangedName="GRNSemiPrintRowChanged" msprop:Generator_RowEvArgName="GRNSemiPrintRowChangeEvent" msprop:Generator_RowClassName="GRNSemiPrintRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GRN_x0020_NO" msprop:Generator_ColumnVarNameInTable="columnGRN_NO" msprop:Generator_ColumnPropNameInRow="GRN_NO" msprop:Generator_ColumnPropNameInTable="GRN_NOColumn" msprop:Generator_UserColumnName="GRN NO" type="xs:string" minOccurs="0" />
@@ -67,7 +68,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GRNBulkPrint" msprop:Generator_TableClassName="GRNBulkPrintDataTable" msprop:Generator_TableVarName="tableGRNBulkPrint" msprop:Generator_TablePropName="GRNBulkPrint" msprop:Generator_RowDeletingName="GRNBulkPrintRowDeleting" msprop:Generator_RowChangingName="GRNBulkPrintRowChanging" msprop:Generator_RowEvHandlerName="GRNBulkPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="GRNBulkPrintRowDeleted" msprop:Generator_UserTableName="GRNBulkPrint" msprop:Generator_RowChangedName="GRNBulkPrintRowChanged" msprop:Generator_RowEvArgName="GRNBulkPrintRowChangeEvent" msprop:Generator_RowClassName="GRNBulkPrintRow">
+        <xs:element name="GRNBulkPrint" msprop:Generator_TableClassName="GRNBulkPrintDataTable" msprop:Generator_TableVarName="tableGRNBulkPrint" msprop:Generator_RowChangedName="GRNBulkPrintRowChanged" msprop:Generator_TablePropName="GRNBulkPrint" msprop:Generator_RowDeletingName="GRNBulkPrintRowDeleting" msprop:Generator_RowChangingName="GRNBulkPrintRowChanging" msprop:Generator_RowEvHandlerName="GRNBulkPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="GRNBulkPrintRowDeleted" msprop:Generator_RowClassName="GRNBulkPrintRow" msprop:Generator_UserTableName="GRNBulkPrint" msprop:Generator_RowEvArgName="GRNBulkPrintRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GRNNO" msprop:Generator_ColumnVarNameInTable="columnGRNNO" msprop:Generator_ColumnPropNameInRow="GRNNO" msprop:Generator_ColumnPropNameInTable="GRNNOColumn" msprop:Generator_UserColumnName="GRNNO" type="xs:string" minOccurs="0" />
@@ -83,7 +84,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GRNPrint" msprop:Generator_TableClassName="GRNPrintDataTable" msprop:Generator_TableVarName="tableGRNPrint" msprop:Generator_RowChangedName="GRNPrintRowChanged" msprop:Generator_TablePropName="GRNPrint" msprop:Generator_RowDeletingName="GRNPrintRowDeleting" msprop:Generator_RowChangingName="GRNPrintRowChanging" msprop:Generator_RowEvHandlerName="GRNPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="GRNPrintRowDeleted" msprop:Generator_RowClassName="GRNPrintRow" msprop:Generator_UserTableName="GRNPrint" msprop:Generator_RowEvArgName="GRNPrintRowChangeEvent">
+        <xs:element name="GRNPrint" msprop:Generator_TableClassName="GRNPrintDataTable" msprop:Generator_TableVarName="tableGRNPrint" msprop:Generator_TablePropName="GRNPrint" msprop:Generator_RowDeletingName="GRNPrintRowDeleting" msprop:Generator_RowChangingName="GRNPrintRowChanging" msprop:Generator_RowEvHandlerName="GRNPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="GRNPrintRowDeleted" msprop:Generator_UserTableName="GRNPrint" msprop:Generator_RowChangedName="GRNPrintRowChanged" msprop:Generator_RowEvArgName="GRNPrintRowChangeEvent" msprop:Generator_RowClassName="GRNPrintRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ITEMCODE" msprop:Generator_ColumnVarNameInTable="columnITEMCODE" msprop:Generator_ColumnPropNameInRow="ITEMCODE" msprop:Generator_ColumnPropNameInTable="ITEMCODEColumn" msprop:Generator_UserColumnName="ITEMCODE" type="xs:string" minOccurs="0" />
@@ -102,7 +103,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchCostSummary" msprop:Generator_TableClassName="RPDBatchCostSummaryDataTable" msprop:Generator_TableVarName="tableRPDBatchCostSummary" msprop:Generator_RowChangedName="RPDBatchCostSummaryRowChanged" msprop:Generator_TablePropName="RPDBatchCostSummary" msprop:Generator_RowDeletingName="RPDBatchCostSummaryRowDeleting" msprop:Generator_RowChangingName="RPDBatchCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchCostSummaryRowDeleted" msprop:Generator_RowClassName="RPDBatchCostSummaryRow" msprop:Generator_UserTableName="RPDBatchCostSummary" msprop:Generator_RowEvArgName="RPDBatchCostSummaryRowChangeEvent">
+        <xs:element name="RPDBatchCostSummary" msprop:Generator_TableClassName="RPDBatchCostSummaryDataTable" msprop:Generator_TableVarName="tableRPDBatchCostSummary" msprop:Generator_TablePropName="RPDBatchCostSummary" msprop:Generator_RowDeletingName="RPDBatchCostSummaryRowDeleting" msprop:Generator_RowChangingName="RPDBatchCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchCostSummaryRowDeleted" msprop:Generator_UserTableName="RPDBatchCostSummary" msprop:Generator_RowChangedName="RPDBatchCostSummaryRowChanged" msprop:Generator_RowEvArgName="RPDBatchCostSummaryRowChangeEvent" msprop:Generator_RowClassName="RPDBatchCostSummaryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RPDBatchID" msprop:Generator_ColumnVarNameInTable="columnRPDBatchID" msprop:Generator_ColumnPropNameInRow="RPDBatchID" msprop:Generator_ColumnPropNameInTable="RPDBatchIDColumn" msprop:Generator_UserColumnName="RPDBatchID" type="xs:string" minOccurs="0" />
@@ -132,7 +133,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchLabourCost" msprop:Generator_TableClassName="RPDBatchLabourCostDataTable" msprop:Generator_TableVarName="tableRPDBatchLabourCost" msprop:Generator_RowChangedName="RPDBatchLabourCostRowChanged" msprop:Generator_TablePropName="RPDBatchLabourCost" msprop:Generator_RowDeletingName="RPDBatchLabourCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchLabourCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchLabourCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchLabourCostRowDeleted" msprop:Generator_RowClassName="RPDBatchLabourCostRow" msprop:Generator_UserTableName="RPDBatchLabourCost" msprop:Generator_RowEvArgName="RPDBatchLabourCostRowChangeEvent">
+        <xs:element name="RPDBatchLabourCost" msprop:Generator_TableClassName="RPDBatchLabourCostDataTable" msprop:Generator_TableVarName="tableRPDBatchLabourCost" msprop:Generator_TablePropName="RPDBatchLabourCost" msprop:Generator_RowDeletingName="RPDBatchLabourCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchLabourCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchLabourCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchLabourCostRowDeleted" msprop:Generator_UserTableName="RPDBatchLabourCost" msprop:Generator_RowChangedName="RPDBatchLabourCostRowChanged" msprop:Generator_RowEvArgName="RPDBatchLabourCostRowChangeEvent" msprop:Generator_RowClassName="RPDBatchLabourCostRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Employee" msprop:Generator_ColumnVarNameInTable="columnEmployee" msprop:Generator_ColumnPropNameInRow="Employee" msprop:Generator_ColumnPropNameInTable="EmployeeColumn" msprop:Generator_UserColumnName="Employee" type="xs:string" minOccurs="0" />
@@ -143,7 +144,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchMaterialCost" msprop:Generator_TableClassName="RPDBatchMaterialCostDataTable" msprop:Generator_TableVarName="tableRPDBatchMaterialCost" msprop:Generator_TablePropName="RPDBatchMaterialCost" msprop:Generator_RowDeletingName="RPDBatchMaterialCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchMaterialCostRowDeleted" msprop:Generator_UserTableName="RPDBatchMaterialCost" msprop:Generator_RowChangedName="RPDBatchMaterialCostRowChanged" msprop:Generator_RowEvArgName="RPDBatchMaterialCostRowChangeEvent" msprop:Generator_RowClassName="RPDBatchMaterialCostRow">
+        <xs:element name="RPDBatchMaterialCost" msprop:Generator_TableClassName="RPDBatchMaterialCostDataTable" msprop:Generator_TableVarName="tableRPDBatchMaterialCost" msprop:Generator_RowChangedName="RPDBatchMaterialCostRowChanged" msprop:Generator_TablePropName="RPDBatchMaterialCost" msprop:Generator_RowDeletingName="RPDBatchMaterialCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchMaterialCostRowDeleted" msprop:Generator_RowClassName="RPDBatchMaterialCostRow" msprop:Generator_UserTableName="RPDBatchMaterialCost" msprop:Generator_RowEvArgName="RPDBatchMaterialCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialCode" msprop:Generator_ColumnVarNameInTable="columnMaterialCode" msprop:Generator_ColumnPropNameInRow="MaterialCode" msprop:Generator_ColumnPropNameInTable="MaterialCodeColumn" msprop:Generator_UserColumnName="MaterialCode" type="xs:string" minOccurs="0" />
@@ -155,7 +156,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchMachineCost" msprop:Generator_TableClassName="RPDBatchMachineCostDataTable" msprop:Generator_TableVarName="tableRPDBatchMachineCost" msprop:Generator_TablePropName="RPDBatchMachineCost" msprop:Generator_RowDeletingName="RPDBatchMachineCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchMachineCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchMachineCostRowDeleted" msprop:Generator_UserTableName="RPDBatchMachineCost" msprop:Generator_RowChangedName="RPDBatchMachineCostRowChanged" msprop:Generator_RowEvArgName="RPDBatchMachineCostRowChangeEvent" msprop:Generator_RowClassName="RPDBatchMachineCostRow">
+        <xs:element name="RPDBatchMachineCost" msprop:Generator_TableClassName="RPDBatchMachineCostDataTable" msprop:Generator_TableVarName="tableRPDBatchMachineCost" msprop:Generator_RowChangedName="RPDBatchMachineCostRowChanged" msprop:Generator_TablePropName="RPDBatchMachineCost" msprop:Generator_RowDeletingName="RPDBatchMachineCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchMachineCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchMachineCostRowDeleted" msprop:Generator_RowClassName="RPDBatchMachineCostRow" msprop:Generator_UserTableName="RPDBatchMachineCost" msprop:Generator_RowEvArgName="RPDBatchMachineCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Machine" msprop:Generator_ColumnVarNameInTable="columnMachine" msprop:Generator_ColumnPropNameInRow="Machine" msprop:Generator_ColumnPropNameInTable="MachineColumn" msprop:Generator_UserColumnName="Machine" type="xs:string" minOccurs="0" />
@@ -164,7 +165,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchOHCost" msprop:Generator_TableClassName="RPDBatchOHCostDataTable" msprop:Generator_TableVarName="tableRPDBatchOHCost" msprop:Generator_TablePropName="RPDBatchOHCost" msprop:Generator_RowDeletingName="RPDBatchOHCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchOHCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchOHCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchOHCostRowDeleted" msprop:Generator_UserTableName="RPDBatchOHCost" msprop:Generator_RowChangedName="RPDBatchOHCostRowChanged" msprop:Generator_RowEvArgName="RPDBatchOHCostRowChangeEvent" msprop:Generator_RowClassName="RPDBatchOHCostRow">
+        <xs:element name="RPDBatchOHCost" msprop:Generator_TableClassName="RPDBatchOHCostDataTable" msprop:Generator_TableVarName="tableRPDBatchOHCost" msprop:Generator_RowChangedName="RPDBatchOHCostRowChanged" msprop:Generator_TablePropName="RPDBatchOHCost" msprop:Generator_RowDeletingName="RPDBatchOHCostRowDeleting" msprop:Generator_RowChangingName="RPDBatchOHCostRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchOHCostRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchOHCostRowDeleted" msprop:Generator_RowClassName="RPDBatchOHCostRow" msprop:Generator_UserTableName="RPDBatchOHCost" msprop:Generator_RowEvArgName="RPDBatchOHCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" type="xs:string" minOccurs="0" />
@@ -173,7 +174,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchActualProduction" msprop:Generator_TableClassName="RPDBatchActualProductionDataTable" msprop:Generator_TableVarName="tableRPDBatchActualProduction" msprop:Generator_RowChangedName="RPDBatchActualProductionRowChanged" msprop:Generator_TablePropName="RPDBatchActualProduction" msprop:Generator_RowDeletingName="RPDBatchActualProductionRowDeleting" msprop:Generator_RowChangingName="RPDBatchActualProductionRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchActualProductionRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchActualProductionRowDeleted" msprop:Generator_RowClassName="RPDBatchActualProductionRow" msprop:Generator_UserTableName="RPDBatchActualProduction" msprop:Generator_RowEvArgName="RPDBatchActualProductionRowChangeEvent">
+        <xs:element name="RPDBatchActualProduction" msprop:Generator_TableClassName="RPDBatchActualProductionDataTable" msprop:Generator_TableVarName="tableRPDBatchActualProduction" msprop:Generator_TablePropName="RPDBatchActualProduction" msprop:Generator_RowDeletingName="RPDBatchActualProductionRowDeleting" msprop:Generator_RowChangingName="RPDBatchActualProductionRowChanging" msprop:Generator_RowEvHandlerName="RPDBatchActualProductionRowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchActualProductionRowDeleted" msprop:Generator_UserTableName="RPDBatchActualProduction" msprop:Generator_RowChangedName="RPDBatchActualProductionRowChanged" msprop:Generator_RowEvArgName="RPDBatchActualProductionRowChangeEvent" msprop:Generator_RowClassName="RPDBatchActualProductionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Material" msprop:Generator_ColumnVarNameInTable="columnMaterial" msprop:Generator_ColumnPropNameInRow="Material" msprop:Generator_ColumnPropNameInTable="MaterialColumn" msprop:Generator_UserColumnName="Material" type="xs:string" minOccurs="0" />
@@ -182,7 +183,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRPDBatchCostSummary" msprop:Generator_TableClassName="PRPDBatchCostSummaryDataTable" msprop:Generator_TableVarName="tablePRPDBatchCostSummary" msprop:Generator_TablePropName="PRPDBatchCostSummary" msprop:Generator_RowDeletingName="PRPDBatchCostSummaryRowDeleting" msprop:Generator_RowChangingName="PRPDBatchCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchCostSummaryRowDeleted" msprop:Generator_UserTableName="PRPDBatchCostSummary" msprop:Generator_RowChangedName="PRPDBatchCostSummaryRowChanged" msprop:Generator_RowEvArgName="PRPDBatchCostSummaryRowChangeEvent" msprop:Generator_RowClassName="PRPDBatchCostSummaryRow">
+        <xs:element name="PRPDBatchCostSummary" msprop:Generator_TableClassName="PRPDBatchCostSummaryDataTable" msprop:Generator_TableVarName="tablePRPDBatchCostSummary" msprop:Generator_RowChangedName="PRPDBatchCostSummaryRowChanged" msprop:Generator_TablePropName="PRPDBatchCostSummary" msprop:Generator_RowDeletingName="PRPDBatchCostSummaryRowDeleting" msprop:Generator_RowChangingName="PRPDBatchCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchCostSummaryRowDeleted" msprop:Generator_RowClassName="PRPDBatchCostSummaryRow" msprop:Generator_UserTableName="PRPDBatchCostSummary" msprop:Generator_RowEvArgName="PRPDBatchCostSummaryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PRPDBatchID" msprop:Generator_ColumnVarNameInTable="columnPRPDBatchID" msprop:Generator_ColumnPropNameInRow="PRPDBatchID" msprop:Generator_ColumnPropNameInTable="PRPDBatchIDColumn" msprop:Generator_UserColumnName="PRPDBatchID" type="xs:string" minOccurs="0" />
@@ -212,7 +213,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRPDBatchLabourCost" msprop:Generator_TableClassName="PRPDBatchLabourCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchLabourCost" msprop:Generator_TablePropName="PRPDBatchLabourCost" msprop:Generator_RowDeletingName="PRPDBatchLabourCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchLabourCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchLabourCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchLabourCostRowDeleted" msprop:Generator_UserTableName="PRPDBatchLabourCost" msprop:Generator_RowChangedName="PRPDBatchLabourCostRowChanged" msprop:Generator_RowEvArgName="PRPDBatchLabourCostRowChangeEvent" msprop:Generator_RowClassName="PRPDBatchLabourCostRow">
+        <xs:element name="PRPDBatchLabourCost" msprop:Generator_TableClassName="PRPDBatchLabourCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchLabourCost" msprop:Generator_RowChangedName="PRPDBatchLabourCostRowChanged" msprop:Generator_TablePropName="PRPDBatchLabourCost" msprop:Generator_RowDeletingName="PRPDBatchLabourCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchLabourCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchLabourCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchLabourCostRowDeleted" msprop:Generator_RowClassName="PRPDBatchLabourCostRow" msprop:Generator_UserTableName="PRPDBatchLabourCost" msprop:Generator_RowEvArgName="PRPDBatchLabourCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HourlyRate" msprop:Generator_ColumnVarNameInTable="columnHourlyRate" msprop:Generator_ColumnPropNameInRow="HourlyRate" msprop:Generator_ColumnPropNameInTable="HourlyRateColumn" msprop:Generator_UserColumnName="HourlyRate" type="xs:string" minOccurs="0" />
@@ -226,7 +227,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRPDBatchOHCost" msprop:Generator_TableClassName="PRPDBatchOHCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchOHCost" msprop:Generator_TablePropName="PRPDBatchOHCost" msprop:Generator_RowDeletingName="PRPDBatchOHCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchOHCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchOHCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchOHCostRowDeleted" msprop:Generator_UserTableName="PRPDBatchOHCost" msprop:Generator_RowChangedName="PRPDBatchOHCostRowChanged" msprop:Generator_RowEvArgName="PRPDBatchOHCostRowChangeEvent" msprop:Generator_RowClassName="PRPDBatchOHCostRow">
+        <xs:element name="PRPDBatchOHCost" msprop:Generator_TableClassName="PRPDBatchOHCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchOHCost" msprop:Generator_RowChangedName="PRPDBatchOHCostRowChanged" msprop:Generator_TablePropName="PRPDBatchOHCost" msprop:Generator_RowDeletingName="PRPDBatchOHCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchOHCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchOHCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchOHCostRowDeleted" msprop:Generator_RowClassName="PRPDBatchOHCostRow" msprop:Generator_UserTableName="PRPDBatchOHCost" msprop:Generator_RowEvArgName="PRPDBatchOHCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" type="xs:string" minOccurs="0" />
@@ -235,7 +236,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRPDBatchMaterialCost" msprop:Generator_TableClassName="PRPDBatchMaterialCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchMaterialCost" msprop:Generator_TablePropName="PRPDBatchMaterialCost" msprop:Generator_RowDeletingName="PRPDBatchMaterialCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchMaterialCostRowDeleted" msprop:Generator_UserTableName="PRPDBatchMaterialCost" msprop:Generator_RowChangedName="PRPDBatchMaterialCostRowChanged" msprop:Generator_RowEvArgName="PRPDBatchMaterialCostRowChangeEvent" msprop:Generator_RowClassName="PRPDBatchMaterialCostRow">
+        <xs:element name="PRPDBatchMaterialCost" msprop:Generator_TableClassName="PRPDBatchMaterialCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchMaterialCost" msprop:Generator_RowChangedName="PRPDBatchMaterialCostRowChanged" msprop:Generator_TablePropName="PRPDBatchMaterialCost" msprop:Generator_RowDeletingName="PRPDBatchMaterialCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchMaterialCostRowDeleted" msprop:Generator_RowClassName="PRPDBatchMaterialCostRow" msprop:Generator_UserTableName="PRPDBatchMaterialCost" msprop:Generator_RowEvArgName="PRPDBatchMaterialCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialCode" msprop:Generator_ColumnVarNameInTable="columnMaterialCode" msprop:Generator_ColumnPropNameInRow="MaterialCode" msprop:Generator_ColumnPropNameInTable="MaterialCodeColumn" msprop:Generator_UserColumnName="MaterialCode" type="xs:string" minOccurs="0" />
@@ -247,7 +248,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRPDBatchMachineCost" msprop:Generator_TableClassName="PRPDBatchMachineCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchMachineCost" msprop:Generator_TablePropName="PRPDBatchMachineCost" msprop:Generator_RowDeletingName="PRPDBatchMachineCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchMachineCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchMachineCostRowDeleted" msprop:Generator_UserTableName="PRPDBatchMachineCost" msprop:Generator_RowChangedName="PRPDBatchMachineCostRowChanged" msprop:Generator_RowEvArgName="PRPDBatchMachineCostRowChangeEvent" msprop:Generator_RowClassName="PRPDBatchMachineCostRow">
+        <xs:element name="PRPDBatchMachineCost" msprop:Generator_TableClassName="PRPDBatchMachineCostDataTable" msprop:Generator_TableVarName="tablePRPDBatchMachineCost" msprop:Generator_RowChangedName="PRPDBatchMachineCostRowChanged" msprop:Generator_TablePropName="PRPDBatchMachineCost" msprop:Generator_RowDeletingName="PRPDBatchMachineCostRowDeleting" msprop:Generator_RowChangingName="PRPDBatchMachineCostRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatchMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatchMachineCostRowDeleted" msprop:Generator_RowClassName="PRPDBatchMachineCostRow" msprop:Generator_UserTableName="PRPDBatchMachineCost" msprop:Generator_RowEvArgName="PRPDBatchMachineCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Machine" msprop:Generator_ColumnVarNameInTable="columnMachine" msprop:Generator_ColumnPropNameInRow="Machine" msprop:Generator_ColumnPropNameInTable="MachineColumn" msprop:Generator_UserColumnName="Machine" type="xs:string" minOccurs="0" />
@@ -256,7 +257,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BatchPackingMRBulkPrint" msprop:Generator_TableClassName="BatchPackingMRBulkPrintDataTable" msprop:Generator_TableVarName="tableBatchPackingMRBulkPrint" msprop:Generator_RowChangedName="BatchPackingMRBulkPrintRowChanged" msprop:Generator_TablePropName="BatchPackingMRBulkPrint" msprop:Generator_RowDeletingName="BatchPackingMRBulkPrintRowDeleting" msprop:Generator_RowChangingName="BatchPackingMRBulkPrintRowChanging" msprop:Generator_RowEvHandlerName="BatchPackingMRBulkPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="BatchPackingMRBulkPrintRowDeleted" msprop:Generator_RowClassName="BatchPackingMRBulkPrintRow" msprop:Generator_UserTableName="BatchPackingMRBulkPrint" msprop:Generator_RowEvArgName="BatchPackingMRBulkPrintRowChangeEvent">
+        <xs:element name="BatchPackingMRBulkPrint" msprop:Generator_TableClassName="BatchPackingMRBulkPrintDataTable" msprop:Generator_TableVarName="tableBatchPackingMRBulkPrint" msprop:Generator_TablePropName="BatchPackingMRBulkPrint" msprop:Generator_RowDeletingName="BatchPackingMRBulkPrintRowDeleting" msprop:Generator_RowChangingName="BatchPackingMRBulkPrintRowChanging" msprop:Generator_RowEvHandlerName="BatchPackingMRBulkPrintRowChangeEventHandler" msprop:Generator_RowDeletedName="BatchPackingMRBulkPrintRowDeleted" msprop:Generator_UserTableName="BatchPackingMRBulkPrint" msprop:Generator_RowChangedName="BatchPackingMRBulkPrintRowChanged" msprop:Generator_RowEvArgName="BatchPackingMRBulkPrintRowChangeEvent" msprop:Generator_RowClassName="BatchPackingMRBulkPrintRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MRNO" msprop:Generator_ColumnVarNameInTable="columnMRNO" msprop:Generator_ColumnPropNameInRow="MRNO" msprop:Generator_ColumnPropNameInTable="MRNOColumn" msprop:Generator_UserColumnName="MRNO" type="xs:string" minOccurs="0" />
@@ -275,25 +276,36 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRPDBatch_Previous" msprop:Generator_TableClassName="PRPDBatch_PreviousDataTable" msprop:Generator_TableVarName="tablePRPDBatch_Previous" msprop:Generator_TablePropName="PRPDBatch_Previous" msprop:Generator_RowDeletingName="PRPDBatch_PreviousRowDeleting" msprop:Generator_RowChangingName="PRPDBatch_PreviousRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatch_PreviousRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatch_PreviousRowDeleted" msprop:Generator_UserTableName="PRPDBatch_Previous" msprop:Generator_RowChangedName="PRPDBatch_PreviousRowChanged" msprop:Generator_RowEvArgName="PRPDBatch_PreviousRowChangeEvent" msprop:Generator_RowClassName="PRPDBatch_PreviousRow">
+        <xs:element name="PRPDBatch_Previous" msprop:Generator_TableClassName="PRPDBatch_PreviousDataTable" msprop:Generator_TableVarName="tablePRPDBatch_Previous" msprop:Generator_RowChangedName="PRPDBatch_PreviousRowChanged" msprop:Generator_TablePropName="PRPDBatch_Previous" msprop:Generator_RowDeletingName="PRPDBatch_PreviousRowDeleting" msprop:Generator_RowChangingName="PRPDBatch_PreviousRowChanging" msprop:Generator_RowEvHandlerName="PRPDBatch_PreviousRowChangeEventHandler" msprop:Generator_RowDeletedName="PRPDBatch_PreviousRowDeleted" msprop:Generator_RowClassName="PRPDBatch_PreviousRow" msprop:Generator_UserTableName="PRPDBatch_Previous" msprop:Generator_RowEvArgName="PRPDBatch_PreviousRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PRPDBatchID" msprop:Generator_ColumnVarNameInTable="columnPRPDBatchID" msprop:Generator_ColumnPropNameInRow="PRPDBatchID" msprop:Generator_ColumnPropNameInTable="PRPDBatchIDColumn" msprop:Generator_UserColumnName="PRPDBatchID" type="xs:string" minOccurs="0" />
               <xs:element name="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalCost" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:string" minOccurs="0" />
+              <xs:element name="MaterialPer" msprop:Generator_ColumnVarNameInTable="columnMaterialPer" msprop:Generator_ColumnPropNameInRow="MaterialPer" msprop:Generator_ColumnPropNameInTable="MaterialPerColumn" msprop:Generator_UserColumnName="MaterialPer" type="xs:string" minOccurs="0" />
+              <xs:element name="MachinePer" msprop:Generator_ColumnVarNameInTable="columnMachinePer" msprop:Generator_ColumnPropNameInRow="MachinePer" msprop:Generator_ColumnPropNameInTable="MachinePerColumn" msprop:Generator_UserColumnName="MachinePer" type="xs:string" minOccurs="0" />
+              <xs:element name="LabourPer" msprop:Generator_ColumnVarNameInTable="columnLabourPer" msprop:Generator_ColumnPropNameInRow="LabourPer" msprop:Generator_ColumnPropNameInTable="LabourPerColumn" msprop:Generator_UserColumnName="LabourPer" type="xs:string" minOccurs="0" />
+              <xs:element name="OHPer" msprop:Generator_ColumnVarNameInTable="columnOHPer" msprop:Generator_ColumnPropNameInRow="OHPer" msprop:Generator_ColumnPropNameInTable="OHPerColumn" msprop:Generator_UserColumnName="OHPer" type="xs:string" minOccurs="0" />
+              <xs:element name="FinalQty" msprop:Generator_ColumnVarNameInTable="columnFinalQty" msprop:Generator_ColumnPropNameInRow="FinalQty" msprop:Generator_ColumnPropNameInTable="FinalQtyColumn" msprop:Generator_UserColumnName="FinalQty" type="xs:string" minOccurs="0" />
+              <xs:element name="Yield" msprop:Generator_ColumnVarNameInTable="columnYield" msprop:Generator_ColumnPropNameInRow="Yield" msprop:Generator_ColumnPropNameInTable="YieldColumn" msprop:Generator_UserColumnName="Yield" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dsRPDBatchPrevious" msprop:Generator_TableClassName="dsRPDBatchPreviousDataTable" msprop:Generator_TableVarName="tabledsRPDBatchPrevious" msprop:Generator_RowChangedName="dsRPDBatchPreviousRowChanged" msprop:Generator_TablePropName="dsRPDBatchPrevious" msprop:Generator_RowDeletingName="dsRPDBatchPreviousRowDeleting" msprop:Generator_RowChangingName="dsRPDBatchPreviousRowChanging" msprop:Generator_RowEvHandlerName="dsRPDBatchPreviousRowChangeEventHandler" msprop:Generator_RowDeletedName="dsRPDBatchPreviousRowDeleted" msprop:Generator_RowClassName="dsRPDBatchPreviousRow" msprop:Generator_UserTableName="dsRPDBatchPrevious" msprop:Generator_RowEvArgName="dsRPDBatchPreviousRowChangeEvent">
+        <xs:element name="dsRPDBatchPrevious" msprop:Generator_TableClassName="dsRPDBatchPreviousDataTable" msprop:Generator_TableVarName="tabledsRPDBatchPrevious" msprop:Generator_TablePropName="dsRPDBatchPrevious" msprop:Generator_RowDeletingName="dsRPDBatchPreviousRowDeleting" msprop:Generator_RowChangingName="dsRPDBatchPreviousRowChanging" msprop:Generator_RowEvHandlerName="dsRPDBatchPreviousRowChangeEventHandler" msprop:Generator_RowDeletedName="dsRPDBatchPreviousRowDeleted" msprop:Generator_UserTableName="dsRPDBatchPrevious" msprop:Generator_RowChangedName="dsRPDBatchPreviousRowChanged" msprop:Generator_RowEvArgName="dsRPDBatchPreviousRowChangeEvent" msprop:Generator_RowClassName="dsRPDBatchPreviousRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RPDBatchID" msprop:Generator_ColumnVarNameInTable="columnRPDBatchID" msprop:Generator_ColumnPropNameInRow="RPDBatchID" msprop:Generator_ColumnPropNameInTable="RPDBatchIDColumn" msprop:Generator_UserColumnName="RPDBatchID" type="xs:string" minOccurs="0" />
               <xs:element name="Output" msprop:Generator_ColumnVarNameInTable="columnOutput" msprop:Generator_ColumnPropNameInRow="Output" msprop:Generator_ColumnPropNameInTable="OutputColumn" msprop:Generator_UserColumnName="Output" type="xs:string" minOccurs="0" />
               <xs:element name="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:string" minOccurs="0" />
               <xs:element name="Yield" msprop:Generator_ColumnVarNameInTable="columnYield" msprop:Generator_ColumnPropNameInRow="Yield" msprop:Generator_ColumnPropNameInTable="YieldColumn" msprop:Generator_UserColumnName="Yield" type="xs:string" minOccurs="0" />
+              <xs:element name="MaterialPer" msprop:Generator_ColumnVarNameInTable="columnMaterialPer" msprop:Generator_ColumnPropNameInRow="MaterialPer" msprop:Generator_ColumnPropNameInTable="MaterialPerColumn" msprop:Generator_UserColumnName="MaterialPer" type="xs:string" minOccurs="0" />
+              <xs:element name="MachinePer" msprop:Generator_ColumnVarNameInTable="columnMachinePer" msprop:Generator_ColumnPropNameInRow="MachinePer" msprop:Generator_ColumnPropNameInTable="MachinePerColumn" msprop:Generator_UserColumnName="MachinePer" type="xs:string" minOccurs="0" />
+              <xs:element name="LabourPer" msprop:Generator_ColumnVarNameInTable="columnLabourPer" msprop:Generator_ColumnPropNameInRow="LabourPer" msprop:Generator_ColumnPropNameInTable="LabourPerColumn" msprop:Generator_UserColumnName="LabourPer" type="xs:string" minOccurs="0" />
+              <xs:element name="OHPer" msprop:Generator_ColumnVarNameInTable="columnOHPer" msprop:Generator_ColumnPropNameInRow="OHPer" msprop:Generator_ColumnPropNameInTable="OHPerColumn" msprop:Generator_UserColumnName="OHPer" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactBatchMaterialCost" msprop:Generator_TableClassName="ManufactBatchMaterialCostDataTable" msprop:Generator_TableVarName="tableManufactBatchMaterialCost" msprop:Generator_TablePropName="ManufactBatchMaterialCost" msprop:Generator_RowDeletingName="ManufactBatchMaterialCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchMaterialCostRowDeleted" msprop:Generator_UserTableName="ManufactBatchMaterialCost" msprop:Generator_RowChangedName="ManufactBatchMaterialCostRowChanged" msprop:Generator_RowEvArgName="ManufactBatchMaterialCostRowChangeEvent" msprop:Generator_RowClassName="ManufactBatchMaterialCostRow">
+        <xs:element name="ManufactBatchMaterialCost" msprop:Generator_TableClassName="ManufactBatchMaterialCostDataTable" msprop:Generator_TableVarName="tableManufactBatchMaterialCost" msprop:Generator_RowChangedName="ManufactBatchMaterialCostRowChanged" msprop:Generator_TablePropName="ManufactBatchMaterialCost" msprop:Generator_RowDeletingName="ManufactBatchMaterialCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchMaterialCostRowDeleted" msprop:Generator_RowClassName="ManufactBatchMaterialCostRow" msprop:Generator_UserTableName="ManufactBatchMaterialCost" msprop:Generator_RowEvArgName="ManufactBatchMaterialCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialCode" msprop:Generator_ColumnVarNameInTable="columnMaterialCode" msprop:Generator_ColumnPropNameInRow="MaterialCode" msprop:Generator_ColumnPropNameInTable="MaterialCodeColumn" msprop:Generator_UserColumnName="MaterialCode" type="xs:string" minOccurs="0" />
@@ -305,7 +317,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactPrevBatchCost" msprop:Generator_TableClassName="ManufactPrevBatchCostDataTable" msprop:Generator_TableVarName="tableManufactPrevBatchCost" msprop:Generator_TablePropName="ManufactPrevBatchCost" msprop:Generator_RowDeletingName="ManufactPrevBatchCostRowDeleting" msprop:Generator_RowChangingName="ManufactPrevBatchCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPrevBatchCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPrevBatchCostRowDeleted" msprop:Generator_UserTableName="ManufactPrevBatchCost" msprop:Generator_RowChangedName="ManufactPrevBatchCostRowChanged" msprop:Generator_RowEvArgName="ManufactPrevBatchCostRowChangeEvent" msprop:Generator_RowClassName="ManufactPrevBatchCostRow">
+        <xs:element name="ManufactPrevBatchCost" msprop:Generator_TableClassName="ManufactPrevBatchCostDataTable" msprop:Generator_TableVarName="tableManufactPrevBatchCost" msprop:Generator_RowChangedName="ManufactPrevBatchCostRowChanged" msprop:Generator_TablePropName="ManufactPrevBatchCost" msprop:Generator_RowDeletingName="ManufactPrevBatchCostRowDeleting" msprop:Generator_RowChangingName="ManufactPrevBatchCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPrevBatchCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPrevBatchCostRowDeleted" msprop:Generator_RowClassName="ManufactPrevBatchCostRow" msprop:Generator_UserTableName="ManufactPrevBatchCost" msprop:Generator_RowEvArgName="ManufactPrevBatchCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ManufacturingBatchID" msprop:Generator_ColumnVarNameInTable="columnManufacturingBatchID" msprop:Generator_ColumnPropNameInRow="ManufacturingBatchID" msprop:Generator_ColumnPropNameInTable="ManufacturingBatchIDColumn" msprop:Generator_UserColumnName="ManufacturingBatchID" type="xs:string" minOccurs="0" />
@@ -315,7 +327,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RPDBatchCostSummary1" msprop:Generator_TableClassName="RPDBatchCostSummary1DataTable" msprop:Generator_TableVarName="tableRPDBatchCostSummary1" msprop:Generator_TablePropName="RPDBatchCostSummary1" msprop:Generator_RowDeletingName="RPDBatchCostSummary1RowDeleting" msprop:Generator_RowChangingName="RPDBatchCostSummary1RowChanging" msprop:Generator_RowEvHandlerName="RPDBatchCostSummary1RowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchCostSummary1RowDeleted" msprop:Generator_UserTableName="RPDBatchCostSummary1" msprop:Generator_RowChangedName="RPDBatchCostSummary1RowChanged" msprop:Generator_RowEvArgName="RPDBatchCostSummary1RowChangeEvent" msprop:Generator_RowClassName="RPDBatchCostSummary1Row">
+        <xs:element name="RPDBatchCostSummary1" msprop:Generator_TableClassName="RPDBatchCostSummary1DataTable" msprop:Generator_TableVarName="tableRPDBatchCostSummary1" msprop:Generator_RowChangedName="RPDBatchCostSummary1RowChanged" msprop:Generator_TablePropName="RPDBatchCostSummary1" msprop:Generator_RowDeletingName="RPDBatchCostSummary1RowDeleting" msprop:Generator_RowChangingName="RPDBatchCostSummary1RowChanging" msprop:Generator_RowEvHandlerName="RPDBatchCostSummary1RowChangeEventHandler" msprop:Generator_RowDeletedName="RPDBatchCostSummary1RowDeleted" msprop:Generator_RowClassName="RPDBatchCostSummary1Row" msprop:Generator_UserTableName="RPDBatchCostSummary1" msprop:Generator_RowEvArgName="RPDBatchCostSummary1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RPDBatchID" msprop:Generator_ColumnVarNameInTable="columnRPDBatchID" msprop:Generator_ColumnPropNameInRow="RPDBatchID" msprop:Generator_ColumnPropNameInTable="RPDBatchIDColumn" msprop:Generator_UserColumnName="RPDBatchID" type="xs:string" minOccurs="0" />
@@ -345,7 +357,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactBatchCostSummary" msprop:Generator_TableClassName="ManufactBatchCostSummaryDataTable" msprop:Generator_TableVarName="tableManufactBatchCostSummary" msprop:Generator_TablePropName="ManufactBatchCostSummary" msprop:Generator_RowDeletingName="ManufactBatchCostSummaryRowDeleting" msprop:Generator_RowChangingName="ManufactBatchCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchCostSummaryRowDeleted" msprop:Generator_UserTableName="ManufactBatchCostSummary" msprop:Generator_RowChangedName="ManufactBatchCostSummaryRowChanged" msprop:Generator_RowEvArgName="ManufactBatchCostSummaryRowChangeEvent" msprop:Generator_RowClassName="ManufactBatchCostSummaryRow">
+        <xs:element name="ManufactBatchCostSummary" msprop:Generator_TableClassName="ManufactBatchCostSummaryDataTable" msprop:Generator_TableVarName="tableManufactBatchCostSummary" msprop:Generator_RowChangedName="ManufactBatchCostSummaryRowChanged" msprop:Generator_TablePropName="ManufactBatchCostSummary" msprop:Generator_RowDeletingName="ManufactBatchCostSummaryRowDeleting" msprop:Generator_RowChangingName="ManufactBatchCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchCostSummaryRowDeleted" msprop:Generator_RowClassName="ManufactBatchCostSummaryRow" msprop:Generator_UserTableName="ManufactBatchCostSummary" msprop:Generator_RowEvArgName="ManufactBatchCostSummaryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialCost" msprop:Generator_ColumnVarNameInTable="columnMaterialCost" msprop:Generator_ColumnPropNameInRow="MaterialCost" msprop:Generator_ColumnPropNameInTable="MaterialCostColumn" msprop:Generator_UserColumnName="MaterialCost" type="xs:string" minOccurs="0" />
@@ -369,7 +381,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactBatchOHCost" msprop:Generator_TableClassName="ManufactBatchOHCostDataTable" msprop:Generator_TableVarName="tableManufactBatchOHCost" msprop:Generator_TablePropName="ManufactBatchOHCost" msprop:Generator_RowDeletingName="ManufactBatchOHCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchOHCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchOHCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchOHCostRowDeleted" msprop:Generator_UserTableName="ManufactBatchOHCost" msprop:Generator_RowChangedName="ManufactBatchOHCostRowChanged" msprop:Generator_RowEvArgName="ManufactBatchOHCostRowChangeEvent" msprop:Generator_RowClassName="ManufactBatchOHCostRow">
+        <xs:element name="ManufactBatchOHCost" msprop:Generator_TableClassName="ManufactBatchOHCostDataTable" msprop:Generator_TableVarName="tableManufactBatchOHCost" msprop:Generator_RowChangedName="ManufactBatchOHCostRowChanged" msprop:Generator_TablePropName="ManufactBatchOHCost" msprop:Generator_RowDeletingName="ManufactBatchOHCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchOHCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchOHCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchOHCostRowDeleted" msprop:Generator_RowClassName="ManufactBatchOHCostRow" msprop:Generator_UserTableName="ManufactBatchOHCost" msprop:Generator_RowEvArgName="ManufactBatchOHCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" type="xs:string" minOccurs="0" />
@@ -378,7 +390,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactBatchLaborCost" msprop:Generator_TableClassName="ManufactBatchLaborCostDataTable" msprop:Generator_TableVarName="tableManufactBatchLaborCost" msprop:Generator_TablePropName="ManufactBatchLaborCost" msprop:Generator_RowDeletingName="ManufactBatchLaborCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchLaborCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchLaborCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchLaborCostRowDeleted" msprop:Generator_UserTableName="ManufactBatchLaborCost" msprop:Generator_RowChangedName="ManufactBatchLaborCostRowChanged" msprop:Generator_RowEvArgName="ManufactBatchLaborCostRowChangeEvent" msprop:Generator_RowClassName="ManufactBatchLaborCostRow">
+        <xs:element name="ManufactBatchLaborCost" msprop:Generator_TableClassName="ManufactBatchLaborCostDataTable" msprop:Generator_TableVarName="tableManufactBatchLaborCost" msprop:Generator_RowChangedName="ManufactBatchLaborCostRowChanged" msprop:Generator_TablePropName="ManufactBatchLaborCost" msprop:Generator_RowDeletingName="ManufactBatchLaborCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchLaborCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchLaborCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchLaborCostRowDeleted" msprop:Generator_RowClassName="ManufactBatchLaborCostRow" msprop:Generator_UserTableName="ManufactBatchLaborCost" msprop:Generator_RowEvArgName="ManufactBatchLaborCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HourlyRate" msprop:Generator_ColumnVarNameInTable="columnHourlyRate" msprop:Generator_ColumnPropNameInRow="HourlyRate" msprop:Generator_ColumnPropNameInTable="HourlyRateColumn" msprop:Generator_UserColumnName="HourlyRate" type="xs:string" minOccurs="0" />
@@ -389,7 +401,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactBatchMachineCost" msprop:Generator_TableClassName="ManufactBatchMachineCostDataTable" msprop:Generator_TableVarName="tableManufactBatchMachineCost" msprop:Generator_TablePropName="ManufactBatchMachineCost" msprop:Generator_RowDeletingName="ManufactBatchMachineCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchMachineCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchMachineCostRowDeleted" msprop:Generator_UserTableName="ManufactBatchMachineCost" msprop:Generator_RowChangedName="ManufactBatchMachineCostRowChanged" msprop:Generator_RowEvArgName="ManufactBatchMachineCostRowChangeEvent" msprop:Generator_RowClassName="ManufactBatchMachineCostRow">
+        <xs:element name="ManufactBatchMachineCost" msprop:Generator_TableClassName="ManufactBatchMachineCostDataTable" msprop:Generator_TableVarName="tableManufactBatchMachineCost" msprop:Generator_RowChangedName="ManufactBatchMachineCostRowChanged" msprop:Generator_TablePropName="ManufactBatchMachineCost" msprop:Generator_RowDeletingName="ManufactBatchMachineCostRowDeleting" msprop:Generator_RowChangingName="ManufactBatchMachineCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactBatchMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactBatchMachineCostRowDeleted" msprop:Generator_RowClassName="ManufactBatchMachineCostRow" msprop:Generator_UserTableName="ManufactBatchMachineCost" msprop:Generator_RowEvArgName="ManufactBatchMachineCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Machine" msprop:Generator_ColumnVarNameInTable="columnMachine" msprop:Generator_ColumnPropNameInRow="Machine" msprop:Generator_ColumnPropNameInTable="MachineColumn" msprop:Generator_UserColumnName="Machine" type="xs:string" minOccurs="0" />
@@ -399,7 +411,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactPackCostSummary" msprop:Generator_TableClassName="ManufactPackCostSummaryDataTable" msprop:Generator_TableVarName="tableManufactPackCostSummary" msprop:Generator_TablePropName="ManufactPackCostSummary" msprop:Generator_RowDeletingName="ManufactPackCostSummaryRowDeleting" msprop:Generator_RowChangingName="ManufactPackCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackCostSummaryRowDeleted" msprop:Generator_UserTableName="ManufactPackCostSummary" msprop:Generator_RowChangedName="ManufactPackCostSummaryRowChanged" msprop:Generator_RowEvArgName="ManufactPackCostSummaryRowChangeEvent" msprop:Generator_RowClassName="ManufactPackCostSummaryRow">
+        <xs:element name="ManufactPackCostSummary" msprop:Generator_TableClassName="ManufactPackCostSummaryDataTable" msprop:Generator_TableVarName="tableManufactPackCostSummary" msprop:Generator_RowChangedName="ManufactPackCostSummaryRowChanged" msprop:Generator_TablePropName="ManufactPackCostSummary" msprop:Generator_RowDeletingName="ManufactPackCostSummaryRowDeleting" msprop:Generator_RowChangingName="ManufactPackCostSummaryRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackCostSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackCostSummaryRowDeleted" msprop:Generator_RowClassName="ManufactPackCostSummaryRow" msprop:Generator_UserTableName="ManufactPackCostSummary" msprop:Generator_RowEvArgName="ManufactPackCostSummaryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PackingMaterialCost" msprop:Generator_ColumnVarNameInTable="columnPackingMaterialCost" msprop:Generator_ColumnPropNameInRow="PackingMaterialCost" msprop:Generator_ColumnPropNameInTable="PackingMaterialCostColumn" msprop:Generator_UserColumnName="PackingMaterialCost" type="xs:string" minOccurs="0" />
@@ -442,7 +454,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactPackMaterialCost" msprop:Generator_TableClassName="ManufactPackMaterialCostDataTable" msprop:Generator_TableVarName="tableManufactPackMaterialCost" msprop:Generator_TablePropName="ManufactPackMaterialCost" msprop:Generator_RowDeletingName="ManufactPackMaterialCostRowDeleting" msprop:Generator_RowChangingName="ManufactPackMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackMaterialCostRowDeleted" msprop:Generator_UserTableName="ManufactPackMaterialCost" msprop:Generator_RowChangedName="ManufactPackMaterialCostRowChanged" msprop:Generator_RowEvArgName="ManufactPackMaterialCostRowChangeEvent" msprop:Generator_RowClassName="ManufactPackMaterialCostRow">
+        <xs:element name="ManufactPackMaterialCost" msprop:Generator_TableClassName="ManufactPackMaterialCostDataTable" msprop:Generator_TableVarName="tableManufactPackMaterialCost" msprop:Generator_RowChangedName="ManufactPackMaterialCostRowChanged" msprop:Generator_TablePropName="ManufactPackMaterialCost" msprop:Generator_RowDeletingName="ManufactPackMaterialCostRowDeleting" msprop:Generator_RowChangingName="ManufactPackMaterialCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackMaterialCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackMaterialCostRowDeleted" msprop:Generator_RowClassName="ManufactPackMaterialCostRow" msprop:Generator_UserTableName="ManufactPackMaterialCost" msprop:Generator_RowEvArgName="ManufactPackMaterialCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaterialCode" msprop:Generator_ColumnVarNameInTable="columnMaterialCode" msprop:Generator_ColumnPropNameInRow="MaterialCode" msprop:Generator_ColumnPropNameInTable="MaterialCodeColumn" msprop:Generator_UserColumnName="MaterialCode" type="xs:string" minOccurs="0" />
@@ -455,7 +467,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactPackLaborCost" msprop:Generator_TableClassName="ManufactPackLaborCostDataTable" msprop:Generator_TableVarName="tableManufactPackLaborCost" msprop:Generator_TablePropName="ManufactPackLaborCost" msprop:Generator_RowDeletingName="ManufactPackLaborCostRowDeleting" msprop:Generator_RowChangingName="ManufactPackLaborCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackLaborCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackLaborCostRowDeleted" msprop:Generator_UserTableName="ManufactPackLaborCost" msprop:Generator_RowChangedName="ManufactPackLaborCostRowChanged" msprop:Generator_RowEvArgName="ManufactPackLaborCostRowChangeEvent" msprop:Generator_RowClassName="ManufactPackLaborCostRow">
+        <xs:element name="ManufactPackLaborCost" msprop:Generator_TableClassName="ManufactPackLaborCostDataTable" msprop:Generator_TableVarName="tableManufactPackLaborCost" msprop:Generator_RowChangedName="ManufactPackLaborCostRowChanged" msprop:Generator_TablePropName="ManufactPackLaborCost" msprop:Generator_RowDeletingName="ManufactPackLaborCostRowDeleting" msprop:Generator_RowChangingName="ManufactPackLaborCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackLaborCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackLaborCostRowDeleted" msprop:Generator_RowClassName="ManufactPackLaborCostRow" msprop:Generator_UserTableName="ManufactPackLaborCost" msprop:Generator_RowEvArgName="ManufactPackLaborCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Employee" msprop:Generator_ColumnVarNameInTable="columnEmployee" msprop:Generator_ColumnPropNameInRow="Employee" msprop:Generator_ColumnPropNameInTable="EmployeeColumn" msprop:Generator_UserColumnName="Employee" type="xs:string" minOccurs="0" />
@@ -466,7 +478,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ManufactPackMachineCost" msprop:Generator_TableClassName="ManufactPackMachineCostDataTable" msprop:Generator_TableVarName="tableManufactPackMachineCost" msprop:Generator_TablePropName="ManufactPackMachineCost" msprop:Generator_RowDeletingName="ManufactPackMachineCostRowDeleting" msprop:Generator_RowChangingName="ManufactPackMachineCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackMachineCostRowDeleted" msprop:Generator_UserTableName="ManufactPackMachineCost" msprop:Generator_RowChangedName="ManufactPackMachineCostRowChanged" msprop:Generator_RowEvArgName="ManufactPackMachineCostRowChangeEvent" msprop:Generator_RowClassName="ManufactPackMachineCostRow">
+        <xs:element name="ManufactPackMachineCost" msprop:Generator_TableClassName="ManufactPackMachineCostDataTable" msprop:Generator_TableVarName="tableManufactPackMachineCost" msprop:Generator_RowChangedName="ManufactPackMachineCostRowChanged" msprop:Generator_TablePropName="ManufactPackMachineCost" msprop:Generator_RowDeletingName="ManufactPackMachineCostRowDeleting" msprop:Generator_RowChangingName="ManufactPackMachineCostRowChanging" msprop:Generator_RowEvHandlerName="ManufactPackMachineCostRowChangeEventHandler" msprop:Generator_RowDeletedName="ManufactPackMachineCostRowDeleted" msprop:Generator_RowClassName="ManufactPackMachineCostRow" msprop:Generator_UserTableName="ManufactPackMachineCost" msprop:Generator_RowEvArgName="ManufactPackMachineCostRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Machine" msprop:Generator_ColumnVarNameInTable="columnMachine" msprop:Generator_ColumnPropNameInRow="Machine" msprop:Generator_ColumnPropNameInTable="MachineColumn" msprop:Generator_UserColumnName="Machine" type="xs:string" minOccurs="0" />
@@ -476,7 +488,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="WIP_Files_BySectionID" msprop:Generator_TableClassName="WIP_Files_BySectionIDDataTable" msprop:Generator_TableVarName="tableWIP_Files_BySectionID" msprop:Generator_RowChangedName="WIP_Files_BySectionIDRowChanged" msprop:Generator_TablePropName="WIP_Files_BySectionID" msprop:Generator_RowDeletingName="WIP_Files_BySectionIDRowDeleting" msprop:Generator_RowChangingName="WIP_Files_BySectionIDRowChanging" msprop:Generator_RowEvHandlerName="WIP_Files_BySectionIDRowChangeEventHandler" msprop:Generator_RowDeletedName="WIP_Files_BySectionIDRowDeleted" msprop:Generator_RowClassName="WIP_Files_BySectionIDRow" msprop:Generator_UserTableName="WIP_Files_BySectionID" msprop:Generator_RowEvArgName="WIP_Files_BySectionIDRowChangeEvent">
+        <xs:element name="WIP_Files_BySectionID" msprop:Generator_TableClassName="WIP_Files_BySectionIDDataTable" msprop:Generator_TableVarName="tableWIP_Files_BySectionID" msprop:Generator_TablePropName="WIP_Files_BySectionID" msprop:Generator_RowDeletingName="WIP_Files_BySectionIDRowDeleting" msprop:Generator_RowChangingName="WIP_Files_BySectionIDRowChanging" msprop:Generator_RowEvHandlerName="WIP_Files_BySectionIDRowChangeEventHandler" msprop:Generator_RowDeletedName="WIP_Files_BySectionIDRowDeleted" msprop:Generator_UserTableName="WIP_Files_BySectionID" msprop:Generator_RowChangedName="WIP_Files_BySectionIDRowChanged" msprop:Generator_RowEvArgName="WIP_Files_BySectionIDRowChangeEvent" msprop:Generator_RowClassName="WIP_Files_BySectionIDRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SectionID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSectionID" msprop:Generator_ColumnPropNameInRow="SectionID" msprop:Generator_ColumnPropNameInTable="SectionIDColumn" msprop:Generator_UserColumnName="SectionID" type="xs:decimal" minOccurs="0" />
@@ -505,7 +517,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BatchPackingMR_WIP" msprop:Generator_TableClassName="BatchPackingMR_WIPDataTable" msprop:Generator_TableVarName="tableBatchPackingMR_WIP" msprop:Generator_TablePropName="BatchPackingMR_WIP" msprop:Generator_RowDeletingName="BatchPackingMR_WIPRowDeleting" msprop:Generator_RowChangingName="BatchPackingMR_WIPRowChanging" msprop:Generator_RowEvHandlerName="BatchPackingMR_WIPRowChangeEventHandler" msprop:Generator_RowDeletedName="BatchPackingMR_WIPRowDeleted" msprop:Generator_UserTableName="BatchPackingMR_WIP" msprop:Generator_RowChangedName="BatchPackingMR_WIPRowChanged" msprop:Generator_RowEvArgName="BatchPackingMR_WIPRowChangeEvent" msprop:Generator_RowClassName="BatchPackingMR_WIPRow">
+        <xs:element name="BatchPackingMR_WIP" msprop:Generator_TableClassName="BatchPackingMR_WIPDataTable" msprop:Generator_TableVarName="tableBatchPackingMR_WIP" msprop:Generator_RowChangedName="BatchPackingMR_WIPRowChanged" msprop:Generator_TablePropName="BatchPackingMR_WIP" msprop:Generator_RowDeletingName="BatchPackingMR_WIPRowDeleting" msprop:Generator_RowChangingName="BatchPackingMR_WIPRowChanging" msprop:Generator_RowEvHandlerName="BatchPackingMR_WIPRowChangeEventHandler" msprop:Generator_RowDeletedName="BatchPackingMR_WIPRowDeleted" msprop:Generator_RowClassName="BatchPackingMR_WIPRow" msprop:Generator_UserTableName="BatchPackingMR_WIP" msprop:Generator_RowEvArgName="BatchPackingMR_WIPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MRSectionID" msprop:Generator_ColumnVarNameInTable="columnMRSectionID" msprop:Generator_ColumnPropNameInRow="MRSectionID" msprop:Generator_ColumnPropNameInTable="MRSectionIDColumn" msprop:Generator_UserColumnName="MRSectionID" type="xs:decimal" minOccurs="0" />
@@ -532,6 +544,83 @@
               </xs:element>
               <xs:element name="Qty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
               <xs:element name="UnitRate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUnitRate" msprop:Generator_ColumnPropNameInRow="UnitRate" msprop:Generator_ColumnPropNameInTable="UnitRateColumn" msprop:Generator_UserColumnName="UnitRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGET_WIP_PRPD" msprop:Generator_TableClassName="SPGET_WIP_PRPDDataTable" msprop:Generator_TableVarName="tableSPGET_WIP_PRPD" msprop:Generator_TablePropName="SPGET_WIP_PRPD" msprop:Generator_RowDeletingName="SPGET_WIP_PRPDRowDeleting" msprop:Generator_RowChangingName="SPGET_WIP_PRPDRowChanging" msprop:Generator_RowEvHandlerName="SPGET_WIP_PRPDRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGET_WIP_PRPDRowDeleted" msprop:Generator_UserTableName="SPGET_WIP_PRPD" msprop:Generator_RowChangedName="SPGET_WIP_PRPDRowChanged" msprop:Generator_RowEvArgName="SPGET_WIP_PRPDRowChangeEvent" msprop:Generator_RowClassName="SPGET_WIP_PRPDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRPDBatchID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRPDBatchID" msprop:Generator_ColumnPropNameInRow="PRPDBatchID" msprop:Generator_ColumnPropNameInTable="PRPDBatchIDColumn" msprop:Generator_UserColumnName="PRPDBatchID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRPDBatchMaterialCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRPDBatchMaterialCode" msprop:Generator_ColumnPropNameInRow="PRPDBatchMaterialCode" msprop:Generator_ColumnPropNameInTable="PRPDBatchMaterialCodeColumn" msprop:Generator_UserColumnName="PRPDBatchMaterialCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialName" msprop:Generator_ColumnPropNameInRow="MaterialName" msprop:Generator_ColumnPropNameInTable="MaterialNameColumn" msprop:Generator_UserColumnName="MaterialName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRPDBatchStatus" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRPDBatchStatus" msprop:Generator_ColumnPropNameInRow="PRPDBatchStatus" msprop:Generator_ColumnPropNameInTable="PRPDBatchStatusColumn" msprop:Generator_UserColumnName="PRPDBatchStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="PRPDBatchQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPRPDBatchQty" msprop:Generator_ColumnPropNameInRow="PRPDBatchQty" msprop:Generator_ColumnPropNameInTable="PRPDBatchQtyColumn" msprop:Generator_UserColumnName="PRPDBatchQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnitCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MaterialCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialCost" msprop:Generator_ColumnPropNameInRow="MaterialCost" msprop:Generator_ColumnPropNameInTable="MaterialCostColumn" msprop:Generator_UserColumnName="MaterialCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MachineCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMachineCost" msprop:Generator_ColumnPropNameInRow="MachineCost" msprop:Generator_ColumnPropNameInTable="MachineCostColumn" msprop:Generator_UserColumnName="MachineCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LabourCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLabourCost" msprop:Generator_ColumnPropNameInRow="LabourCost" msprop:Generator_ColumnPropNameInTable="LabourCostColumn" msprop:Generator_UserColumnName="LabourCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OverheadCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOverheadCost" msprop:Generator_ColumnPropNameInRow="OverheadCost" msprop:Generator_ColumnPropNameInTable="OverheadCostColumn" msprop:Generator_UserColumnName="OverheadCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SPGET_WIP_RPD" msprop:Generator_TableClassName="SPGET_WIP_RPDDataTable" msprop:Generator_TableVarName="tableSPGET_WIP_RPD" msprop:Generator_RowChangedName="SPGET_WIP_RPDRowChanged" msprop:Generator_TablePropName="SPGET_WIP_RPD" msprop:Generator_RowDeletingName="SPGET_WIP_RPDRowDeleting" msprop:Generator_RowChangingName="SPGET_WIP_RPDRowChanging" msprop:Generator_RowEvHandlerName="SPGET_WIP_RPDRowChangeEventHandler" msprop:Generator_RowDeletedName="SPGET_WIP_RPDRowDeleted" msprop:Generator_RowClassName="SPGET_WIP_RPDRow" msprop:Generator_UserTableName="SPGET_WIP_RPD" msprop:Generator_RowEvArgName="SPGET_WIP_RPDRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RPDBatchID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRPDBatchID" msprop:Generator_ColumnPropNameInRow="RPDBatchID" msprop:Generator_ColumnPropNameInTable="RPDBatchIDColumn" msprop:Generator_UserColumnName="RPDBatchID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RPDBatchMaterialCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRPDBatchMaterialCode" msprop:Generator_ColumnPropNameInRow="RPDBatchMaterialCode" msprop:Generator_ColumnPropNameInTable="RPDBatchMaterialCodeColumn" msprop:Generator_UserColumnName="RPDBatchMaterialCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialName" msprop:Generator_ColumnPropNameInRow="MaterialName" msprop:Generator_ColumnPropNameInTable="MaterialNameColumn" msprop:Generator_UserColumnName="MaterialName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RPDBatchStatus" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRPDBatchStatus" msprop:Generator_ColumnPropNameInRow="RPDBatchStatus" msprop:Generator_ColumnPropNameInTable="RPDBatchStatusColumn" msprop:Generator_UserColumnName="RPDBatchStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RPDBatchQty" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRPDBatchQty" msprop:Generator_ColumnPropNameInRow="RPDBatchQty" msprop:Generator_ColumnPropNameInTable="RPDBatchQtyColumn" msprop:Generator_UserColumnName="RPDBatchQty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UnitCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MaterialCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialCost" msprop:Generator_ColumnPropNameInRow="MaterialCost" msprop:Generator_ColumnPropNameInTable="MaterialCostColumn" msprop:Generator_UserColumnName="MaterialCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PackingMaterialCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPackingMaterialCost" msprop:Generator_ColumnPropNameInRow="PackingMaterialCost" msprop:Generator_ColumnPropNameInTable="PackingMaterialCostColumn" msprop:Generator_UserColumnName="PackingMaterialCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MachineCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMachineCost" msprop:Generator_ColumnPropNameInRow="MachineCost" msprop:Generator_ColumnPropNameInTable="MachineCostColumn" msprop:Generator_UserColumnName="MachineCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LabourCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLabourCost" msprop:Generator_ColumnPropNameInRow="LabourCost" msprop:Generator_ColumnPropNameInTable="LabourCostColumn" msprop:Generator_UserColumnName="LabourCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OverheadCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOverheadCost" msprop:Generator_ColumnPropNameInRow="OverheadCost" msprop:Generator_ColumnPropNameInTable="OverheadCostColumn" msprop:Generator_UserColumnName="OverheadCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCost" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

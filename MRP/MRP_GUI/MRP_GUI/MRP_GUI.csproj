@@ -143,6 +143,18 @@
     <Compile Include="Components\ucProcessedMaterial.designer.cs">
       <DependentUpon>ucProcessedMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\ucUpdateEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucUpdateEmployee.designer.cs">
+      <DependentUpon>ucUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ucUpdateMachine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ucUpdateMachine.designer.cs">
+      <DependentUpon>ucUpdateMachine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\usProductInsert.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +208,18 @@
     </Compile>
     <Compile Include="Packing\frmBatchPacking_DamagedGoods.Designer.cs">
       <DependentUpon>frmBatchPacking_DamagedGoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA\frmContactRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA\frmContactRegistration.Designer.cs">
+      <DependentUpon>frmContactRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA\frmSuplierMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PA\frmSuplierMaterials.Designer.cs">
+      <DependentUpon>frmSuplierMaterials.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductionPlan\frmBatchPlan.cs">
       <SubType>Form</SubType>
@@ -533,6 +557,12 @@
     <Compile Include="PRPD\frmViewPRPDBatch.Designer.cs">
       <DependentUpon>frmViewPRPDBatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRPD\frmWIP_PRPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRPD\frmWIP_PRPD.designer.cs">
+      <DependentUpon>frmWIP_PRPD.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRPD\Manage\frmPRPDBatchManagement-Preperation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -568,6 +598,18 @@
     </Compile>
     <Compile Include="Registration\frmStockManagment.designer.cs">
       <DependentUpon>frmStockManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmUpdateEmployeeHRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmUpdateEmployeeHRate.designer.cs">
+      <DependentUpon>frmUpdateEmployeeHRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\frmUpdateMachineHRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\frmUpdateMachineHRate.designer.cs">
+      <DependentUpon>frmUpdateMachineHRate.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration\QC\frmQC.cs">
       <SubType>Form</SubType>
@@ -1232,6 +1274,18 @@
     <Compile Include="Report\frmRptRPDBatchCost.designer.cs">
       <DependentUpon>frmRptRPDBatchCost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\frmRptWIP_PRPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptWIP_PRPD.Designer.cs">
+      <DependentUpon>frmRptWIP_PRPD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmRptWIP_RPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmRptWIP_RPD.designer.cs">
+      <DependentUpon>frmRptWIP_RPD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\frmWIP_manufacturingReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1310,13 +1364,19 @@
     <Compile Include="RPD\frmRPDCostApprove.Designer.cs">
       <DependentUpon>frmRPDCostApprove.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataValidation.cs" />
     <Compile Include="RPD\frmRPDProduction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RPD\frmRPDProduction.Designer.cs">
+    <Compile Include="RPD\frmRPDProduction.designer.cs">
       <DependentUpon>frmRPDProduction.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataValidation.cs" />
+    <Compile Include="RPD\frmWIP_RPD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPD\frmWIP_RPD.designer.cs">
+      <DependentUpon>frmWIP_RPD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\AddDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1494,6 +1554,12 @@
     <EmbeddedResource Include="Components\ucProcessedMaterial.resx">
       <DependentUpon>ucProcessedMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucUpdateEmployee.resx">
+      <DependentUpon>ucUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ucUpdateMachine.resx">
+      <DependentUpon>ucUpdateMachine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\usProductInsert.resx">
       <DependentUpon>usProductInsert.cs</DependentUpon>
     </EmbeddedResource>
@@ -1520,6 +1586,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Packing\frmBatchPacking_DamagedGoods.resx">
       <DependentUpon>frmBatchPacking_DamagedGoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA\frmContactRegistration.resx">
+      <DependentUpon>frmContactRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA\frmSuplierMaterials.resx">
+      <DependentUpon>frmSuplierMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan\frmBatchPlan.resx">
       <DependentUpon>frmBatchPlan.cs</DependentUpon>
@@ -1683,6 +1755,9 @@
     <EmbeddedResource Include="PRPD\frmViewPRPDBatch.resx">
       <DependentUpon>frmViewPRPDBatch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRPD\frmWIP_PRPD.resx">
+      <DependentUpon>frmWIP_PRPD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRPD\Manage\frmPRPDBatchManagement-Preperation.resx">
       <DependentUpon>frmPRPDBatchManagement-Preperation.cs</DependentUpon>
     </EmbeddedResource>
@@ -1700,6 +1775,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\frmStockManagment.resx">
       <DependentUpon>frmStockManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\frmUpdateEmployeeHRate.resx">
+      <DependentUpon>frmUpdateEmployeeHRate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\QC\frmQC.resx">
       <DependentUpon>frmQC.cs</DependentUpon>
@@ -2035,6 +2113,12 @@
     <EmbeddedResource Include="Report\frmRptRPDBatchCost.resx">
       <DependentUpon>frmRptRPDBatchCost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptWIP_PRPD.resx">
+      <DependentUpon>frmRptWIP_PRPD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmRptWIP_RPD.resx">
+      <DependentUpon>frmRptWIP_RPD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\frmWIP_manufacturingReport.resx">
       <DependentUpon>frmWIP_manufacturingReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -2054,6 +2138,8 @@
     <EmbeddedResource Include="Report\rptRPDBatchCost.rdlc" />
     <EmbeddedResource Include="Report\rptWIP_manufacturingReport.rdlc" />
     <EmbeddedResource Include="Report\rptWIP_Packing_MaterialTablePrint.rdlc" />
+    <EmbeddedResource Include="Report\rptWIP_PRPD.rdlc" />
+    <EmbeddedResource Include="Report\rptWIP_RPD.rdlc" />
     <EmbeddedResource Include="RPD\frmBatchPackingMR_RPD.resx">
       <DependentUpon>frmBatchPackingMR_RPD.cs</DependentUpon>
     </EmbeddedResource>
@@ -2089,6 +2175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RPD\frmRPDProduction.resx">
       <DependentUpon>frmRPDProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPD\frmWIP_RPD.resx">
+      <DependentUpon>frmWIP_RPD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\AddDetails.resx">
       <DependentUpon>AddDetails.cs</DependentUpon>

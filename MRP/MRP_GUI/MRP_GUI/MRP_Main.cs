@@ -3218,6 +3218,44 @@ namespace MRP_GUI
             ShowForm(frm);
         }
 
+        private void testToolStripMenuItem_Click_3(object sender, EventArgs e)
+        {
+            frmWIP_RPD frm = new frmWIP_RPD();
+            ShowForm(frm);
+        }
+
+        private void viewWIPPRPDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmWIP_PRPD frm = new frmWIP_PRPD();
+            ShowForm(frm);
+        }
+
+        private void viewWIPRPDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmWIP_RPD frm = new frmWIP_RPD();
+            ShowForm(frm);
+        }
+
+
+
+        private void employeeRateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateEmployeeHRate frm = new frmUpdateEmployeeHRate();
+            ShowForm(frm);
+        }
+
+        private void machineRateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateMachineHRate frm = new frmUpdateMachineHRate();
+            ShowForm(frm);
+        }
+
+        private void testToolStripMenuItem_Click_4(object sender, EventArgs e)
+        {
+            frmContactRegistration frm = new frmContactRegistration();
+            ShowForm(frm);
+        }
+
 
 
 

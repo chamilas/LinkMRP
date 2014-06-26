@@ -86,7 +86,7 @@
             // btnLoad
             // 
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLoad.Location = new System.Drawing.Point(535, 8);
+            this.btnLoad.Location = new System.Drawing.Point(471, 8);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(106, 25);
             this.btnLoad.TabIndex = 188;
@@ -102,7 +102,7 @@
             this.cmbSections.FormattingEnabled = true;
             this.cmbSections.Location = new System.Drawing.Point(116, 10);
             this.cmbSections.Name = "cmbSections";
-            this.cmbSections.Size = new System.Drawing.Size(413, 23);
+            this.cmbSections.Size = new System.Drawing.Size(349, 23);
             this.cmbSections.TabIndex = 189;
             this.cmbSections.ValueMember = "SectionID";
             this.cmbSections.SelectedIndexChanged += new System.EventHandler(this.cmbSections_SelectedIndexChanged);
@@ -132,10 +132,10 @@
             this.InputQty,
             this.OutputProduct,
             this.OutputQty});
-            this.dgvWIP.Location = new System.Drawing.Point(12, 68);
+            this.dgvWIP.Location = new System.Drawing.Point(12, 39);
             this.dgvWIP.Name = "dgvWIP";
             this.dgvWIP.ReadOnly = true;
-            this.dgvWIP.Size = new System.Drawing.Size(826, 532);
+            this.dgvWIP.Size = new System.Drawing.Size(826, 561);
             this.dgvWIP.TabIndex = 191;
             this.dgvWIP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWIP_CellClick);
             this.dgvWIP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWIP_CellContentClick);
@@ -210,7 +210,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(670, 18);
+            this.label1.Location = new System.Drawing.Point(583, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 192;
@@ -219,7 +219,7 @@
             // txtFinalQty
             // 
             this.txtFinalQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFinalQty.Location = new System.Drawing.Point(743, 12);
+            this.txtFinalQty.Location = new System.Drawing.Point(643, 10);
             this.txtFinalQty.Name = "txtFinalQty";
             this.txtFinalQty.Size = new System.Drawing.Size(100, 21);
             this.txtFinalQty.TabIndex = 193;
@@ -227,7 +227,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(917, 10);
+            this.btnSave.Location = new System.Drawing.Point(749, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 194;
@@ -246,10 +246,10 @@
             this.dgvWIPStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Material,
             this.StockQty});
-            this.dgvWIPStock.Location = new System.Drawing.Point(844, 68);
+            this.dgvWIPStock.Location = new System.Drawing.Point(844, 38);
             this.dgvWIPStock.Name = "dgvWIPStock";
             this.dgvWIPStock.ReadOnly = true;
-            this.dgvWIPStock.Size = new System.Drawing.Size(157, 532);
+            this.dgvWIPStock.Size = new System.Drawing.Size(227, 562);
             this.dgvWIPStock.TabIndex = 195;
             // 
             // Material
@@ -272,7 +272,7 @@
             // btnPrintMaterial
             // 
             this.btnPrintMaterial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrintMaterial.Location = new System.Drawing.Point(877, 39);
+            this.btnPrintMaterial.Location = new System.Drawing.Point(951, 9);
             this.btnPrintMaterial.Name = "btnPrintMaterial";
             this.btnPrintMaterial.Size = new System.Drawing.Size(115, 23);
             this.btnPrintMaterial.TabIndex = 196;
@@ -283,7 +283,7 @@
             // btnprintBatch
             // 
             this.btnprintBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnprintBatch.Location = new System.Drawing.Point(756, 39);
+            this.btnprintBatch.Location = new System.Drawing.Point(830, 9);
             this.btnprintBatch.Name = "btnprintBatch";
             this.btnprintBatch.Size = new System.Drawing.Size(115, 23);
             this.btnprintBatch.TabIndex = 197;
@@ -294,7 +294,7 @@
             // frmWIP_Packing
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1004, 612);
+            this.ClientSize = new System.Drawing.Size(1074, 612);
             this.Controls.Add(this.btnprintBatch);
             this.Controls.Add(this.btnPrintMaterial);
             this.Controls.Add(this.dgvWIPStock);

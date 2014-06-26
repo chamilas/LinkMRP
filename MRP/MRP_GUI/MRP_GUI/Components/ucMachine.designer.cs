@@ -293,6 +293,7 @@ namespace MRP_GUI
             // 
             // txtMachineCostPerHour
             // 
+            this.txtMachineCostPerHour.Enabled = false;
             this.txtMachineCostPerHour.Location = new System.Drawing.Point(147, 143);
             this.txtMachineCostPerHour.Name = "txtMachineCostPerHour";
             this.txtMachineCostPerHour.Size = new System.Drawing.Size(123, 20);

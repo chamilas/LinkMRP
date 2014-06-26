@@ -50,6 +50,8 @@ namespace MRP_GUI
             this.packTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subContractorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.employeeRateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.machineRateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planningWeeksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.batchPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,6 +85,8 @@ namespace MRP_GUI
             this.wIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wIPPackingToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.createProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewWIPPRPDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewWIPRPDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaWeighingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulaWeighingCheckingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -184,6 +188,8 @@ namespace MRP_GUI
             this.healthCareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayurvedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forecastApproveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.healthCareToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayurvedaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.approveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.companyDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -329,8 +335,7 @@ namespace MRP_GUI
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRPDBatchEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.healthCareToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayurvedaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -423,7 +428,9 @@ namespace MRP_GUI
             this.editStandardBatchToolStripMenuItem,
             this.packTypeToolStripMenuItem,
             this.subContractorToolStripMenuItem,
-            this.customerToolStripMenuItem});
+            this.customerToolStripMenuItem,
+            this.employeeRateToolStripMenuItem,
+            this.machineRateToolStripMenuItem});
             this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
             this.registrationToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.registrationToolStripMenuItem.Text = "Registration";
@@ -512,6 +519,20 @@ namespace MRP_GUI
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.customerToolStripMenuItem.Text = "Customer";
             this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
+            // 
+            // employeeRateToolStripMenuItem
+            // 
+            this.employeeRateToolStripMenuItem.Name = "employeeRateToolStripMenuItem";
+            this.employeeRateToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.employeeRateToolStripMenuItem.Text = "Employee - Rate";
+            this.employeeRateToolStripMenuItem.Click += new System.EventHandler(this.employeeRateToolStripMenuItem_Click);
+            // 
+            // machineRateToolStripMenuItem
+            // 
+            this.machineRateToolStripMenuItem.Name = "machineRateToolStripMenuItem";
+            this.machineRateToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.machineRateToolStripMenuItem.Text = "Machine - Rate";
+            this.machineRateToolStripMenuItem.Click += new System.EventHandler(this.machineRateToolStripMenuItem_Click);
             // 
             // planningToolStripMenuItem
             // 
@@ -705,7 +726,9 @@ namespace MRP_GUI
             this.batchQCFailToolStripMenuItem,
             this.wIPToolStripMenuItem,
             this.wIPPackingToolStripMenuItem1,
-            this.createProjectToolStripMenuItem});
+            this.createProjectToolStripMenuItem,
+            this.viewWIPPRPDToolStripMenuItem,
+            this.viewWIPRPDToolStripMenuItem});
             this.productionToolStripMenuItem.Name = "productionToolStripMenuItem";
             this.productionToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.productionToolStripMenuItem.Text = "MRP";
@@ -772,6 +795,20 @@ namespace MRP_GUI
             this.createProjectToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
             this.createProjectToolStripMenuItem.Text = "Create Project";
             this.createProjectToolStripMenuItem.Click += new System.EventHandler(this.createProjectToolStripMenuItem_Click);
+            // 
+            // viewWIPPRPDToolStripMenuItem
+            // 
+            this.viewWIPPRPDToolStripMenuItem.Name = "viewWIPPRPDToolStripMenuItem";
+            this.viewWIPPRPDToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.viewWIPPRPDToolStripMenuItem.Text = "View WIP - PRPD";
+            this.viewWIPPRPDToolStripMenuItem.Click += new System.EventHandler(this.viewWIPPRPDToolStripMenuItem_Click);
+            // 
+            // viewWIPRPDToolStripMenuItem
+            // 
+            this.viewWIPRPDToolStripMenuItem.Name = "viewWIPRPDToolStripMenuItem";
+            this.viewWIPRPDToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.viewWIPRPDToolStripMenuItem.Text = "View WIP - RPD";
+            this.viewWIPRPDToolStripMenuItem.Click += new System.EventHandler(this.viewWIPRPDToolStripMenuItem_Click);
             // 
             // operationToolStripMenuItem
             // 
@@ -1582,14 +1619,14 @@ namespace MRP_GUI
             // healthCareToolStripMenuItem
             // 
             this.healthCareToolStripMenuItem.Name = "healthCareToolStripMenuItem";
-            this.healthCareToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.healthCareToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.healthCareToolStripMenuItem.Text = "Health Care";
             this.healthCareToolStripMenuItem.Click += new System.EventHandler(this.healthCareToolStripMenuItem_Click);
             // 
             // ayurvedaToolStripMenuItem
             // 
             this.ayurvedaToolStripMenuItem.Name = "ayurvedaToolStripMenuItem";
-            this.ayurvedaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ayurvedaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.ayurvedaToolStripMenuItem.Text = "Ayurveda";
             this.ayurvedaToolStripMenuItem.Click += new System.EventHandler(this.ayurvedaToolStripMenuItem_Click);
             // 
@@ -1602,6 +1639,20 @@ namespace MRP_GUI
             this.forecastApproveToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.forecastApproveToolStripMenuItem.Text = "Forecast Approve";
             this.forecastApproveToolStripMenuItem.Click += new System.EventHandler(this.forecastApproveToolStripMenuItem_Click);
+            // 
+            // healthCareToolStripMenuItem1
+            // 
+            this.healthCareToolStripMenuItem1.Name = "healthCareToolStripMenuItem1";
+            this.healthCareToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.healthCareToolStripMenuItem1.Text = "Health Care";
+            this.healthCareToolStripMenuItem1.Click += new System.EventHandler(this.healthCareToolStripMenuItem1_Click);
+            // 
+            // ayurvedaToolStripMenuItem1
+            // 
+            this.ayurvedaToolStripMenuItem1.Name = "ayurvedaToolStripMenuItem1";
+            this.ayurvedaToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.ayurvedaToolStripMenuItem1.Text = "Ayurveda";
+            this.ayurvedaToolStripMenuItem1.Click += new System.EventHandler(this.ayurvedaToolStripMenuItem1_Click);
             // 
             // addDetailsToolStripMenuItem
             // 
@@ -2222,7 +2273,8 @@ namespace MRP_GUI
             this.systemDataToolStripMenuItem,
             this.userRightsToolStripMenuItem,
             this.costRatesToolStripMenuItem,
-            this.activityManagementToolStripMenuItem});
+            this.activityManagementToolStripMenuItem,
+            this.testToolStripMenuItem});
             this.toolsMenu.Name = "toolsMenu";
             this.toolsMenu.Size = new System.Drawing.Size(51, 20);
             this.toolsMenu.Text = "Tools";
@@ -2702,19 +2754,12 @@ namespace MRP_GUI
             this.pRPDBatchEditToolStripMenuItem.Text = "Manage";
             this.pRPDBatchEditToolStripMenuItem.Click += new System.EventHandler(this.pRPDBatchEditToolStripMenuItem_Click);
             // 
-            // healthCareToolStripMenuItem1
+            // testToolStripMenuItem
             // 
-            this.healthCareToolStripMenuItem1.Name = "healthCareToolStripMenuItem1";
-            this.healthCareToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.healthCareToolStripMenuItem1.Text = "Health Care";
-            this.healthCareToolStripMenuItem1.Click += new System.EventHandler(this.healthCareToolStripMenuItem1_Click);
-            // 
-            // ayurvedaToolStripMenuItem1
-            // 
-            this.ayurvedaToolStripMenuItem1.Name = "ayurvedaToolStripMenuItem1";
-            this.ayurvedaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ayurvedaToolStripMenuItem1.Text = "Ayurveda";
-            this.ayurvedaToolStripMenuItem1.Click += new System.EventHandler(this.ayurvedaToolStripMenuItem1_Click);
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click_4);
             // 
             // MRP_Main
             // 
@@ -3045,6 +3090,11 @@ namespace MRP_GUI
         private System.Windows.Forms.ToolStripMenuItem ayurvedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem healthCareToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ayurvedaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem viewWIPPRPDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewWIPRPDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem employeeRateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem machineRateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 

@@ -201,7 +201,8 @@ namespace MRP_GUI
                         objMR.MRReceivedBy = CurrentUser.UserEmp.EmployeeID;
                         objMR.MRStatus = MR.Status.Recevied;
 
-                        int x = objMRDL.Update_Receive_toRPDBatch(objMR);
+                        //int x = objMRDL.Update_Receive_toRPDBatch(objMR);
+                        int x = objMRDL.Update_Receive_toBatch(objMR);
 
                         Load_MaterialList();
                         Load_MRList();

@@ -110,7 +110,7 @@ namespace MRP_GUI
                     objMachine.MachineCapacityUnit = objUnitDL.Get(Convert.ToInt64(cmbUnit.SelectedValue));
                     objMachine.MachineCode = txtMachineCode.Text;
                     objMachine.MachineDescription = txtMachienDescription.Text;
-                    objMachine.MachineHourCost = Convert.ToDecimal(txtMachineCostPerHour.Text);
+                    objMachine.MachineHourCost = Convert.ToDecimal("0.00");
                     objMachine.MachineName = txtMachineName.Text;
                     objMachine.MachinePropertyTag = txtPropertyTag.Text;
                     objMachine.MachinePurchaseDate = dtPurchaseDate.Value;

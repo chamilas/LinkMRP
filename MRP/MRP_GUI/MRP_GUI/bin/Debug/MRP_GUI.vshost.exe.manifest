@@ -230,31 +230,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>qtEkfkr9aGn3+Rits77W33d6bFA=</dsig:DigestValue>
+        <dsig:DigestValue>5DDTnHCw/zLmrWEc9fc8xgKjlSQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_DL.dll" size="355328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_DL.dll" size="355840">
       <assemblyIdentity name="MRP_DL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>F3Fe54Ui7iMiLyp0BItUVsSpnAQ=</dsig:DigestValue>
+        <dsig:DigestValue>VInPbtVl4w3GqVacjLo9LqT2Fjk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_GUI.exe" size="9277440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MRP_GUI.exe" size="9619968">
       <assemblyIdentity name="MRP_GUI" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8huLEgvWjLHavTAQ4T07DK8POwk=</dsig:DigestValue>
+        <dsig:DigestValue>KbWAyggOUsoyWw5gE5ctjA4yWdQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -266,7 +266,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HehrMjBLQ+gLnnXw+ZyoNPylR/Y=</dsig:DigestValue>
+        <dsig:DigestValue>rcqyCQVYc8PYdzf4xvdQx8XYcFc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -279,13 +279,13 @@
       <dsig:DigestValue>QuKrUo96eqPQZo7b39NcPcoARes=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="MRP_GUI.exe.config" size="2509">
+  <file name="MRP_GUI.exe.config" size="3153">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>8ic4gzTpikGssZm585oAxmdtNYs=</dsig:DigestValue>
+      <dsig:DigestValue>Rwt7YpyRUMEHwPMFQKKD9/FSujo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
