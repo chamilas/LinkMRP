@@ -106,3 +106,12 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_BL\bin\Debug\MRP_REF.pdb
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_BL\obj\Debug\MRP_BL.csprojResolveAssemblyReference.cache
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_BL\obj\Debug\MRP_BL.dll
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_BL\obj\Debug\MRP_BL.pdb
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\bin\Debug\MRP_BL.dll
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\bin\Debug\MRP_BL.pdb
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\bin\Debug\MRP_DL.dll
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\bin\Debug\MRP_REF.dll
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\bin\Debug\MRP_DL.pdb
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\bin\Debug\MRP_REF.pdb
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\obj\Debug\MRP_BL.csprojResolveAssemblyReference.cache
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\obj\Debug\MRP_BL.dll
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_BL\obj\Debug\MRP_BL.pdb

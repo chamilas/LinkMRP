@@ -55,9 +55,14 @@
     <Compile Include="BatchMachineDetails_DL.cs" />
     <Compile Include="BatchPackingMR_DL.cs" />
     <Compile Include="BatchActivityMachineDetails_DL.cs" />
+    <Compile Include="CustomerProducts_DL.cs" />
+    <Compile Include="CustomerRegisteration_DL.cs" />
     <Compile Include="CustomerTerritoryList_DL.cs" />
     <Compile Include="Customer_DL.cs" />
     <Compile Include="FinishGoodsReturn_DL.cs" />
+    <Compile Include="Invoice_DL.cs" />
+    <Compile Include="NewOrder_DL.cs" />
+    <Compile Include="OrderSorting_DL.cs" />
     <Compile Include="PlanBatch_DL.cs" />
     <Compile Include="PlanWeek_DL.cs" />
     <Compile Include="PlanMaterials_DL.cs" />
@@ -77,6 +82,7 @@
     <Compile Include="PRPDCAP_DL.cs" />
     <Compile Include="QCReportDetails_DL.cs" />
     <Compile Include="QCReport_DL.cs" />
+    <Compile Include="Region_DL.cs" />
     <Compile Include="RPDActivityDetailsLabour_DL.cs" />
     <Compile Include="RPDActivityDetailsMachine_DL.cs" />
     <Compile Include="RPDActivityMachine_DL.cs" />
@@ -88,6 +94,7 @@
     <Compile Include="RPDBatchPackingMaterialUsage_DL.cs" />
     <Compile Include="RPDBatchProduction_DL.cs" />
     <Compile Include="RPDBatch_DL.cs" />
+    <Compile Include="SalesFinishProduct_DL.cs" />
     <Compile Include="SalesForecastContent_DL.cs" />
     <Compile Include="SalesForecastDetails_DL.cs" />
     <Compile Include="SalesForeCast_DL.cs" />
@@ -96,6 +103,7 @@
     <Compile Include="DeliverNoteMaterials_DL.cs" />
     <Compile Include="DeliverNote_DL.cs" />
     <Compile Include="STDBatch_DL.cs" />
+    <Compile Include="Territory_DL.cs" />
     <Compile Include="TGRN_DL.cs" />
     <Compile Include="UserDepartments_DL.cs" />
     <Compile Include="Department_DL.cs" />

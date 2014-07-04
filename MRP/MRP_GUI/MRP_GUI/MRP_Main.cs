@@ -3100,20 +3100,20 @@ namespace MRP_GUI
 
         private void addDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddDetails frm = new AddDetails();
-            ShowForm(frm);
+            //frmAddDetails frm = new frmAddDetails();
+            //ShowForm(frm);
         }
 
         private void approveToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
-            Approve frm = new Approve();
-            ShowForm(frm);
+            //Approve frm = new Approve();
+            //ShowForm(frm);
         }
 
         private void companyDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CompanyDetails frm = new CompanyDetails(1,1);
-            ShowForm(frm);
+            //CompanyDetails frm = new CompanyDetails(1,1);
+            //ShowForm(frm);
         }
 
         private void comRegDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3124,14 +3124,14 @@ namespace MRP_GUI
 
         private void financeDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FinanceDetails frm = new FinanceDetails(1, 1);
-            ShowForm(frm);
+            //FinanceDetails frm = new FinanceDetails(1, 1);
+            //ShowForm(frm);
         }
 
         private void frmAssignQuantityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAssignQuantity frm = new frmAssignQuantity();
-            ShowForm(frm);
+            //frmAssignQuantity frm = new frmAssignQuantity();
+            //ShowForm(frm);
         }
 
         private void frmHigherApprovalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3178,20 +3178,20 @@ namespace MRP_GUI
 
         private void newCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewCustomer frm = new NewCustomer(1676);
+            frmNewCustomer frm = new frmNewCustomer(1676);
             ShowForm(frm);
         }
 
         private void transactionDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TransactionDetails frm = new TransactionDetails(1,1);
-            ShowForm(frm);
+            //TransactionDetails frm = new TransactionDetails(1,1);
+            //ShowForm(frm);
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Update frm = new Update();
-            ShowForm(frm);
+            //Update frm = new Update();
+            //ShowForm(frm);
         }
 
         private void ayurvedaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3254,6 +3254,120 @@ namespace MRP_GUI
         {
             frmContactRegistration frm = new frmContactRegistration();
             ShowForm(frm);
+        }
+
+        private void createToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmNewCustomer objfrm = new frmNewCustomer(int.Parse(CurrentUser.UserID.ToString()));
+            objfrm.ShowDialog();
+        }
+
+        private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddDetails frm = new frmAddDetails(int.Parse(CurrentUser.UserID.ToString()));
+            ShowForm(frm);
+        }
+
+        private void updateToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Update frm = new Update(int.Parse(CurrentUser.UserID.ToString()));
+            ShowForm(frm);
+        }
+
+        private void approveToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Approve frm = new Approve(int.Parse(CurrentUser.UserID.ToString()));
+            ShowForm(frm);
+        }
+
+        private void addTerritoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddTerritories frm = new frmAddTerritories();
+            frm.ShowDialog();
+        }
+
+        private void addProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomerProducts frm = new frmCustomerProducts("Company Outlet");
+            frm.ShowDialog();
+        }
+
+        private void manageToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmCustomerState frm = new frmCustomerState();
+            frm.ShowDialog();
+        }
+
+        private void finishedProductsPriceDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalesFinishProducts frm = new frmSalesFinishProducts();
+            frm.ShowDialog();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewOrder frm = new frmNewOrder();
+            frm.ShowDialog();
+        }
+
+        private void approvalBySalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderApprovalBySales frm = new frmOrderApprovalBySales();
+            frm.ShowDialog();
+        }
+
+        private void approvalByFinanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderApproveByFinance frm = new frmOrderApproveByFinance();
+            frm.ShowDialog();
+        }
+
+        private void approvalByStoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderApprovalByStoreManager frm = new frmOrderApprovalByStoreManager();
+            frm.ShowDialog();
+        }
+
+        private void orderSortingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOrderSorting frm = new frmOrderSorting();
+            frm.ShowDialog();
+        }
+
+        private void approveInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvoiceApprove frm = new frmInvoiceApprove();
+            frm.ShowDialog(); ;
+        }
+
+        private void manageInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHigherApproval frm = new frmHigherApproval();
+            ShowForm(frm);
+        }
+
+        private void printInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrint frm = new frmPrint();
+            frm.ShowDialog();
+        }
+
+        private void orderFinalizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIncompleteInvoices frm = new frmIncompleteInvoices();
+            frm.ShowDialog();
+        }
+
+        private void areaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewRegion frm = new frmNewRegion();
+            frm.ShowDialog();
+        }
+
+        private void territoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewTerritory frm = new frmNewTerritory();
+            frm.ShowDialog();
         }
 
 

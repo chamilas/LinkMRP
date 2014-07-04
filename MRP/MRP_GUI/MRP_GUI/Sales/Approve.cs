@@ -13,19 +13,20 @@ namespace MRP_GUI.Sales
 {
     public partial class Approve : Form
     {
-        //private CustomerRegisteration_DL dl = new CustomerRegisteration_DL(ConnectionStringClass.GetConnection());
-        public Approve()
+        private CustomerRegisteration_DL dl = new CustomerRegisteration_DL(ConnectionStringClass.GetConnection());
+        private int UserID;
+        public Approve(int userID)
         {
             InitializeComponent();
+            this.UserID = userID;
             cmb_approve.SelectedIndex = 0;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
             if (e.ColumnIndex == 0)
             {
-                int UserID = 0;
+                int UserID = this.UserID;
                 int Customer_code = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value.ToString());
                 if (cmb_approve.SelectedIndex == 0)
                 {
@@ -107,12 +108,10 @@ namespace MRP_GUI.Sales
                     }
                 }
             }
-             */
         }
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            /*
             if (cmb_approve.SelectedIndex == 0)
             {
                 dataGridView1.DataSource = dl.AppCustomerMaster();
@@ -137,7 +136,6 @@ namespace MRP_GUI.Sales
             {
                 dataGridView1.DataSource = dl.AppCustomerFinanceDetails();
             }
-             */
         }
     }
 }

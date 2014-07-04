@@ -38,6 +38,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Edit_Name,
@@ -53,11 +56,13 @@
             // 
             this.Edit_Name.HeaderText = "Edit Name";
             this.Edit_Name.Name = "Edit_Name";
+            this.Edit_Name.ReadOnly = true;
             // 
             // Edit_Address
             // 
             this.Edit_Address.HeaderText = "Edit Address";
             this.Edit_Address.Name = "Edit_Address";
+            this.Edit_Address.ReadOnly = true;
             // 
             // Update
             // 

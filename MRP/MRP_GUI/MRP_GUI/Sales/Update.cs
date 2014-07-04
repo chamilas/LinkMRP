@@ -13,18 +13,20 @@ namespace MRP_GUI.Sales
 {
     public partial class Update : Form
     {
-        //private CustomerRegisteration_DL dl = new CustomerRegisteration_DL(ConnectionStringClass.GetConnection());
+        private CustomerRegisteration_DL dl = new CustomerRegisteration_DL(ConnectionStringClass.GetConnection());
         private static UpdateName un;
         private static UpdateAddress ua;
-        public Update()
+        private int UserID;
+        public Update(int userID)
         {
             InitializeComponent();
-            //dataGridView1.DataSource = dl.GetCustomerDetails();
+            this.UserID = userID;
+            dataGridView1.DataSource = dl.GetCustomerDetails();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int UserID = 0;
+            int UserID = this.UserID;
 
             DialogResult rs = MessageBox.Show("Do you wish to continue...?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -32,7 +34,7 @@ namespace MRP_GUI.Sales
             {
                 return;
             }
-            /*
+
             if (e.ColumnIndex == 0)
             {
                 int Customer_code = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 2].Value.ToString());
@@ -46,7 +48,6 @@ namespace MRP_GUI.Sales
                 ua = new UpdateAddress(UserID, Customer_code);
                 ua.ShowDialog();
             }
-             //*/
         }
     }
 }

@@ -58,10 +58,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>9B0E49986C45ABE873ED745FE4757891AD56916E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>8FDB4F4C446B9D5C7AAE6355074C5D919C2936FF</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MRP_GUI_3_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MRP_GUI_6_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -1377,11 +1377,11 @@
     <Compile Include="RPD\frmWIP_RPD.designer.cs">
       <DependentUpon>frmWIP_RPD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\AddDetails.cs">
+    <Compile Include="Sales\frmAddDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\AddDetails.designer.cs">
-      <DependentUpon>AddDetails.cs</DependentUpon>
+    <Compile Include="Sales\frmAddDetails.designer.cs">
+      <DependentUpon>frmAddDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\Approve.cs">
       <SubType>Form</SubType>
@@ -1413,11 +1413,29 @@
     <Compile Include="Sales\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmAddTeritories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmAddTeritories.designer.cs">
+      <DependentUpon>frmAddTeritories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\frmApproveSalesForeCast.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sales\frmApproveSalesForeCast.designer.cs">
       <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmAssignDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmAssignDialog.designer.cs">
+      <DependentUpon>frmAssignDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmAssignPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmAssignPrice.designer.cs">
+      <DependentUpon>frmAssignPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\frmAssignQuantity.cs">
       <SubType>Form</SubType>
@@ -1431,11 +1449,23 @@
     <Compile Include="Sales\frmBatchPlan_admin.designer.cs">
       <DependentUpon>frmBatchPlan_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmCustomerProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmCustomerProducts.designer.cs">
+      <DependentUpon>frmCustomerProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\frmCustomerRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sales\frmCustomerRegistration.designer.cs">
       <DependentUpon>frmCustomerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmCustomerState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmCustomerState.designer.cs">
+      <DependentUpon>frmCustomerState.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\frmDailySales.cs">
       <SubType>Form</SubType>
@@ -1443,11 +1473,29 @@
     <Compile Include="Sales\frmDailySales.designer.cs">
       <DependentUpon>frmDailySales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmDispatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmDispatch.designer.cs">
+      <DependentUpon>frmDispatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\frmHigherApproval.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sales\frmHigherApproval.designer.cs">
       <DependentUpon>frmHigherApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmIncompleteInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmIncompleteInvoices.designer.cs">
+      <DependentUpon>frmIncompleteInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmInvoice.designer.cs">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\frmInvoiceApprove.cs">
       <SubType>Form</SubType>
@@ -1460,6 +1508,18 @@
     </Compile>
     <Compile Include="Sales\frmNewOrder.designer.cs">
       <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmNewRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmNewRegion.designer.cs">
+      <DependentUpon>frmNewRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmNewTerritory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmNewTerritory.designer.cs">
+      <DependentUpon>frmNewTerritory.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\frmOrderApprovalBySales.cs">
       <SubType>Form</SubType>
@@ -1491,6 +1551,18 @@
     <Compile Include="Sales\frmPlanPackingMaterial_Full.Designer.cs">
       <DependentUpon>frmPlanPackingMaterial_Full.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales\frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmPrint.designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmSalesFinishProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmSalesFinishProducts.designer.cs">
+      <DependentUpon>frmSalesFinishProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sales\frmSalesForeCast.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1503,11 +1575,17 @@
     <Compile Include="Sales\frmSalesReturn.Designer.cs">
       <DependentUpon>frmSalesReturn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sales\NewCustomer.cs">
+    <Compile Include="Sales\frmNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sales\NewCustomer.designer.cs">
-      <DependentUpon>NewCustomer.cs</DependentUpon>
+    <Compile Include="Sales\frmNewCustomer.designer.cs">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\frmViewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\frmViewOrder.designer.cs">
+      <DependentUpon>frmViewOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Sales\TransactionDetails.cs">
       <SubType>Form</SubType>
@@ -2179,8 +2257,8 @@
     <EmbeddedResource Include="RPD\frmWIP_RPD.resx">
       <DependentUpon>frmWIP_RPD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales\AddDetails.resx">
-      <DependentUpon>AddDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\frmAddDetails.resx">
+      <DependentUpon>frmAddDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\Approve.resx">
       <DependentUpon>Approve.cs</DependentUpon>
@@ -2197,8 +2275,17 @@
     <EmbeddedResource Include="Sales\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmAddTeritories.resx">
+      <DependentUpon>frmAddTeritories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmApproveSalesForeCast.resx">
       <DependentUpon>frmApproveSalesForeCast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmAssignDialog.resx">
+      <DependentUpon>frmAssignDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmAssignPrice.resx">
+      <DependentUpon>frmAssignPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmAssignQuantity.resx">
       <DependentUpon>frmAssignQuantity.cs</DependentUpon>
@@ -2206,20 +2293,41 @@
     <EmbeddedResource Include="Sales\frmBatchPlan_admin.resx">
       <DependentUpon>frmBatchPlan_admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmCustomerProducts.resx">
+      <DependentUpon>frmCustomerProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmCustomerRegistration.resx">
       <DependentUpon>frmCustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmCustomerState.resx">
+      <DependentUpon>frmCustomerState.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmDailySales.resx">
       <DependentUpon>frmDailySales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmDispatch.resx">
+      <DependentUpon>frmDispatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmHigherApproval.resx">
       <DependentUpon>frmHigherApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmIncompleteInvoices.resx">
+      <DependentUpon>frmIncompleteInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmInvoice.resx">
+      <DependentUpon>frmInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmInvoiceApprove.resx">
       <DependentUpon>frmInvoiceApprove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmNewOrder.resx">
       <DependentUpon>frmNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmNewRegion.resx">
+      <DependentUpon>frmNewRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmNewTerritory.resx">
+      <DependentUpon>frmNewTerritory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmOrderApprovalBySales.resx">
       <DependentUpon>frmOrderApprovalBySales.cs</DependentUpon>
@@ -2236,14 +2344,23 @@
     <EmbeddedResource Include="Sales\frmPlanPackingMaterial_Full.resx">
       <DependentUpon>frmPlanPackingMaterial_Full.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmSalesFinishProducts.resx">
+      <DependentUpon>frmSalesFinishProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmSalesForeCast.resx">
       <DependentUpon>frmSalesForeCast.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\frmSalesReturn.resx">
       <DependentUpon>frmSalesReturn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sales\NewCustomer.resx">
-      <DependentUpon>NewCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="Sales\frmNewCustomer.resx">
+      <DependentUpon>frmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\frmViewOrder.resx">
+      <DependentUpon>frmViewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sales\TransactionDetails.resx">
       <DependentUpon>TransactionDetails.cs</DependentUpon>
@@ -2263,6 +2380,9 @@
     <None Include="MRP_GUI_1_TemporaryKey.pfx" />
     <None Include="MRP_GUI_2_TemporaryKey.pfx" />
     <None Include="MRP_GUI_3_TemporaryKey.pfx" />
+    <None Include="MRP_GUI_4_TemporaryKey.pfx" />
+    <None Include="MRP_GUI_5_TemporaryKey.pfx" />
+    <None Include="MRP_GUI_6_TemporaryKey.pfx" />
     <None Include="MRP_GUI_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

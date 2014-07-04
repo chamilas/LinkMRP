@@ -45,6 +45,7 @@
     <Compile Include="ActivityMachine.cs" />
     <Compile Include="ActivityMachineUsage.cs" />
     <Compile Include="ApproveLimits.cs" />
+    <Compile Include="AuthorizedNotes.cs" />
     <Compile Include="BasicProduct.cs" />
     <Compile Include="Batch.cs" />
     <Compile Include="BatchActivity.cs" />
@@ -58,11 +59,16 @@
     <Compile Include="BatchLabourDetails.cs" />
     <Compile Include="CAP.cs" />
     <Compile Include="CAPProduct.cs" />
+    <Compile Include="CompanyDetails.cs" />
     <Compile Include="CompanyOverHeadRate.cs" />
     <Compile Include="BatchMachineDetails.cs" />
     <Compile Include="BatchActivityMachineDetails.cs" />
+    <Compile Include="CompanyRegDetails.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomerProducts.cs" />
     <Compile Include="CustomerTerritoryList.cs" />
+    <Compile Include="FinanceDetails.cs" />
+    <Compile Include="NewCustomer.cs" />
     <Compile Include="PlanMaterials.cs" />
     <Compile Include="DeliverNote.cs" />
     <Compile Include="DeliverNoteMaterials.cs" />
@@ -151,6 +157,7 @@
     <Compile Include="PRPDCAP.cs" />
     <Compile Include="QCReport.cs" />
     <Compile Include="QCReportDetails.cs" />
+    <Compile Include="Region.cs" />
     <Compile Include="RepackBatch.cs" />
     <Compile Include="RepackBatchBasicProductUsage.cs" />
     <Compile Include="RepackBatchMaterialUsage.cs" />
@@ -172,6 +179,7 @@
     <Compile Include="RPDBatchActualProduction.cs" />
     <Compile Include="RPDBatchPackingMaterialUsage.cs" />
     <Compile Include="RPDBatchProduction.cs" />
+    <Compile Include="SalesFinishProducts.cs" />
     <Compile Include="SalesForecast.cs" />
     <Compile Include="SalesForecastBatches.cs" />
     <Compile Include="SalesForecastContent.cs" />
@@ -197,8 +205,10 @@
     <Compile Include="Supplier.cs" />
     <Compile Include="SystemFunction.cs" />
     <Compile Include="TempPOMaterials.cs" />
+    <Compile Include="Territory.cs" />
     <Compile Include="TestParameter.cs" />
     <Compile Include="TGRN.cs" />
+    <Compile Include="TransactionDetails.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserAccesRoles.cs" />

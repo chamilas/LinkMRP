@@ -47,6 +47,7 @@
             // 
             // cmb_approve
             // 
+            this.cmb_approve.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_approve.FormattingEnabled = true;
             this.cmb_approve.Items.AddRange(new object[] {
             "Customer Approval",
@@ -63,6 +64,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});

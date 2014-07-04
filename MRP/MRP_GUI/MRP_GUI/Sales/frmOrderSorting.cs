@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DL;
+using MRP_DL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,15 +13,21 @@ namespace MRP_GUI.Sales
 {
     public partial class frmOrderSorting : Form
     {
+        private OrderSorting_DL ors = new OrderSorting_DL(ConnectionStringClass.GetConnection());
         public frmOrderSorting()
         {
             InitializeComponent();
+            grid_unsortedOrders.DataSource = ors.GetUnsortedOrders();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void grid_unsortedOrders_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmAssignQuantity frm = new frmAssignQuantity();
-            frm.ShowDialog();
+            if (e.ColumnIndex == 0)
+            {
+                frmAssignQuantity frm = new frmAssignQuantity(grid_unsortedOrders.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value.ToString());
+                frm.ShowDialog();
+                grid_unsortedOrders.DataSource = ors.GetUnsortedOrders();
+            }
         }
     }
 }

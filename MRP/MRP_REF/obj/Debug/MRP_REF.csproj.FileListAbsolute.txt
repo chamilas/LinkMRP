@@ -50,3 +50,8 @@ C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_REF\bin\Debug\MRP_REF.dll
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_REF\bin\Debug\MRP_REF.pdb
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_REF\obj\Debug\MRP_REF.dll
 C:\Users\Erimac-PC\Documents\GitHub\LinkMRP\MRP\MRP_REF\obj\Debug\MRP_REF.pdb
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_REF\bin\Debug\MRP_REF.dll
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_REF\bin\Debug\MRP_REF.pdb
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_REF\obj\Debug\MRP_REF.csprojResolveAssemblyReference.cache
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_REF\obj\Debug\MRP_REF.dll
+C:\Users\Thilina\Desktop\Link\omal_MRP\MRP\MRP_REF\obj\Debug\MRP_REF.pdb
